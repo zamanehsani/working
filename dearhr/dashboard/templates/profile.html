@@ -48,7 +48,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END: Custom CSS-->
   </head>
   <!-- END: Head-->
-  <body class="vertical-layout gradient-45deg-indigo-purple vertical-menu-collapsible page-header-dark vertical-modern-menu preload-transitions 2-columns " data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
+  <body class="vertical-layout gradient-45deg-indigo-purple vertical-menu-collapsible menu-collapse page-header-dark vertical-modern-menu preload-transitions 2-columns " data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
 
     <!-- BEGIN: Header-->
     <header class="page-topbar"  id="header">
@@ -2167,33 +2167,6 @@ License: You must have a valid license purchased only from themeforest(the above
             }
         });
 
-
-    // this function is when the screen size is smaller and adds a class
-    $(document).ready( function(){
-      $(window).on('resize', function() {
-        if ($(window).width() < 1460) {
-        $(".sidenav-main").removeClass("nav-lock");
-        $(".navbar-main.nav-collapsible")
-            .removeClass("sideNav-lock")
-            .addClass("nav-expanded");
-        $(".navbar-toggler i").html("radio_button_unchecked");
-        $("#main").addClass("main-full");
-        $(".sidenav-main.nav-collapsible, .navbar .brand-sidebar").trigger("mouseleave");
-      } else {
-        $(".sidenav-main")
-            .addClass("nav-lock")
-            .removeClass("nav-collapsed");
-        $(".navbar-main.nav-collapsible")
-            .addClass("sideNav-lock")
-            .removeClass("nav-collapsed");
-        $(".navbar-toggler i").html("radio_button_checked");
-        $("#main").removeClass("main-full");
-        $(".sidenav-main.nav-collapsible, .navbar .brand-sidebar").trigger("mouseenter");
-      }
-      
-      });
-
-
       $(window).on("resize", function(){
         if ($(window).width() < 1200) {
         $("#generic-card").removeClass("l4").addClass("l6");
@@ -2214,7 +2187,6 @@ License: You must have a valid license purchased only from themeforest(the above
         $("#profile-card2").removeClass("s6").addClass("s12");
       }
       });
-    }); 
  
       $(window).on('resize', function(){
         var width = $(window).width();

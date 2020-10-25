@@ -1,0 +1,87 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+        <div class="page-wrapper auth">
+            <div class="page-inner bg-brand-gradient">
+                <div class="page-content-wrapper bg-transparent m-0">
+                    <div class="height-10 w-100 shadow-lg px-4 bg-brand-gradient">
+                        <div class="d-flex align-items-center container p-0">
+                            <div class="page-logo width-mobile-auto m-0 align-items-center justify-content-center p-0 bg-transparent bg-img-none shadow-0 height-9 border-0">
+                                <a href="javascript:void(0)" class="page-logo-link press-scale-down d-flex align-items-center">
+                                    <img src="{% static 'users/img/logo.png' %}" alt="SmartAdmin WebApp" aria-roledescription="logo">
+                                    <span class="page-logo-text mr-1">DearHR</span>
+                                </a>
+                            </div> 
+                            <a href="{% url 'users:user_login' %}" class="btn-link text-white ml-auto">
+                               <strong>Login Here</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-1" style="background: url({% static 'users/img/svg/pattern-1.svg' %}) no-repeat center bottom fixed; background-size: cover;">
+                        <div class="container py-4 py-lg-5 my-lg-5 px-4 px-sm-0">
+                            <div class="row">
+                                <div class="col col-md-5 col-lg-5 hidden-sm-down">
+                                    <h2 class="fs-xxl fw-500 mt-4 text-white">
+                                        Join us today ..
+                                        <small class="h3 fw-300 mt-3 mb-5 text-white opacity-60">
+                                            here is the place for a short about section.
+
+                                        </small>
+                                    </h2>
+                                    <a href="#" class="fs-lg fw-500 text-white opacity-70">Learn more &gt;&gt;</a>
+                                    <div class="d-sm-flex flex-column align-items-center justify-content-center d-md-block">
+                                        <div class="px-0 py-1 mt-5 text-white fs-nano opacity-50">
+                                            Find us on social media
+                                        </div>
+                                        <div class="d-flex flex-row opacity-70">
+                                            <a href="#" class="mr-2 fs-xxl text-white">
+                                                <i class="fab fa-facebook-square"></i>
+                                            </a>
+                                            <a href="#" class="mr-2 fs-xxl text-white">
+                                                <i class="fab fa-twitter-square"></i>
+                                            </a>
+                                            <a href="#" class="mr-2 fs-xxl text-white">
+                                                <i class="fab fa-google-plus-square"></i>
+                                            </a>
+                                            <a href="#" class="mr-2 fs-xxl text-white">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                             
+                                <div class="col-sm-12 col-md-5 col-lg-4  ml-auto">
+                                    <!-- <div class="card p-4 rounded-plus bg-faded align-items-center"> -->
+
+                                        <div class=" my-2">
+                                            <a href="{% url 'users:register' %}">
+                                                <button id="js-login-btn" type="submit" class="btn btn-primary btn-block btn-lg"> <strong>I am a job Seeker</strong> </button>
+                                            </a>                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class=" my-2">
+                                            <a href="{% url 'users:register' %}">
+                                                <button id="js-login-btn" type="submit" class="btn btn-primary btn-block btn-lg"> <strong>I am an HR Manager</strong> </button>
+                                            </a>                                        </div>
+                                        <br><br>
+                                        <div class=" my-2">
+                                            <a href="{% url 'users:register' %}">
+                                                <button id="js-login-btn" type="submit" class="btn btn-primary btn-block btn-lg"> <strong>I am a Serivce Provider</strong> </button>
+                                            </a>
+                                        </div>
+                                        <br><br>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                            <div class="position-absolute pos-bottom pos-left pos-right p-3 text-center text-white">
+                                2020 © DearHR&nbsp;<a href='https://www.dearhr.com' class='text-white opacity-40 fw-500' title='dearhr.com' target='_blank'>dearhr.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endblock content %}

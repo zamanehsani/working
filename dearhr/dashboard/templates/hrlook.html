@@ -54,7 +54,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="https://use.fontawesome.com/de1bfe1b04.js"></script>
   </head>
   <!-- END: Head-->
-  <body style="font-family: sans-serif" class="vertical-layout gradient-45deg-indigo-purple vertical-menu-collapsible page-header-dark vertical-modern-menu preload-transitions 2-columns " data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
+  <body class="vertical-layout gradient-45deg-indigo-purple vertical-menu-collapsible menu-collapse page-header-dark vertical-modern-menu preload-transitions 2-columns " data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
 
     <!-- BEGIN: Header-->
     <header class="page-topbar"  id="header">
@@ -69,11 +69,11 @@ License: You must have a valid license purchased only from themeforest(the above
                   <input class="header-search-input z-depth-2 border-round" type="text" name="Search" placeholder="Explore DearHR" data-search="template-list">
                   <ul class="search-list collection display-none"></ul>
                 </div>
-                <ul class="navbar-list right" id="nabbar-top" >
+                <ul class="navbar-list right" id="nabbar-top">
                   <!-- <li class="dropdown-language"><a class="waves-effect waves-block waves-light translation-button" href="#" data-target="translation-dropdown"><span class="flag-icon flag-icon-gb"></span></a></li> -->
-                  <li class="hide-on-med-and-down"><a class="waves-effect waves-block waves-light toggle-fullscreen" href="javascript:void(0);"><i class="material-icons" style="height: 60px;" >settings_overscan</i></a></li>
-                  <li class="hide-on-large-only search-input-wrapper"><a class="waves-effect waves-block waves-light search-button" href="javascript:void(0);"><i class="material-icons" style="height: 60px;">search</i></a></li>
-                  <li><a class="waves-effect waves-block waves-light notification-button" href="javascript:void(0);" data-target="notifications-dropdown"><i class="material-icons" style="height: 60px;">notifications_none<small class="notification-badge">5</small></i></a></li>
+                  <li class="hide-on-med-and-down"><a style="height: 60px;" class="waves-effect waves-block waves-light toggle-fullscreen" href="javascript:void(0);"><i class="material-icons">settings_overscan</i></a></li>
+                  <li class="hide-on-large-only search-input-wrapper"><a style="height: 60px;" class="waves-effect waves-block waves-light search-button" href="javascript:void(0);"><i class="material-icons">search</i></a></li>
+                  <li><a style="height: 60px;" class="waves-effect waves-block waves-light notification-button" href="javascript:void(0);" data-target="notifications-dropdown"><i class="material-icons">notifications_none<small class="notification-badge">5</small></i></a></li>
                   <li><a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown"><span class="avatar-status avatar-online"><img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="avatar"><i></i></span></a></li>
                   <li> <a style="height: 60px;"  href="#" data-target="theme-cutomizer-out" class="accent-2 white-text sidenav-trigger theme-cutomizer-trigger"><i class="material-icons">settings</i></a></li>
                   <li><a style="height: 60px;" class="waves-effect waves-block waves-light sidenav-trigger" href="#" data-target="slide-out-right"><i class="material-icons">format_indent_increase</i></a></li>
@@ -209,7 +209,7 @@ License: You must have a valid license purchased only from themeforest(the above
     </ul>
 
     <!-- BEGIN: SideNav-->
-    <aside class="sidenav-main nav-collapsed nav-collapsible sidenav-light sidenav-active-rounded">
+    <aside class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-light sidenav-active-rounded">
       <div class="brand-sidebar">
         <h1 class="logo-wrapper">
           <a class="brand-logo darken-1" href="index.html">
@@ -564,15 +564,15 @@ License: You must have a valid license purchased only from themeforest(the above
         </li>
       </ul>
       <div class="navigation-background"></div>
-      <a class="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only" style="top: 10px;" href="#" data-target="slide-out"><i class="material-icons">menu</i></a>
+      <a class="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only" href="#" data-target="slide-out"><i class="material-icons">menu</i></a>
     </aside>
     <!-- END: SideNav-->
 
     <!-- BEGIN: Page Main-->
-    <div id="main" class="main-full">
+    <div id="main">
       <div class="row">
         <div class="content-wrapper-before"></div>
-        <div class="col s12 large-screen">
+        <div class="col s12">
           <div class="container">
             <div class="section">
               <div class="row">
@@ -749,7 +749,6 @@ License: You must have a valid license purchased only from themeforest(the above
                      
                   </div>
                 </div>
-
                 <div id="search-card-container" class="col s12 m6 l9 p-0">
                   <!-- first card -->
                   <div class="col s12 card-rec">

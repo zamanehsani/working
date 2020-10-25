@@ -1,0 +1,62 @@
+/*================================================================================
+	Item Name: Materialize - Material Design Admin Template
+	Version: 5.0
+	Author: PIXINVENT
+	Author URL: https://themeforest.net/user/pixinvent/portfolio
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN CSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+
+.card{
+	border-radius: 15px;
+}
+.radius{
+	border-radius: 15px;
+}
+.batom-radius{
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.topRadius{
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+#floating
+{
+    position: relative;
+}
+.top-margin-5{
+	margin-top: 50px;
+}
+
+.float{
+	position:fixed;
+	width:160px;
+	height:160px;
+	bottom:140px;
+	right:140px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+
+.labal_badge{
+	height: 10px;
+	width: 20px;
+	background-color: #0C9;
+}
+
+.photo-border{
+	border-radius: 6px;
+}
+
+#collection-custom li{
+	border-bottom: none;
+}

@@ -3456,7 +3456,7 @@ video.responsive-video
     font-size: 24px;
 
     display: inline-block;
-    float: left;
+    /* float: left; */
 }
 
 .breadcrumb:before
@@ -7263,7 +7263,7 @@ body.keyboard-focused .dropdown-content li:focus
 {
     -webkit-transform: translateZ(0);
             transform: translateZ(0);
-
+        mask-image: radial-gradient(circle, white 100%, black 100%) ;
     -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
 
@@ -7292,7 +7292,7 @@ body.keyboard-focused .dropdown-content li:focus
     text-align: center;
 
     border-radius: 50%;
-
+    mask-image: none;
     -webkit-mask-image: none;
 }
 
@@ -7436,13 +7436,13 @@ body.keyboard-focused .dropdown-content li:focus
     will-change: bottom, opacity;
 }
 
-.collapsible
+/* .collapsible
 {
-    /* margin: .5rem 0 0 0;
+    margin: .5rem 0 0 0;
     border-top: 1px solid #ddd;
     border-right: 1px solid #ddd;
-    border-left: 1px solid #ddd; */
-}
+    border-left: 1px solid #ddd;
+} */
 
 .collapsible-header
 {
@@ -7699,6 +7699,7 @@ body.keyboard-focused .dropdown-content li:focus
             transition: opacity .4s;
 
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .materialboxed:hover:not(.active)
@@ -8634,10 +8635,10 @@ textarea.materialize-textarea
     opacity: 0;
 }
 
-[type='checkbox']
-{
+/* [type='checkbox'] */
+/* { */
     /* checkbox aspect */
-}
+/* } */
 
 [type='checkbox'] + span:not(.lever)
 {
@@ -9393,7 +9394,7 @@ input[type=range]
     /* fix for FF unable to apply focus style bug  */
     /* border: 1px solid white; */
     /*required for proper track sizing in FF*/
-}
+/* } */
 /* 
 input[type=range]::-moz-range-track
 {
