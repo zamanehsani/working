@@ -30,6 +30,9 @@ License: You must have a valid license purchased only from themeforest(the above
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/vendors.min.css' %}">
+
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/animate-css/animate.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/chartist-js/chartist.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/chartist-js/chartist-plugin-tooltip.css' %}">
@@ -811,14 +814,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <!-- icons container -->
                                 <div class="right" style="position: relative; top: -8px;">
                                   <ul class="icons">
-                                    <li style="display: inline; padding: 0px 4px; cursor: pointer;" id="shortlist" onclick="shortlist()">
-                                      <i class="fa fa-heart-o fa-2x" ></i>
+                                    <li  style="display: inline; padding: 0px 4px; cursor: pointer;" >
+                                      <a class="btn-shortlist"><i class="material-icons">add</i></a>
                                     </li>
-                                    <li style="display: inline;  padding: 0px 4px; cursor: pointer;" onclick="my1()">
-                                      <i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
+                                    <li style="display: inline;  padding: 0px 4px; cursor: pointer;">
+                                      <a class="btn-like"><i class="material-icons">thumb_up</i></a>
                                     </li>
-                                    <li style="display: inline; padding: 0px 4px; cursor: pointer;" onclick="my2()">
-                                      <i class="fa fa-thumbs-o-down fa-2x" aria-hidden="true"></i>
+                                    <li style="display: inline; padding: 0px 4px; cursor: pointer;">
+                                      <a class="btn-shortlist"><i class="material-icons">thumb_down</i></a>
                                     </li>
                                   </ul>
                                 </div>
@@ -1143,8 +1146,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <!-- icons container -->
                                 <div class="right" style="position: relative; top: -8px;">
                                   <ul >
-                                    <li style="display: inline; padding: 0px 4px;">
-                                      <i class="fa fa-heart-o fa-2x"></i>
+                                    <li class="click_advance" style="display: inline; padding: 0px 4px;">
+                                      <i class="display_advance fa fa-thumbs-o-up fa-2x"></i>
                                     </li>
                                     <li style="display: inline;  padding: 0px 4px;">
                                       <i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
@@ -2074,7 +2077,7 @@ License: You must have a valid license purchased only from themeforest(the above
                   <div class="col s12 l12 card-sq" style="display: none; border-radius: 15px;">
                     <div class="card animate hoverable fadeRight">
                       <div class="card-content p-0">
-                        <div class="video-container" >
+                        <div class="video-container" sty>
                           <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/OZzEBa9cHN0" frameborder="0" 
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" ></iframe>                        
                         </div>
@@ -3413,7 +3416,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- END RIGHT SIDEBAR NAV -->
 
           </div>
-        <d iv class="content-overlay"></div>
+        <div class="content-overlay"></div>
         </div>
       </div>
     </div>
@@ -3971,17 +3974,21 @@ License: You must have a valid license purchased only from themeforest(the above
       //   });
       // });
  
+      // <li style="display: inline;  padding: 0px 4px; cursor: pointer;">
+      //     <a class="btn-like"><i class="material-icons">thumb_up</i></a>
+      //   </li>
 
- function shortlist(){
-   var clas = document.getElementById('shortlist');
-   if(clas.innerHTML=='<i class="fa fa-heart-o fa-2x" ></i>'){
-     clas.innerHTML = '<span class="chip green lighten-5" style="line-height:40px;"><span style="position: relative; top:-5px;" class="green-text">Shortlisted</span></span>';
-   }
-   if(!clas.innerHTML =='<i class="fa fa-heart-o fa-2x" ></i>'){
-     clas.innerHTML = '<i class="fa fa-heart-o fa-2x" ></i>';
-   }
- }
+      //   <li class="like" style="display: inline; padding: 0px 4px;">
+      //   <i class="fa fa-thumbs-o-down fa-2x" aria-hidden="true"></i>
+      // </li>
 
+      $('.btn-shortlist').on('click',function(){
+          if ($(this).find('i').text() == 'add'){
+              $(this).find('i').text('remove');
+          } else {
+              $(this).find('i').text('add');
+          }
+      });
 //  function my1(){
 //   $('.icons li:nth-child(2)').html('<i class="fa fa-thumbs-up fa-2x" aria-hidden="true"></i>');
 //  }

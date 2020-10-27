@@ -15,4 +15,8 @@ urlpatterns = [
     path('profile/', views.profile, name="profile"),
     path('logout/', views.logout_request, name="logout"),
     path('hrlook/', views.hrlook, name="hrlook"),
+    path('shortlist/', views.shortlist, name="shortlist"),
+    path('card/', views.card, name="card"),
+    path('general_info/', views.general_info, name="general_info"),
+    path('hr_dashboard/', views.hr_dashboard, name="hr_dashboard"),
 ]

@@ -44,3 +44,15 @@ def logout_request(request):
 
 def hrlook(request):
     return render(request, "hrlook.html")
+
+def shortlist(request):
+    return render(request, "shortlist.html")
+
+def card(request):
+    return render(request, 'detail.html')
+
+def general_info(request):
+    return render(request, 'general_info.html')
+
+def hr_dashboard(request):
+    return render(request, 'hr_dashboard.html')

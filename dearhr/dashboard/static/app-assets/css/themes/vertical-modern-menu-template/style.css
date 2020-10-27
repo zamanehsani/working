@@ -1,6 +1,29 @@
 /*-------------------------------------------------
 	Style file contain theme components style
 -------------------------------------------------*/
+/* carousel on shortlisted page */
+/* * { box-sizing: border-box; } */
+.carousel {
+  /* background: #FAFAFA; */
+}
+.carousel-cell {
+    /* width: 100px; */
+    /* height: 100px; */
+    margin-right: 10px;
+    /* background: #8C8; */
+    border-radius: 50px;
+    /* counter-increment: carousel-cell; */
+  }
+  
+  /* cell number */
+  .carousel-cell:before {
+    /* display: block; */
+    text-align: center;
+    /* content: counter(carousel-cell); */
+    /* line-height: 100px; */
+    /* font-size: 80px; */
+    color: white;
+  }
 
 /* for large screen */
 @media only screen and (min-width: 2200px)

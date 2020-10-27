@@ -22,67 +22,104 @@ License: You must have a valid license purchased only from themeforest(the above
     <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google.">
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template, eCommerce dashboard, analytic dashboard">
     <meta name="author" content="ThemeSelect">
-    <title>DearHR  | Shortlisted Candidates </title>
+    <title>DearHR  |  General Information  </title>
     <link rel="apple-touch-icon" href="{% static 'app-assets/images/favicon/apple-touch-icon-152x152.png' %}">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'app-assets/images/favicon/favicon-32x32.png' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- BEGIN: VENDOR CSS-->
     
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/vendors.min.css' %}">
-
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-    <link rel='stylesheet' href='https://npmcdn.com/flickity@2/dist/flickity.css'>
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/animate-css/animate.css' %}">
     <!-- END: VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/circular_prograss_bar.css' %}">
+
     <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/materialize.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/dashboard-modern.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/magnific-popup/magnific-popup.css' %}">
     <!-- END: Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/timeline.css' %}">
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/custom/custom.css' %}">
     <!-- END: Custom CSS-->
-    <script src="https://use.fontawesome.com/de1bfe1b04.js"></script>
   </head>
   <!-- END: Head-->
   <body class="vertical-layout gradient-45deg-indigo-purple vertical-menu-collapsible menu-collapse page-header-dark vertical-modern-menu preload-transitions 2-columns " data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
 
-   <!-- BEGIN: Header-->
-   <header class="page-topbar"  id="header">
-    <div class="navbar navbar-fixed"> 
-      <nav id="navscroll" style="padding-top: 15px; padding-bottom: 20px;"  class="navbar-main navbar-color nav-collapsible navbar-dark gradient-45deg-indigo-purple no-shadow">
-        <div class="nav-wrapper gradient-45deg-indigo-purple">
-          <div class="header-search-wrapper hide-on-med-and-down">
-            <i class="material-icons">search</i>
-            <input class="header-search-input z-depth-2 border-round" type="text" name="Search" placeholder="Explore DearHR" data-search="template-list">
-            <ul class="search-list collection display-none"></ul>
+    <!-- BEGIN: Header-->
+    <header class="page-topbar"  id="header">
+      <div class="navbar navbar-fixed"> 
+        <nav id="navscroll" style="padding-top: 15px; padding-bottom: 20px;"  class="navbar-main navbar-color nav-collapsible navbar-dark gradient-45deg-indigo-purple no-shadow">
+          <div class="nav-wrapper gradient-45deg-indigo-purple">
+                <div class="header-search-wrapper hide-on-med-and-down">
+                  <i class="material-icons">search</i>
+                  <input class="header-search-input z-depth-2 border-round" type="text" name="Search" placeholder="Explore DearHR" data-search="template-list">
+                  <ul class="search-list collection display-none"></ul>
+                </div>
+                <ul class="navbar-list right" id="nabbar-top">
+                  <!-- <li class="dropdown-language"><a class="waves-effect waves-block waves-light translation-button" href="#" data-target="translation-dropdown"><span class="flag-icon flag-icon-gb"></span></a></li> -->
+                  <li class="hide-on-med-and-down"><a style="height: 60px;" class="waves-effect waves-block waves-light toggle-fullscreen" href="javascript:void(0);"><i class="material-icons">settings_overscan</i></a></li>
+                  <li class="hide-on-large-only search-input-wrapper"><a style="height: 60px;" class="waves-effect waves-block waves-light search-button" href="javascript:void(0);"><i class="material-icons">search</i></a></li>
+                  <li><a style="height: 60px;" class="waves-effect waves-block waves-light notification-button" href="javascript:void(0);" data-target="notifications-dropdown"><i class="material-icons">notifications_none<small class="notification-badge">5</small></i></a></li>
+                  <li><a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown"><span class="avatar-status avatar-online"><img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="avatar"><i></i></span></a></li>
+                  <li> <a style="height: 60px;"  href="#" data-target="theme-cutomizer-out" class="accent-2 white-text sidenav-trigger theme-cutomizer-trigger"><i class="material-icons">settings</i></a></li>
+                  <li><a style="height: 60px;" class="waves-effect waves-block waves-light sidenav-trigger" href="#" data-target="slide-out-right"><i class="material-icons">format_indent_increase</i></a></li>
+                </ul>
+                <!-- translation-button-->
+                <ul class="dropdown-content" id="translation-dropdown">
+                  <li class="dropdown-item"><a class="grey-text text-darken-1" href="#!" data-language="en"><i class="flag-icon flag-icon-gb"></i> English</a></li>
+                  <li class="dropdown-item"><a class="grey-text text-darken-1" href="#!" data-language="fr"><i class="flag-icon flag-icon-fr"></i> French</a></li>
+                  <li class="dropdown-item"><a class="grey-text text-darken-1" href="#!" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a></li>
+                  <li class="dropdown-item"><a class="grey-text text-darken-1" href="#!" data-language="de"><i class="flag-icon flag-icon-de"></i> German</a></li>
+                </ul> 
+                <!-- notifications-dropdown-->
+                <ul class="dropdown-content" id="notifications-dropdown">
+                  <li>
+                    <h6>NOTIFICATIONS<span class="new badge">5</span></h6>
+                  </li>
+                  <li class="divider"></li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle cyan small">add_shopping_cart</span> A new order has been placed!</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">2 hours ago</time>
+                  </li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle red small">stars</span> Completed the task</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">3 days ago</time>
+                  </li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle teal small">settings</span> Settings updated</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">4 days ago</time>
+                  </li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle deep-orange small">today</span> Director meeting started</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">6 days ago</time>
+                  </li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle amber small">trending_up</span> Generate monthly report</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">1 week ago</time>
+                  </li>
+                </ul>
+                <!-- profile-dropdown-->
+                <ul class="dropdown-content" id="profile-dropdown">
+                  <li><a class="grey-text text-darken-1" href="user-profile-page.html"><i class="material-icons">person_outline</i> Profile</a></li>
+                  <li><a class="grey-text text-darken-1" href="app-chat.html"><i class="material-icons">chat_bubble_outline</i> Chat</a></li>
+                  <li><a class="grey-text text-darken-1" href="page-faq.html"><i class="material-icons">help_outline</i> Help</a></li>
+                  <li class="divider"></li>
+                  <li><a class="grey-text text-darken-1" href="user-lock-screen.html"><i class="material-icons">lock_outline</i> Lock</a></li>
+                  <li><a class="grey-text text-darken-1" href="{% url 'dashboard:logout' %}"><i class="material-icons">keyboard_tab</i> Logout</a></li>
+                </ul>
+              <!-- </div> -->
+            <!-- </div> -->
           </div>
-          <ul class="navbar-list right" id="nabbar-top">
-            <li class="hide-on-med-and-down"><a style="height: 60px;" class="waves-effect waves-block waves-light toggle-fullscreen" href="javascript:void(0);"><i class="material-icons">settings_overscan</i></a></li>
-            <li class="hide-on-large-only search-input-wrapper"><a style="height: 60px;" class="waves-effect waves-block waves-light search-button" href="javascript:void(0);"><i class="material-icons">search</i></a></li>
-          </ul>
-             
-        </div>
-        <nav class="display-none search-sm">
-          <div class="nav-wrapper">
-            <form id="navbarForm">
-              <div class="input-field search-input-sm">
-                <input class="search-box-sm mb-0" type="search" required="" id="search" placeholder="Explore Materialize" data-search="template-list">
-                <label class="label-icon" for="search"><i class="material-icons search-sm-icon">search</i></label><i class="material-icons search-sm-close">close</i>
-                <ul class="search-list collection search-list-sm display-none"></ul>
-              </div>
-            </form>
-          </div>
+          <nav class="display-none search-sm">
+            <div class="nav-wrapper">
+              <form id="navbarForm">
+                <div class="input-field search-input-sm">
+                  <input class="search-box-sm mb-0" type="search" required="" id="search" placeholder="Explore Materialize" data-search="template-list">
+                  <label class="label-icon" for="search"><i class="material-icons search-sm-icon">search</i></label><i class="material-icons search-sm-close">close</i>
+                  <ul class="search-list collection search-list-sm display-none"></ul>
+                </div>
+              </form>
+            </div>
+          </nav>
         </nav>
-      </nav>
-    </div>
-  </header>
-  <!-- END: Header-->
+      </div>
+    </header>
+    <!-- END: Header-->
     <ul class="display-none" id="default-search-main">
       <li class="auto-suggestion-title"><a class="collection-item" href="#">
           <h6 class="search-title">FILES</h6></a></li>
@@ -520,1180 +557,310 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- BEGIN: Page Main-->
     <div id="main">
       <div class="row">
-        <div class="content-wrapper-before"></div>
-        <div class="col s12">
+        <div class="content-wrapper-before "></div>
+        <div class="col s12 ">
           <div class="container">
-            <div class="row">
-              <div class="col s12 m6 l8">
-                <div class="row pt-3 pb-2">
-                  <div class="col s12 m3 l2 ">
-                    <h6 class="right" style="color: white;">Collaborators:</h6>
-                  </div>
-                  <div class="col s12 m8 ">
-                  <div class="carousel " 
-                    data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false }'>
-                    <div class="carousel-cell ">
-                      <div class="chip">
-                        <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="Contact Person">
-                        Jane Doe  
-                    </div>
-                    </div>
-                    <div class="carousel-cell">
-                      <div class="chip">
-                        <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="Contact Person">
-                        Jane Doe  
-                    </div>
-                    </div>
-                    <div class="carousel-cell">
-                      <div class="chip">
-                        <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="Contact Person">
-                        Jane Doe  
-                    </div>
-                    </div>
-                    <div class="carousel-cell">
-                      <div class="chip">
-                        <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="Contact Person">
-                        Jane Doe  
-                    </div>
-                    </div>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </div>
             <div class="section">
+              <!-- User statistics & appointment cards-->
               <div class="row">
+
+                <!-- first column -->
+                <div class="col s12 m4 l3 allCard">
+                  <!-- generic user profile -->
+                  <div class=" card animate fadeLeft ">
+                      <div class="card-content">
+                          <div class="col s12 center-align">
+                            <img id="generic-profile" class="responsive-img padding-1 card-profile-image gradient-indigo-purple  circle z-depth-3" width="130px" src="{% static 'app-assets/images/user/12.jpg' %}"
+                              alt="user profile">
+                              <a class="waves-block profile-button" style="cursor: pointer; ">
+                                <span class="avatar-status">
+                                  <i class="material-icons" style="background: #e1e4e9; position: absolute; right: 0px; bottom: 10px; height: fit-content !important;width: fit-content !important; padding: 3px;border: 1px solid #e1e4e9;">brush</i>
+                                </span>
+                              </a>
+                          </div>
+                        <div class="row">
+                          <div class="col s12">
+                            <div class="row">
+                              <div id="text" class="col s12">
+                                <h5 class="mb-0 pt-3 text-ellipsis"> <b>Emma Olivia</b> </h5>
+                                <h6  class="text-ellipsis" style="display: inline; vertical-align: top;">Email&nbsp;: <a href="#"> emmaOlivia@gmail.com</a> </h6>
+                                <h6 class="text-ellipsis"  style="vertical-align: top;">Phone&nbsp;: <a href="#"> 0566652534</a> </h6>
+                                <h6  class="text-ellipsis" style=" vertical-align: top;">DOB: <a href="#">15/10/1994</a> </h6>
+                                <h6  class="text-ellipsis" style="vertical-align: top;">Gender: <a href="#"> female</a> </h6>
+                                <h6  class="text-ellipsis" style="vertical-align: top;">Nationality: <a href="#"> German</a></h6>
+                                <!-- <h6  style="vertical-align: top;">Gender: <a href="#"> female</a> </h6> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <!-- Experience card -->
+
+                    <!-- endorsement card -->
+                    <div class="card user-statistics-card animate fadeLeft mt-7">
+                      <div class="card-content pb-0">
+                        <h5  class="pt-0 mt-0 center-align text-ellipsis"> <a href="" > Endorsements </a></h5>
+                            <div class="mb-3">
+                                <article >put all of your Endorsements here in order to use them in your targeted profiles.</article>
+                            </div>
+                            <ul id="collection-custom" class="collection mb-0" style="border: none;">
+                              <li class="collection-item avatar">
+                                <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                <p class="font-weight-600">John Doe</p>
+                                <p class="medium-small">18, January 2019</p>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
+                              </li>
+                              <li class="collection-item avatar" style="border-bottom: none;">
+                                <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
+                                <p class="font-weight-600">Adam Garza</p>
+                                <p class="medium-small">20, January 2019</p>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                              </li>
+                              <li class="collection-item avatar" style="border-bottom: none;">
+                                <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
+                                <p class="font-weight-600">Jennifer Rice</p>
+                                <p class="medium-small">25, January 2019</p>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
+                              </li>
+                              <li class="collection-item avatar" style="border-bottom: none;">
+                                <img src="{% static 'app-assets/images/avatar/avatar-6.png' %}" alt="" class="circle" />
+                                <p class="font-weight-600">Jennifer Rice</p>
+                                <p class="medium-small">25, January 2019</p>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
+                              </li>
+                              <li class="collection-item avatar" style="border-bottom: none;">
+                                <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" alt="" class="circle" />
+                                <p class="font-weight-600">Jennifer Rice</p>
+                                <p class="medium-small">25, January 2019</p>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
+                              </li>
+                              <li class="collection-item avatar" style="border-bottom: none;">
+                                <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="" class="circle" />
+                                <p class="font-weight-600">Jennifer Rice</p>
+                                <p class="medium-small">25, January 2019</p>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
+                              </li>
+                              <li class="collection-item avatar" style="border-bottom: none;">
+                                <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" alt="" class="circle" />
+                                <p class="font-weight-600">Jennifer Rice</p>
+                                <p class="medium-small">25, January 2019</p>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
+                              </li>
+
+                          </ul>
+                            <!-- accordian here -->
+                      </div>
+                    </div>
+                      <!-- end of endorsement -->
+                  
+                </div>
+                <!-- end of first column -->
                 
-                <!--1 shortlisted candidate card-->
-                <div class="col s12 m4 l3 resizeable">
-                  <div class="card animate fadeUp hoverable">
-                    <div class="video-container">
-                      <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/LspIeUElIFA" frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                    </div>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col s5 golden p-0 valign-wrapper">
-                          <div class="row ">
-                            <!-- this col is for the circle progress bar to be in place -->
-                            <div class="col"></div>
-                            <div class="col s7 p-0 ">
-                              <div class="progress-container ">
-                                <svg  class="progressbar " viewBox="0 0 68 64">
-                                  <defs>
-                                    <linearGradient id="linear1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                      <stop offset="0%"   stop-color="#388e3c"/>
-                                        <stop offset="100%" stop-color="#6ca86e"/>
-                                    </linearGradient>
-                                  </defs>
-                                    <circle class="progressbar__track"  stroke="url(#linear)" cx="50%" cy="50%" r="30px"></circle>
-                                    <circle class=" " stroke="white" stroke-width="3" fill="url(#img)"  cx="50%" cy="50%" r="26px"></circle>
-                                    <circle class="progressbar__thumb progressbar__thumb--track-3"  stroke="url(#linear1)" cx="50%" cy="50%" r="30px"></circle>
-                                </svg>
-                                <div class="padding-10">
-                                  <img  src="{% static 'app-assets/images/avatar/avatar-6.png' %}"
-                                  style=" position: relative; top: 4px; left: -1px; z-index: -1;" alt="" 
-                                  class="responsive-img circle padding-2"/>
-                                </div>
+                    <!-- second column -->
+                  <div class="col s12 m4 l3 allCard">
+                    <!-- experience card -->
+                    <div class="card user-statistics-card animate fadeLeft">
+                        <div class="card-content pb-2">
+                          <h5  class="pt-0 mt-0 center-align text-ellipsis"> <a href="" > Experiences </a></h5>
+                              <div class="mb-3">
+                                  <article >list all of you exsperiences here to make them avaible for your cards.</article>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col s7 pull-s1 golden_ratio valign-wrapper">
-                          <div>
-                            <h6 class=" m-0 text-ellipsis" style="font-weight: bolder;">Lucia&nbsp;Jones&nbsp;Smith</h6>
-                            <h6 class=" m-0 text-ellipsis">Match:&nbsp;<a href="">90%</a></h6>
-                            <h6 class=" m-0 text-ellipsis">Votes:,&nbsp;<a href="">6</a></h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of shortlisted candidates card -->
-                
-                <!--1 shortlisted candidate card-->
-                <div class="col s12 m4 l3 resizeable">
-                  <div class="card animate fadeUp hoverable">
-                    <div class="video-container">
-                      <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/LspIeUElIFA" frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                    </div>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col s5 golden p-0 valign-wrapper">
-                          <div class="row ">
-                            <!-- this col is for the circle progress bar to be in place -->
-                            <div class="col"></div>
-                            <div class="col s7 p-0 ">
-                              <div class="progress-container ">
-                                <svg  class="progressbar " viewBox="0 0 68 64">
-                                  <defs>
-                                    <linearGradient id="linear1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                      <stop offset="0%"   stop-color="#388e3c"/>
-                                        <stop offset="100%" stop-color="#6ca86e"/>
-                                    </linearGradient>
-                                  </defs>
-                                    <circle class="progressbar__track"  stroke="url(#linear)" cx="50%" cy="50%" r="30px"></circle>
-                                    <circle class=" " stroke="white" stroke-width="3" fill="url(#img)"  cx="50%" cy="50%" r="26px"></circle>
-                                    <circle class="progressbar__thumb progressbar__thumb--track-3"  stroke="url(#linear1)" cx="50%" cy="50%" r="30px"></circle>
-                                </svg>
-                                <div class="padding-10">
-                                  <img  src="{% static 'app-assets/images/avatar/avatar-6.png' %}"
-                                  style=" position: relative; top: 4px; left: -1px; z-index: -1;" alt="" 
-                                  class="responsive-img circle padding-2"/>
-                                </div>
+                              <div>
+                                <h6 class="text-ellipsis" style="font-weight: bolder;">2018&nbsp;-&nbsp;present<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></h6>
+                                <b class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;Subsonic&nbsp;LLC</b>
+                                <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col s7 pull-s1 golden_ratio valign-wrapper">
-                          <div>
-                            <h6 class=" m-0 text-ellipsis" style="font-weight: bolder;">Lucia&nbsp;Jones&nbsp;Smith</h6>
-                            <h6 class=" m-0 text-ellipsis">Match:&nbsp;<a href="">90%</a></h6>
-                            <h6 class=" m-0 text-ellipsis">Votes:,&nbsp;<a href="">6</a></h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of shortlisted candidates card -->
-
-                <!--1 shortlisted candidate card-->
-                <div class="col s12 m4 l3 resizeable">
-                  <div class="card animate fadeUp hoverable">
-                    <div class="video-container">
-                      <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/LspIeUElIFA" frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                    </div>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col s5 golden p-0 valign-wrapper">
-                          <div class="row ">
-                            <!-- this col is for the circle progress bar to be in place -->
-                            <div class="col"></div>
-                            <div class="col s7 p-0 ">
-                              <div class="progress-container ">
-                                <svg  class="progressbar " viewBox="0 0 68 64">
-                                  <defs>
-                                    <linearGradient id="linear1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                      <stop offset="0%"   stop-color="#388e3c"/>
-                                        <stop offset="100%" stop-color="#6ca86e"/>
-                                    </linearGradient>
-                                  </defs>
-                                    <circle class="progressbar__track"  stroke="url(#linear)" cx="50%" cy="50%" r="30px"></circle>
-                                    <circle class=" " stroke="white" stroke-width="3" fill="url(#img)"  cx="50%" cy="50%" r="26px"></circle>
-                                    <circle class="progressbar__thumb progressbar__thumb--track-3"  stroke="url(#linear1)" cx="50%" cy="50%" r="30px"></circle>
-                                </svg>
-                                <div class="padding-10">
-                                  <img  src="{% static 'app-assets/images/avatar/avatar-6.png' %}"
-                                  style=" position: relative; top: 4px; left: -1px; z-index: -1;" alt="" 
-                                  class="responsive-img circle padding-2"/>
-                                </div>
+                              <div>
+                                <h6 class="text-ellipsis"  style="font-weight: bolder;">2016&nbsp;-&nbsp;2018<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></h6>
+                                <b  class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;Subsonic&nbsp;LLC</b>
+                                <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col s7 pull-s1 golden_ratio valign-wrapper">
-                          <div>
-                            <h6 class=" m-0 text-ellipsis" style="font-weight: bolder;">Lucia&nbsp;Jones&nbsp;Smith</h6>
-                            <h6 class=" m-0 text-ellipsis">Match:&nbsp;<a href="">90%</a></h6>
-                            <h6 class=" m-0 text-ellipsis">Votes:,&nbsp;<a href="">6</a></h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of shortlisted candidates card -->
-
-                <!--1 shortlisted candidate card-->
-                <div class="col s12 m4 l3 resizeable">
-                  <div class="card animate fadeUp hoverable">
-                    <div class="video-container">
-                      <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/LspIeUElIFA" frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                    </div>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col s5 golden p-0 valign-wrapper">
-                          <div class="row ">
-                            <!-- this col is for the circle progress bar to be in place -->
-                            <div class="col"></div>
-                            <div class="col s7 p-0 ">
-                              <div class="progress-container ">
-                                <svg  class="progressbar " viewBox="0 0 68 64">
-                                  <defs>
-                                    <linearGradient id="linear1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                      <stop offset="0%"   stop-color="#388e3c"/>
-                                        <stop offset="100%" stop-color="#6ca86e"/>
-                                    </linearGradient>
-                                  </defs>
-                                    <circle class="progressbar__track"  stroke="url(#linear)" cx="50%" cy="50%" r="30px"></circle>
-                                    <circle class=" " stroke="white" stroke-width="3" fill="url(#img)"  cx="50%" cy="50%" r="26px"></circle>
-                                    <circle class="progressbar__thumb progressbar__thumb--track-3"  stroke="url(#linear1)" cx="50%" cy="50%" r="30px"></circle>
-                                </svg>
-                                <div class="padding-10">
-                                  <img  src="{% static 'app-assets/images/avatar/avatar-6.png' %}"
-                                  style=" position: relative; top: 4px; left: -1px; z-index: -1;" alt="" 
-                                  class="responsive-img circle padding-2"/>
-                                </div>
+                              <div>
+                                <h6 class="text-ellipsis" style="font-weight: bolder;">2013&nbsp;-&nbsp;2016<a href="#" style="font-size: 16px;">&nbsp;&nbsp;5yr</a></h6>
+                                <b class="text-ellipsis">Asistant&nbsp;&nbsp;|&nbsp;&nbsp;Subsonic&nbsp;LLC</b>
+                                <p class="pb-5" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col s7 pull-s1 golden_ratio valign-wrapper">
-                          <div>
-                            <h6 class=" m-0 text-ellipsis" style="font-weight: bolder;">Lucia&nbsp;Jones&nbsp;Smith</h6>
-                            <h6 class=" m-0 text-ellipsis">Match:&nbsp;<a href="">90%</a></h6>
-                            <h6 class=" m-0 text-ellipsis">Votes:,&nbsp;<a href="">6</a></h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of shortlisted candidates card -->
 
-                <!--1 shortlisted candidate card-->
-                <div class="col s12 m4 l3 resizeable">
-                  <div class="card animate fadeUp hoverable">
-                    <div class="video-container">
-                      <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/LspIeUElIFA" frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                              <!-- accordian here -->
+                        </div>
                     </div>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col s5 golden p-0 valign-wrapper">
-                          <div class="row ">
-                            <!-- this col is for the circle progress bar to be in place -->
-                            <div class="col"></div>
-                            <div class="col s7 p-0 ">
-                              <div class="progress-container ">
-                                <svg  class="progressbar " viewBox="0 0 68 64">
-                                  <defs>
-                                    <linearGradient id="linear1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                      <stop offset="0%"   stop-color="#388e3c"/>
-                                        <stop offset="100%" stop-color="#6ca86e"/>
-                                    </linearGradient>
-                                  </defs>
-                                    <circle class="progressbar__track"  stroke="url(#linear)" cx="50%" cy="50%" r="30px"></circle>
-                                    <circle class=" " stroke="white" stroke-width="3" fill="url(#img)"  cx="50%" cy="50%" r="26px"></circle>
-                                    <circle class="progressbar__thumb progressbar__thumb--track-3"  stroke="url(#linear1)" cx="50%" cy="50%" r="30px"></circle>
-                                </svg>
-                                <div class="padding-10">
-                                  <img  src="{% static 'app-assets/images/avatar/avatar-6.png' %}"
-                                  style=" position: relative; top: 4px; left: -1px; z-index: -1;" alt="" 
-                                  class="responsive-img circle padding-2"/>
-                                </div>
+                    <!-- end of experience card  -->
+
+                      <!-- showcase card -->
+                      <div class="card user-statistics-card animate fadeLeft mt-7">
+                        <div class="card-content pb-0">
+                          <h5  class="pt-0 mt-0 center-align text-ellipsis"> <a href="" > Showcase </a></h5>
+                              <div class="mb-3">
+                                  <article >put all of your records, projections and documents here in order to use them in tyour targeted profiles.</article>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col s7 pull-s1 golden_ratio valign-wrapper">
-                          <div>
-                            <h6 class=" m-0 text-ellipsis" style="font-weight: bolder;">Lucia&nbsp;Jones&nbsp;Smith</h6>
-                            <h6 class=" m-0 text-ellipsis">Match:&nbsp;<a href="">90%</a></h6>
-                            <h6 class=" m-0 text-ellipsis">Votes:,&nbsp;<a href="">6</a></h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of shortlisted candidates card -->
-
-                <!--1 shortlisted candidate card-->
-                <div class="col s12 m4 l3 resizeable">
-                  <div class="card animate fadeUp hoverable">
-                    <div class="video-container">
-                      <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/LspIeUElIFA" frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                    </div>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col s5 golden p-0 valign-wrapper">
-                          <div class="row ">
-                            <!-- this col is for the circle progress bar to be in place -->
-                            <div class="col"></div>
-                            <div class="col s7 p-0 ">
-                              <div class="progress-container ">
-                                <svg  class="progressbar " viewBox="0 0 68 64">
-                                  <defs>
-                                    <linearGradient id="linear1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                      <stop offset="0%"   stop-color="#388e3c"/>
-                                        <stop offset="100%" stop-color="#6ca86e"/>
-                                    </linearGradient>
-                                  </defs>
-                                    <circle class="progressbar__track"  stroke="url(#linear)" cx="50%" cy="50%" r="30px"></circle>
-                                    <circle class=" " stroke="white" stroke-width="3" fill="url(#img)"  cx="50%" cy="50%" r="26px"></circle>
-                                    <circle class="progressbar__thumb progressbar__thumb--track-3"  stroke="url(#linear1)" cx="50%" cy="50%" r="30px"></circle>
-                                </svg>
-                                <div class="padding-10">
-                                  <img  src="{% static 'app-assets/images/avatar/avatar-6.png' %}"
-                                  style=" position: relative; top: 4px; left: -1px; z-index: -1;" alt="" 
-                                  class="responsive-img circle padding-2"/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col s7 pull-s1 golden_ratio valign-wrapper">
-                          <div>
-                            <h6 class=" m-0 text-ellipsis" style="font-weight: bolder;">Lucia&nbsp;Jones&nbsp;Smith</h6>
-                            <h6 class=" m-0 text-ellipsis">Match:&nbsp;<a href="">90%</a></h6>
-                            <h6 class=" m-0 text-ellipsis">Votes:,&nbsp;<a href="">6</a></h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of shortlisted candidates card -->
-
-                <!--1 shortlisted candidate card-->
-                <div class="col s12 m4 l3 resizeable">
-                  <div class="card animate fadeUp hoverable">
-                    <div class="video-container">
-                      <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/LspIeUElIFA" frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                    </div>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col s5 golden p-0 valign-wrapper">
-                          <div class="row ">
-                            <!-- this col is for the circle progress bar to be in place -->
-                            <div class="col"></div>
-                            <div class="col s7 p-0 ">
-                              <div class="progress-container ">
-                                <svg  class="progressbar " viewBox="0 0 68 64">
-                                  <defs>
-                                    <linearGradient id="linear1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                      <stop offset="0%"   stop-color="#388e3c"/>
-                                        <stop offset="100%" stop-color="#6ca86e"/>
-                                    </linearGradient>
-                                  </defs>
-                                    <circle class="progressbar__track"  stroke="url(#linear)" cx="50%" cy="50%" r="30px"></circle>
-                                    <circle class=" " stroke="white" stroke-width="3" fill="url(#img)"  cx="50%" cy="50%" r="26px"></circle>
-                                    <circle class="progressbar__thumb progressbar__thumb--track-3"  stroke="url(#linear1)" cx="50%" cy="50%" r="30px"></circle>
-                                </svg>
-                                <div class="padding-10">
-                                  <img  src="{% static 'app-assets/images/avatar/avatar-6.png' %}"
-                                  style=" position: relative; top: 4px; left: -1px; z-index: -1;" alt="" 
-                                  class="responsive-img circle padding-2"/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col s7 pull-s1 golden_ratio valign-wrapper">
-                          <div>
-                            <h6 class=" m-0 text-ellipsis" style="font-weight: bolder;">Lucia&nbsp;Jones&nbsp;Smith</h6>
-                            <h6 class=" m-0 text-ellipsis">Match:&nbsp;<a href="">90%</a></h6>
-                            <h6 class=" m-0 text-ellipsis">Votes:,&nbsp;<a href="">6</a></h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of shortlisted candidates card -->
-
-                <!--1 shortlisted candidate card-->
-                <div class="col s12 m4 l3 resizeable">
-                  <div class="card animate fadeUp hoverable">
-                    <div class="video-container">
-                      <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/LspIeUElIFA" frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                    </div>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col s5 golden p-0 valign-wrapper">
-                          <div class="row ">
-                            <!-- this col is for the circle progress bar to be in place -->
-                            <div class="col"></div>
-                            <div class="col s7 p-0 ">
-                              <div class="progress-container ">
-                                <svg  class="progressbar " viewBox="0 0 68 64">
-                                  <defs>
-                                    <linearGradient id="linear1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                      <stop offset="0%"   stop-color="#388e3c"/>
-                                        <stop offset="100%" stop-color="#6ca86e"/>
-                                    </linearGradient>
-                                  </defs>
-                                    <circle class="progressbar__track"  stroke="url(#linear)" cx="50%" cy="50%" r="30px"></circle>
-                                    <circle class=" " stroke="white" stroke-width="3" fill="url(#img)"  cx="50%" cy="50%" r="26px"></circle>
-                                    <circle class="progressbar__thumb progressbar__thumb--track-3"  stroke="url(#linear1)" cx="50%" cy="50%" r="30px"></circle>
-                                </svg>
-                                <div class="padding-10">
-                                  <img  src="{% static 'app-assets/images/avatar/avatar-6.png' %}"
-                                  style=" position: relative; top: 4px; left: -1px; z-index: -1;" alt="" 
-                                  class="responsive-img circle padding-2"/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col s7 pull-s1 golden_ratio valign-wrapper">
-                          <div>
-                            <h6 class=" m-0 text-ellipsis" style="font-weight: bolder;">Lucia&nbsp;Jones&nbsp;Smith</h6>
-                            <h6 class=" m-0 text-ellipsis">Match:&nbsp;<a href="">90%</a></h6>
-                            <h6 class=" m-0 text-ellipsis">Votes:,&nbsp;<a href="">6</a></h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of shortlisted candidates card -->
-
-                <!--1 shortlisted candidate card-->
-                <div class="col s12 m4 l3 resizeable">
-                  <div class="card animate fadeUp hoverable">
-                    <div class="video-container">
-                      <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/LspIeUElIFA" frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                    </div>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col s5 golden p-0 valign-wrapper">
-                          <div class="row ">
-                            <!-- this col is for the circle progress bar to be in place -->
-                            <div class="col"></div>
-                            <div class="col s7 p-0 ">
-                              <div class="progress-container ">
-                                <svg  class="progressbar " viewBox="0 0 68 64">
-                                  <defs>
-                                    <linearGradient id="linear1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                      <stop offset="0%"   stop-color="#388e3c"/>
-                                        <stop offset="100%" stop-color="#6ca86e"/>
-                                    </linearGradient>
-                                  </defs>
-                                    <circle class="progressbar__track"  stroke="url(#linear)" cx="50%" cy="50%" r="30px"></circle>
-                                    <circle class=" " stroke="white" stroke-width="3" fill="url(#img)"  cx="50%" cy="50%" r="26px"></circle>
-                                    <circle class="progressbar__thumb progressbar__thumb--track-3"  stroke="url(#linear1)" cx="50%" cy="50%" r="30px"></circle>
-                                </svg>
-                                <div class="padding-10">
-                                  <img  src="{% static 'app-assets/images/avatar/avatar-6.png' %}"
-                                  style=" position: relative; top: 4px; left: -1px; z-index: -1;" alt="" 
-                                  class="responsive-img circle padding-2"/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col s7 pull-s1 golden_ratio valign-wrapper">
-                          <div>
-                            <h6 class=" m-0 text-ellipsis" style="font-weight: bolder;">Lucia&nbsp;Jones&nbsp;Smith</h6>
-                            <h6 class=" m-0 text-ellipsis">Match:&nbsp;<a href="">90%</a></h6>
-                            <h6 class=" m-0 text-ellipsis">Votes:,&nbsp;<a href="">6</a></h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of shortlisted candidates card -->
-
-                <!--1 shortlisted candidate card-->
-                <div class="col s12 m4 l3 resizeable">
-                  <div class="card animate fadeUp hoverable">
-                    <div class="video-container">
-                      <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/LspIeUElIFA" frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                    </div>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col s5 golden p-0 valign-wrapper">
-                          <div class="row ">
-                            <!-- this col is for the circle progress bar to be in place -->
-                            <div class="col"></div>
-                            <div class="col s7 p-0 ">
-                              <div class="progress-container ">
-                                <svg  class="progressbar " viewBox="0 0 68 64">
-                                  <defs>
-                                    <linearGradient id="linear1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                      <stop offset="0%"   stop-color="#388e3c"/>
-                                        <stop offset="100%" stop-color="#6ca86e"/>
-                                    </linearGradient>
-                                  </defs>
-                                    <circle class="progressbar__track"  stroke="url(#linear)" cx="50%" cy="50%" r="30px"></circle>
-                                    <circle class=" " stroke="white" stroke-width="3" fill="url(#img)"  cx="50%" cy="50%" r="26px"></circle>
-                                    <circle class="progressbar__thumb progressbar__thumb--track-3"  stroke="url(#linear1)" cx="50%" cy="50%" r="30px"></circle>
-                                </svg>
-                                <div class="padding-10">
-                                  <img  src="{% static 'app-assets/images/avatar/avatar-6.png' %}"
-                                  style=" position: relative; top: 4px; left: -1px; z-index: -1;" alt="" 
-                                  class="responsive-img circle padding-2"/>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col s7 pull-s1 golden_ratio valign-wrapper">
-                          <div>
-                            <h6 class=" m-0 text-ellipsis" style="font-weight: bolder;">Lucia Jones Smith</h6>
-                            <h6 class=" m-0 text-ellipsis">Match:&nbsp;<a href="">90%</a></h6>
-                            <h6 class=" m-0 text-ellipsis">Votes:,&nbsp;<a href="">6</a></h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
-                  </div>
-                </div>
-                <!-- end of shortlisted candidates card -->
-
-
-
-
-                <!-- <div class="col s12 m6 l3 resizeable">
-                  <div class="card animate hoverable fadeRight">
-                    <div class="card-content p-0">
-                      <div class="video-container">
-                        <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/OZzEBa9cHN0" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" ></iframe>                        
-                      </div>
-                      <div class="container">
-                        <div class="row" style=" margin: 0px 1px;">
-                          <div class="col s4">
-                            <div class="row pt-2 ">
-                              <div class="col s6  pl-0">
-                                <div class="progress-container p-0 mt-3" style=" min-height: 70px; min-width: 70px;">
-                                  <svg  class="progressbar" viewBox="0 0 68 64">
-                                    <defs>
-                                      <linearGradient id="linear1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%"   stop-color="#388e3c"/>
-                                          <stop offset="100%" stop-color="#6ca86e"/>
-                                      </linearGradient>
-                                    </defs>
-                                      <circle class="progressbar__track"  stroke="url(#linear)" cx="50%" cy="50%" r="30px"></circle>
-                                      <circle class=" " stroke="white" stroke-width="3" fill="url(#img)"  cx="50%" cy="50%" r="26px"></circle>
-                                      <circle class="progressbar__thumb progressbar__thumb--track-3"  stroke="url(#linear1)" cx="50%" cy="50%" r="30px"></circle>
-                                  </svg>
-                                  <div class="padding-10">
-                                    <img  src="{% static 'app-assets/images/avatar/avatar-6.png' %}"
-                                    style=" position: relative; top: 4px; left: -1px; z-index: -1; " alt="" 
-                                    class="responsive-img circle padding-2"/>
+                              <div class="container">
+                                <div class="row user-projects  pb-4">
+                                  <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                    <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/35.png' %}">
+                                  </div>
+                                  <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                    <img class="responsive-img photo-border mt-5 " alt="" src="{% static 'app-assets/images/gallery/37.png' %}">
+                                  </div>
+                                  <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                    <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/39.png' %}">
+                                  </div>
+                                  <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                    <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/40.png' %}">
+                                  </div>
+                                  <div class="col s4 " style="padding-left: 0.5em; padding-right: 0.5em;">
+                                    <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/41.png' %}">
+                                  </div>
+                                  <div class="col s4 " style="padding-left: 0.5em; padding-right: 0.5em;">
+                                    <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/43.png' %}">
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div class="col s8 ">
-                              <h6 class="text-ellipsis" style="font-weight: bolder;">Lucia&nbsp;Jones&nbsp;Smith</h6>
-                              <p class="text-ellipsis">Match:&nbsp;<a href="">90%</a></p>
-                              <p class="text-ellipsis">Votes:,&nbsp;<a href="">6</a></p>
-                          </div>
+
+                              <!-- accordian here -->
                         </div>
                       </div>
-                      <div style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                        <p class="center toggle-button mt-1 mb-1">See More... </p>
-                      </div>
-                    </div>
+                        <!-- end of showcase -->
                   </div>
-                </div> -->
-                <!-- end of shortlisted condidate card-->
-              </div>
-            </div> 
-          </div>
-          <!-- modal for endorsements -->
-          <div id="modalEndors" class="modal modal-fixed-footer" style="border-radius: 12px;">
-            <div class="" style="overflow-y: auto; width: 100%; padding:5px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
-              <div class="container">
-                <div class="row">
-                  <div class="col s2">
-                  </div>
-                  <div class="col s8">
-                    <h6 class="center-align text-ellipsis"><a href=""><b> Endoresement:<a href="">10</a> </b></a> </h6>
-                  </div>
-                  <div class="col s2" style="padding-right: 0px; ">
-                    <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
-                          onmouseover="this.style.background ='#e91e63'" 
-                          onmouseout="this.style.background='transparent'" 
-                          style="padding-left: 10px; width: 20px; border-radius: 10px;">
-                      <i class="material-icons">clear</i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  <!-- end of second column -->
+                  
 
-            <!-- modal endorsements -->
-            <div class="modal-content">
-                <div class="row p-0">
-                    <div class="col s12">
-                      <ul id="collection-custom" style="border: none; border-radius: 15px;" class="collection">
-                        <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                          <div style="padding-left: 80px; padding-top: 5px;" >
-                            <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 70px; height: 70px; padding: 1px; " alt="" class="circle z-depth-2" />
-                            <p class="right">12/10/ 2018</p>
-                            <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                            <!-- <p class="right">12/10/ 2018</p> -->
-                            <p class="medium-small text-ellipsis">subsonic</p>
-                            <p class="medium-small text-ellipsis">Dept Manager </p> 
-                          </div>
-                          <article class="mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                          </article>                                          
-                        </li>
-                        <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin:0px 10px 20px 10px; padding-left: 20px;">
-                          <div style="padding-left: 80px; padding-top: 5px;" >
-                            <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                            <p class="right">12/10/ 2018</p>
-                            <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                            <!-- <p class="right">12/10/ 2018</p> -->
-                            <p class="medium-small text-ellipsis">subsonic</p>
-                            <p class="medium-small text-ellipsis">Dept Manager </p> 
-                          </div>
-                          <article class="mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                          </article>                                          
-                        </li>
-                        <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                          <div style="padding-left: 80px; padding-top: 5px;" >
-                            <img src="{% static 'app-assets/images/avatar/avatar-6.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                            <p class="right">12/10/ 2018</p>
-                            <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                            <!-- <p class="right">12/10/ 2018</p> -->
-                            <p class="medium-small text-ellipsis">subsonic</p>
-                            <p class="medium-small text-ellipsis">Dept Manager </p> 
-                          </div>
-                          <article class="mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                          </article>                                          
-                        </li>
-                        <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                          <div style="padding-left: 80px; padding-top: 5px;" >
-                            <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" style="width: 70px; height: 70px; padding: 1px;  " alt="" class="circle z-depth-2" />
-                            <p class="right">12/10/ 2018</p>
-                            <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                            <!-- <p class="right">12/10/ 2018</p> -->
-                            <p class="medium-small text-ellipsis">subsonic</p>
-                            <p class="medium-small text-ellipsis">Dept Manager </p> 
-                          </div>
-                          <article class="mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                          </article>                                          
-                        </li>
-                        <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                          <div style="padding-left: 80px; padding-top: 5px;" >
-                            <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 70px; height: 70px; padding: 1px;  " alt="" class="circle z-depth-2" />
-                            <p class="right">12/10/ 2018</p>
-                            <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                            <p class="medium-small text-ellipsis">subsonic</p>
-                            <p class="medium-small text-ellipsis">Dept Manager </p> 
-                          </div>
-                          <article class="mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                          </article>                                          
-                        </li>
-                        <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                          <div style="padding-left: 80px; padding-top: 5px;" >
-                            <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                            <p class="right">12/10/ 2018</p>
-                            <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                            <p class="medium-small text-ellipsis">subsonic</p>
-                            <p class="medium-small text-ellipsis">Dept Manager </p> 
-                          </div>
-                          <article class="mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                          </article>                                          
-                        </li>
-                        <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                          <div style="padding-left: 80px; padding-top: 5px;" >
-                            <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                            <p class="right">12/10/ 2018</p>
-                            <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                            
-                            <p class="medium-small text-ellipsis">subsonic</p>
-                            <p class="medium-small text-ellipsis">Dept Manager </p> 
-                          </div>
-                          <article class="mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                          </article>                                          
-                        </li>
-                        <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                          <div style="padding-left: 80px; padding-top: 5px;" >
-                            <img src="{% static 'app-assets/images/avatar/avatar-9.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                            <p class="right">12/10/ 2018</p>
-                            <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                            
-                            <p class="medium-small text-ellipsis">subsonic</p>
-                            <p class="medium-small text-ellipsis">Dept Manager </p> 
-                          </div>
-                          <article class="mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                          </article>                                          
-                        </li>
-                        <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                          <div style="padding-left: 80px; padding-top: 5px;" >
-                            <img src="{% static 'app-assets/images/avatar/avatar-13.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                            <p class="right">12/10/ 2018</p>
-                            <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                            
-                            <p class="medium-small text-ellipsis">subsonic</p>
-                            <p class="medium-small text-ellipsis">Dept Manager </p> 
-                          </div>
-                          <article class="mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                          </article>                                          
-                        </li>
-                        <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                          <div style="padding-left: 80px; padding-top: 5px;" >
-                            <img src="{% static 'app-assets/images/avatar/avatar-10.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                            <p class="right">12/10/ 2018</p>
-                            <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                            
-                            <p class="medium-small text-ellipsis">subsonic</p>
-                            <p class="medium-small text-ellipsis">Dept Manager </p> 
-                          </div>
-                          <article class="mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                          </article>                                          
-                        </li>
-                        <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                          <div style="padding-left: 80px; padding-top: 5px;" >
-                            <img src="{% static 'app-assets/images/avatar/avatar-11.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                            <p class="right">12/10/ 2018</p>
-                            <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                            
-                            <p class="medium-small text-ellipsis">subsonic</p>
-                            <p class="medium-small text-ellipsis">Dept Manager </p> 
-                          </div>
-                          <article class="mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                          </article>                                          
-                        </li>
-                        <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                          <div style="padding-left: 80px; padding-top: 5px;" >
-                            <img src="{% static 'app-assets/images/avatar/avatar-12.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                            <p class="right">12/10/ 2018</p>
-                            <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                            
-                            <p class="medium-small text-ellipsis">subsonic</p>
-                            <p class="medium-small text-ellipsis">Dept Manager </p> 
-                          </div>
-                          <article class="mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                          </article>                                          
-                        </li>
-                       
-                       
-                      </ul>
-                    </div>
-                </div>
-            </div>
-          </div>
+                  <!-- third column -->
+                  <div class="col s12 m4 l3 allCard">
+                    <!-- education card -->
+                    <div class="card user-statistics-card animate fadeLeft">
+                        <div class="card-content pb-0">
+                          <h5  class=" text-ellipsis pt-0 mt-0 center-align"> <a href="" > Education </a></h5>
+                              <div class="mb-3">
+                                  <article >Enter your all eudcational records. later on, you can choose which which educational records you want to show on your targeted profile.</article>
+                              </div>
+                              <div>
+                                <h6 class="text-ellipsis" style="font-weight: bolder;">Master&nbsp;in&nbsp;Marketing&nbsp;|&nbsp;&nbsp;Harvard&nbsp;University</h6>
+                                <b class="text-ellipsis">2018&nbsp;-&nbsp;2020<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
+                                <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
+                              </div>
+                              <div>
+                                <h6 class="text-ellipsis" style="font-weight: bolder;">Bachelor&nbsp;in&nbsp;IT&nbsp;|&nbsp;&nbsp;MIT&nbsp;</h6>
+                                <b class="text-ellipsis">2014&nbsp;-&nbsp;2017<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
+                                <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
+                              </div>
+                              <div>
+                                <h6 class="text-ellipsis" style="font-weight: bolder;">Master&nbsp;in&nbsp;Marketing&nbsp;|&nbsp;&nbsp;Harvard&nbsp;University</h6>
+                                <b class="text-ellipsis">2018&nbsp;-&nbsp;2020<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
+                                <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
+                              </div>
+                              <div>
+                                <h6 class="text-ellipsis" style="font-weight: bolder;">Diploma&nbsp;in&nbsp;PMP&nbsp;|&nbsp;&nbsp;PMI&nbsp;</h6>
+                                <b class="text-ellipsis">2014&nbsp;-&nbsp;2015<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
+                                <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
+                              </div>
 
-          <!-- modal for experiences -->
-          <div id="modalExp" class="modal modal-fixed-footer" style="border-radius: 12px;">
-            <div class="" style="overflow-y: auto; width: 100%; padding:5px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
-              <div class="container">
-                <div class="row">
-                  <div class="col s2">
-                  </div>
-                  <div class="col s8">
-                    <h6 class="center-align text-ellipsis"><a href=""><b> Experience:&nbsp;<a href="">5 years</a> </b></a> </h6>
-                  </div>
-                  <div class="col s2" style="padding-right: 0px; ">
-                    <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
-                          onmouseover="this.style.background ='#e91e63'" 
-                          onmouseout="this.style.background='transparent'" 
-                          style="padding-left: 10px; width: 20px; border-radius: 10px;">
-                      <i class="material-icons">clear</i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-content">
-              <section class="timeline2">
-                <div class="container">
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content js--fadeInLeft  animate fadeLeft">
-                      <h2>Title</h2>
-                      <div class="date">1 MAY 2016</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
+                              <!-- accordian here -->
+                        </div>
                     </div>
-                  </div> 
-              
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
-                      <div class="timeline2-img-header">
-                        <h2>Card Title</h2>
-                      </div>
-                      <div class="date">25 MAY 2016</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div>   
-              
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content js--fadeInLeft animate fadeLeft">
-                      <div class="date">3 JUN 2016</div>
-                      <h2>Quote</h2>
-                      <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
-                    </div>
-                  </div>   
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content js--fadeInRight animate fadeRight">
-                      <h2>Title</h2>
-                      <div class="date">22 JUN 2016</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div>   
-              
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content timeline2-card js--fadeInLeft animate fadeLeft">
-                      <div class="timeline2-img-header">
-                        <h2>Card Title</h2>
-                      </div>
-                      <div class="date">10 JULY 2016</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div>   
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
-                      <div class="timeline2-img-header">
-                        <h2>Card Title</h2>
-                      </div>
-                      <div class="date">30 JULY 2016</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div>  
-              
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content js--fadeInLeft animate fadeLeft">
-                      <div class="date">5 AUG 2016</div>
-                      <h2>Quote</h2>
-                      <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
-                    </div>
-                  </div>   
-              
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
-                      <div class="timeline2-img-header">
-                        <h2>Card Title</h2>
-                      </div>
-                      <div class="date">19 AUG 2016</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div>  
-              
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content js--fadeInLeft animate fadeLeft">
-                      <div class="date">1 SEP 2016</div>
-                      <h2>Title</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div>   
-              
-                </div>
-              </section>
-            </div>
-          </div>
-
-          <!-- education model here -->
-          <div id="modalEdu" class="modal modal-fixed-footer" style="border-radius: 12px;">
-            <div class="" style="overflow-y: auto; width: 100%; padding:5px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
-              <div class="container">
-                <div class="row">
-                  <div class="col s2">
-                  </div>
-                  <div class="col s8">
-                    <h6 class="center-align text-ellipsis"><a href=""><b> Education&nbsp; </b></a> </h6>
-                  </div>
-                  <div class="col s2" style="padding-right: 0px; ">
-                    <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
-                          onmouseover="this.style.background ='#e91e63'" 
-                          onmouseout="this.style.background='transparent'" 
-                          style="padding-left: 10px; width: 20px; border-radius: 10px;">
-                      <i class="material-icons">clear</i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-content">
-              <section class="timeline2">
-                <div class="container">
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content js--fadeInLeft  animate fadeLeft">
-                      <h2>Title</h2>
-                      <div class="date">1 MAY 2016</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div> 
-              
-                  <div class="timeline2-item">
-              
-                    <div class="timeline2-img"></div>
-              
-                    <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
-                      <div class="timeline2-img-header">
-                        <h2>Card Title</h2>
-                      </div>
-                      <div class="date">25 MAY 2016</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div>   
-              
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content js--fadeInLeft animate fadeLeft">
-                      <div class="date">3 JUN 2016</div>
-                      <h2>Quote</h2>
-                      <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
-                    </div>
-                  </div>   
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content js--fadeInRight animate fadeRight">
-                      <h2>Title</h2>
-                      <div class="date">22 JUN 2016</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div>   
-              
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content timeline2-card js--fadeInLeft animate fadeLeft">
-                      <div class="timeline2-img-header">
-                        <h2>Card Title</h2>
-                      </div>
-                      <div class="date">10 JULY 2016</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div>   
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
-                      <div class="timeline2-img-header">
-                        <h2>Card Title</h2>
-                      </div>
-                      <div class="date">30 JULY 2016</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div>  
-              
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content js--fadeInLeft animate fadeLeft">
-                      <div class="date">5 AUG 2016</div>
-                      <h2>Quote</h2>
-                      <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
-                    </div>
-                  </div>   
-              
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
-                      <div class="timeline2-img-header">
-                        <h2>Card Title</h2>
-                      </div>
-                      <div class="date">19 AUG 2016</div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div>  
-              
-                  <div class="timeline2-item">
-                    <div class="timeline2-img"></div>
-                    <div class="timeline2-content js--fadeInLeft animate fadeLeft">
-                      <div class="date">1 SEP 2016</div>
-                      <h2>Title</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                      <a class="bnt-more" href="javascript:void(0)">More</a>
-                    </div>
-                  </div>   
-              
-                </div>
-              </section>
-            </div>
-          </div>
-
-          <!-- gallery modal -->
-          <div id="modalgallery" class="modal modal-fixed-footer" style="border-radius: 12px;">
-            <div class="" style="overflow-y: auto; width: 100%; padding:5px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
-              <div class="container">
-                <div class="row">
-                  <div class="col s2">
-                  </div>
-                  <div class="col s8">
-                    <h6 class="center-align text-ellipsis"><a href=""><b> Showcase&nbsp; </b></a> </h6>
-                  </div>
-                  <div class="col s2" style="padding-right: 0px; ">
-                    <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
-                          onmouseover="this.style.background ='#e91e63'" 
-                          onmouseout="this.style.background='transparent'" 
-                          style="padding-left: 10px; width: 20px; border-radius: 10px;">
-                      <i class="material-icons">clear</i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-content">
-              <div class="masonry-gallery-wrapper">
-                <div class="popup-gallery">
-                  <div class="gallery-sizer"></div>
-                  <div class="row">
-
-                    <div class="col s12 m6 l4 xl4" >
-                      <div>
-                        <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The Cleaner">
-                          <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col s12 m6 l4 xl4">
-                      <div>
-                        <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The Cleaner">
-                          <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col s12 m6 l4 xl4">
-                      <div>
-                        <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The Cleaner">
-                          <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col s12 m6 l4 xl4">
-                      <div>
-                        <a href="{% static 'app-assets/images/gallery/4.png' %}" title="The Cleaner">
-                          <img src="{% static 'app-assets/images/gallery/4.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col s12 m6 l4 xl4">
-                      <div>
-                        <a href="{% static 'app-assets/images/gallery/5.png' %}" title="The Cleaner">
-                          <img src="{% static 'app-assets/images/gallery/5.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col s12 m6 l4 xl4">
-                      <div>
-                        <a href="{% static 'app-assets/images/gallery/6.png' %}" title="The Cleaner">
-                          <img src="{% static 'app-assets/images/gallery/6.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col s12 m6 l4 xl4">
-                      <div>
-                        <a href="{% static 'app-assets/images/gallery/7.png' %}" title="The Cleaner">
-                          <img src="{% static 'app-assets/images/gallery/7.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                        </a>
-                      </div>
-                    </div>
+                    <!-- end of education card  -->
 
                   </div>
-                </div>
+                  <!-- end of third column -->
+                  
+
+                  
+                  <div class="col s12 m4 l3 allCard">
+                    <!-- skills card -->
+                    <div class="card user-statistics-card animate fadeLeft">
+                        <div class="card-content pb-0">
+                          <h5  class=" text-ellipsis pt-0 mt-0 center-align"> <a href="" > Skills </a></h5>
+                              <div class="mb-3">
+                                  <article >Enter your all your skills records. later on, you can choose which which skills records you want to show on your targeted profile.</article>
+                              </div>
+                              <div class="container">
+                                <div class="row">
+                                  <ul id="collection-custom" class="collection" style="border: none;">
+                                    <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                      <p class="font-weight-600">Project management </p>
+                                      <div class="prograss">
+                                        <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                      </div>
+                                    </li>
+                                    <li class="collection-item avatar mb-2" style="border-bottom: none;">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
+                                      <p class="font-weight-600">Marketing </p>
+                                      <div class="prograss">
+                                        <div class="w3-yellow-green prograss_bar" style="width:80%; box-shadow: 0 0 0 1px #A3C14F;">
+                                          <span>80%</span>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li class="collection-item avatar mb-2" style="border-bottom: none;">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
+                                      <p class="font-weight-600">Vloging </p>
+                                      <div class="prograss">
+                                        <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span>60%</span></div>
+                                      </div>
+                                    </li>
+                                    <li class="collection-item avatar mb-2" style="border-bottom: none;">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
+                                      <p class="font-weight-600">SEO </p>
+                                      <div class="prograss">
+                                        <div class="w3-orange prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #ff9800 ; "><span>35%</span></div>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <!-- accordian here -->
+                        </div>
+                    </div>                
+                      <!-- end of skills card  -->
+
+                  </div>
+                  <!-- end of  -->
+                  
               </div>
             </div>
-          </div>
 
             <!-- START RIGHT SIDEBAR NAV -->
             <aside id="right-sidebar-nav">
@@ -2232,9 +1399,10 @@ License: You must have a valid license purchased only from themeforest(the above
               </ul>
             </aside>
             <!-- END RIGHT SIDEBAR NAV -->
-
+          
+            
           </div>
-        <d iv class="content-overlay"></div>
+          <div class="content-overlay"></div>
         </div>
       </div>
     </div>
@@ -2469,6 +1637,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!--/ Theme Customizer -->
 
     <!-- BEGIN: Footer-->
+
     <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-purple gradient-shadow navbar-border navbar-shadow">
       <div class="footer-copyright">
         <div class="container">
@@ -2485,100 +1654,45 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END: Footer-->
     <!-- BEGIN VENDOR JS-->
     <script src="{% static 'app-assets/js/vendors.min.js' %}"></script>
-    <script src="{% static 'app-assets/vendors/sparkline/jquery.sparkline.min.js' %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
-
-    <script src="{% static 'app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'app-assets/js/plugins.js' %}"></script>
     <script src="{% static 'app-assets/js/search.js' %}"></script>
-    <script src="{% static 'app-assets/js/timeline.js' %}"></script>
     <script src="{% static 'app-assets/js/custom/custom-script.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
-    <!-- <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script> -->
-    <script src="{% static 'app-assets/js/scripts/advance-ui-modals.js' %}"></script>
-    <script src="{% static 'app-assets/js/scripts/media-gallery-page.js' %}"></script>
-    <script src="{% static 'app-assets/js/scripts/advance-ui-carousel.js' %}"></script>
-    <script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
-
     <script>
 
-      document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.carousel');
-      var instances = M.Carousel.init(elems, options);
-      });
-
-            // this counts the rating number
-        $('.count').each(function () {
-          $(this).prop('Counter',0).animate({
-              Counter: $(this).text()
-          }, {
-              duration: 1400,
-              easing: 'swing',
-              step: function (now) {
-                  $(this).text(Math.ceil(now));
-              }
-          });
-      });
-
-        // for screen resize on load
-          $(document).ready( function(){
-            $(window).on("resize", function(){
-              if($(window).width() < 1200){
-                $(".resizeable").removeClass("l3").addClass("l4");
-              }else{
-                $(".resizeable").removeClass("l4").addClass("l3");
-              }
-            })
-          });
-          // for screen resize on resizing screen
-          $(document).ready(function(){
-            if ($(window).width() < 1200) {
-                $(".resizeable").removeClass("l3").addClass("l4");
-              }else{
-                $(".resizeable").removeClass("l4").addClass("l3");
-              }
-          });
-
-           // for screen resize on load
-           $(document).ready( function(){
-            $(window).on("resize", function(){
-              if($(window).width() < 800){
-                $(".resizeable").removeClass("m4").addClass("m6");
-              }else{
-                $(".resizeable").removeClass("m6").addClass("m4");
-              }
-            })
-          });
-          // for screen resize on resizing screen
-          $(document).ready(function(){
-            if ($(window).width() < 800) {
-                $(".resizeable").removeClass("m4").addClass("m6");
-              }else{
-                $(".resizeable").removeClass("m6").addClass("m4");
-              }
-          });
 
 
+
+      // for resizing 
       $(document).ready(function(){
-        var w = $('.golden_ratio').width();
-        $('.golden_ratio').css("height", w/1.618);
-        $('.golden').css("height", w/1.618);
+        if ($(window).width() < 1300) {
+            $(".allCard").removeClass('l3').addClass('l4');
+          }else{
+            $('.allCard').removeClass('l4').addClass('l3');
+          }
       });
-      $(window).on('resize', function(){
-        var w = $('.golden_ratio').width();
-        $('.golden_ratio').css("height", w/1.618);
-        $('.golden').css("height", w/1.618);
+      $(document).ready( function(){
+        $(window).on("resize", function(){
+          if ($(window).width() < 1300) {
+            $(".allCard").removeClass('l3').addClass('l4');
+          }else{
+            $('.allCard').removeClass('l4').addClass('l3');
+          }
+        })
       });
       // this function is for nav bar smooth transition when scrolling
     $(document).ready(function() {
-      $(window).scroll(function() {
-        if ($(document).scrollTop() > 20) {
-          $("#navscroll").addClass("navtransition");
-        } else {
-          $("#navscroll").removeClass("navtransition");
-        }
-      });
+    $(window).scroll(function() {
+      if ($(document).scrollTop() > 20) {
+        $("#navscroll").addClass("navtransition");
+
+      
+      } else {
+        $("#navscroll").removeClass("navtransition");
+      }
     });
+  });
+
    </script>
   </body>
 </html>
