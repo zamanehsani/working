@@ -66,5 +66,3 @@ def profile_edit(request):
 def analytic_dashboard(request):
     return render(request, 'analytic_dashboard.html')
 
-def te(request):
-    return render()
