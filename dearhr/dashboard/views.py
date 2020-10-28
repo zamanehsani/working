@@ -56,3 +56,12 @@ def general_info(request):
 
 def hr_dashboard(request):
     return render(request, 'hr_dashboard.html')
+
+def testing(request):
+    return render(request, 'testing.html')
+
+def profile_edit(request):
+    return render(request, 'profile_edit.html')
+
+def analytic_dashboard(request):
+    return render(request, 'analytic_dashboard.html')

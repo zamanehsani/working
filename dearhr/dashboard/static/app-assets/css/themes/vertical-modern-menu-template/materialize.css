@@ -10612,7 +10612,7 @@ input[type=range]::-ms-thumb
     background-color: #4caf50;
 }
 
-/* 
+
 .carousel
 {
     position: relative;
@@ -10732,7 +10732,7 @@ input[type=range]::-ms-thumb
 {
     pointer-events: none;
 }
- */
+
 
 .tap-target-wrapper
 {

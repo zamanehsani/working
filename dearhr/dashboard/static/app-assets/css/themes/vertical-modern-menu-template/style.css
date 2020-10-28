@@ -1,6 +1,21 @@
 /*-------------------------------------------------
 	Style file contain theme components style
 -------------------------------------------------*/
+
+/* this is for pie cahrtist  */
+.ct-series-a .ct-slice-pie {
+    /* fill of the pie slieces */
+    fill: #388e3c!important;
+    /* give your pie slices some outline or separate them visually by using the background color here */
+    stroke: white;
+    /* outline width */
+    stroke-width: 4px;
+  }
+  .ct-label{
+    fill:white!important;
+  }
+
+  
 /* carousel on shortlisted page */
 /* * { box-sizing: border-box; } */
 .carousel {
@@ -17,13 +32,13 @@
   
   /* cell number */
   .carousel-cell:before {
-    /* display: block; */
+    display: block;
     text-align: center;
     /* content: counter(carousel-cell); */
-    /* line-height: 100px; */
-    /* font-size: 80px; */
+    line-height: 100px;
+    font-size: 80px;
     color: white;
-  }
+  } 
 
 /* for large screen */
 @media only screen and (min-width: 2200px)

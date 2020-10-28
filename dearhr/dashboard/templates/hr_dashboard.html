@@ -39,6 +39,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END: Page Level CSS-->
 
     <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/custom/custom.css' %}">
     <!-- END: Custom CSS-->
   </head>
@@ -207,11 +209,11 @@ License: You must have a valid license purchased only from themeforest(the above
         <li class="active bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">settings_input_svideo</i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge pill orange float-right mr-10">3</span></a>
           <div class="collapsible-body">
             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-              <li class="active"><a class="active" href="dashboard-modern.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Modern">Modern</span></a>
+              <li class="active"><a class="active" href="{% url 'dashboard:hr_dashboard' %}"><i class="material-icons">settings_input_svideo</i><span data-i18n="Modern">HR Dashboard</span></a>
               </li>
-              <li><a href="dashboard-ecommerce.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="eCommerce">eCommerce</span></a>
+              <li><a href="{% url 'dashboard:shortlist' %}"><i class="material-icons">check</i><span data-i18n="eCommerce">Short listed</span></a>
               </li>
-              <li><a href="dashboard-analytics.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Analytics</span></a>
+              <li><a href="{% url 'dashboard:card' %}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">One Card</span></a>
               </li>
             </ul>
           </div>
@@ -568,27 +570,25 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="col s12 m4 l3 allCard">
                   <!-- generic info -->
                   <div class=" card animate fadeLeft ">
-                      <div class="card-content">
-                          <div class="col s12 border-radius-10 p-0" style="height: 120px;">
-                            <img class="border-radius-10" height="100%" width="100%" src="{% static 'app-assets/images/pics/subsonic.png' %}"
+                      <div class="card-content pt-0 ">
+                          <div class="col s12 border-radius-10 p-0 mb-0">
+                            <img class="border-radius-10 p-0 " height="" width="100%" src="{% static 'app-assets/images/pics/subsonic.png' %}"
                               alt="user profile">
                           </div>
-                        <div class="row">
-                          <div class="col s12">
-                            <div class="row">
-                              <div id="text" class="col s12">
-                                <h5 class=" pt-3 text-ellipsis"> <b>SUBSONIC&nbsp;LLC</b> </h5>
-                                <h6  class="text-ellipsis" style="vertical-align: top;">Address&nbsp;: <a href="#"> DIP1,&nbsp;Dubai,&nbsp;UAE</a> </h6>
-                                <h6 class="text-ellipsis"  style="vertical-align: top;">website &nbsp;: <a href="#"> www.subsonic.ae</a> </h6>
-                                <h6  class="text-ellipsis" style="vertical-align: top;">Email <a href="#">15/10/1994</a> </h6>
-                                <h6  class="text-ellipsis" style="vertical-align: top;">Phone: <a href="#"> 0562312534</a> </h6>
-                                <!-- <h6  style="vertical-align: top;">Gender: <a href="#"> female</a> </h6> -->
-                              </div>
+                          <div class="row pt-0">
+                            <div class="col s12 pt-0 mt-0">
+                                <div class="col s12 pt-0 mt-0">
+                                  <h5 class="text-ellipsis mt-0 pt-0"> <b>SUBSONIC&nbsp;LLC</b> </h5>
+                                  <h6 class="text-ellipsis" style="vertical-align: top;">Address&nbsp;: <a href="#"> DIP1,&nbsp;Dubai,&nbsp;UAE</a> </h6>
+                                  <h6 class="text-ellipsis"  style="vertical-align: top;">website &nbsp;: <a href="#"> www.subsonic.ae</a> </h6>
+                                  <h6 class="text-ellipsis" style="vertical-align: top;">Email <a href="#">15/10/1994</a> </h6>
+                                  <h6 class="text-ellipsis" style="vertical-align: top;">Phone: <a href="#"> 0562312534</a> </h6>
+                                  <!-- <h6  style="vertical-align: top;">Gender: <a href="#"> female</a> </h6> -->
+                                </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                  </div>
+                    </div>
                   <!-- end of generic info -->
 
                   <!-- generic user info -->
@@ -689,243 +689,341 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
                 <!-- end of first column -->
                 
-                    <!-- second column -->
+                  <!-- second column -->
+                <div class="col s12 m4 l3 allCard">
+                  <!-- experience card -->
+                  <div class="card user-statistics-card animate fadeLeft">
+                    <div class="card-header gradient-shadow gradient-shadow gradient-45deg-amber-amber pl-4 pt-8 pb-5" style="border-radius: 15px 15px 0 0;">
+                      <div  class="fixed-action-btn right  direction-left" style="margin-top: 80px !important; bottom: 0px; margin-right: 20px;">
+                        <a class="btn-floating btn-medium pink.accent-2 menu-shadow">
+                          <i class="material-icons">add</i>
+                        </a>
+                        <ul style="list-style: none;">
+                            <li><a href="" class="btn-floating blue"><i class="material-icons">edit</i></a></li>
+                            <li><a href="" class="btn-floating green"><i class="material-icons">lock_open</i></a></li>
+                            <li><a href="" class="btn-floating amber"><i class="material-icons">thumb_up</i></a></li>
+                            <li><a href="" class="btn-floating cyan"><i class="material-icons">filter_list</i></a></li>
+                            <li><a href="" class="btn-floating red"><i class="material-icons">visibility</i></a></li>
+                        </ul>
+                      </div> 
+                      <h5  class="pt-0 mt-0 text-ellipsis center-align" style="color: white;">JOB&nbsp;TITLE</h5>
+                      <p class="text-ellipsis center-align" style="color: white;">Salary: 
+                        <a href="" style="color:lightgray">&nbsp;$2000 </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location: 
+                        <a href="" style="color:lightgray">&nbsp;NY,&nbsp;USA</a>
+                      </p>
+                    </div>
+                      <div class="card-content pb-2 pt-3">
+                        <h6>Pool&nbsp;of&nbsp;Condidates Data:</h6>
+                        <p>Over&nbsp;90%&nbsp;Match: <b style="font-weight: bolder;">28</b><a href="">&nbsp;&nbsp;view</a> </p>
+                        <p>Over&nbsp;75&nbsp;Match: <b style="font-weight: bolder;">72</b><a href="">&nbsp;&nbsp;view</a> </p>
+                        <p>Shortlisted: <a href="">8</a></p>
+                        
+                        <!-- accordin -->
+                        <div class="row">
+                          <div class="col s12">
+                            <ul class="collapsible collapsible-accordion">
+                              <li class="">
+                                <div class="collapsible-header pb-2 centering">
+                                  <i class="material-icons">grain</i>Chart
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body pb-3"  >
+                                  <div class="container pt-3 pb-1" >
+                                    <div class="container ct-golden-section pt-2 pl-0" >
+                                      <div class="ct-chart ct9-chart">
+                                           <h4 class="card-title pb-0 mb-0">Simple Pie Chart</h4>
+                                           <p class="caption p-0">
+                                            this is a simple description if needed.
+                                           </p>
+                                     </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="collapsible-header pb-2 centering">
+                                  <i class="material-icons">assignment</i>THE BRIEF
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body pb-3" >
+                                  <div class="container pt-3 pb-1">
+                                   <article>
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                    It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                    a Latin professor at Hampden-Sydney College in Virginia, 
+                                   </article>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="collapsible-header pb-2 centering">
+                                  <i class="material-icons">assignment</i>JOB DESCRIPTION 
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body pb-3" >
+                                  <div class="container pt-3 pb-1">
+                                    <article>
+                                      Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia,
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia, 
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia,  
+                                     </article>
+
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="collapsible-header pb-2 centering">
+                                  <i class="material-icons">check</i>KEY&nbsp;ROLES
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body pb-3" >
+                                  <div class="container pl-6 pt-3 pb-1">
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                        <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                        <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="collapsible-header pb-3 centering">
+                                  <i class="material-icons">done</i>RESPONSIBILITIES
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                  <div class="collapsible-body">
+                                    <div class="container pl-6 pt-3 pb-1">
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                        <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                        <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="collapsible-header pb-2 centering">
+                                    <i class="material-icons">grain</i>THE BRIEF
+                                    <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                  </div>
+                                  <div class="collapsible-body pb-3" >
+                                    <div class="container pt-3 pb-1">
+                                     <article>
+                                      Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia, 
+                                     </article>
+                                    </div>
+                                  </div>
+                                </li>
+                              <li>
+                                <div class="collapsible-header pb-0 centering" style="border-bottom: none;" >
+                                  <i class="material-icons">assignment</i>NOTE
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body" style="border-bottom: none;">
+                                  <div class="container pt-3 pb-1">
+                                    <article>
+                                      Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia, 
+                                     </article>
+                                  </div>
+                                </div>
+                              </li>
+                          </ul>
+                          </div>
+                        </div>
+                        <!-- end of acordian -->
+                          <!-- bottom share -->
+                          <div class="card-action pb-0">
+                          <div id="clients-bar" >
+                            <div class="container">
+                              <div class="row mb-0">
+                                <div class="col s6 centering pr-0 mr-0"> <a href="#" > <i style="font-size: 30px;" class="material-icons">share</i> </a></div>
+                                <div class="col s6 centering pr-0 mr-0"> <a href="#" > <i style="font-size: 40px;" class="material-icons">timeline</i> </a> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div> <!-- END OF SHARE BUTTON -->
+                      </div>
+                  </div>
+                  <!-- end of experience card  -->
+                </div>
+                <!-- end of second column -->
+
+                  <!-- third column -->
                   <div class="col s12 m4 l3 allCard">
                     <!-- experience card -->
                     <div class="card user-statistics-card animate fadeLeft">
-                        <div class="card-content pb-2">
-                          <div  class="fixed-action-btn right click-to-toggle direction-left" style="margin-top: 35px !important; bottom: 0px;">
-                            <a class="btn-floating btn-medium pink.accent-2 menu-shadow">
-                              <i class="material-icons">add</i>
-                            </a>
-                            <ul style="list-style: none;">
-                                <li><a href="" class="btn-floating blue"><i class="material-icons">edit</i></a></li>
-                                <li><a href="" class="btn-floating green"><i class="material-icons">lock_open</i></a></li>
-                                <li><a href="" class="btn-floating amber"><i class="material-icons">thumb_up</i></a></li>
-                                <li><a href="" class="btn-floating cyan"><i class="material-icons">filter_list</i></a></li>
-                                <li><a href="" class="btn-floating red"><i class="material-icons">visibility</i></a></li>
-                            </ul>
-                          </div> 
-                          <h5  class="pt-0 mt-0 text-ellipsis"> <a href="" >Job&nbsp;Title </a></h5>
-                          <p class="text-ellipsis">Salary: <a href="">&nbsp;$2000 </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location: <a href="">&nbsp;NY,&nbsp;USA</a></p>
-                          <div style="border-bottom: 1px solid #e1e4e9;"></div>
+                      <div class="card-header gradient-45deg-purple-deep-purple gradient-shadow pl-4 pt-8 pb-5" style="border-radius: 15px 15px 0 0;">
+                        <div  class="fixed-action-btn right direction-left" style="margin-top: 80px !important; bottom: 0px; margin-right: 20px;">
+                          <a class="btn-floating btn-medium pink.accent-2 menu-shadow">
+                            <i class="material-icons">add</i>
+                          </a>
+                          <ul style="list-style: none;">
+                              <li><a href="" class="btn-floating blue"><i class="material-icons">edit</i></a></li>
+                              <li><a href="" class="btn-floating green"><i class="material-icons">lock_open</i></a></li>
+                              <li><a href="" class="btn-floating amber"><i class="material-icons">thumb_up</i></a></li>
+                              <li><a href="" class="btn-floating cyan"><i class="material-icons">filter_list</i></a></li>
+                              <li><a href="" class="btn-floating red"><i class="material-icons">visibility</i></a></li>
+                          </ul>
+                        </div> 
+                        <h5  class="pt-0 mt-0 text-ellipsis center-align" style="color: white;">JOB&nbsp;TITLE</h5>
+                        <p class="text-ellipsis center-align" style="color: white;">Salary: 
+                          <a href="" style="color:lightgray">&nbsp;$2000 </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location: 
+                          <a href="" style="color:lightgray">&nbsp;NY,&nbsp;USA</a>
+                        </p>
+                      </div>
+                        <div class="card-content pb-2 pt-1">
                           <h6>Pool&nbsp;of&nbsp;Condidates Data:</h6>
-                          <p>Over&nbsp;90%&nbsp;Match: <b style="font-weight: bolder;">25</b><a href="">&nbsp;&nbsp;view</a> </p>
-                          <p>Over&nbsp;755&nbsp;Match: <b style="font-weight: bolder;">75</b><a href="">&nbsp;&nbsp;view</a> </p>
+                          <p>Over&nbsp;90%&nbsp;Match: <b style="font-weight: bolder;">28</b><a href="">&nbsp;&nbsp;view</a> </p>
+                          <p>Over&nbsp;75&nbsp;Match: <b style="font-weight: bolder;">72</b><a href="">&nbsp;&nbsp;view</a> </p>
                           <p>Shortlisted: <a href="">8</a></p>
-
+                          
                           <!-- accordin -->
-                          <div class="row">
-                            <div class="col s12">
-                              <ul class="collapsible collapsible-accordion">
-                                <li class="">
-                                  <div class="collapsible-header pb-2 centering">
-                                    <i class="material-icons">assignment</i>THE BRIEF
-                                    <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                        <div class="row">
+                          <div class="col s12">
+                            <ul class="collapsible collapsible-accordion">
+                              <li class="">
+                                <div class="collapsible-header pb-2 centering">
+                                  <i class="material-icons">grain</i>Chart
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body pb-3" >
+                                  <div class="container pt-3 pb-1">
+                                    <div class="container ct-golden-section pt-2 pl-0">
+                                      <div class="ct-chart ct9-chart">
+                                           <h4 class="card-title pb-0 mb-0">Simple Pie Chart</h4>
+                                           <p class="caption p-0">
+                                            this is a simple description if needed.
+                                           </p>
+                                     </div>
+                                    </div>
                                   </div>
-                                  <div class="collapsible-body pb-3" >
-                                    <div class="container">
-                                      <div class="row">
-                                        <ul id="collection-custom" class="collection mb-0">
-                                          <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
-                                            <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
-                                            <p class="font-weight-600">Project management </p>
-                                            <div class="prograss">
-                                              <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
-                                            </div>
-                                          </li>
-                                          <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                            <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
-                                            <p class="font-weight-600">Marketing </p>
-                                            <div class="prograss">
-                                              <div class="w3-yellow-green prograss_bar" style="width:80%; box-shadow: 0 0 0 1px #A3C14F;">
-                                                <span>80%</span>
-                                              </div>
-                                            </div>
-                                          </li>
-                                          <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                            <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                            <p class="font-weight-600">Vloging </p>
-                                            <div class="prograss">
-                                              <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span>60%</span></div>
-                                            </div>
-                                          </li>
-                                          <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                            <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                            <p class="font-weight-600">SEO </p>
-                                            <div class="prograss">
-                                              <div class="w3-orange prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #ff9800 ; "><span>35%</span></div>
-                                            </div>
-                                          </li>
-                                        </ul>
-                                      </div>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="collapsible-header pb-2 centering">
+                                  <i class="material-icons">assignment</i>THE BRIEF
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body pb-3" >
+                                  <div class="container pt-3 pb-1">
+                                   <article>
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                    It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                    a Latin professor at Hampden-Sydney College in Virginia, 
+                                   </article>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="collapsible-header pb-2 centering">
+                                  <i class="material-icons">assignment</i>JOB DESCRIPTION 
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body pb-3" >
+                                  <div class="container pt-3 pb-1">
+                                    <article>
+                                      Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia,
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia, 
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia,  
+                                     </article>
+
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="collapsible-header pb-2 centering">
+                                  <i class="material-icons">check</i>KEY&nbsp;ROLES
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body pb-3" >
+                                  <div class="container pl-6 pt-3 pb-1">
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                        <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                        <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="collapsible-header pb-3 centering">
+                                  <i class="material-icons">done</i>RESPONSIBILITIES
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                  <div class="collapsible-body">
+                                    <div class="container pl-6 pt-3 pb-1">
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                        <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                        <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
                                     </div>
                                   </div>
                                 </li>
                                 <li class="">
                                   <div class="collapsible-header pb-2 centering">
-                                    <i class="material-icons">assignment</i>JOB DESCRIPTION 
+                                    <i class="material-icons">grain</i>THE BRIEF
                                     <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
                                   </div>
                                   <div class="collapsible-body pb-3" >
-                                    <div class="container">
-                                      <div class="row">
-                                        <ul id="collection-custom" class="collection mb-0">
-                                          <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
-                                            <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
-                                            <p class="font-weight-600">Project management </p>
-                                            <div class="prograss">
-                                              <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
-                                            </div>
-                                          </li>
-                                          <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                            <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
-                                            <p class="font-weight-600">Marketing </p>
-                                            <div class="prograss">
-                                              <div class="w3-yellow-green prograss_bar" style="width:80%; box-shadow: 0 0 0 1px #A3C14F;">
-                                                <span>80%</span>
-                                              </div>
-                                            </div>
-                                          </li>
-                                          <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                            <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                            <p class="font-weight-600">Vloging </p>
-                                            <div class="prograss">
-                                              <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span>60%</span></div>
-                                            </div>
-                                          </li>
-                                          <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                            <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                            <p class="font-weight-600">SEO </p>
-                                            <div class="prograss">
-                                              <div class="w3-orange prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #ff9800 ; "><span>35%</span></div>
-                                            </div>
-                                          </li>
-                                        </ul>
-                                      </div>
+                                    <div class="container pt-3 pb-1">
+                                     <article>
+                                      Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia, 
+                                     </article>
                                     </div>
                                   </div>
                                 </li>
-                                <li class="">
-                                  <div class="collapsible-header pb-2 centering">
-                                    <i class="material-icons">check</i>KEY&nbsp;ROLES
-                                    <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                              <li>
+                                <div class="collapsible-header pb-0 centering" style="border-bottom: none;" >
+                                  <i class="material-icons">assignment</i>NOTE
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body" style="border-bottom: none;">
+                                  <div class="container pt-3 pb-1">
+                                    <article>
+                                      Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia, 
+                                     </article>
                                   </div>
-                                  <div class="collapsible-body pb-3" >
-                                    <div class="container">
-                                      <div class="row">
-                                        <ul id="collection-custom" class="collection mb-0">
-                                          <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
-                                            <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
-                                            <p class="font-weight-600">Project management </p>
-                                            <div class="prograss">
-                                              <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
-                                            </div>
-                                          </li>
-                                          <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                            <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
-                                            <p class="font-weight-600">Marketing </p>
-                                            <div class="prograss">
-                                              <div class="w3-yellow-green prograss_bar" style="width:80%; box-shadow: 0 0 0 1px #A3C14F;">
-                                                <span>80%</span>
-                                              </div>
-                                            </div>
-                                          </li>
-                                          <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                            <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                            <p class="font-weight-600">Vloging </p>
-                                            <div class="prograss">
-                                              <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span>60%</span></div>
-                                            </div>
-                                          </li>
-                                          <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                            <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                            <p class="font-weight-600">SEO </p>
-                                            <div class="prograss">
-                                              <div class="w3-orange prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #ff9800 ; "><span>35%</span></div>
-                                            </div>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="collapsible-header pb-3 centering">
-                                    <i class="material-icons">done</i>RESPONSIBILITIES
-                                    <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
-                                  </div>
-                                    <div class="collapsible-body">
-                                      <div class="container">
-                                        <div class="row user-projects pb-1 pt-1">
-                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                            <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/35.png' %}">
-                                          </div>
-                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                            <img class="responsive-img photo-border mt-5 " alt="" src="{% static 'app-assets/images/gallery/37.png' %}">
-                                          </div>
-                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                            <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/39.png' %}">
-                                          </div>
-                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                            <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/40.png' %}">
-                                          </div>
-                                          <div class="col s4 " style="padding-left: 0.5em; padding-right: 0.5em;">
-                                            <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/41.png' %}">
-                                          </div>
-                                          <div class="col s4 " style="padding-left: 0.5em; padding-right: 0.5em;">
-                                            <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/43.png' %}">
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                <li>
-                                  <div class="collapsible-header pb-0 centering" style="border-bottom: none;" >
-                                    <i class="material-icons">adjust</i>PERKS
-                                    <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
-                                  </div>
-                                  <div class="collapsible-body" style="border-bottom: none;">
-                                    <ul id="collection-custom" class="collection mb-0">
-                                      <li class="collection-item avatar" style="border-bottom: none;">
-                                        <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
-                                        <p class="font-weight-600">John Doe</p>
-                                        <p class="medium-small">18, January 2019</p>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
-                                      </li>
-                                      <li class="collection-item avatar" style="border-bottom: none;">
-                                        <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
-                                        <p class="font-weight-600">Adam Garza</p>
-                                        <p class="medium-small">20, January 2019</p>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
-                                      </li>
-                                      <li class="collection-item avatar" style="border-bottom: none;">
-                                        <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                        <p class="font-weight-600">Jennifer Rice</p>
-                                        <p class="medium-small">25, January 2019</p>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                        <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
-                                      </li>
-                                  </ul>
-                                  </div>
-                                </li>
-                            </ul>
-                            </div>
+                                </div>
+                              </li>
+                          </ul>
                           </div>
+                        </div>
                           <!-- end of acordian -->
-                           <!-- bottom share -->
-                           <div class="card-action pb-0">
+                            <!-- bottom share -->
+                            <div class="card-action pb-0">
                             <div id="clients-bar" >
                               <div class="container">
                                 <div class="row mb-0">
@@ -939,109 +1037,182 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                     <!-- end of experience card  -->
                   </div>
-                  <!-- end of second column -->
-                  
-
-                  <!-- third column -->
-                  <div class="col s12 m4 l3 allCard">
-                    <!-- education card -->
-                    <div class="card user-statistics-card animate fadeLeft">
-                        <div class="card-content pb-0">
-                          <h5  class=" text-ellipsis pt-0 mt-0 center-align"> <a href="" > Education </a></h5>
-                              <div class="mb-3">
-                                  <article >Enter your all eudcational records. later on, you can choose which which educational records you want to show on your targeted profile.</article>
-                              </div>
-                              <div>
-                                <h6 class="text-ellipsis" style="font-weight: bolder;">Master&nbsp;in&nbsp;Marketing&nbsp;|&nbsp;&nbsp;Harvard&nbsp;University</h6>
-                                <b class="text-ellipsis">2018&nbsp;-&nbsp;2020<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
-                                <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
-                                  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
-                              </div>
-                              <div>
-                                <h6 class="text-ellipsis" style="font-weight: bolder;">Bachelor&nbsp;in&nbsp;IT&nbsp;|&nbsp;&nbsp;MIT&nbsp;</h6>
-                                <b class="text-ellipsis">2014&nbsp;-&nbsp;2017<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
-                                <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
-                                  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
-                              </div>
-                              <div>
-                                <h6 class="text-ellipsis" style="font-weight: bolder;">Master&nbsp;in&nbsp;Marketing&nbsp;|&nbsp;&nbsp;Harvard&nbsp;University</h6>
-                                <b class="text-ellipsis">2018&nbsp;-&nbsp;2020<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
-                                <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
-                                  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
-                              </div>
-                              <div>
-                                <h6 class="text-ellipsis" style="font-weight: bolder;">Diploma&nbsp;in&nbsp;PMP&nbsp;|&nbsp;&nbsp;PMI&nbsp;</h6>
-                                <b class="text-ellipsis">2014&nbsp;-&nbsp;2015<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
-                                <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
-                                  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
-                              </div>
-
-                              <!-- accordian here -->
-                        </div>
-                    </div>
-                    <!-- end of education card  -->
-
-                  </div>
                   <!-- end of third column -->
-                  
 
-                  
-                  <div class="col s12 m4 l3 allCard">
-                    <!-- skills card -->
-                    <div class="card user-statistics-card animate fadeLeft">
-                        <div class="card-content pb-0">
-                          <h5  class=" text-ellipsis pt-0 mt-0 center-align"> <a href="" > Skills </a></h5>
-                              <div class="mb-3">
-                                  <article >Enter your all your skills records. later on, you can choose which which skills records you want to show on your targeted profile.</article>
-                              </div>
-                              <div class="container">
-                                <div class="row">
-                                  <ul id="collection-custom" class="collection" style="border: none;">
-                                    <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
-                                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
-                                      <p class="font-weight-600">Project management </p>
-                                      <div class="prograss">
-                                        <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
-                                      </div>
-                                    </li>
-                                    <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                      <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
-                                      <p class="font-weight-600">Marketing </p>
-                                      <div class="prograss">
-                                        <div class="w3-yellow-green prograss_bar" style="width:80%; box-shadow: 0 0 0 1px #A3C14F;">
-                                          <span>80%</span>
-                                        </div>
-                                      </div>
-                                    </li>
-                                    <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                      <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                      <p class="font-weight-600">Vloging </p>
-                                      <div class="prograss">
-                                        <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span>60%</span></div>
-                                      </div>
-                                    </li>
-                                    <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                      <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                      <p class="font-weight-600">SEO </p>
-                                      <div class="prograss">
-                                        <div class="w3-orange prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #ff9800 ; "><span>35%</span></div>
-                                      </div>
-                                    </li>
-                                  </ul>
+                    <!-- fourth column -->
+                <div class="col s12 m4 l3 allCard">
+                  <!-- experience card -->
+                  <div class="card user-statistics-card animate fadeLeft">
+                    <div class="card-header gradient-shadow gradient-45deg-green-teal pl-4 pt-8 pb-5" style="border-radius: 15px 15px 0 0;">
+                      <div  class="fixed-action-btn right direction-left" style="margin-top: 80px !important; bottom: 0px; margin-right: 20px;">
+                        <a class="btn-floating btn-medium pink.accent-2 menu-shadow">
+                          <i class="material-icons">add</i>
+                        </a>
+                        <ul style="list-style: none;">
+                            <li><a href="" class="btn-floating blue"><i class="material-icons">edit</i></a></li>
+                            <li><a href="" class="btn-floating green"><i class="material-icons">lock_open</i></a></li>
+                            <li><a href="" class="btn-floating amber"><i class="material-icons">thumb_up</i></a></li>
+                            <li><a href="" class="btn-floating cyan"><i class="material-icons">filter_list</i></a></li>
+                            <li><a href="" class="btn-floating red"><i class="material-icons">visibility</i></a></li>
+                        </ul>
+                      </div> 
+                      <h5  class="pt-0 mt-0 text-ellipsis center-align" style="color: white;">JOB&nbsp;TITLE</h5>
+                      <p class="text-ellipsis center-align" style="color: white;">Salary: 
+                        <a href="" style="color:lightgray">&nbsp;$2000 </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location: 
+                        <a href="" style="color:lightgray">&nbsp;NY,&nbsp;USA</a>
+                      </p>
+                    </div>
+                      <div class="card-content pb-2 pt-1">
+                        <h6>Pool&nbsp;of&nbsp;Condidates Data:</h6>
+                        <p>Over&nbsp;90%&nbsp;Match: <b style="font-weight: bolder;">28</b><a href="">&nbsp;&nbsp;view</a> </p>
+                        <p>Over&nbsp;75&nbsp;Match: <b style="font-weight: bolder;">72</b><a href="">&nbsp;&nbsp;view</a> </p>
+                        <p>Shortlisted: <a href="">8</a></p>
+                        
+                        <!-- accordin -->
+                        <div class="row">
+                          <div class="col s12">
+                            <ul class="collapsible collapsible-accordion">
+                              <li class="active">
+                                <div class="collapsible-header pb-2 centering">
+                                  <i class="material-icons">grain</i>Chart
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
                                 </div>
-                              </div>
-                              <!-- accordian here -->
-                        </div>
-                    </div>                
-                      <!-- end of skills card  -->
+                                <div class="collapsible-body pb-3" >
+                                  <div class="container pt-3 pb-1">
+                                    <div class="container ct-golden-section pt-2 pl-0">
+                                      <div class="ct-chart ct9-chart">
+                                           <h4 class="card-title pb-0 mb-0">Simple Pie Chart</h4>
+                                           <p class="caption p-0">
+                                            this is a simple description if needed.
+                                           </p>
+                                     </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="collapsible-header pb-2 centering">
+                                  <i class="material-icons">assignment</i>THE BRIEF
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body pb-3" >
+                                  <div class="container pt-3 pb-1">
+                                   <article>
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                    It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                    a Latin professor at Hampden-Sydney College in Virginia, 
+                                   </article>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="collapsible-header pb-2 centering">
+                                  <i class="material-icons">assignment</i>JOB DESCRIPTION 
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body pb-3" >
+                                  <div class="container pt-3 pb-1">
+                                    <article>
+                                      Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia,
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia, 
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia,  
+                                     </article>
 
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="">
+                                <div class="collapsible-header pb-2 centering">
+                                  <i class="material-icons">check</i>KEY&nbsp;ROLES
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body pb-3" >
+                                  <div class="container pl-6 pt-3 pb-1">
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                        <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                        <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                  </div>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="collapsible-header pb-3 centering">
+                                  <i class="material-icons">done</i>RESPONSIBILITIES
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                  <div class="collapsible-body">
+                                    <div class="container pl-6 pt-3 pb-1">
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                        <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                        <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="">
+                                  <div class="collapsible-header pb-2 centering">
+                                    <i class="material-icons">grain</i>THE BRIEF
+                                    <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                  </div>
+                                  <div class="collapsible-body pb-3" >
+                                    <div class="container pt-3 pb-1">
+                                     <article>
+                                      Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia, 
+                                     </article>
+                                    </div>
+                                  </div>
+                                </li>
+                              <li>
+                                <div class="collapsible-header pb-0 centering" style="border-bottom: none;" >
+                                  <i class="material-icons">assignment</i>NOTE
+                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                </div>
+                                <div class="collapsible-body" style="border-bottom: none;">
+                                  <div class="container pt-3 pb-1">
+                                    <article>
+                                      Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
+                                      a Latin professor at Hampden-Sydney College in Virginia, 
+                                     </article>
+                                  </div>
+                                </div>
+                              </li>
+                          </ul>
+                          </div>
+                        </div>
+                        <!-- end of acordian -->
+                          <!-- bottom share -->
+                          <div class="card-action pb-0">
+                          <div id="clients-bar" >
+                            <div class="container">
+                              <div class="row mb-0">
+                                <div class="col s6 centering pr-0 mr-0"> <a href="#" > <i style="font-size: 30px;" class="material-icons">share</i> </a></div>
+                                <div class="col s6 centering pr-0 mr-0"> <a href="#" > <i style="font-size: 40px;" class="material-icons">timeline</i> </a> </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div> <!-- END OF SHARE BUTTON -->
+                      </div>
                   </div>
-                  <!-- end of  -->
-                  
+                  <!-- end of experience card  -->
+                </div>
+                <!-- end of fourth column -->
               </div>
             </div>
 
@@ -1582,8 +1753,6 @@ License: You must have a valid license purchased only from themeforest(the above
               </ul>
             </aside>
             <!-- END RIGHT SIDEBAR NAV -->
-          
-            
           </div>
           <div class="content-overlay"></div>
         </div>
@@ -1841,11 +2010,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="{% static 'app-assets/js/search.js' %}"></script>
     <script src="{% static 'app-assets/js/custom/custom-script.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
+    
     <script>
-
-
-
-
       // for resizing 
       $(document).ready(function(){
         if ($(window).width() < 1300) {
@@ -1863,18 +2029,48 @@ License: You must have a valid license purchased only from themeforest(the above
           }
         })
       });
+      $(document).ready(function(){
+        if ($(window).width() < 900) {
+            $(".allCard").removeClass('m4').addClass('m6');
+          }else{
+            $('.allCard').removeClass('m6').addClass('m4');
+          }
+      });
+      $(document).ready( function(){
+        $(window).on("resize", function(){
+          if ($(window).width() < 900) {
+            $(".allCard").removeClass('m4').addClass('m6');
+          }else{
+            $('.allCard').removeClass('m6').addClass('m4');
+          }
+        })
+      });
+   
+
       // this function is for nav bar smooth transition when scrolling
     $(document).ready(function() {
     $(window).scroll(function() {
       if ($(document).scrollTop() > 20) {
         $("#navscroll").addClass("navtransition");
-
-      
       } else {
         $("#navscroll").removeClass("navtransition");
       }
     });
   });
+
+    //Pie chartist for pool condidates
+      var sum = function(a, b) { return a + b };
+      var allcharts = document.querySelectorAll('.ct-chart');
+      var i=0;
+      for (;i<allcharts.length; i++){
+        var data = {series: [72, 28] };
+        // if(allcharts[i].parentElement.heigh)
+        new Chartist.Pie(allcharts[i], data, {
+        labelInterpolationFnc: function(value) {
+          return Math.round(value / data.series.reduce(sum) * 100) + '%';
+        }
+      });
+      }
 
    </script>
   </body>

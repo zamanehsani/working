@@ -40,49 +40,95 @@ License: You must have a valid license purchased only from themeforest(the above
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/materialize.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/dashboard-modern.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/magnific-popup/magnific-popup.css' %}">
     <!-- END: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/timeline.css' %}">
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/custom/custom.css' %}">
     <!-- END: Custom CSS-->
-    <script src="https://use.fontawesome.com/de1bfe1b04.js"></script>
+    <!-- <script src="https://use.fontawesome.com/de1bfe1b04.js"></script> -->
   </head>
   <!-- END: Head-->
   <body class="vertical-layout gradient-45deg-indigo-purple vertical-menu-collapsible menu-collapse page-header-dark vertical-modern-menu preload-transitions 2-columns " data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
 
-   <!-- BEGIN: Header-->
-   <header class="page-topbar"  id="header">
-    <div class="navbar navbar-fixed"> 
-      <nav id="navscroll" style="padding-top: 15px; padding-bottom: 20px;"  class="navbar-main navbar-color nav-collapsible navbar-dark gradient-45deg-indigo-purple no-shadow">
-        <div class="nav-wrapper gradient-45deg-indigo-purple">
-          <div class="header-search-wrapper hide-on-med-and-down">
-            <i class="material-icons">search</i>
-            <input class="header-search-input z-depth-2 border-round" type="text" name="Search" placeholder="Explore DearHR" data-search="template-list">
-            <ul class="search-list collection display-none"></ul>
+     <!-- BEGIN: Header-->
+     <header class="page-topbar"  id="header">
+      <div class="navbar navbar-fixed"> 
+        <nav id="navscroll" style="padding-top: 15px; padding-bottom: 20px;"  class="navbar-main navbar-color nav-collapsible navbar-dark gradient-45deg-indigo-purple no-shadow">
+          <div class="nav-wrapper gradient-45deg-indigo-purple">
+            <!-- <div class="row"> -->
+              <!-- <div class="col m6 l6"></div> -->
+              <!-- <div class="col s12 right no-padding " > -->
+                <div class="header-search-wrapper hide-on-med-and-down">
+                  <i class="material-icons">search</i>
+                  <input class="header-search-input z-depth-2 border-round" type="text" name="Search" placeholder="Explore DearHR" data-search="template-list">
+                  <ul class="search-list collection display-none"></ul>
+                </div>
+                <ul class="navbar-list right" id="nabbar-top">
+                  <!-- <li class="dropdown-language"><a class="waves-effect waves-block waves-light translation-button" href="#" data-target="translation-dropdown"><span class="flag-icon flag-icon-gb"></span></a></li> -->
+                  <li class="hide-on-med-and-down"><a style="height: 60px;" class="waves-effect waves-block waves-light toggle-fullscreen" href="javascript:void(0);"><i class="material-icons">settings_overscan</i></a></li>
+                  <li class="hide-on-large-only search-input-wrapper"><a style="height: 60px;" class="waves-effect waves-block waves-light search-button" href="javascript:void(0);"><i class="material-icons">search</i></a></li>
+                  <li><a style="height: 60px;" class="waves-effect waves-block waves-light notification-button" href="javascript:void(0);" data-target="notifications-dropdown"><i class="material-icons">notifications_none<small class="notification-badge">5</small></i></a></li>
+                  <li><a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown"><span class="avatar-status avatar-online"><img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="avatar"><i></i></span></a></li>
+                  <li> <a style="height: 60px;"  href="#" data-target="theme-cutomizer-out" class="accent-2 white-text sidenav-trigger theme-cutomizer-trigger"><i class="material-icons">settings</i></a></li>
+                  <li><a style="height: 60px;" class="waves-effect waves-block waves-light sidenav-trigger" href="#" data-target="slide-out-right"><i class="material-icons">format_indent_increase</i></a></li>
+                </ul>
+                <!-- translation-button-->
+                <ul class="dropdown-content" id="translation-dropdown">
+                  <li class="dropdown-item"><a class="grey-text text-darken-1" href="#!" data-language="en"><i class="flag-icon flag-icon-gb"></i> English</a></li>
+                  <li class="dropdown-item"><a class="grey-text text-darken-1" href="#!" data-language="fr"><i class="flag-icon flag-icon-fr"></i> French</a></li>
+                  <li class="dropdown-item"><a class="grey-text text-darken-1" href="#!" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a></li>
+                  <li class="dropdown-item"><a class="grey-text text-darken-1" href="#!" data-language="de"><i class="flag-icon flag-icon-de"></i> German</a></li>
+                </ul> 
+                <!-- notifications-dropdown-->
+                <ul class="dropdown-content" id="notifications-dropdown">
+                  <li>
+                    <h6>NOTIFICATIONS<span class="new badge">5</span></h6>
+                  </li>
+                  <li class="divider"></li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle cyan small">add_shopping_cart</span> A new order has been placed!</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">2 hours ago</time>
+                  </li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle red small">stars</span> Completed the task</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">3 days ago</time>
+                  </li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle teal small">settings</span> Settings updated</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">4 days ago</time>
+                  </li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle deep-orange small">today</span> Director meeting started</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">6 days ago</time>
+                  </li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle amber small">trending_up</span> Generate monthly report</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">1 week ago</time>
+                  </li>
+                </ul>
+                <!-- profile-dropdown-->
+                <ul class="dropdown-content" id="profile-dropdown">
+                  <li><a class="grey-text text-darken-1" href="user-profile-page.html"><i class="material-icons">person_outline</i> Profile</a></li>
+                  <li><a class="grey-text text-darken-1" href="app-chat.html"><i class="material-icons">chat_bubble_outline</i> Chat</a></li>
+                  <li><a class="grey-text text-darken-1" href="page-faq.html"><i class="material-icons">help_outline</i> Help</a></li>
+                  <li class="divider"></li>
+                  <li><a class="grey-text text-darken-1" href="user-lock-screen.html"><i class="material-icons">lock_outline</i> Lock</a></li>
+                  <li><a class="grey-text text-darken-1" href="{% url 'dashboard:logout' %}"><i class="material-icons">keyboard_tab</i> Logout</a></li>
+                </ul>
+              <!-- </div> -->
+            <!-- </div> -->
           </div>
-          <ul class="navbar-list right" id="nabbar-top">
-            <li class="hide-on-med-and-down"><a style="height: 60px;" class="waves-effect waves-block waves-light toggle-fullscreen" href="javascript:void(0);"><i class="material-icons">settings_overscan</i></a></li>
-            <li class="hide-on-large-only search-input-wrapper"><a style="height: 60px;" class="waves-effect waves-block waves-light search-button" href="javascript:void(0);"><i class="material-icons">search</i></a></li>
-          </ul>
-             
-        </div>
-        <nav class="display-none search-sm">
-          <div class="nav-wrapper">
-            <form id="navbarForm">
-              <div class="input-field search-input-sm">
-                <input class="search-box-sm mb-0" type="search" required="" id="search" placeholder="Explore Materialize" data-search="template-list">
-                <label class="label-icon" for="search"><i class="material-icons search-sm-icon">search</i></label><i class="material-icons search-sm-close">close</i>
-                <ul class="search-list collection search-list-sm display-none"></ul>
-              </div>
-            </form>
-          </div>
+          <nav class="display-none search-sm">
+            <div class="nav-wrapper">
+              <form id="navbarForm">
+                <div class="input-field search-input-sm">
+                  <input class="search-box-sm mb-0" type="search" required="" id="search" placeholder="Explore Materialize" data-search="template-list">
+                  <label class="label-icon" for="search"><i class="material-icons search-sm-icon">search</i></label><i class="material-icons search-sm-close">close</i>
+                  <ul class="search-list collection search-list-sm display-none"></ul>
+                </div>
+              </form>
+            </div>
+          </nav>
         </nav>
-      </nav>
-    </div>
-  </header>
-  <!-- END: Header-->
+      </div>
+    </header>
+    <!-- END: Header-->
     <ul class="display-none" id="default-search-main">
       <li class="auto-suggestion-title"><a class="collection-item" href="#">
           <h6 class="search-title">FILES</h6></a></li>
@@ -170,11 +216,11 @@ License: You must have a valid license purchased only from themeforest(the above
         <li class="active bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">settings_input_svideo</i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge pill orange float-right mr-10">3</span></a>
           <div class="collapsible-body">
             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-              <li class="active"><a class="active" href="dashboard-modern.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Modern">Modern</span></a>
+              <li class="active"><a class="active" href="{% url 'dashboard:hr_dashboard' %}"><i class="material-icons">settings_input_svideo</i><span data-i18n="Modern">HR Dashboard</span></a>
               </li>
-              <li><a href="dashboard-ecommerce.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="eCommerce">eCommerce</span></a>
+              <li><a href="{% url 'dashboard:shortlist' %}"><i class="material-icons">check</i><span data-i18n="eCommerce">Short listed</span></a>
               </li>
-              <li><a href="dashboard-analytics.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Analytics</span></a>
+              <li><a href="{% url 'dashboard:card' %}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">One Card</span></a>
               </li>
             </ul>
           </div>
@@ -523,47 +569,53 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="content-wrapper-before"></div>
         <div class="col s12">
           <div class="container">
-            <div class="row">
-              <div class="col s12 m6 l8">
-                <div class="row pt-3 pb-2">
-                  <div class="col s12 m3 l2 ">
-                    <h6 class="right" style="color: white;">Collaborators:</h6>
-                  </div>
-                  <div class="col s12 m8 ">
-                  <div class="carousel " 
-                    data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false }'>
-                    <div class="carousel-cell ">
-                      <div class="chip">
-                        <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="Contact Person">
-                        Jane Doe  
-                    </div>
-                    </div>
-                    <div class="carousel-cell">
-                      <div class="chip">
-                        <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="Contact Person">
-                        Jane Doe  
-                    </div>
-                    </div>
-                    <div class="carousel-cell">
-                      <div class="chip">
-                        <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="Contact Person">
-                        Jane Doe  
-                    </div>
-                    </div>
-                    <div class="carousel-cell">
-                      <div class="chip">
-                        <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="Contact Person">
-                        Jane Doe  
-                    </div>
+                <div class="row ">
+                  
+                  <div class="col s12 m9 l11 ">
+                    <div class="" style="padding-top: 10px;" 
+                      data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+                      
+                      <div class="carousel-cell ">
+                        <div class="chip">
+                          Collaborators:
+                        </div>
+                      </div>
+                      <div class="carousel-cell">
+                        <div class="chip">
+                          <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="Contact Person">
+                          Jane Doe
+                        </div>
+                      </div>
+                      <div class="carousel-cell">
+                        <div class="chip">
+                          <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" alt="Contact Person">
+                          Jane Doe
+                        </div>
+                      </div>
+                      <div class="carousel-cell">
+                        <div class="chip">
+                          <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="Contact Person">
+                          Jane Doe
+                        </div>
+                      </div>
+                      <div class="carousel-cell">
+                        <div class="chip">
+                          <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="Contact Person">
+                          Jane Doe
+                        </div>
+                      </div>
+                      <div class="carousel-cell">
+                        <div class="chip">
+                          <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" alt="Contact Person">
+                          Jane Doe
+                        </div>
+                      </div>
+                     
                     </div>
                   </div>
                 </div>
-                </div>
-              </div>
-            </div>
             <div class="section">
               <div class="row">
-                
                 <!--1 shortlisted candidate card-->
                 <div class="col s12 m4 l3 resizeable">
                   <div class="card animate fadeUp hoverable">
@@ -608,9 +660,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                       </div>
                     </div>
+                    <a href="{% url 'dashboard:card' %}">
                     <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
                       <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
+                    </div></a>
                   </div>
                 </div>
                 <!-- end of shortlisted candidates card -->
@@ -659,9 +712,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                       </div>
                     </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
+                    <a href="{% url 'dashboard:card' %}">
+                      <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
+                        <p class="center toggle-button mt-1 mb-1">See More... </p>
+                      </div></a>
                   </div>
                 </div>
                 <!-- end of shortlisted candidates card -->
@@ -710,9 +764,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                       </div>
                     </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
+                    <a href="{% url 'dashboard:card' %}">
+                      <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
+                        <p class="center toggle-button mt-1 mb-1">See More... </p>
+                      </div></a>
                   </div>
                 </div>
                 <!-- end of shortlisted candidates card -->
@@ -761,9 +816,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                       </div>
                     </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
+                    <a href="{% url 'dashboard:card' %}">
+                      <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
+                        <p class="center toggle-button mt-1 mb-1">See More... </p>
+                      </div></a>
                   </div>
                 </div>
                 <!-- end of shortlisted candidates card -->
@@ -812,9 +868,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                       </div>
                     </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
+                    <a href="{% url 'dashboard:card' %}">
+                      <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
+                        <p class="center toggle-button mt-1 mb-1">See More... </p>
+                      </div></a>
                   </div>
                 </div>
                 <!-- end of shortlisted candidates card -->
@@ -863,9 +920,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                       </div>
                     </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
+                    <a href="{% url 'dashboard:card' %}">
+                      <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
+                        <p class="center toggle-button mt-1 mb-1">See More... </p>
+                      </div></a>
                   </div>
                 </div>
                 <!-- end of shortlisted candidates card -->
@@ -914,9 +972,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                       </div>
                     </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
+                    <a href="{% url 'dashboard:card' %}">
+                      <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
+                        <p class="center toggle-button mt-1 mb-1">See More... </p>
+                      </div></a>
                   </div>
                 </div>
                 <!-- end of shortlisted candidates card -->
@@ -965,9 +1024,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                       </div>
                     </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
+                    <a href="{% url 'dashboard:card' %}">
+                      <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
+                        <p class="center toggle-button mt-1 mb-1">See More... </p>
+                      </div></a>
                   </div>
                 </div>
                 <!-- end of shortlisted candidates card -->
@@ -1016,9 +1076,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                       </div>
                     </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
+                    <a href="{% url 'dashboard:card' %}">
+                      <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
+                        <p class="center toggle-button mt-1 mb-1">See More... </p>
+                      </div></a>
                   </div>
                 </div>
                 <!-- end of shortlisted candidates card -->
@@ -1067,14 +1128,13 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                       </div>
                     </div>
-                    <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
-                      <p class="center toggle-button mt-1 mb-1">See More... </p>
-                    </div>
+                    <a href="{% url 'dashboard:card' %}">
+                      <div class="m-0" style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;">
+                        <p class="center toggle-button mt-1 mb-1">See More... </p>
+                      </div></a>
                   </div>
                 </div>
                 <!-- end of shortlisted candidates card -->
-
-
 
 
                 <!-- <div class="col s12 m6 l3 resizeable">
@@ -2485,19 +2545,11 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END: Footer-->
     <!-- BEGIN VENDOR JS-->
     <script src="{% static 'app-assets/js/vendors.min.js' %}"></script>
-    <script src="{% static 'app-assets/vendors/sparkline/jquery.sparkline.min.js' %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
-
-    <script src="{% static 'app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'app-assets/js/plugins.js' %}"></script>
     <script src="{% static 'app-assets/js/search.js' %}"></script>
     <script src="{% static 'app-assets/js/timeline.js' %}"></script>
     <script src="{% static 'app-assets/js/custom/custom-script.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
-    <!-- <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script> -->
-    <script src="{% static 'app-assets/js/scripts/advance-ui-modals.js' %}"></script>
-    <script src="{% static 'app-assets/js/scripts/media-gallery-page.js' %}"></script>
-    <script src="{% static 'app-assets/js/scripts/advance-ui-carousel.js' %}"></script>
     <script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
 
     <script>

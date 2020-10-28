@@ -1,11 +1,12 @@
 // this is the function that loads the intro model in the dashbaord when loads.
-$(window).on('load', function () {
+
+$('.modalintro').click( function () {
 
     $('.modal').modal({
         'onOpenEnd': initCarouselModal,
     });
 
-    setTimeout(function () { $('.modal').modal('open'); }, 1800)
+    setTimeout(function () { $('.modal').modal('open'); }, 18)
 
 
     $('.btn-next').on('click', function (e) {
@@ -42,7 +43,7 @@ $(window).on('load', function () {
 
                     // on 3rd step add and remove elements
 
-                    if ($('.carousel-item.active').index() == 3) {
+                    if ($('.carousel-item.active').index() == 8) {
                         $('.btn-next').addClass('disabled');
                     }
                 }

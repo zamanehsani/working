@@ -19,4 +19,8 @@ urlpatterns = [
     path('card/', views.card, name="card"),
     path('general_info/', views.general_info, name="general_info"),
     path('hr_dashboard/', views.hr_dashboard, name="hr_dashboard"),
+    # path('testing/', views.testing, name="testing"),
+    path('profile_edit/', views.profile_edit, name="profile_edit"),
+    path('analytic_dashboard/', views.analytic_dashboard, name="analytic_dashboard"),
+    
 ]

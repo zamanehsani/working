@@ -31,18 +31,21 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/fontAwesome/css/font-awesome.min.css' %}"> -->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/vendors.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/animate-css/animate.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/chartist-js/chartist.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/chartist-js/chartist-plugin-tooltip.css' %}">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/chartist-js/chartist.min.css' %}"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/chartist-js/chartist-plugin-tooltip.css' %}"> -->
     <!-- END: VENDOR CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/hover-effects/media-hover-effects.css' %}">
-
     <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/materialize.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/dashboard-modern.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/intro.css' %}">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/data-tables/css/jquery.dataTables.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/data-tables/extensions/responsive/css/responsive.dataTables.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/app-contacts.css' %}">
     <!-- END: Page Level CSS-->
-
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/custom/custom.css' %}">
     <!-- END: Custom CSS-->
@@ -221,6 +224,18 @@ License: You must have a valid license purchased only from themeforest(the above
               </li>
               <li><a href="dashboard-analytics.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Analytics</span></a>
               </li>
+            </ul>
+          </div>
+        </li>
+        <li class=" bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">settings_input_svideo</i><span class="menu-title" data-i18n="users">Users</span></a>
+          <div class="collapsible-body">
+            <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+              <li class="active"><a class="active" href="{% url 'dashboard:profile' %}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Modern">Profile</span></a>
+              </li>
+              <li><a href="{% url 'dashboard:general_info' %}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="eCommerce">General Information</span></a>
+              </li>
+              <!-- <li><a href="dashboard-analytics.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Analytics</span></a>
+              </li> -->
             </ul>
           </div>
         </li>
@@ -571,17 +586,9 @@ License: You must have a valid license purchased only from themeforest(the above
             <div class="section">
               <!-- User statistics & appointment cards-->
               <div class="row">
-                <!-- <div class="col s12" style="height: 70px;"> -->
-                  <!-- <div id="margin-custom" class="card recent-buyers-card animate fadeUp ">
-                      <div class="card-content pb-1 pt-1">
-                        <h4 class="card-title mb-0">Targeted Profiles  <a href="#">1&nbsp;Complated</a>, <a href="#">1&nbsp;in&nbsp;Prograss.</a></h4>
-                      </div>
-                  </div> -->
-                <!-- </div> -->
-
                 <!-- generic user profile -->
-                <div id="generic-card" class="col s12 l4 ">
-                  <div class=" card animate fadeRight ">
+                <div class="col s12 m4 l3 generic">
+                  <div class=" card animate fadeLeft ">
                       <div class="card-content">
                           <div class="col s12 center-align">
                             <img id="generic-profile" class="responsive-img padding-1 card-profile-image gradient-indigo-purple  circle z-depth-3" width="180px" src="{% static 'app-assets/images/user/12.jpg' %}"
@@ -727,199 +734,201 @@ License: You must have a valid license purchased only from themeforest(the above
                       </div>
                   </div>
                 </div>
-        
-                <!-- user profile first -->
-                  <div id="profile-card1" class="col s12 l4">
-                    <!-- User Statistics  -->
-                    <div class="card user-statistics-card animate fadeLeft">
-                      <div class="ribbon base-alt z-depth-2"><span>Complated</span></div>
-                      <div style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class=" waves-effect waves-block waves-light">
-                          <video autoplay playsinline loop muted preload="auto"  width="100%" height="100%" >
-                            <source src="https://webnus.net/themes/easyweb/design/wp-content/uploads/2016/05/easy-v1.mp4" type="video/mp4">
-                          </video>
-                      </div>
-                        <div class="card-content pb-0">
-                          <div  class="fixed-action-btn right click-to-toggle direction-left">
-                            <a class="btn-floating btn-medium pink.accent-2 menu-shadow">
-                              <i class="material-icons">add</i>
-                            </a>
-                              <ul style="list-style: none;">
-                                  <li><a href="" class="btn-floating blue"><i class="material-icons">edit</i></a></li>
-                                  <li><a href="" class="btn-floating green"><i class="material-icons">lock_open</i></a></li>
-                                  <li><a href="" class="btn-floating amber"><i class="material-icons">thumb_up</i></a></li>
-                                  <li><a href="" class="btn-floating cyan"><i class="material-icons">filter_list</i></a></li>
-                                  <li><a href="" class="btn-floating red"><i class="material-icons">visibility</i></a></li>
-                              </ul>
-                          </div>            
-                          <img src="{% static 'app-assets/images/user/12.jpg' %}" style="position: relative; top: -70px; z-index: 1;" alt="profile card " width="80px" class="circle  z-depth-2 "/>                
-                          <h5 style="margin-top: -60px; font-size: x-large;" class="mb-3" > <a href=""> Project&nbsp;Manager </a></h5>
-                              <div class="mb-3">
-                                  <article >This is the short bio. at this place you can write short bio of your self. 
-                                    In this section add what ever you want to show case your profile. Show off youself.</article>
-                              </div>
-                              <div>
-                                <h6>Experiences: <a href="#">1&nbsp;years</a></h6>
-                              </div>
-                              <div>
-                                <h6 class="mt-3 mb-3">Targeted&nbsp;location: <a href="#">Dubai,&nbsp;UAE</a> </h6>
-                              </div>
-                              <div>
-                                <h6 class="mt-3">Expected&nbsp;Salary: <a href="#"> 8000&nbsp;AED</a></h6>
-                              </div>
-                                
-                              <div class="container">
-                                <div class="row">
-                                  <div id="view-basic-demo">
-                                      <div class="col s12 mt-1">
-                                        <input type="text" class="js-range-slider" value="" />                                     
-                                      </div>
+                <!-- this is the main section of cards -->
+                <div class="col s12 m8 l9 sectionMainContent">
+                  <div class="row">
+                    <!-- user profile first -->
+                    <div  class="col s12 m6 l4 resizeable animate fadeRight ">
+                      <!-- User Statistics  -->
+                      <div class="card user-statistics-card">
+                        <div class="ribbon base-alt z-depth-2"><span>Complated</span></div>
+                        <div style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class=" waves-effect waves-block waves-light">
+                            <video autoplay playsinline loop muted preload="auto"  width="100%" height="100%" >
+                              <source src="https://webnus.net/themes/easyweb/design/wp-content/uploads/2016/05/easy-v1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                          <div class="card-content pb-0">
+                            <div  class="fixed-action-btn right click-to-toggle direction-left">
+                              <a class="btn-floating btn-medium pink.accent-2 menu-shadow">
+                                <i class="material-icons">add</i>
+                              </a>
+                                <ul style="list-style: none;">
+                                    <li><a href="{% url 'dashboard:profile_edit'%}" target="_blank" class="btn-floating blue"><i class="material-icons">edit</i></a></li>
+                                    <li><a href="" class="btn-floating green"><i class="material-icons">lock_open</i></a></li>
+                                    <li><a href="" class="btn-floating amber"><i class="material-icons">thumb_up</i></a></li>
+                                    <li><a href="" class="btn-floating cyan"><i class="material-icons">filter_list</i></a></li>
+                                    <li><a href="" class="btn-floating red"><i class="material-icons">visibility</i></a></li>
+                                </ul>
+                            </div>            
+                            <img src="{% static 'app-assets/images/user/12.jpg' %}" style="position: relative; top: -70px; z-index: 1;" alt="profile card " width="80px" class="circle  z-depth-2 "/>                
+                            <h5 style="margin-top: -60px; font-size: x-large;" class="mb-3" > <a href=""> Project&nbsp;Manager </a></h5>
+                                <div class="mb-3">
+                                    <article >This is the short bio. at this place you can write short bio of your self. 
+                                      In this section add what ever you want to show case your profile. Show off youself.</article>
+                                </div>
+                                <div>
+                                  <h6>Experiences: <a href="#">1&nbsp;years</a></h6>
+                                </div>
+                                <div>
+                                  <h6 class="mt-3 mb-3">Targeted&nbsp;location: <a href="#">Dubai,&nbsp;UAE</a> </h6>
+                                </div>
+                                <div>
+                                  <h6 class="mt-3">Expected&nbsp;Salary: <a href="#"> 8000&nbsp;AED</a></h6>
+                                </div>
+                                  
+                                <div class="container">
+                                  <div class="row">
+                                    <div id="view-basic-demo">
+                                        <div class="col s12 mt-1">
+                                          <input type="text" class="js-range-slider" value="" />                                     
+                                        </div>
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                            <!-- accordin -->
-                            <div class="row">
-                              <div class="col s12">
-                                <ul class="collapsible collapsible-accordion">
-                                  <li class="">
-                                    <div class="collapsible-header pb-2 centering">
-                                      <i class="material-icons">add</i>
-                                        Skill Set 
-                                      <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
-                                    </div>
-                                    <div class="collapsible-body pb-3" >
-                                      <div class="container">
-                                        <div class="row">
-                                          <ul id="collection-custom" class="collection mb-0">
-                                            <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
-                                              <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
-                                              <p class="font-weight-600">Project management </p>
-                                              <div class="prograss">
-                                                <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
-                                              </div>
-                                            </li>
-                                            <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                              <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
-                                              <p class="font-weight-600">Marketing </p>
-                                              <div class="prograss">
-                                                <div class="w3-yellow-green prograss_bar" style="width:80%; box-shadow: 0 0 0 1px #A3C14F;">
-                                                  <span>80%</span>
-                                                </div>
-                                              </div>
-                                            </li>
-                                            <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                              <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                              <p class="font-weight-600">Vloging </p>
-                                              <div class="prograss">
-                                                <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span>60%</span></div>
-                                              </div>
-                                            </li>
-                                            <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                              <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                              <p class="font-weight-600">SEO </p>
-                                              <div class="prograss">
-                                                <div class="w3-orange prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #ff9800 ; "><span>35%</span></div>
-                                              </div>
-                                            </li>
-                                          </ul>
-                                        </div>
+                              <!-- accordin -->
+                              <div class="row">
+                                <div class="col s12">
+                                  <ul class="collapsible collapsible-accordion">
+                                    <li class="">
+                                      <div class="collapsible-header pb-2 centering">
+                                        <i class="material-icons">add</i>
+                                          Skill Set 
+                                        <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
                                       </div>
-                                    </div>
-                                  </li>
-                                  <li>
-                                    <div class="collapsible-header pb-3 centering">
-                                      <i class="material-icons">aspect_ratio</i>
-                                        Showcase
-                                      <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
-                                    </div>
-                                      <div class="collapsible-body">
+                                      <div class="collapsible-body pb-3" >
                                         <div class="container">
-                                          <div class="row user-projects pb-1 pt-1">
-                                            <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                              <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/35.png' %}">
-                                            </div>
-                                            <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                              <img class="responsive-img photo-border mt-5 " alt="" src="{% static 'app-assets/images/gallery/37.png' %}">
-                                            </div>
-                                            <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                              <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/39.png' %}">
-                                            </div>
-                                            <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                              <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/40.png' %}">
-                                            </div>
-                                            <div class="col s4 " style="padding-left: 0.5em; padding-right: 0.5em;">
-                                              <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/41.png' %}">
-                                            </div>
-                                            <div class="col s4 " style="padding-left: 0.5em; padding-right: 0.5em;">
-                                              <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/43.png' %}">
-                                            </div>
+                                          <div class="row">
+                                            <ul id="collection-custom" class="collection mb-0">
+                                              <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                                                <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                                <p class="font-weight-600">Project management </p>
+                                                <div class="prograss">
+                                                  <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                                </div>
+                                              </li>
+                                              <li class="collection-item avatar mb-2" style="border-bottom: none;">
+                                                <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
+                                                <p class="font-weight-600">Marketing </p>
+                                                <div class="prograss">
+                                                  <div class="w3-yellow-green prograss_bar" style="width:80%; box-shadow: 0 0 0 1px #A3C14F;">
+                                                    <span>80%</span>
+                                                  </div>
+                                                </div>
+                                              </li>
+                                              <li class="collection-item avatar mb-2" style="border-bottom: none;">
+                                                <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
+                                                <p class="font-weight-600">Vloging </p>
+                                                <div class="prograss">
+                                                  <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span>60%</span></div>
+                                                </div>
+                                              </li>
+                                              <li class="collection-item avatar mb-2" style="border-bottom: none;">
+                                                <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
+                                                <p class="font-weight-600">SEO </p>
+                                                <div class="prograss">
+                                                  <div class="w3-orange prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #ff9800 ; "><span>35%</span></div>
+                                                </div>
+                                              </li>
+                                            </ul>
                                           </div>
                                         </div>
                                       </div>
                                     </li>
-                                  <li>
-                                    <div class="collapsible-header pb-0 centering" style="border-bottom: none;" >
-                                      <i class="material-icons">adjust</i>
-                                      Endorsements 
-                                      <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
-                                    </div>
-                                    <div class="collapsible-body" style="border-bottom: none;">
-                                      <ul id="collection-custom" class="collection mb-0">
-                                        <li class="collection-item avatar" style="border-bottom: none;">
-                                          <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
-                                          <p class="font-weight-600">John Doe</p>
-                                          <p class="medium-small">18, January 2019</p>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
-                                        </li>
-                                        <li class="collection-item avatar" style="border-bottom: none;">
-                                          <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
-                                          <p class="font-weight-600">Adam Garza</p>
-                                          <p class="medium-small">20, January 2019</p>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
-                                        </li>
-                                        <li class="collection-item avatar" style="border-bottom: none;">
-                                          <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                          <p class="font-weight-600">Jennifer Rice</p>
-                                          <p class="medium-small">25, January 2019</p>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>
-                                          <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
-                                        </li>
-                                    </ul>
-                                    </div>
-                                  </li>
-                              </ul>
+                                    <li>
+                                      <div class="collapsible-header pb-3 centering">
+                                        <i class="material-icons">aspect_ratio</i>
+                                          Showcase
+                                        <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                      </div>
+                                        <div class="collapsible-body">
+                                          <div class="container">
+                                            <div class="row user-projects pb-1 pt-1">
+                                              <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                                <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/35.png' %}">
+                                              </div>
+                                              <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                                <img class="responsive-img photo-border mt-5 " alt="" src="{% static 'app-assets/images/gallery/37.png' %}">
+                                              </div>
+                                              <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                                <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/39.png' %}">
+                                              </div>
+                                              <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                                <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/40.png' %}">
+                                              </div>
+                                              <div class="col s4 " style="padding-left: 0.5em; padding-right: 0.5em;">
+                                                <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/41.png' %}">
+                                              </div>
+                                              <div class="col s4 " style="padding-left: 0.5em; padding-right: 0.5em;">
+                                                <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/43.png' %}">
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </li>
+                                    <li>
+                                      <div class="collapsible-header pb-0 centering" style="border-bottom: none;" >
+                                        <i class="material-icons">adjust</i>
+                                        Endorsements 
+                                        <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
+                                      </div>
+                                      <div class="collapsible-body" style="border-bottom: none;">
+                                        <ul id="collection-custom" class="collection mb-0">
+                                          <li class="collection-item avatar" style="border-bottom: none;">
+                                            <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                            <p class="font-weight-600">John Doe</p>
+                                            <p class="medium-small">18, January 2019</p>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
+                                          </li>
+                                          <li class="collection-item avatar" style="border-bottom: none;">
+                                            <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
+                                            <p class="font-weight-600">Adam Garza</p>
+                                            <p class="medium-small">20, January 2019</p>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
+                                          </li>
+                                          <li class="collection-item avatar" style="border-bottom: none;">
+                                            <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
+                                            <p class="font-weight-600">Jennifer Rice</p>
+                                            <p class="medium-small">25, January 2019</p>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>
+                                            <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                        
+                                          </li>
+                                      </ul>
+                                      </div>
+                                    </li>
+                                </ul>
+                                </div>
                               </div>
-                            </div>
-                            <!-- bottom buttons -->
-                            <div class="card-action pb-0">
-                              <div id="clients-bar" >
-                                <div class="container">
-                                  <div class="row mb-0">
-                                    <div class="col s6 centering pr-0 mr-0"> <a href="#" > <i style="font-size: 30px;" class="material-icons">share</i> </a></div>
-                                    <div class="col s6 centering pr-0 mr-0"> <a href="#" > <i style="font-size: 40px;" class="material-icons">timeline</i> </a> </div>
+                              <!-- bottom buttons -->
+                              <div class="card-action pb-0">
+                                <div id="clients-bar" >
+                                  <div class="container">
+                                    <div class="row mb-0">
+                                      <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:card' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons">share</i> </a></div>
+                                      <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:analytic_dashboard' %}" > <i style="font-size: 40px;" class="material-icons">timeline</i> </a> </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
-                        </div>
+                          </div>
+                      </div>
                     </div>
-                  </div>
-                  <!-- user profile first end -->
+                    <!-- user profile first end -->
 
-                  <!-- user profile second -->
-                  <div id="profile-card2" class="col s12 l4">
+                    <!-- user profile second -->
+                  <div class="col s12 m6 l4 resizeable animate fadeRight">
                     <!-- User Statistics  -->
-                    <div class="card user-statistics-card animate fadeLeft">
+                    <div class="card user-statistics-card">
                       <div class="ribbon base-alt2 z-depth-2"><span>In&nbsp;Progress</span></div>
                       <div style="border-top-left-radius: 15px; border-top-right-radius: 15px;" class="  waves-effect waves-block waves-light">
                           <video  palysinline muted loop preload="auto" width="100%" height="100%" >
@@ -932,7 +941,7 @@ License: You must have a valid license purchased only from themeforest(the above
                               <i class="material-icons">add</i>
                             </a>
                               <ul style="list-style: none;">
-                                  <li><a href="" class="btn-floating blue"><i class="material-icons">edit</i></a></li>
+                                  <li><a href="{% url 'dashboard:profile_edit' %}" target="_blank" class="btn-floating blue"><i class="material-icons">edit</i></a></li>
                                   <li><a href="" class="btn-floating green"><i class="material-icons">lock_open</i></a></li>
                                   <li><a href="" class="btn-floating amber"><i class="material-icons">thumb_up</i></a></li>
                                   <li><a href="" class="btn-floating cyan"><i class="material-icons">filter_list</i></a></li>
@@ -940,6 +949,7 @@ License: You must have a valid license purchased only from themeforest(the above
                               </ul>
                           </div>            
                           <img src="{% static 'app-assets/images/user/12.jpg' %}" style="position: relative; top: -70px; z-index: 1;" alt="profile card " width="80px" class="circle   cyan  z-depth-1 "/>                
+                          <!-- <a href="#modalEndorsAdd" style="top:20px" class="star modal-trigger"><i class="material-icons green-text">brush</i></a> -->
                           <h6 style="margin-top: -60px; font-size: x-large;" class="mb-3 card-title" > <a href=""> Director</a></h6>
                               <div class="mb-3">
                                   <article >
@@ -1096,8 +1106,8 @@ License: You must have a valid license purchased only from themeforest(the above
                               <div id="clients-bar" >
                                 <div class="container">
                                   <div class="row mb-0">
-                                    <div class="col s6 centering pr-0 mr-0"> <a href="#" > <i style="font-size: 30px;" class="material-icons">share</i> </a></div>
-                                    <div class="col s6 centering pr-0 mr-0"> <a href="#" > <i style="font-size: 40px;" class="material-icons">timeline</i> </a> </div>
+                                    <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:card' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons">share</i> </a></div>
+                                    <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:analytic_dashboard' %}" > <i style="font-size: 40px;" class="material-icons">timeline</i> </a> </div>
                                   </div>
                                 </div>
                               </div>
@@ -1107,6 +1117,20 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                   </div>
                   <!-- user profile second end -->
+
+                  <!-- add card button -->
+                  <div class="col s12 m6 l4 animate fadeRight resizeable">
+                    <div class="card modalintro" data-target="intro" style="cursor: pointer;">
+                      <div class="card-content " style="border-radius: 10px;">
+                        <h3 class="grey-text text-lighten-1 centering">ADD PROFILE</h3>
+                        <h1 class="centering">
+                          <i class="material-icons grey-text text-lighten-1" style="font-size: 100px;">add</i>
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
 
               </div>
               <!--/ Current balance & appointment cards-->
@@ -1731,102 +1755,297 @@ License: You must have a valid license purchased only from themeforest(the above
               </ul>
             </aside>
             <!-- END RIGHT SIDEBAR NAV -->
-            
 
             <!-- this is the intro model that loads on page laod -->
-            <!-- Intro -->
-            <!-- <div id="intro">
-                <div class="row">
-                    <div class="col s12">
+            <div id="intro">
+              <div class="row">
+                  <div class="col s12">
+          
+                      <div id="img-modal" class="modal white">
+                          <div class="modal-content">
+                              <div class="bg-img-div"></div>
+                              <p class="modal-header right modal-close">
+                                  Skip  <span class="right"><i class="material-icons right-align">clear</i></span>
+                              </p>
+                              <div class="carousel carousel-slider center intro-carousel">
+                                  <div class="carousel-fixed-item center middle-indicator">
+                                      <div class="left">
+                                          <button class="movePrevCarousel middle-indicator-text btn btn-flat purple-text waves-effect waves-light btn-prev">
+                                              <i class="material-icons">navigate_before</i> <span class="hide-on-small-only">Prev</span>
+                                          </button>
+                                      </div>
+          
+                                      <div class="right">
+                                          <button class=" moveNextCarousel middle-indicator-text btn btn-flat purple-text waves-effect waves-light btn-next">
+                                              <span class="hide-on-small-only">Next</span> <i class="material-icons">navigate_next</i>
+                                          </button>
+                                      </div>
+                                  </div>
+                                  <div class="carousel-item slide-1">
+                                      <img src="{% static 'app-assets/images/gallery/intro-slide-1.png' %}" alt="" class="responsive-img animated fadeInUp slide-1-img">
+                                      <h5 class="intro-step-title mt-7 center animated fadeInUp">Welcome to Dear User</h5>
+                                      <p class="intro-step-text mt-5 animated fadeInUp">
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                                        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, 
+                                        as opposed to using 'Content here, content here', making it look like readable English. 
+                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
+                                        and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
+                                        Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                        </p>
+                                  </div>
+                                  
+                                  <div class="carousel-item slide-2">
+                                      <img src="{% static 'app-assets/images/gallery/intro-features.png' %}" alt="" class="responsive-img slide-2-img">
+                                      <h5 class="intro-step-title mt-7 center">Make your Targeted Profile</h5>
+                                      <p class="intro-step-text mt-5">Lorem ipsum dolor sit amet consectetur,
+                                          adipisicing elit.
+                                          Aperiam deserunt nulla
+                                          repudiandae odit quisquam incidunt, maxime explicabo.</p>
+                                      <div class="row">
+                                          <div class="col s6">
+                                              <div class="input-field">
+                                                  <label for="first_name">Card's Title</label>
+                                                  <input placeholder="Name" id="first_name" type="text" class="validate">
+                                              </div>
+                                          </div>
+                                          <div class="col s6">
+                                            <div class="col s12 m4 l3">
+                                              <p>Photo  </p>
+                                            </div>
+                                            <div class="col s12 m8 l9 pt-5">
+                                              <input type="file" id="input-file-events" class="dropify-event"
+                                                data-default-file="{% static 'app-assets/images/gallery/1.png' %}" />
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="input-field col s12">
+                                          <textarea id="message5" class="materialize-textarea"></textarea>
+                                          <label for="message">Your Profile description</label>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item slide-3">
+                                    <img src="{% static 'app-assets/images/gallery/intro-features.png' %}" alt="" class="responsive-img slide-2-img">
+                                    <h5 class="intro-step-title mt-7 center">add more informatione</h5>
+                                    <p class="intro-step-text mt-5">
+                                      add some more basic information about your experiences and where you would like to locate this card. 
+                                      also, Please do not forget to add your expected salary you want.
+                                      </p>
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <div class="input-field">
+                                                <label for="experience">Experience</label>
+                                                <input placeholder="experiences" id="experience" type="text" class="validate">
+                                            </div>
+                                        </div>
+                                        <div class="col s12">
+                                          <div class="input-field">
+                                              <label for="lcoation">Location</label>
+                                              <input placeholder="Location" id="location" type="text" class="validate">
+                                          </div>
+                                      </div>
+                                      <div class="col s12">
+                                        <div class="input-field">
+                                            <label for="salary"> Salary</label>
+                                            <input placeholder="Expected Salary" id="salary" type="text" class="validate">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item slide-4">
+                                    <img src="{% static 'app-assets/images/gallery/intro-features.png' %}" alt="" class="responsive-img slide-2-img">
+                                    <h5 class="intro-step-title mt-7 center">add your Vidoe CV</h5>
+                                    <p class="intro-step-text mt-5">
+                                      Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
+                                      and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                                      </p>
+                                    <div class="row">
+                                      <div class="col s12">
+                                        <div class="col s12 m4 l3">
+                                          <p>Upload here  </p>
+                                        </div>
+                                        <div class="col s12 m8 l9 pt-5">
+                                          <input type="file" id="input-file-events" class="dropify-event"
+                                            data-default-file="{% static 'app-assets/images/gallery/1.png' %}" />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item slide-5">
+                                    <img src="{% static 'app-assets/images/gallery/intro-features.png' %}" alt="" class="responsive-img slide-2-img">
+                                    <h5 class="intro-step-title mt-7 center">add your skills </h5>
+                                    <p class="intro-step-text mt-5">
+                                      Choose all your skills that you think is relevent to this card.
+                                      </p>
 
-                        <div id="img-modal" class="modal white">
-                            <div class="modal-content">
-                                <div class="bg-img-div"></div>
-                                <p class="modal-header right modal-close">
-                                    Skip Intro <span class="right"><i class="material-icons right-align">clear</i></span>
-                                </p>
-                                <div class="carousel carousel-slider center intro-carousel">
-                                    <div class="carousel-fixed-item center middle-indicator">
-                                        <div class="left">
-                                            <button class="movePrevCarousel middle-indicator-text btn btn-flat purple-text waves-effect waves-light btn-prev">
-                                                <i class="material-icons">navigate_before</i> <span class="hide-on-small-only">Prev</span>
-                                            </button>
+                                    <div class="container">
+                                      <div class="row">
+                                        <div class="card-content p-0">
+                                          <div id="data-table-contact_wrapper" class="dataTables_wrapper no-footer">
+                                              <div class="dataTables_scroll">
+                                                <div class="dataTables_scrollBody ps ps--active-y" style="position: relative; overflow: auto; max-height: 462px; width: 100%;">
+                                                  <table id="data-table-contact" class="display dataTable no-footer dtr-inline" style="width: 100%;" role="grid" aria-describedby="data-table-contact_info">
+                                                    <thead>
+                                                      <tr role="row" style="height: 0px;">
+                                                        <th class="background-image-none center-align sorting_asc" rowspan="1" colspan="1" 
+                                                            style="width: 104px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="">
+                                                            <div class="dataTables_sizing" style="height: 0px; overflow: hidden;">
+                                                            <label>
+                                                            <input type="checkbox" onclick="toggle(this)">
+                                                            <span></span>
+                                                            </label>
+                                                            </div>
+                                                        </th>
+                                                        <th class="sorting" aria-controls="data-table-contact" rowspan="1" colspan="1" style="width: 185px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;" aria-label="Phone: activate to sort column ascending">
+                                                          <div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Phone</div>
+                                                        </th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr role="row" class="odd">
+                                                        <td class="center-align contact-checkbox sorting_1" tabindex="0">
+                                                          <label class="checkbox-label">
+                                                            <input type="checkbox" name="foo">
+                                                            <span></span>
+                                                          </label>
+                                                        </td>
+                                                        <td>
+                                                          <p class="font-weight-600 mt-3"> Event Management</p>
+                                                          <div class="prograss">
+                                                            <div class="w3-green prograss_bar" style="width:82%; box-shadow: 0 0 0 1px #6ca86e ;"><span style="padding:1px 90%">82%</span></div>
+                                                          </div>
+                                                        </td>
+                                                      </tr>
+                                                      <tr role="row" class="odd">
+                                                        <td class="center-align contact-checkbox sorting_1" tabindex="0">
+                                                          <label class="checkbox-label">
+                                                            <input type="checkbox" name="foo">
+                                                            <span></span>
+                                                          </label>
+                                                        </td>
+                                                        <td>
+                                                          <p class="font-weight-600 mt-3"> Event Management</p>
+                                                          <div class="prograss">
+                                                            <div class="w3-green prograss_bar" style="width:82%; box-shadow: 0 0 0 1px #6ca86e ;"><span style="padding:1px 90%">82%</span></div>
+                                                          </div>
+                                                        </td>
+                                                      </tr>
+                                                      <tr role="row" class="odd">
+                                                        <td class="center-align contact-checkbox sorting_1" tabindex="0">
+                                                          <label class="checkbox-label">
+                                                            <input type="checkbox" name="foo">
+                                                            <span></span>
+                                                          </label>
+                                                        </td>
+                                                        <td>
+                                                          <p class="font-weight-600 mt-3"> Event Management</p>
+                                                          <div class="prograss">
+                                                            <div class="w3-green prograss_bar" style="width:82%; box-shadow: 0 0 0 1px #6ca86e ;"><span style="padding:1px 90%">82%</span></div>
+                                                          </div>
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                              </div>                                                
+                                          </div>
                                         </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item slide-6">
+                                    <img src="{% static 'app-assets/images/gallery/intro-features.png' %}" alt="" class="responsive-img slide-2-img">
+                                    <h5 class="intro-step-title mt-7 center">add your showcase </h5>
+                                    <p class="intro-step-text mt-5">
+                                      here you can add some of the showcases you have.
+                                      </p>
+                                    <div class="row">
+                                      <div class="container padding-5">
+                                        <div class="row user-projects pb-1 pt-1">
+                                          <div class="col s3" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/35.png' %}">
+                                          </div>
+                                          <div class="col s3" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <img class="responsive-img photo-border mt-5 " alt="" src="{% static 'app-assets/images/gallery/37.png' %}">
+                                          </div>
+                                          <div class="col s3" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/39.png' %}">
+                                          </div>
+                                          <div class="col s3" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/40.png' %}">
+                                          </div>
+                                          <div class="col s3 " style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/41.png' %}">
+                                          </div>
+                                          <div class="col s3 " style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/43.png' %}">
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item slide-7">
+                                    <img src="{% static 'app-assets/images/gallery/intro-features.png' %}" alt="" class="responsive-img slide-2-img">
+                                    <h5 class="intro-step-title mt-7 center">add your endorsements </h5>
+                                    <p class="intro-step-text mt-5">
+                                      add here some of your endorsements.
+                                      </p>
+                                    <div class="row">
+                                      <div class="container pl-5 pr-5">
+                                        <ul id="collection-custom" class="collection" style="border: none;">
+                                          <li class="collection-item avatar" >
+                                            <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                            <p class="font-weight-600 " style="text-align: left!important;">John Doe</p>
+                                            <p class="medium-small" style="text-align: left!important;">18, January 2019</p>
 
-                                        <div class="right">
-                                            <button class=" moveNextCarousel middle-indicator-text btn btn-flat purple-text waves-effect waves-light btn-next">
-                                                <span class="hide-on-small-only">Next</span> <i class="material-icons">navigate_next</i>
-                                            </button>
-                                        </div>
+                                          </li>
+                                          <li class="collection-item avatar" >
+                                            <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
+                                            <p class="font-weight-600" style="text-align: left!important;">Adam Garza</p>
+                                            <p class="medium-small" style="text-align: left!important;">20, January 2019</p>                                         
+                                          </li>
+                                          <li class="collection-item avatar" >
+                                            <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
+                                            <p class="font-weight-600" style="text-align: left!important;">Jennifer Rice</p>
+                                            <p class="medium-small" style="text-align: left!important;">25, January 2019</p>                                         
+                                          </li>
+                                        </ul>
                                     </div>
-                                    <div class="carousel-item slide-1">
-                                        <img src="{% static 'app-assets/images/gallery/intro-slide-1.png' %}" alt="" class="responsive-img animated fadeInUp slide-1-img">
-                                        <h5 class="intro-step-title mt-7 center animated fadeInUp">Welcome to Materialize</h5>
-                                        <p class="intro-step-text mt-5 animated fadeInUp">Materialize is a Material Design Admin
-                                            Template is the excellent responsive google material design inspired multipurpose admin
-                                            template. Materialize has a huge collection of material design animation & widgets, UI
-                                            Elements.</p>
                                     </div>
-                                    <div class="carousel-item slide-2">
-                                        <img src="{% static 'app-assets/images/gallery/intro-features.png' %}" alt="" class="responsive-img slide-2-img">
-                                        <h5 class="intro-step-title mt-7 center">Example Request Information</h5>
-                                        <p class="intro-step-text mt-5">Lorem ipsum dolor sit amet consectetur,
-                                            adipisicing elit.
-                                            Aperiam deserunt nulla
-                                            repudiandae odit quisquam incidunt, maxime explicabo.</p>
-                                        <div class="row">
-                                            <div class="col s6">
-                                                <div class="input-field">
-                                                    <label for="first_name">Name</label>
-                                                    <input placeholder="Name" id="first_name" type="text" class="validate">
-                                                </div>
-                                            </div>
-                                            <div class="col s6">
-                                                <div class="input-field">
-                                                    <select>
-                                                        <option value="" disabled selected>Choose your option</option>
-                                                        <option value="1">Option 1</option>
-                                                        <option value="2">Option 2</option>
-                                                        <option value="3">Option 3</option>
-                                                    </select>
-                                                    <label>Materialize Select</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item slide-3">
-                                        <img src="{% static 'app-assets/images/gallery/intro-app.png' %}" alt="" class="responsive-img slide-1-img">
-                                        <h5 class="intro-step-title mt-7 center">Showcase App Features</h5>
-                                        <div class="row">
-                                            <div class="col m5 offset-m1 s12">
-                                                <ul class="feature-list left-align">
-                                                    <li><i class="material-icons">check</i> Email Application</li>
-                                                    <li><i class="material-icons">check</i> Chat Application</li>
-                                                    <li><i class="material-icons">check</i> Todo Application</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col m6 s12">
-                                                <ul class="feature-list left-align">
-                                                    <li><i class="material-icons">check</i>Contacts Application</li>
-                                                    <li><i class="material-icons">check</i>Full Calendar</li>
-                                                    <li><i class="material-icons">check</i> Ecommerce Application</li>
-                                                </ul>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col s12 center">
-                                                    <button class="get-started btn waves-effect waves-light gradient-45deg-purple-deep-orange mt-3 modal-close">Get
-                                                        Started</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- / Intro -->
+                                  </div>
+                                  <div class="carousel-item slide-8">
+                                      <img src="{% static 'app-assets/images/gallery/intro-app.png' %}" alt="" class="responsive-img slide-1-img">
+                                      <h5 class="intro-step-title mt-7 center">Well Done</h5>
+                                      <div class="row">
+                                          <div class="col m5 offset-m1 s12">
+                                              <ul class="feature-list left-align">
+                                                  <li><i class="material-icons">check</i> Profile Photo </li>
+                                                  <li><i class="material-icons">check</i> Video </li>
+                                                  <li><i class="material-icons">check</i> General Info </li>
+                                              </ul>
+                                          </div>
+                                          <div class="col m6 s12">
+                                              <ul class="feature-list left-align">
+                                                  <li><i class="material-icons">check</i>Skills </li>
+                                                  <li><i class="material-icons">check</i>Showscases </li>
+                                                  <li><i class="material-icons">check</i> Endorsement</li>
+                                              </ul>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col s12 center">
+                                                  <button class="get-started btn waves-effect waves-light gradient-45deg-purple-deep-orange mt-3 modal-close">Finish</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- / Intro -->
             
           </div>
           <div class="content-overlay"></div>
@@ -2084,7 +2303,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="{% static 'app-assets/vendors/sparkline/jquery.sparkline.min.js' %}"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
-
+    <script src="{% static 'app-assets/js/scripts/intro.js' %}"></script>
 
     <!-- BEGIN VENDOR JS-->
     <!-- BEGIN PAGE VENDOR JS-->
@@ -2100,9 +2319,13 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
+    
+    <script src="{% static 'app-assets/vendors/data-tables/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'app-assets/vendors/data-tables/extensions/responsive/js/dataTables.responsive.min.js' %}"></script>
+    <script src="{% static 'app-assets/js/scripts/app-contacts.js' %}"></script>
     <!-- <script src="{% static 'app-assets/js/scripts/extra-components-range-slider.js' %}"></script> -->
     <!-- <script src="{% static 'app-assets/js/scripts/dashboard-modern.js' %}"></script> -->
-    <!-- <script src="{% static 'app-assets/js/scripts/intro.js' %}"></script> -->
+
     <!-- END PAGE LEVEL JS-->
 
     <script>
@@ -2167,25 +2390,70 @@ License: You must have a valid license purchased only from themeforest(the above
             }
         });
 
-      $(window).on("resize", function(){
+
+        // this is for resizing
+        
+      $(document).ready(function(){
+        if ($(window).width() < 1300 ) {
+            $(".resizeable").removeClass('l3').addClass('l6');
+          }else{
+            $('.resizeable').removeClass('l6').addClass('l3');
+          }
+      });
+      $(document).ready( function(){
+        $(window).on("resize", function(){
+          if ($(window).width() < 1300) {
+            $(".resizeable").removeClass('l3').addClass('l6');
+          }else{
+            $('.resizeable').removeClass('l6').addClass('l3');
+          }
+        })
+      });
+
+      $(document).ready(function(){
         if ($(window).width() < 1200) {
-        $("#generic-card").removeClass("l4").addClass("l6");
-        $("#profile-card1").removeClass("l4").addClass("l6");
-        $("#profile-card2").removeClass("l4").addClass("l6");
-      } else {
-        $("#generic-card").removeClass("l6").addClass("l4");
-        $("#profile-card1").removeClass("l6").addClass("l4");
-        $("#profile-card2").removeClass("l6").addClass("l4");
-      }
-      if($(window).on("resize").width() > 750 ){
-        $("#generic-card").removeClass("s12").addClass("s6");
-        $("#profile-card1").removeClass("s12").addClass("s6");
-        $("#profile-card2").removeClass("s12").addClass("s6");
-      }else{
-        $("#generic-card").removeClass("s6").addClass("s12");
-        $("#profile-card1").removeClass("s6").addClass("s12");
-        $("#profile-card2").removeClass("s6").addClass("s12");
-      }
+            $(".generic").removeClass('l3').addClass('l4');
+            $('.sectionMainContent').removeClass('l9').addClass('l8');
+          }else{
+            $('.generic').removeClass('l4').addClass('l3');
+            $('.sectionMainContent').removeClass('l8').addClass('l9');
+          }
+      });
+      $(document).ready( function(){
+        $(window).on("resize", function(){
+          if ($(window).width() < 1200) {
+            $(".generic").removeClass('l3').addClass('l4');
+            $('.sectionMainContent').removeClass('l9').addClass('l8');
+          }else{
+            $('.generic').removeClass('l4').addClass('l3');
+            $('.sectionMainContent').removeClass('l8').addClass('l9');
+          }
+        })
+      });
+
+      $(document).ready(function(){
+        if ($(window).width() < 900) {
+            $(".generic").removeClass('m4').addClass('m5');
+            $('.sectionMainContent').removeClass('m8').addClass('m7');
+            $('.resizeable').removeClass('m6');
+          }else{
+            $('.generic').removeClass('m5').addClass('m4');
+            $('.sectionMainContent').removeClass('m7').addClass('m8');
+            $('.resizeable').addClass('m6')
+          }
+      });
+      $(document).ready( function(){
+        $(window).on("resize", function(){
+          if ($(window).width() < 900) {
+            $(".generic").removeClass('m4').addClass('m5');
+            $('.sectionMainContent').removeClass('m8').addClass('m7');
+            $('.resizeable').removeClass('m6');
+          }else{
+            $('.generic').removeClass('m5').addClass('m4');
+            $('.sectionMainContent').removeClass('m7').addClass('m8');
+            $('.resizeable').addClass('m6')
+          }
+        })
       });
  
       $(window).on('resize', function(){
@@ -2204,8 +2472,6 @@ License: You must have a valid license purchased only from themeforest(the above
     $(window).scroll(function() {
       if ($(document).scrollTop() > 20) {
         $("#navscroll").addClass("navtransition");
-
-      
       } else {
         $("#navscroll").removeClass("navtransition");
       }
