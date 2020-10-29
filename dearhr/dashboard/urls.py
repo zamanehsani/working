@@ -23,5 +23,5 @@ urlpatterns = [
     path('profile_edit/', views.profile_edit, name="profile_edit"),
     path('analytic_dashboard/', views.analytic_dashboard, name="analytic_dashboard"),
     path('job_card/', views.job_card, name="job_card"),
-    
+    path('question/', views.question, name="question"),    
 ]

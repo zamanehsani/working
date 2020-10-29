@@ -66,8 +66,8 @@ def profile_edit(request):
 def analytic_dashboard(request):
     return render(request, 'analytic_dashboard.html')
 
-
 def job_card(request):
     return render(request, 'analytic_dashboard.html')
 
-
+def question(request):
+    return render(request,'question.html')
