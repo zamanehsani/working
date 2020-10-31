@@ -31,12 +31,16 @@ License: You must have a valid license purchased only from themeforest(the above
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/vendors.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/animate-css/animate.css' %}">
     <!-- END: VENDOR CSS-->
+    <link rel="stylesheet" href="{% static 'app-assets/vendors/select2/select2.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'app-assets/vendors/select2/select2-materialize.css' %}" type="text/css">
 
     <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/materialize.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/dashboard-modern.css' %}">
     <!-- END: Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/form-select2.css' %}">
+
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
@@ -565,124 +569,33 @@ License: You must have a valid license purchased only from themeforest(the above
             <div class="section">
               <!-- User statistics & appointment cards-->
               <div class="row">
-
                 <!-- first column -->
                 <div class="col s12 m4 l3 allCard">
-                
-
                   <!-- collaborators   -->
                   <div class=" card animate fadeLeft ">
-                    <div class="card-header gradient-shadow gradient-45deg-deep-orange-orange pl-4 pt-4 pb-1" style="border-radius: 15px 15px 0 0;">
-                      <h5  class="pt-0 mt-0 text-ellipsis text-lighten-3 white-text ">Pob Title</h5>
-                      <p class="m-0 pb-2 pl-3 white-text text-lighten-3" style="vertical-align: top;">Type:
-                        <a class="grey-text text-lighten-3" href=""></a></p>
-                    </div>
-                    <div class="card-content">
-                      <div class="container">
-                        <div class="row p-0">
-                          <div class="col s12 l6 pt-2 modal-trigger" data-target="modalEndors">
-                            <ul id="collection-custom" class="collection mb-0" style="border: none;">
-                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
-                                <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 60px; height: 60px; left: 0px;" alt="" class="circle" />
-                                <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                                <p class="medium-small text-ellipsis">subsonic</p>
-                                <p class="medium-small text-ellipsis">Dept Manager </p>                                         
-                              </li>
-                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px;margin-bottom: 20px;">
-                                <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 60px; height: 60px; left: 0px;" alt="" class="circle" />
-                                <p class="font-weight-600 text-ellipsis">Adam&nbsp;Garza</p>
-                                <p class="medium-small text-ellipsis">subsonic</p>
-                                <p class="medium-small text-ellipsis">Dept Manager </p>                                       
-                              </li>
-                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px;margin-bottom: 20px;">
-                                <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 60px; height: 60px; left: 0px;" alt="" class="circle" />
-                                <p class="font-weight-600 text-ellipsis">Jennifer&nbsp;Rice</p>
-                                <p class="medium-small text-ellipsis">subsonic</p>
-                                <p class="medium-small text-ellipsis">Dept Manager </p>                                        
-                              </li>
-                            </ul>
-                          </div> 
-                          <div class="col s12 l6 pt-2 modal-trigger" data-target="modalEndors">
-                            <ul id="collection-custom" class="collection mb-0" style="border: none;">
-                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
-                                <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 60px; height: 60px; left: 0px;" alt="" class="circle" />
-                                <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                                <p class="medium-small text-ellipsis">subsonic</p>
-                                <p class="medium-small text-ellipsis">Dept Manager </p>                                         
-                              </li>
-                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px;margin-bottom: 20px;">
-                                <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 60px; height: 60px; left: 0px;" alt="" class="circle" />
-                                <p class="font-weight-600 text-ellipsis">Adam&nbsp;Garza</p>
-                                <p class="medium-small text-ellipsis">subsonic</p>
-                                <p class="medium-small text-ellipsis">Dept Manager </p>                                       
-                              </li>
-                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px;margin-bottom: 20px;">
-                                <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 60px; height: 60px; left: 0px;" alt="" class="circle" />
-                                <p class="font-weight-600 text-ellipsis">Jennifer&nbsp;Rice</p>
-                                <p class="medium-small text-ellipsis">subsonic</p>
-                                <p class="medium-small text-ellipsis">Dept Manager </p>                                        
-                              </li>
-                            </ul>
-                          </div>
+                    <div class="card-header gradient-shadow pl-4 pt-4 " >
+                      <a href="#modalEndorsAdd" style="top:5px;  " class="star modal-trigger pr-4"><i class="material-icons">brush</i></a>
+                      <h5  class="pt-2 mt-0 text-ellipsis center-align ">Job Title</h5>
+                      <div class="contianer  pr-6 ">
+                        <div class="input-field ">
+                          <select>
+                            <option value="1" class="" selected>Full-time</option>
+                            <option value="2">part-time</option>
+                            <option value="3">project based</option>
+                            <option value="2">intern</option>
+                            <option value="2">freelance</option>
+                          </select>
                         </div>
                       </div>
-
                     </div>
-                  </div>
-                  <!-- end of collaborator   -->
-                  
-                </div>
-                <!-- end of first column -->
-                
-                  <!-- second column -->
-                <div class="col s12 m4 l3 allCard">
-                  <!-- experience card -->
-                  <div class="card user-statistics-card animate fadeLeft">
-                    <div class="card-header gradient-shadow gradient-shadow gradient-45deg-amber-amber pl-4 pt-8 pb-5" style="border-radius: 15px 15px 0 0;">
-                      <div  class="fixed-action-btn right  direction-left" style="margin-top: 80px !important; bottom: 0px; margin-right: 20px;">
-                        <a class="btn-floating btn-medium pink.accent-2 menu-shadow">
-                          <i class="material-icons">add</i>
-                        </a>
-                        <ul style="list-style: none;">
-                            <li><a href="" class="btn-floating blue"><i class="material-icons">edit</i></a></li>
-                            <li><a href="" class="btn-floating green"><i class="material-icons">lock_open</i></a></li>
-                            <li><a href="" class="btn-floating amber"><i class="material-icons">thumb_up</i></a></li>
-                            <li><a href="" class="btn-floating cyan"><i class="material-icons">filter_list</i></a></li>
-                            <li><a href="" class="btn-floating red"><i class="material-icons">visibility</i></a></li>
-                        </ul>
-                      </div> 
-                      <h5  class="pt-0 mt-0 text-ellipsis white-text  center-align" >JOB&nbsp;TITLE</h5>
-                      <p class="text-ellipsis center-align white-text m-0" >Salary: 
-                        <a href="" class="grey-text text-lighten-3">&nbsp;$2000 </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location: 
-                        <a href="" class="text-ellipsis center-align grey-text text-lighten-3" >&nbsp;NY,&nbsp;USA</a>&nbsp;&nbsp;
-                      </p>
-                      <p class="center-align white-text m-0">Type:&nbsp;<a href="" class="grey-text text-lighten-3">Full-time</a> </p>
-                    </div>
-                    <div class="card-content pb-2 pt-1">
-                      <div class="row pt-3">
-                        <div class="col s12 m7 mt-3">
-                          <h6 class="text-ellipsis">Pool&nbsp;of&nbsp;Condidates Data:</h6>
-                          <p class="text-ellipsis">Over&nbsp;90%&nbsp;Match: <b style="font-weight: bolder;">28</b><a href="">&nbsp;&nbsp;view</a> </p>
-                          <p class="text-ellipsis">Over&nbsp;75&nbsp;Match: <b style="font-weight: bolder;">72</b><a href="">&nbsp;&nbsp;view</a> </p>
-                          <p class="text-ellipsis">Shortlisted: <a href="">8</a></p>
-                        </div>
-                        <div class="col s12 m5">
-                          <div class="container">
-                            <div class="container ct-golden-section">
-                              <div class="ct-chart ct9-chart">                                 
-                             </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
+                    <div class="card-content mt-0 pt-0">
                       <!-- accordin -->
                       <div class="row" >
                         <div class="col s12">
                           <ul class="collapsible collapsible-accordion">
-                            <li class="">
+                            <li class="active">
                               <div class="collapsible-header pb-2 centering text-ellipsis">
-                                <i class="material-icons">assignment</i>THE&nbsp;BRIEF
+                                <i class="material-icons">assignment</i>JOB&nbsp;SUMMARY
                                 <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
                               </div>
                               <div class="collapsible-body pb-3" >
@@ -695,30 +608,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                               </div>
                             </li>
-                              
+                             
                               <li class="">
                                 <div class="collapsible-header pb-2 centering text-ellipsis ">
-                                  <i class="material-icons">assignment</i>JOB&nbsp;DESCRIPTION 
-                                  <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
-                                </div>
-                                <div class="collapsible-body pb-3" >
-                                  <div class="container pt-3 pb-1">
-                                    <article>
-                                      Contrary to popular belief, Lorem Ipsum is not simply random text. 
-                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
-                                      a Latin professor at Hampden-Sydney College in Virginia,
-                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
-                                      a Latin professor at Hampden-Sydney College in Virginia, 
-                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
-                                      a Latin professor at Hampden-Sydney College in Virginia,  
-                                     </article>
-
-                                  </div>
-                                </div>
-                              </li>
-                              <li class="">
-                                <div class="collapsible-header pb-2 centering text-ellipsis ">
-                                  <i class="material-icons">check</i>KEY&nbsp;ROLES
+                                  <i class="material-icons text-ellipsis">check</i>DUTIES&nbsp;AND&nbsp;RESPONSIBILITIES
                                   <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
                                 </div>
                                 <div class="collapsible-body pb-3" >
@@ -737,7 +630,7 @@ License: You must have a valid license purchased only from themeforest(the above
                               </li>
                               <li>
                                 <div class="collapsible-header pb-3 centering text-ellipsis">
-                                  <i class="material-icons">done</i>RESPONSIBILITIES
+                                  <i class="material-icons text-ellipsis">done</i>EXPERIENCE:&nbsp;&nbsp;3yr
                                   <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
                                 </div>
                                   <div class="collapsible-body">
@@ -756,7 +649,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </li>
                                 <li class="">
                                   <div class="collapsible-header pb-2 text-ellipsis centering">
-                                    <i class="material-icons">grain</i>PERKS
+                                    <i class="material-icons">grain</i>Education
                                     <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
                                   </div>
                                   <div class="collapsible-body pb-3" >
@@ -771,37 +664,171 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </li>
                               <li>
                                 <div class="collapsible-header pb-0 centering" style="border-bottom: none;" >
-                                  <i class="material-icons">assignment</i>NOTE
+                                  <i class="material-icons">assignment</i>location
                                   <div class="col s1 push-s1"><i class="material-icons right ">arrow_drop_down</i></div>
                                 </div>
                                 <div class="collapsible-body" style="border-bottom: none;">
                                   <div class="container pt-3 pb-1">
-                                    <article>
-                                      Contrary to popular belief, Lorem Ipsum is not simply random text. 
-                                      It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, 
-                                      a Latin professor at Hampden-Sydney College in Virginia, 
-                                     </article>
+                                    <div class="contianer">
+                                      <div class="row">
+                                        <div>
+                                          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14467.183238259919!2d55.17070995!3d24.9730609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sae!4v1604134254047!5m2!1sen!2sae" 
+                                          width="400" height="300" frameborder="0" style="border:0; position: relative!important; border-radius: 8px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                      </div>
+                                      </div>
+                                    </div>
+                                    
                                   </div>
                                 </div>
                               </li>
                           </ul>
                           </div>
-                        </div>
+                      </div>
                         <!-- end of acordian -->
-                          <!-- bottom share -->
-                          <div class="card-action pb-0 ">
-                          <div id="clients-bar">
-                            <div class="container ">
-                              <div class="row mb-0 ">
-                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_card' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons">share</i> </a></div>
-                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:analytic_dashboard' %}" > <i style="font-size: 40px;" class="material-icons">timeline</i> </a> </div>
-                              </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of first column -->
+
+                  <!-- second column -->
+                <div class="col s12 m8 l9 anothercard">
+                  <div class="card animate fadeLeft">
+                    <div class="card-content pt-1 pb-0">
+                      <a href="#modalEndorsAdd" style="top:2px" class="star modal-trigger"><i class="material-icons ">brush</i></a>
+                      <h6 class="text-ellipsis"><b> Collaborators</b></h6>
+                      <div class="contianer">
+                        <div class="row">
+                          <div class="col s6 m4 l3">
+                            <ul id="collection-custom" class="collection mb-0" style="border: none;">
+                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
+                                <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle responsive-img" />
+                                <p class="font-weight-600 m-0 text-ellipsis">John&nbsp;Doe</p>
+                                <p class="medium-small m-0 text-ellipsis">subsonic</p>
+                                <p class="medium-small m-0 text-ellipsis">Dept Manager </p>                                         
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col s6 m4 l3">
+                            <ul id="collection-custom" class="collection mb-0" style="border: none;">
+                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
+                                <img src="{% static 'app-assets/images/avatar/avatar-6.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle responsive-img" />
+                                <p class="font-weight-600 m-0 text-ellipsis">John&nbsp;Doe</p>
+                                <p class="medium-small m-0 text-ellipsis">subsonic</p>
+                                <p class="medium-small m-0 text-ellipsis">Dept Manager </p>                                         
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col s6 m4 l3">
+                            <ul id="collection-custom" class="collection mb-0" style="border: none;">
+                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
+                                <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle responsive-img" />
+                                <p class="font-weight-600 m-0 text-ellipsis">John&nbsp;Doe</p>
+                                <p class="medium-small m-0 text-ellipsis">subsonic</p>
+                                <p class="medium-small m-0 text-ellipsis">Dept Manager </p>                                         
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col s6 m4 l3">
+                            <ul id="collection-custom" class="collection mb-0" style="border: none;">
+                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
+                                <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle responsive-img" />
+                                <p class="font-weight-600 m-0 text-ellipsis">John&nbsp;Doe</p>
+                                <p class="medium-small m-0 text-ellipsis">subsonic</p>
+                                <p class="medium-small m-0 text-ellipsis">Dept Manager </p>                                         
+                              </li>
+                            </ul>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Qualification card -->
+                  <div class="card user-statistics-card animate fadeLeft">
+                    <div class="card-content pb-2 pt-1">
+                     <h6><b>Qualification&nbsp;and&nbsp;Skills</b></h6>
+                     <b>Specific&nbsp;Knowledge:</b>
+                     <div class="input-field">
+                      <select class="select2 browser-default" multiple="multiple">
+                        <optgroup label="Figures">
+                          <option value="romboid">Romboid</option>
+                          <option value="trapeze" selected>Trapeze</option>
+                          <option value="triangle">Triangle</option>
+                          <option value="polygon">Polygon</option>
+                        </optgroup>
+                        <optgroup label="Colors">
+                          <option value="red">Red</option>
+                          <option value="green">Green</option>
+                          <option value="blue" selected>Blue</option>
+                          <option value="purple">Purple</option>
+                        </optgroup>
+                      </select>
+                    </div>
+
+
+                      <b>Professional&nbsp;Decredition:</b>
+                      <div class="input-field">
+                        <select class="select2 browser-default" multiple="multiple">
+                          <optgroup label="category">
+                            <option value="romboid">option first</option>
+                            <option value="trapeze" selected>option zero</option>
+                            <option value="triangle">option 3</option>
+                            <option value="polygon">another option</option>
+                            <option value="triangle">option 3</option>
+                            <option value="polygon">another option</option>
+                          </optgroup>
+                        </select>
+                      </div>
+
+                      <b>Languages:</b>
+                      <div class="input-field">
+                        <select class="select2 browser-default" multiple="multiple">
+                          <optgroup label="category">
+                            <option value="romboid" selected>English</option>
+                            <option value="trapeze" selected>Arabic</option>
+                            <option value="triangle">Spanish</option>
+                            <option value="polygon">German</option>
+                            <option value="triangle">Persian</option>
+                            <option value="polygon">Irish</option>
+                          </optgroup>
+                        </select>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- end of Qualification card  -->
+
+                  <!-- KeyWord card -->
+                  <div class="card user-statistics-card animate fadeLeft">
+                    <div class="card-content pb-2 pt-1">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col s4 l2 mt-2">
+                            <h6 class="center-align"><b>Key Word:</b></h6>
+                            <div style="border-top: 1px solid lightgrey;"></div>
+                            <p class="center-align">1</p>
+                          </div>
+                          <div class="col s8 l10 ">
+                            <div class="input-field">
+                              <select class="select2 browser-default" multiple="multiple">
+                                <optgroup label="Figures">
+                                  <option value="romboid" selected>love</option>
+                                  <option value="trapeze">hate</option>
+                                  <option value="triangle">perfection</option>
+                                  <option value="polygon">another</option>
+                                </optgroup>
+                              </select>
                             </div>
                           </div>
-                        </div> <!-- END OF SHARE BUTTON -->
+                        </div>
                       </div>
+                     
+                     
+                    </div>
                   </div>
-                  <!-- end of experience card  -->
+                  <!-- end of Keyword card  -->
+                  <div class="btn right animate fadeLeft ml-2">Cancel</div>
+                  <div class="btn right animate fadeLeft">save</div>
                 </div>
                 <!-- end of second column -->
               </div>
@@ -1597,42 +1624,53 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END: Footer-->
     <!-- BEGIN VENDOR JS-->
     <script src="{% static 'app-assets/js/vendors.min.js' %}"></script>
+    <script src="{% static 'app-assets/vendors/select2/select2.full.min.js' %}"></script>
     <script src="{% static 'app-assets/js/plugins.js' %}"></script>
     <script src="{% static 'app-assets/js/search.js' %}"></script>
     <script src="{% static 'app-assets/js/custom/custom-script.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
+    <script src="{% static 'app-assets/js/scripts/form-select2.js' %}"></script>
+
     
     <script>
       // for resizing 
       $(document).ready(function(){
         if ($(window).width() < 1300) {
             $(".allCard").removeClass('l3').addClass('l4');
+            $('.anothercard').removeClass('l9').addClass('l8')
           }else{
             $('.allCard').removeClass('l4').addClass('l3');
+            $('.anothercard').removeClass('l8').addClass('l9')
           }
       });
       $(document).ready( function(){
         $(window).on("resize", function(){
           if ($(window).width() < 1300) {
             $(".allCard").removeClass('l3').addClass('l4');
+            $('.anothercard').removeClass('l9').addClass('l8')
           }else{
             $('.allCard').removeClass('l4').addClass('l3');
+            $('.anothercard').removeClass('l8').addClass('l9')
           }
         })
       });
       $(document).ready(function(){
         if ($(window).width() < 900) {
             $(".allCard").removeClass('m4').addClass('m6');
+            $('.anothercard').removeClass('m8').addClass('m6')
           }else{
             $('.allCard').removeClass('m6').addClass('m4');
+            $('.anothercard').removeClass('m6').addClass('m8')
           }
       });
       $(document).ready( function(){
         $(window).on("resize", function(){
           if ($(window).width() < 900) {
             $(".allCard").removeClass('m4').addClass('m6');
+            $('.anothercard').removeClass('m8').addClass('m6')
           }else{
             $('.allCard').removeClass('m6').addClass('m4');
+            $('.anothercard').removeClass('m6').addClass('m8')
           }
         })
       });
@@ -1662,6 +1700,16 @@ License: You must have a valid license purchased only from themeforest(the above
         }
       });
       }
+
+      // this is for the input selection of skills and qualifications
+      $(".select2-icons").select2({
+        dropdownAutoWidth: true,
+        width: '100%',
+        minimumResultsForSearch: Infinity,
+        templateResult: iconFormat,
+        templateSelection: iconFormat,
+        escapeMarkup: function (es) { return es; }
+    });
    </script>
   </body>
 </html>
