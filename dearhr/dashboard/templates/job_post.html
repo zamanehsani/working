@@ -211,6 +211,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
               <li class="active"><a class="active" href="{% url 'dashboard:hr_dashboard' %}"><i class="material-icons">settings_input_svideo</i><span data-i18n="Modern">HR Dashboard</span></a>
               </li>
+              <li><a href="{% url 'dashboard:hrlook' %}"><i class="material-icons">check</i><span data-i18n="eCommerce">search Canditates</span></a>
               <li><a href="{% url 'dashboard:shortlist' %}"><i class="material-icons">check</i><span data-i18n="eCommerce">Short listed</span></a>
               </li>
               <li><a href="{% url 'dashboard:card' %}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">One Card</span></a>
@@ -570,7 +571,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- first column -->
                 <div class="col s12 m4 l3 allCard">
                   <!-- generic info -->
-                  <div class=" card animate fadeLeft ">
+                  <div class=" card animate fadeLeft">
                       <div class="card-content pt-0 ">
                           <div class="col s12 border-radius-10 p-0 mb-0">
                             <img class="border-radius-10 p-0 " height="" width="100%" src="{% static 'app-assets/images/pics/subsonic.png' %}"
@@ -593,7 +594,7 @@ License: You must have a valid license purchased only from themeforest(the above
                   <!-- end of generic info -->
 
                   <!-- generic user info -->
-                  <div class=" card animate fadeLeft gradient-shadow gradient-45deg-light-blue-cyan ">
+                  <div class="card animate fadeLeft gradient-45deg-light-blue-cyan mt-7">
                     <div class="card-content">
                       <div class="row mr-2">
                         <div class="col s6">
@@ -625,8 +626,8 @@ License: You must have a valid license purchased only from themeforest(the above
                   <!-- end of generic user info -->
 
                   <!-- collaborators   -->
-                  <div class=" card animate fadeLeft ">
-                    <div class="card-header gradient-shadow gradient-45deg-deep-orange-orange pl-4 pt-4 pb-1" style="border-radius: 15px 15px 0 0;">
+                  <div class=" card animate fadeLeft mt-7">
+                    <div class="card-header gradient-45deg-deep-orange-orange pl-4 pt-4 pb-1" style="border-radius: 15px 15px 0 0;">
                       <h5  class="pt-0 mt-0 text-ellipsis text-lighten-3 white-text ">Collaborator</h5>
                       <p class="m-0 pb-2 pl-3 white-text text-lighten-3" style="vertical-align: top;">Active: <a class="grey-text text-lighten-3" href="">6</a></p>
                     </div>
@@ -691,7 +692,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="col s12 m4 l3 allCard">
                   <!-- experience card -->
                   <div class="card user-statistics-card animate fadeLeft">
-                    <div class="card-header gradient-shadow gradient-shadow gradient-45deg-amber-amber pl-4 pt-8 pb-5" style="border-radius: 15px 15px 0 0;">
+                    <div class="card-header gradient-45deg-amber-amber pl-4 pt-8 pb-5" style="border-radius: 15px 15px 0 0;">
                       <div  class="fixed-action-btn right  direction-left" style="margin-top: 80px !important; bottom: 0px; margin-right: 20px;">
                         <a class="btn-floating btn-medium pink.accent-2 menu-shadow">
                           <i class="material-icons">add</i>
@@ -862,7 +863,7 @@ License: You must have a valid license purchased only from themeforest(the above
                   <div class="col s12 m4 l3 allCard">
                     <!-- experience card -->
                     <div class="card user-statistics-card animate fadeLeft">
-                      <div class="card-header gradient-45deg-purple-deep-purple gradient-shadow pl-4 pt-8 pb-5" style="border-radius: 15px 15px 0 0;">
+                      <div class="card-header gradient-45deg-purple-deep-purple pl-4 pt-8 pb-5" style="border-radius: 15px 15px 0 0;">
                         <div  class="fixed-action-btn right direction-left" style="margin-top: 80px !important; bottom: 0px; margin-right: 20px;">
                           <a class="btn-floating btn-medium pink.accent-2 menu-shadow">
                             <i class="material-icons">add</i>
@@ -1032,7 +1033,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="col s12 m4 l3 allCard">
                   <!-- experience card -->
                   <div class="card user-statistics-card animate fadeLeft">
-                    <div class="card-header gradient-shadow gradient-45deg-green-teal pl-4 pt-8 pb-5" style="border-radius: 15px 15px 0 0;">
+                    <div class="card-header gradient-45deg-green-teal pl-4 pt-8 pb-5" style="border-radius: 15px 15px 0 0;">
                       <div  class="fixed-action-btn right direction-left" style="margin-top: 80px !important; bottom: 0px; margin-right: 20px;">
                         <a class="btn-floating btn-medium pink.accent-2 menu-shadow">
                           <i class="material-icons">add</i>
@@ -1974,7 +1975,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <!-- BEGIN: Footer-->
 
-    <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-purple gradient-shadow navbar-border navbar-shadow">
+    <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-purple navbar-border navbar-shadow">
       <div class="footer-copyright">
         <div class="container">
           <span>&copy; 2020   

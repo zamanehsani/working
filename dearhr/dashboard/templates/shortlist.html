@@ -45,6 +45,12 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/custom/custom.css' %}">
+
+    <style>
+      .flickity-slider{
+        transform: none!important;
+      }
+    </style>
     <!-- END: Custom CSS-->
     <!-- <script src="https://use.fontawesome.com/de1bfe1b04.js"></script> -->
   </head>
@@ -218,9 +224,11 @@ License: You must have a valid license purchased only from themeforest(the above
             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
               <li class="active"><a class="active" href="{% url 'dashboard:hr_dashboard' %}"><i class="material-icons">settings_input_svideo</i><span data-i18n="Modern">HR Dashboard</span></a>
               </li>
+              <li><a href="{% url 'dashboard:hrlook' %}"><i class="material-icons">check</i><span data-i18n="eCommerce">search Canditates</span></a>
               <li><a href="{% url 'dashboard:shortlist' %}"><i class="material-icons">check</i><span data-i18n="eCommerce">Short listed</span></a>
               </li>
               <li><a href="{% url 'dashboard:card' %}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">One Card</span></a>
+                <li><a href="{% url 'dashboard:job_post_editor' %}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Job post editor </span></a>
               </li>
             </ul>
           </div>
@@ -569,51 +577,48 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="content-wrapper-before"></div>
         <div class="col s12">
           <div class="container">
-                <div class="row ">
-                  
-                  <div class="col s12 m9 l11 ">
-                    <div class="" style="padding-top: 10px;" 
-                      data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false }'>
-                      
-                      <div class="carousel-cell ">
-                        <div class="chip">
-                          Collaborators:
-                        </div>
-                      </div>
-                      <div class="carousel-cell">
-                        <div class="chip">
-                          <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="Contact Person">
-                          Jane Doe
-                        </div>
-                      </div>
-                      <div class="carousel-cell">
-                        <div class="chip">
-                          <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" alt="Contact Person">
-                          Jane Doe
-                        </div>
-                      </div>
-                      <div class="carousel-cell">
-                        <div class="chip">
-                          <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="Contact Person">
-                          Jane Doe
-                        </div>
-                      </div>
-                      <div class="carousel-cell">
-                        <div class="chip">
-                          <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="Contact Person">
-                          Jane Doe
-                        </div>
-                      </div>
-                      <div class="carousel-cell">
-                        <div class="chip">
-                          <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" alt="Contact Person">
-                          Jane Doe
-                        </div>
-                      </div>
-                     
+            <div class="row">
+              <div class="col s12 m9 l11 ">
+                <div class="" style="padding-top: 10px;" 
+                  data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+                  <div class="carousel-cell ">
+                    <div class="chip">
+                      Collaborators:
+                    </div>
+                  </div>
+                  <div class="carousel-cell">
+                    <div class="chip">
+                      <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="Contact Person">
+                      Jane Doe
+                    </div>
+                  </div>
+                  <div class="carousel-cell">
+                    <div class="chip">
+                      <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" alt="Contact Person">
+                      Jane Doe
+                    </div>
+                  </div>
+                  <div class="carousel-cell">
+                    <div class="chip">
+                      <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="Contact Person">
+                      Jane Doe
+                    </div>
+                  </div>
+                  <div class="carousel-cell">
+                    <div class="chip">
+                      <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="Contact Person">
+                      Jane Doe
+                    </div>
+                  </div>
+                  <div class="carousel-cell">
+                    <div class="chip">
+                      <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" alt="Contact Person">
+                      Jane Doe
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
             <div class="section">
               <div class="row">
                 <!--1 shortlisted candidate card-->

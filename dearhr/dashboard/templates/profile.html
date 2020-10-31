@@ -220,11 +220,13 @@ License: You must have a valid license purchased only from themeforest(the above
         <li class="active bold"><a class="collapsible-header waves-effect waves-cyan " href="JavaScript:void(0)"><i class="material-icons">settings_input_svideo</i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge pill orange float-right mr-10">3</span></a>
           <div class="collapsible-body">
             <ul class="collapsible collapsible-sub" data-collapsible="accordion">
-              <li class="active"><a class="active" href="dashboard-modern.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Modern">Modern</span></a>
+              <li class="active"><a class="active" href="{% url 'dashboard:hr_dashboard' %}"><i class="material-icons">settings_input_svideo</i><span data-i18n="Modern">HR Dashboard</span></a>
               </li>
-              <li><a href="dashboard-ecommerce.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="eCommerce">eCommerce</span></a>
+              <li><a href="{% url 'dashboard:hrlook' %}"><i class="material-icons">check</i><span data-i18n="eCommerce">search Canditates</span></a>
+              <li><a href="{% url 'dashboard:shortlist' %}"><i class="material-icons">check</i><span data-i18n="eCommerce">Short listed</span></a>
               </li>
-              <li><a href="dashboard-analytics.html"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Analytics</span></a>
+              <li><a href="{% url 'dashboard:card' %}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">One Card</span></a>
+                <li><a href="{% url 'dashboard:job_post_editor' %}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Analytics">Job post editor </span></a>
               </li>
             </ul>
           </div>
@@ -1097,7 +1099,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <a href="#!" class="star"><i class="material-icons">star_border</i></a>
                                             <a href="#!" class="star"><i class="material-icons">star_border</i></a>                                          
                                           </li>
-                                      </ul>
+                                        </ul>
                                       </div>
                                     </li>
                                 </ul>
@@ -1122,13 +1124,15 @@ License: You must have a valid license purchased only from themeforest(the above
 
                   <!-- add card button -->
                   <div class="col s12 m6 l4 animate fadeRight resizeable">
-                    <div class="card modalintro" data-target="intro" style="cursor: pointer;">
-                      <div class="card-content " style="border-radius: 10px;">
-                        <h3 class="grey-text text-lighten-1 centering">ADD PROFILE</h3>
-                        <h1 class="centering">
-                          <i class="material-icons grey-text text-lighten-1" style="font-size: 100px;">add</i>
-                        </h1>
-                      </div>
+                    <div class="card" style="cursor: pointer;">
+                      <a href="{% url 'dashboard:create_card'%}">
+                        <div class="card-content " style="border-radius: 10px;">
+                          <h3 class="grey-text text-lighten-1 centering">ADD PROFILE</h3>
+                          <h1 class="centering">
+                            <i class="material-icons grey-text text-lighten-1" style="font-size: 100px;">add</i>
+                          </h1>
+                        </div>
+                      </a>
                     </div>
                   </div>
                   </div>
