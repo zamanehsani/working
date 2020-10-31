@@ -54,8 +54,8 @@ def card(request):
 def general_info(request):
     return render(request, 'general_info.html')
 
-def hr_dashboard(request):
-    return render(request, 'hr_dashboard.html')
+def job_post(request):
+    return render(request, 'job_post.html')
 
 def testing(request):
     return render(request, 'testing.html')
@@ -71,3 +71,6 @@ def job_card(request):
 
 def question(request):
     return render(request,'question.html')
+
+def job_post_editor(request):
+    return render(request, 'job_post_editor.html')
