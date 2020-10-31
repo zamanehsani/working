@@ -25,4 +25,5 @@ urlpatterns = [
     path('job_card/', views.job_card, name="job_card"),
     path('question/', views.question, name="question"),
     path('job_post_editor/', views.job_post_editor, name="job_post_editor"),
+    path('create_card/', views.create_card, name="create_card"),
 ]
