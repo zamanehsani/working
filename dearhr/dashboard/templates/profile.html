@@ -36,15 +36,17 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END: VENDOR CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/hover-effects/media-hover-effects.css' %}">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/materialize-stepper/materialize-stepper.min.css' %}"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/form-wizard.css' %}"> -->
     <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/materialize.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/dashboard-modern.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/intro.css' %}">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/intro.css' %}"> -->
     
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/data-tables/css/jquery.dataTables.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/data-tables/extensions/responsive/css/responsive.dataTables.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/app-contacts.css' %}">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/data-tables/css/jquery.dataTables.min.css' %}"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/data-tables/extensions/responsive/css/responsive.dataTables.min.css' %}"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/app-contacts.css' %}"> -->
     <!-- END: Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/custom/custom.css' %}">
@@ -1133,89 +1135,6 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
 
               </div>
-              <!--/ Current balance & appointment cards-->
-              <!-- <div class="row">
-                  <div class="col s12 m6 l4">
-                    <div class="card padding-2 animate fadeLeft">
-                        <div class="row">
-                          <div class="col s5 m5">
-                              <h5 class="mb-0">1885</h5>
-                              <p class="no-margin">New</p>
-                              <p class="mb-0 pt-8">1,12,900</p>
-                          </div>
-                          <div class="col s7 m7 right-align">
-                              <i
-                                class="material-icons background-round mt-5 mb-5 gradient-45deg-purple-amber gradient-shadow white-text">perm_identity</i>
-                              <p class="mb-0">Total Clients</p>
-                          </div>
-                        </div>
-                    </div>
-                    <div id="chartjs" class="card pt-0 pb-0 animate fadeLeft">
-                        <div class="dashboard-revenue-wrapper padding-2 ml-2">
-                          <span class="new badge gradient-45deg-indigo-purple gradient-shadow mt-2 mr-2">+ $900</span>
-                          <p class="mt-2 mb-0 font-weight-600">Today's revenue</p>
-                          <p class="no-margin grey-text lighten-3">$40,512 avg</p>
-                          <h5>$ 22,300</h5>
-                        </div>
-                        <div class="sample-chart-wrapper card-gradient-chart">
-                          <canvas id="custom-line-chart-sample-three" class="center"></canvas>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="col s12 m6 l8">
-                    <div class="card subscriber-list-card animate fadeRight">
-                        <div class="card-content pb-1">
-                          <h4 class="card-title mb-0">Subscriber List <i class="material-icons float-right">more_vert</i></h4>
-                        </div>
-                        <table class="subscription-table responsive-table highlight">
-                          <thead>
-                              <tr>
-                                <th>Name</th>
-                                <th>Company</th>
-                                <th>Start Date</th>
-                                <th>Status</th>
-                                <th>Amount</th>
-                                <th>Action</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                <td>Michael Austin</td>
-                                <td>ABC Fintech LTD.</td>
-                                <td>Jan 1,2019</td>
-                                <td><span class="badge pink lighten-5 pink-text text-accent-2">Close</span></td>
-                                <td>$ 1000.00</td>
-                                <td class="center-align"><a href="#"><i class="material-icons pink-text">clear</i></a></td>
-                              </tr>
-                              <tr>
-                                <td>Aldin Rakić</td>
-                                <td>ACME Pvt LTD.</td>
-                                <td>Jan 10,2019</td>
-                                <td><span class="badge green lighten-5 green-text text-accent-4">Open</span></td>
-                                <td>$ 3000.00</td>
-                                <td class="center-align"><a href="#"><i class="material-icons pink-text">clear</i></a></td>
-                              </tr>
-                              <tr>
-                                <td>İris Yılmaz</td>
-                                <td>Collboy Tech LTD.</td>
-                                <td>Jan 12,2019</td>
-                                <td><span class="badge green lighten-5 green-text text-accent-4">Open</span></td>
-                                <td>$ 2000.00</td>
-                                <td class="center-align"><a href="#"><i class="material-icons pink-text">clear</i></a></td>
-                              </tr>
-                              <tr>
-                                <td>Lidia Livescu</td>
-                                <td>My Fintech LTD.</td>
-                                <td>Jan 14,2019</td>
-                                <td><span class="badge pink lighten-5 pink-text text-accent-2">Close</span></td>
-                                <td>$ 1100.00</td>
-                                <td class="center-align"><a href="#"><i class="material-icons pink-text">clear</i></a></td>
-                              </tr>
-                          </tbody>
-                        </table>
-                    </div>
-                  </div>
-              </div> -->
             </div>
 
             <!-- START RIGHT SIDEBAR NAV -->
@@ -2319,10 +2238,13 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
     <!-- END THEME  JS-->
     <!-- BEGIN PAGE LEVEL JS-->
+
+    <!-- <script src="{% static 'app-assets/vendors/materialize-stepper/materialize-stepper.min.js' %}"></script>    -->
+    <!-- <script src="{% static 'app-assets/js/scripts/form-wizard.js' %}"></script> -->
     
-    <script src="{% static 'app-assets/vendors/data-tables/js/jquery.dataTables.min.js' %}"></script>
-    <script src="{% static 'app-assets/vendors/data-tables/extensions/responsive/js/dataTables.responsive.min.js' %}"></script>
-    <script src="{% static 'app-assets/js/scripts/app-contacts.js' %}"></script>
+    <!-- <script src="{% static 'app-assets/vendors/data-tables/js/jquery.dataTables.min.js' %}"></script> -->
+    <!-- <script src="{% static 'app-assets/vendors/data-tables/extensions/responsive/js/dataTables.responsive.min.js' %}"></script> -->
+    <!-- <script src="{% static 'app-assets/js/scripts/app-contacts.js' %}"></script> -->
     <!-- <script src="{% static 'app-assets/js/scripts/extra-components-range-slider.js' %}"></script> -->
     <!-- <script src="{% static 'app-assets/js/scripts/dashboard-modern.js' %}"></script> -->
 
