@@ -34,8 +34,8 @@ def reg(request):
         form = UserRegisterForm()
     return render(request, 'user-register.html', {'form': form})
 
-def profile(request):
-    return render(request, 'profile.html')
+def dash(request):
+    return render(request, 'dashboard.html')
 
 def logout_request(request):
     logout(request)
@@ -51,8 +51,8 @@ def shortlist(request):
 def card(request):
     return render(request, 'detail.html')
 
-def general_info(request):
-    return render(request, 'general_info.html')
+def profile(request):
+    return render(request, 'profile.html')
 
 def job_post(request):
     return render(request, 'job_post.html')

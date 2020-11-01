@@ -137,6 +137,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 SITE_ID =1
-LOGIN_REDIRECT_URL = 'dashboard:profile'
+LOGIN_REDIRECT_URL = 'dashboard:dash'
 LOGIN_URL ='dashboard:login'
 LOGOUT_REDIRECT_URL = 'dashboard:login'

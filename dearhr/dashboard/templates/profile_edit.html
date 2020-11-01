@@ -44,6 +44,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/custom/custom.css' %}">
+
     <!-- END: Custom CSS-->
   </head>
   <!-- END: Head-->
@@ -584,21 +585,23 @@ License: You must have a valid license purchased only from themeforest(the above
                   <!-- generic user profile -->
                   <div class=" card animate fadeLeft  gradient-45deg-green-teal ">
                       <div class="card-content">
-                          <div class="col s12 center-align">
-                            <img id="generic-profile" class=" responsive-img padding-1 card-profile-image gradient-indigo-purple  circle z-depth-3" width="130px" src="{% static 'app-assets/images/user/12.jpg' %}"
-                              alt="user profile">
-                              <a class="waves-block profile-button" style="cursor: pointer; ">
-                                <span class="avatar-status">
-                                  <i class="material-icons" style="border: none; color: white; background: transparent; position: absolute; right: 0px; bottom: 10px; height: fit-content !important;width: fit-content !important; ">create</i>
-                                </span>
-                              </a>
+                          <div class="col s12 push-l3">
+                            <div class="grid " style="width: 130px;" >
+                              <figure class="effect-sadie center-align" style="width: 130px; border-radius: 50%;" >
+                                <img  class="responsive-img padding-2 card-profile-image gradient-indigo-purple  circle z-depth-5" width="130px" src="{% static 'app-assets/images/user/12.jpg' %}"
+                                alt="user profile">
+                                <figcaption class="circle" >
+                                  <p ><a href=""><i class="material-icons pink-text">camera_alt</i></a></p>
+                                </figcaption>
+                              </figure>
+                            </div>
                           </div>
                         <div class="row">
                           <div class="col s12">
                             <div class="row">
                               <div id="text" class="col s12">
-                                <a href="#modalEndorsAdd" style="top:20px" class="star modal-trigger white-text "><i class="material-icons">create</i></a>
-                                <h5 class="mb-0 pt-3 text-ellipsis white-text"> <b>Project Manager </b> </h5>
+                                <!-- <a href="#modalEndorsAdd" style="top:20px" class="star modal-trigger white-text "><i class="material-icons">create</i></a> -->
+                                <h5 class="mb-0 pt-3 text-ellipsis white-text"> <b>Project Manager &nbsp;<a href=""><i class="material-icons grey-text text-lighten-3">create</i></a> </b> </h5>
                                 <h6  class="text-ellipsis white-text" >Email&nbsp;: <a href="#" class="grey-text text-lighten-3"> emmaOlivia@gmail.com</a> </h6>
                                 <h6 class="text-ellipsis white-text"  >Phone&nbsp;: <a href="#" class="grey-text text-lighten-3"> 0566652534</a> </h6>
                                 <h6  class="text-ellipsis white-text" >DOB: <a href="#" class="grey-text text-lighten-3">15/10/1994</a> </h6>
@@ -632,30 +635,30 @@ License: You must have a valid license purchased only from themeforest(the above
                             <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
                             <p class="font-weight-600">John Doe</p>
                             <p class="medium-small">18, January 2019</p>
-                            <a href="#modalEndorsView" class="star modal-trigger"><i class="material-icons blue-text">remove_red_eye</i></a>
-                            <a href="#modalEndorsAdd" class="star modal-trigger"><i class="material-icons blue-text">create</i></a>                                      
+                            <a href="#modalEndorsView" class="star modal-trigger pl-3"><i class="material-icons blue-text">remove_red_eye</i></a>
+                            <a href="#" class="star"><i class="material-icons red-text">delete</i></a>                                      
                           </li>
                           <li class="collection-item avatar" style="border-bottom: none;">
                             <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
                             <p class="font-weight-600">Adam Garza</p>
                             <p class="medium-small">20, January 2019</p>
-                            <a href="#modalEndorsView" class="star modal-trigger"><i class="material-icons blue-text">remove_red_eye</i></a>
-                            <a href="#modalEndorsAdd" class="star modal-trigger"><i class="material-icons blue-text">create</i></a>                                      
+                            <a href="#modalEndorsView" class="star modal-trigger pl-3"><i class="material-icons blue-text">remove_red_eye</i></a>
+                            <a href="#" class="star"><i class="material-icons red-text">delete</i></a>                                      
                           </li>
                           <li class="collection-item avatar" style="border-bottom: none;">
                             <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
                             <p class="font-weight-600">Jennifer Rice</p>
                             <p class="medium-small">25, January 2019</p>
-                            <a href="#modalEndorsView" class="star modal-trigger"><i class="material-icons blue-text">remove_red_eye</i></a>
-                            <a href="#modalEndorsAdd" class="star modal-trigger"><i class="material-icons blue-text">create</i></a>                                      
+                            <a href="#modalEndorsView" class="star modal-trigger pl-3"><i class="material-icons blue-text">remove_red_eye</i></a>
+                            <a href="#" class="star"><i class="material-icons red-text">delete</i></a>                                      
                           </li>
                          
                           <li class="collection-item avatar" style="border-bottom: none;">
                             <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" alt="" class="circle" />
                             <p class="font-weight-600">Jennifer Rice</p>
                             <p class="medium-small">25, January 2019</p>
-                            <a href="#modalEndorsView" class="star modal-trigger"><i class="material-icons blue-text">remove_red_eye</i></a>
-                            <a href="#modalEndorsAdd" class="star modal-trigger"><i class="material-icons blue-text">create</i></a>                                      
+                            <a href="#modalEndorsView" class="star modal-trigger pl-3"><i class="material-icons blue-text">remove_red_eye</i></a>
+                            <a href="#" class="star"><i class="material-icons red-text">delete</i></a>                                      
                           </li>
 
                       </ul>
@@ -676,36 +679,29 @@ License: You must have a valid license purchased only from themeforest(the above
                           <article class="white-text center-align" >list all of you exsperiences here to make them avaible for your cards.</article>
                       </div>
                         <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalEndorsAdd" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
-                          <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
+                          <a class="btn-floating btn-medium pink.accent-2 menu-shadow modal-trigger" data-target="modalExpAdd"><i class="material-icons ">add</i> </a>
                         </div> 
                       </div>
                         <div class="card-content pb-2">
                           <div>
                             <h6 class="text-ellipsis" style="font-weight: bolder;">2018&nbsp;-&nbsp;present<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></h6>
-                            <b class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;Subsonic&nbsp;LLC</b>
-                            <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons green-text">create</i></a>
+                            <b class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.subsonic.ae" target="_blank">Subsonic&nbsp;LLC</a></b>
+                            <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons red-text">delete</i></a>
                             <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                               It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                              Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
-                              
+                              Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+                            </p>
                           </div>
                           <div>
-                            <h6 class="text-ellipsis"  style="font-weight: bolder;">2016&nbsp;-&nbsp;2018<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></h6>
-                            <b  class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;Subsonic&nbsp;LLC</b>
-                            <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons green-text">create</i></a>
+                            <h6 class="text-ellipsis" style="font-weight: bolder;">2018&nbsp;-&nbsp;present<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></h6>
+                            <b class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.subsonic.ae" target="_blank">Subsonic&nbsp;LLC</a></b>
+                            <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons red-text">delete</i></a>
                             <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                               It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                              Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
+                              Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+                            </p>
                           </div>
-                          <div>
-                            <h6 class="text-ellipsis" style="font-weight: bolder;">2013&nbsp;-&nbsp;2016<a href="#" style="font-size: 16px;">&nbsp;&nbsp;5yr</a></h6>
-                            <b class="text-ellipsis">Asistant&nbsp;&nbsp;|&nbsp;&nbsp;Subsonic&nbsp;LLC</b>
-                            <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons green-text">create</i></a>
-                            <p class="pb-5" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
-                              It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                              Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
-                          </div>
-                          <!-- accordian here -->
+                          
                         </div>
                     </div>
                     <!-- end of experience card  -->
@@ -717,31 +713,74 @@ License: You must have a valid license purchased only from themeforest(the above
                           <div class="mb-3">
                               <article class="white-text center-align" >put all of your records, projections and documents here in order to use them in tyour targeted profiles.</article>
                           </div>
-                          <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalEndorsAdd" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
+                          <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalShowcaseAdd" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
                             <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
                           </div> 
                         </div>
                         <div class="card-content pb-0">
                           <div class="container">
-                            <div class="row user-projects  pb-4">
+                            <div class="row user-projects  pb-3 pt-1">
                               <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/35.png' %}">
+                                <div class=" grid">
+                                  <figure class="effect-sadie photo-border" style="border-radius: 6px;">
+                                    <img  src="{% static 'app-assets/images/gallery/10.png' %}"  alt="shopify LOGO" />
+                                    <figcaption >
+                                      <p ><a href=""><i class="material-icons pink-text">delete</i></a></p>
+                                    </figcaption>
+                                  </figure>
+                                </div>
                               </div>
                               <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                <img class="responsive-img photo-border mt-5 " alt="" src="{% static 'app-assets/images/gallery/37.png' %}">
+                                <div class=" grid">
+                                  <figure class="effect-sadie photo-border" style="border-radius: 6px;">
+                                    <img  src="{% static 'app-assets/images/gallery/11.png' %}" alt="shopify LOGO" />
+                                    <figcaption >
+                                      <p ><a href=""><i class="material-icons pink-text">delete</i></a></p>
+                                    </figcaption>
+                                  </figure>
+                                </div>
                               </div>
                               <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/39.png' %}">
+                                <div class=" grid">
+                                  <figure class="effect-sadie photo-border" style="border-radius: 6px;">
+                                    <img  src="{% static 'app-assets/images/gallery/12.png' %}" alt="shopify LOGO" />
+                                    <figcaption >
+                                      <p ><a href=""><i class="material-icons pink-text">delete</i></a></p>
+                                    </figcaption>
+                                  </figure>
+                                </div>
                               </div>
                               <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/40.png' %}">
+                                <div class=" grid">
+                                  <figure class="effect-sadie photo-border" style="border-radius: 6px;">
+                                    <img  src="{% static 'app-assets/images/gallery/13.png' %}" alt="shopify LOGO" />
+                                    <figcaption >
+                                      <p ><a href=""><i class="material-icons pink-text">delete</i></a></p>
+                                    </figcaption>
+                                  </figure>
+                                </div>
                               </div>
-                              <div class="col s4 " style="padding-left: 0.5em; padding-right: 0.5em;">
-                                <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/41.png' %}">
+                              <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                <div class=" grid">
+                                  <figure class="effect-sadie photo-border" style="border-radius: 6px;">
+                                    <img  src="{% static 'app-assets/images/gallery/14.png' %}" alt="shopify LOGO" />
+                                    <figcaption >
+                                      <p ><a href=""><i class="material-icons pink-text">delete</i></a></p>
+                                    </figcaption>
+                                  </figure>
+                                </div>
                               </div>
-                              <div class="col s4 " style="padding-left: 0.5em; padding-right: 0.5em;">
-                                <img class="responsive-img photo-border mt-5" alt="" src="{% static 'app-assets/images/gallery/43.png' %}">
+                              <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                <div class=" grid">
+                                  <figure class="effect-sadie photo-border" style="border-radius: 6px;">
+                                    <img  src="{% static 'app-assets/images/gallery/15.png' %}" alt="shopify LOGO" />
+                                    <figcaption >
+                                      <p ><a href=""><i class="material-icons pink-text">delete</i></a></p>
+                                    </figcaption>
+                                  </figure>
+                                </div>
                               </div>
+
                             </div>
                           </div>
                           <!-- accordian here -->
@@ -754,6 +793,9 @@ License: You must have a valid license purchased only from themeforest(the above
 
                   <!-- third column -->
                   <div class="col s12 m4 l3 allCard">
+
+                    
+
                     <!-- education card -->
                     <div class="card user-statistics-card animate fadeLeft">
                       <div class="card-header gradient-45deg-amber-amber pl-3 pr-3 pt-4 pb-2" style="border-radius: 15px 15px 0 0;">
@@ -1684,6 +1726,557 @@ License: You must have a valid license purchased only from themeforest(the above
           </div>
         </div>
         <div class="modal-content pb-6">
+          <div class="row p-0">
+            <div class="col s12">
+              <ul id="collection-custom" style="border: none; border-radius: 15px;" class="collection">
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style="padding-left: 80px; padding-top: 5px;" >
+                    <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 70px; height: 70px; padding: 1px; " alt="" class="circle z-depth-2" />
+                    <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                    <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                    <p class="medium-small text-ellipsis">2019/2/20 </p>
+                  </div>
+                  <article class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin:0px 10px 20px 10px; padding-left: 20px;">
+                  <div style="padding-left: 80px; padding-top: 5px;" >
+                    <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                    <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                    <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                    <p class="medium-small text-ellipsis">2019/2/20 </p>
+                  </div>
+                  <article class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style="padding-left: 80px; padding-top: 5px;" >
+                    <img src="{% static 'app-assets/images/avatar/avatar-6.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                    <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                    <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                    <p class="medium-small text-ellipsis">2019/2/20 </p>
+                  </div>
+                  <article class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style="padding-left: 80px; padding-top: 5px;" >
+                    <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" style="width: 70px; height: 70px; padding: 1px;  " alt="" class="circle z-depth-2" />
+                    <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                    <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                    <p class="medium-small text-ellipsis">2019/2/20 </p>
+                  </div>
+                  <article class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style="padding-left: 80px; padding-top: 5px;" >
+                    <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 70px; height: 70px; padding: 1px;  " alt="" class="circle z-depth-2" />
+                    <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                    <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                    <p class="medium-small text-ellipsis">2019/2/20 </p>
+                  </div>
+                  <article class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style="padding-left: 80px; padding-top: 5px;" >
+                    <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                    <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                    <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                    <p class="medium-small text-ellipsis">2019/2/20 </p>
+                  </div>
+                  <article class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style="padding-left: 80px; padding-top: 5px;" >
+                    <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                    <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                    <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                    <p class="medium-small text-ellipsis">2019/2/20 </p> 
+                  </div>
+                  <article class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style="padding-left: 80px; padding-top: 5px;" >
+                    <img src="{% static 'app-assets/images/avatar/avatar-9.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                    <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                    <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                    <p class="medium-small text-ellipsis">2019/2/20 </p>
+                  </div>
+                  <article class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style="padding-left: 80px; padding-top: 5px;" >
+                    <img src="{% static 'app-assets/images/avatar/avatar-13.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                    <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                    <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                    <p class="medium-small text-ellipsis">2019/2/20 </p>
+                  </div>
+                  <article class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style="padding-left: 80px; padding-top: 5px;" >
+                    <img src="{% static 'app-assets/images/avatar/avatar-10.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                    <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                    <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                    <p class="medium-small text-ellipsis">2019/2/20 </p>
+                  </div>
+                  <article class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style="padding-left: 80px; padding-top: 5px;" >
+                    <img src="{% static 'app-assets/images/avatar/avatar-11.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                    <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                    <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                    <p class="medium-small text-ellipsis">2019/2/20 </p>
+                  </div>
+                  <article class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style="padding-left: 80px; padding-top: 5px;" >
+                    <img src="{% static 'app-assets/images/avatar/avatar-12.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                    <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                    <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                    <p class="medium-small text-ellipsis">2019/2/20 </p>
+                  </div>
+                  <article class="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer" style="z-index: 1;">
+          <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">save</a>
+        </div>
+      </div>
+      <!-- endo of endorsement modal -->
+
+       <!-- modal for Experiences -->
+       <div id="modalExpAdd" class="modal modal-fixed-footer" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b>Add Experience </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content pb-6">
+          <div class="row p-0">
+            <div class="col s12">
+              <ul id="collection-custom" style="border: none; border-radius: 15px;" class="collection">
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style=" padding-top: 5px;" >
+                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                  </div>
+                  <article class="mt-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style=" padding-top: 5px;" >
+                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                  </div>
+                  <article class="mt-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style=" padding-top: 5px;" >
+                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                  </div>
+                  <article class="mt-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style=" padding-top: 5px;" >
+                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                  </div>
+                  <article class="mt-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style=" padding-top: 5px;" >
+                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                  </div>
+                  <article class="mt-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style=" padding-top: 5px;" >
+                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                  </div>
+                  <article class="mt-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style=" padding-top: 5px;" >
+                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                  </div>
+                  <article class="mt-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style=" padding-top: 5px;" >
+                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                  </div>
+                  <article class="mt-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style=" padding-top: 5px;" >
+                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                  </div>
+                  <article class="mt-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                  <div style=" padding-top: 5px;" >
+                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                  </div>
+                  <article class="mt-1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                  </article>                                          
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer" style="z-index: 1;">
+          <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">save</a>
+        </div>
+      </div>
+      <!-- endo of experience modal -->
+
+
+      <!-- modal for showcase -->
+      <div id="modalShowcaseAdd" class="modal modal-fixed-footer" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b>Select Showcase </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content pb-6">
+          <div class="row user-projects pb-1 pt-5">
+            
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/6.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/7.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/8.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/9.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/10.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/11.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/12.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/13.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/14.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/15.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+          </div>
+        </div>
+        <div class="modal-footer" style="z-index: 1;">
+          <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">save</a>
+        </div>
+      </div>
+      <!-- endo of showcase modal -->
+      <!-- modal for endorsements -->
+      <div id="" class="modal modal-fixed-footer" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b>Add an Endoresement </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content pb-6">
             <div class="row p-0">
                 <div class="col s12">
                   <!-- Form Advance -->
@@ -1768,6 +2361,8 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
       </div>
       <!-- endo of endorsement modal -->
+
+
        <!-- modal for endorsements -->
        <div id="modalEndorsView" class="modal" style="border-radius: 12px;">
         <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
@@ -1846,6 +2441,15 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <script>
 
+ // this is for viewing the picture only one
+          $(document).ready(function(){
+            $('.materialboxed').materialbox();
+          });
+
+
+          $(".overlai").on('click',function(){
+              $(this).children(".overlay1").toggleClass("show");
+          });
 
       // for resizing 
       $(document).ready(function(){

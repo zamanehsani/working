@@ -93,8 +93,8 @@
                           <h6 class="text-ellipsis">Education: <a href="#modalEdu" class="modal-trigger">Master</a></h6>
                         </div>
                         <div class="col s12 l6">
-                            <h6 class="mt-3 text-ellipsis">Targeted&nbsp;location: <a href="#">Dubai,&nbsp;UAE</a> </h6>
-                            <h6 class="mt-3 text-ellipsis">Expected&nbsp;Salary: <a href="#"> 8000&nbsp;AED</a></h6>
+                            <h6 class="mt-3 text-ellipsis">Targeted&nbsp;location: <a class="modal-trigger" href="#modallocation">Dubai,&nbsp;UAE</a> </h6>
+                            <h6 class="mt-3 text-ellipsis">Languages: <a href="#"> EN,&nbsp;PR,&nbsp;ARB</a></h6>
                         </div>
                       </div>
                     </div>
@@ -156,7 +156,7 @@
                     <div class="col s6">
                       <div class="col s5">
                       <div class="container">
-                        <img  src="{% static 'app-assets/images/avatar/avatar-4.png' %}" class="responsive-img circle padding-2 z-depth-2"/>
+                        <img  src="{% static 'app-assets/images/avatar/avatar-4.png' %}" class=" materialboxed responsive-img circle padding-2 z-depth-2"/>
                         </div>
                       </div>
                     </div>
@@ -336,19 +336,7 @@
                 <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/OZzEBa9cHN0" frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" ></iframe>                        
               </div>
-              <div class="right" style="position: relative; bottom: 50px; right: 5px;" >
-                <ul >
-                  <li style="display: inline; padding: 0px 4px;">
-                    <i class="fa fa-heart-o fa-2x"></i>
-                  </li>
-                  <li style="display: inline;  padding: 0px 4px;">
-                    <i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
-                  </li>
-                  <li style="display: inline; padding: 0px 4px;">
-                    <i class="fa fa-thumbs-o-down fa-2x" aria-hidden="true"></i>
-                  </li>
-                </ul>
-              </div>
+              
               <div class="container">
                 <div class="row">
                   <div class="col s6 " >
@@ -376,11 +364,11 @@
                       </div>
                       <div class="col s6 pt-7">
                         <b class="centering"> <a href="" style="font-weight: bolder;"> MATCH </a></b>
-                        <b class="centering"> <a href="" style="font-size: 40px; font-weight: bolder;"><span class="count"> 90</span></a>  <a href="">%</a></b>
+                        <b class="centering"> <a href="" style="font-size: 40px; font-weight: bolder;"><span class="count"> 90</span></a> <a href="">%</a></b>
                       </div>
                     </div>
                   </div>
-                  <div class="col s6 " style="position: relative; top: -40px;">
+                  <div class="col s6 ">
                       <h6 class="text-ellipsis" style="font-weight: bolder;">Lucia&nbsp;Jones&nbsp;Smith</h6>
                       <p class="text-ellipsis">Event&nbsp;Project&nbsp;Manager</p>
                       <p class="text-ellipsis">GreenVilia,&nbsp;Illinois,&nbsp;USA</p>
@@ -446,10 +434,10 @@
                         <h6 class="mt-3">Education:&nbsp;<a class="modal-trigger" href="#modalEdu">Master</a></h6>
                       </div> 
                       <div>
-                        <h6 class="mt-3 mb-3">Targeted&nbsp;location: <a href="#">Dubai,&nbsp;UAE</a> </h6>
+                        <h6 class="mt-3 mb-3">Targeted&nbsp;location: <a class="modal-trigger" href="#modallocation">Dubai,&nbsp;UAE</a> </h6>
                       </div>
                       <div>
-                        <h6 class="mt-3">Expected&nbsp;Salary: <a href="#"> 8000&nbsp;AED</a></h6>
+                        <h6 class="mt-3">Languages: <a href="#"> EN&nbsp;,PR</a></h6>
                       </div>  
                     </div>
                   </div>
@@ -1129,7 +1117,35 @@
         </div>
       </div>
     </div>
+    <!-- END: Page Main-->
 
+     <!-- gallery modal -->
+     <div id="modallocation" class="modal modal-fixed-footer" style="border-radius: 12px;">
+      <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+        <div class="container p-0">
+          <div class="row">
+            <div class="col s2">
+            </div>
+            <div class="col s8">
+              <h6 class="center-align text-ellipsis"><a href=""><b> Location&nbsp; </b></a> </h6>
+            </div>
+            <div class="col s2" style="padding-right: 0px; ">
+              <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                    onmouseover="this.style.background ='#e91e63'" 
+                    onmouseout="this.style.background='transparent'" 
+                    style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                <i class="material-icons">clear</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14465.211945787229!2d55.170928747549816!3d24.989818590020977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sae!4v1604234346091!5m2!1sen!2sae" 
+         width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
+      </div>
+    </div>
     <!-- END: Page Main-->
 
 
@@ -1169,6 +1185,10 @@
 
 
     <script>
+          // this is for viewing the picture only one
+          $(document).ready(function(){
+            $('.materialboxed').materialbox();
+          });
 
       $(document).ready( function(){
         $(window).on("resize", function(){
@@ -1250,6 +1270,8 @@
               $(".toggle-button2").html('<i class="fa fa-chevron-down"></i>');
             }
           });
+
+         
 
    </script>
   </body>
