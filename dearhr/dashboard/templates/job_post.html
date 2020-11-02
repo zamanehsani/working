@@ -51,7 +51,12 @@ License: You must have a valid license purchased only from themeforest(the above
     <header class="page-topbar"  id="header">
       <div class="navbar navbar-fixed"> 
         <nav id="navscroll" style="padding-top: 15px; padding-bottom: 20px;"  class="navbar-main navbar-color nav-collapsible navbar-dark gradient-45deg-indigo-purple no-shadow">
-          <div class="nav-wrapper gradient-45deg-indigo-purple">
+          <div class="row">
+            <div class="col m5">
+              <h6 class="pl-7 grey-text text-lighten-1 text-ellipsis "><b class="white-text">HR</b> <i class="material-icons white-text" style="position: relative; top: 5px;">chevron_right</i>  Create Job </h6>
+            </div>
+            <div class="col m7">
+              <div class="nav-wrapper gradient-45deg-indigo-purple">
                 <div class="header-search-wrapper hide-on-med-and-down">
                   <i class="material-icons">search</i>
                   <input class="header-search-input z-depth-2 border-round" type="text" name="Search" placeholder="Explore DearHR" data-search="template-list">
@@ -106,6 +111,8 @@ License: You must have a valid license purchased only from themeforest(the above
                 </ul>
               <!-- </div> -->
             <!-- </div> -->
+          </div>
+            </div>
           </div>
           <nav class="display-none search-sm">
             <div class="nav-wrapper">
@@ -585,7 +592,6 @@ License: You must have a valid license purchased only from themeforest(the above
                                   <h6 class="text-ellipsis"  style="vertical-align: top;">website &nbsp;: <a href="#" > www.subsonic.ae</a> </h6>
                                   <h6 class="text-ellipsis" style="vertical-align: top;">Email <a href="#" >15/10/1994</a> </h6>
                                   <h6 class="text-ellipsis" style="vertical-align: top;">Phone: <a href="#" > 0562312534</a> </h6>
-                                  <!-- <h6  style="vertical-align: top;">Gender: <a href="#"> female</a> </h6> -->
                                 </div>
                             </div>
                           </div>
@@ -596,7 +602,7 @@ License: You must have a valid license purchased only from themeforest(the above
                   <!-- generic user info -->
                   <div class="card animate fadeLeft gradient-45deg-light-blue-cyan mt-7">
                     <div class="card-content">
-                      <div class="row mr-2">
+                      <div class="row  pl-0 ">
                         <div class="col s6">
                           <div class="col s10">
                           <div class="container">
@@ -604,10 +610,10 @@ License: You must have a valid license purchased only from themeforest(the above
                             </div>
                           </div>
                         </div>
-                        <div class="col s6 pull-s2 mt-4">
+                        <div class="col s6 pull-s2 mt-4  ml-0">
                           <div class="">
-                            <h6 class="white-text" style="font-weight: bolder;">Peter Same North</h6>
-                            <p class="white-text">Event Project Manager</p>
+                            <h6 class="white-text text-ellipsis" style="font-weight: bolder;">Peter Same North</h6>
+                            <p class="white-text text-ellipsis">Event Project Manager</p>
                           </div>
                         </div>
                       </div>
@@ -700,9 +706,6 @@ License: You must have a valid license purchased only from themeforest(the above
                         <ul style="list-style: none;">
                             <li><a href="" class="btn-floating blue"><i class="material-icons">edit</i></a></li>
                             <li><a href="" class="btn-floating green"><i class="material-icons">lock_open</i></a></li>
-                            <li><a href="" class="btn-floating amber"><i class="material-icons">thumb_up</i></a></li>
-                            <li><a href="" class="btn-floating cyan"><i class="material-icons">filter_list</i></a></li>
-                            <li><a href="" class="btn-floating red"><i class="material-icons">visibility</i></a></li>
                         </ul>
                       </div> 
                       <h5  class="pt-0 mt-0 text-ellipsis white-text  center-align" >JOB&nbsp;TITLE</h5>
@@ -722,7 +725,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="col s12 m5">
                           <div class="container">
-                            <div class="container ct-golden-section">
+                            <div class="container ct-golden-section" style="min-width: 100px;">
                               <div class="ct-chart ct9-chart">                                 
                              </div>
                             </div>
@@ -847,8 +850,8 @@ License: You must have a valid license purchased only from themeforest(the above
                           <div id="clients-bar">
                             <div class="container ">
                               <div class="row mb-0 ">
-                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_card' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons">share</i> </a></div>
-                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:analytic_dashboard' %}" > <i style="font-size: 40px;" class="material-icons">timeline</i> </a> </div>
+                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_card' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons tooltipped" data-tooltip="initialize search" data-position="top">search</i> </a></div>
+                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_post_editor' %}" > <i style="font-size: 30px;" class="material-icons tooltipped" data-position="top" data-tooltip="edite">edit</i> </a> </div>
                               </div>
                             </div>
                           </div>
@@ -871,9 +874,6 @@ License: You must have a valid license purchased only from themeforest(the above
                           <ul style="list-style: none;">
                               <li><a href="" class="btn-floating blue"><i class="material-icons">edit</i></a></li>
                               <li><a href="" class="btn-floating green"><i class="material-icons">lock_open</i></a></li>
-                              <li><a href="" class="btn-floating amber"><i class="material-icons">thumb_up</i></a></li>
-                              <li><a href="" class="btn-floating cyan"><i class="material-icons">filter_list</i></a></li>
-                              <li><a href="" class="btn-floating red"><i class="material-icons">visibility</i></a></li>
                           </ul>
                         </div> 
                         <h5  class="pt-0 mt-0 text-ellipsis  white-text center-align" >JOB&nbsp;TITLE</h5>
@@ -893,7 +893,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           </div>
                           <div class="col s12 m5">
                             <div class="container">
-                              <div class="container ct-golden-section">
+                              <div class="container ct-golden-section" style="min-width: 100px;">
                                 <div class="ct-chart ct9-chart">                                 
                                </div>
                               </div>
@@ -1017,8 +1017,8 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div id="clients-bar" >
                               <div class="container">
                                 <div class="row mb-0">
-                                  <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_card' %}" target="_blank"> <i style="font-size: 30px;" class="material-icons">share</i> </a></div>
-                                  <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:analytic_dashboard' %}" > <i style="font-size: 40px;" class="material-icons">timeline</i> </a> </div>
+                                  <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_card' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons tooltipped" data-tooltip="initialize search" data-position="top">search</i> </a></div>
+                                  <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_post_editor' %}" > <i style="font-size: 30px;" class="material-icons tooltipped" data-position="top" data-tooltip="edite">edit</i> </a> </div>
                                 </div>
                               </div>
                             </div>
@@ -1041,9 +1041,6 @@ License: You must have a valid license purchased only from themeforest(the above
                         <ul style="list-style: none;">
                             <li><a href="" class="btn-floating blue"><i class="material-icons">edit</i></a></li>
                             <li><a href="" class="btn-floating green"><i class="material-icons">lock_open</i></a></li>
-                            <li><a href="" class="btn-floating amber"><i class="material-icons">thumb_up</i></a></li>
-                            <li><a href="" class="btn-floating cyan"><i class="material-icons">filter_list</i></a></li>
-                            <li><a href="" class="btn-floating red"><i class="material-icons">visibility</i></a></li>
                         </ul>
                       </div> 
                       <h5  class="pt-0 mt-0 text-ellipsis  white-text center-align" >JOB&nbsp;TITLE</h5>
@@ -1063,7 +1060,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           </div>
                           <div class="col s12 m5">
                             <div class="container">
-                              <div class="container ct-golden-section">
+                              <div class="container ct-golden-section" style="min-width: 100px;">
                                 <div class="ct-chart ct9-chart">                                 
                                </div>
                               </div>
@@ -1187,8 +1184,8 @@ License: You must have a valid license purchased only from themeforest(the above
                           <div id="clients-bar" >
                             <div class="container">
                               <div class="row mb-0">
-                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_card' %}" target="_blank"> <i style="font-size: 30px;" class="material-icons">share</i> </a></div>
-                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:analytic_dashboard' %}" > <i style="font-size: 40px;" class="material-icons">timeline</i> </a> </div>
+                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_card' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons tooltipped" data-tooltip="initialize search" data-position="top">search</i> </a></div>
+                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_post_editor' %}" > <i style="font-size: 30px;" class="material-icons tooltipped" data-position="top" data-tooltip="edite">edit</i> </a> </div>
                               </div>
                             </div>
                           </div>
@@ -1997,6 +1994,13 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
     
     <script>
+
+      // for tooltip
+      $(document).ready(function(){
+          $('.tooltipped').tooltip({enterDelay:200 });
+        });
+
+
       // for resizing 
       $(document).ready(function(){
         if ($(window).width() < 1300) {
