@@ -35,6 +35,12 @@
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/custom/custom.css' %}">
     <!-- END: Custom CSS-->
+    <style>
+      .material-placeholder:nth-child(1){
+        height: auto!important;
+        top: 0px!important;
+      }
+    </style>
   </head>
   <!-- END: Head-->
   <body class="vertical-layout gradient-45deg-indigo-purple page-header-dark vertical-modern-menu preload-transitions 2-columns " data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
@@ -93,14 +99,14 @@
                         </div>
                         <div class="col s12 l6">
                             <h6 class="mt-3 text-ellipsis">Targeted&nbsp;location: <a class="modal-trigger" href="#modallocation">Dubai,&nbsp;UAE</a> </h6>
-                            <h6 class="mt-3 text-ellipsis">Languages: <a href="#"> EN,&nbsp;PR,&nbsp;ARB</a></h6>
+                            <h6 class="mt-3 text-ellipsis">Languages: <a href="#modallanguage" class="modal-trigger"> EN,&nbsp;PR,&nbsp;ARB</a></h6>
                         </div>
                       </div>
                     </div>
                     <!-- endoresement -->
-                      <div class="container ">
+                      <div class="container ml-1">
                         <div class="row p-0">
-                          <h6 class="pl-2 pt-1 pb-1 ml-1 mr-1" style="background: #e1e4e9; border-radius: 5px;"> <b>Endoresement: <a href="#">6</a></b> </h6>
+                          <h6 class="pl-2 pt-1 pb-1 ml-1 mr-1" style="background: #e1e4e9; border-radius: 5px;margin-left: 5px;"> <b>Endoresement: <a class="modal-trigger" href="#modalEndors">6</a></b> </h6>
                           <div class="col s12 l6 pt-2 modal-trigger" data-target="modalEndors">
                             <ul id="collection-custom" class="collection mb-0" style="border: none;">
                               <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
@@ -1058,9 +1064,7 @@
       <div class="modal-content">
         <div class="masonry-gallery-wrapper">
           <div class="popup-gallery">
-            <div class="gallery-sizer"></div>
             <div class="row">
-
               <div class="col s12 m6 l4 xl4" >
                 <div>
                   <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The Cleaner">
@@ -1116,9 +1120,9 @@
         </div>
       </div>
     </div>
-    <!-- END: Page Main-->
+    <!-- END: modal gallery -->
 
-     <!-- gallery modal -->
+     <!-- location modal -->
      <div id="modallocation" class="modal modal-fixed-footer" style="border-radius: 12px;">
       <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
         <div class="container p-0">
@@ -1145,8 +1149,66 @@
         </iframe>
       </div>
     </div>
-    <!-- END: Page Main-->
+    <!-- END: location modal-->
 
+    <!-- language modal -->
+    <div id="modallanguage" class="modal " style="border-radius: 12px; width: 30%!important;">
+      <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+        <div class="container p-0">
+          <div class="row">
+            <div class="col s2">
+            </div>
+            <div class="col s8">
+              <h6 class="center-align text-ellipsis"><a href=""><b> languages&nbsp; </b></a> </h6>
+            </div>
+            <div class="col s2" style="padding-right: 0px; ">
+              <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                    onmouseover="this.style.background ='#e91e63'" 
+                    onmouseout="this.style.background='transparent'" 
+                    style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                <i class="material-icons">clear</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content">
+        <div class="container">
+          <div class="row">
+            <div class="container">
+              <div class="col s12">
+                <div class="card">
+                  <div class="card-content p-0">
+                    <div class="row">
+                      <div class="col s12">
+                        <ul id="collection-custom " class="collection " style="border: none; border-radius: 8px;">
+                          
+                          <li class="collection-item avatar " style="border-radius: 8px; border-bottom: none; min-height: 60px; padding-left: 70px;">
+                            <img src="{% static 'app-assets/images/country-flag/united-kingdom.png' %}" style="width: 30px; height: 30px; left: 10px;" alt="" class="circle mt-1" />
+                            <p class="font-weight-600 text-ellipsis mt-3">English  <b class="right">Native</b></p>
+                          </li>
+                          <li class="collection-item avatar " style="border-radius: 8px; border-bottom: none; min-height: 60px; padding-left: 70px;">
+                            <img src="{% static 'app-assets/images/country-flag/united-arab-emirates.png' %}" style="width: 30px; height: 30px; left: 10px;" alt="" class="circle mt-1" />
+                            <p class="font-weight-600 text-ellipsis mt-3">Arabic  <b class="right">Fluent</b></p>
+                          </li>
+                          <li class="collection-item avatar " style="border-radius: 8px; border-bottom: none; min-height: 60px; padding-left: 70px;">
+                            <img src="{% static 'app-assets/images/country-flag/Italy.png' %}" style="width: 30px; height: 30px; left: 10px;" alt="" class="circle mt-1" />
+                            <p class="font-weight-600 text-ellipsis mt-3">Italy  <b class="right">Basic</b></p>
+                          </li>
+
+                        </ul>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: language modal-->
 
 
     <!-- BEGIN: Footer-->
@@ -1172,7 +1234,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
 
 
-    <script src="{% static 'app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <!-- <script src="{% static 'app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script> -->
     <script src="{% static 'app-assets/js/plugins.js' %}"></script>
     <script src="{% static 'app-assets/js/search.js' %}"></script>
     <script src="{% static 'app-assets/js/timeline.js' %}"></script>
@@ -1183,10 +1245,11 @@
     <script src="{% static 'app-assets/js/scripts/media-gallery-page.js' %}"></script>
 
 
+
     <script>
           // this is for viewing the picture only one
           $(document).ready(function(){
-            $('.materialboxed').materialbox();
+            $('.materialboxed').materialbox({height:1, });
           });
 
       $(document).ready( function(){

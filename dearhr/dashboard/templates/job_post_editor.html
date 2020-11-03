@@ -574,22 +574,32 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="col s12 m4 l3 allCard">
                   <!-- collaborators   -->
                   <div class=" card animate fadeLeft">
-                    <div class="card-header gradient-shadow pl-4 pt-4 " >
-                      <a href="#modalEndorsAdd" style="top:5px;  " class="star modal-trigger pr-6"><i class="material-icons">create</i></a>
-                      <h5  class="pt-2 mt-0 text-ellipsis center-align ">Job Title</h5>
-                      <div class="contianer  pr-6 ">
-                        <div class="input-field pl-3 pr-3">
-                          <select>
-                            <option value="1" class="" selected>Full-time</option>
-                            <option value="2">part-time</option>
-                            <option value="3">project based</option>
-                            <option value="2">intern</option>
-                            <option value="2">freelance</option>
-                          </select>
-                        </div>
-                      </div>
+                    <div class="card-header gradient-45deg-deep-orange-orange pl-4 pt-4 pb-4" style="border-radius: 15px 15px 0 0;" >
+                      <a href="#modalEndorsAdd" style="top:5px;  " class="star modal-trigger pr-6"><i class="material-icons white-text">create</i></a>
+                      <h5  class="pt-2 mt-0 text-ellipsis center-align white-text">Job Title</h5>
+                      <a href="" class="star pl-3"><i class="material-icons transparent" style=" color: transparent;"> add</i></a>
+                      <p class="center-align white-text ">Date: 2020/3/12</p>
                     </div>
                     <div class="card-content mt-0 pt-0">
+                      <div class="row">
+                        <div class="col s12 m6">
+                          <div class="contianer  pr-6 ">
+                            <div class="input-field pl-3 pr-3">
+                              <select>
+                                <option value="1" class="" selected>Full-time</option>
+                                <option value="2">part-time</option>
+                                <option value="3">project based</option>
+                                <option value="2">intern</option>
+                                <option value="2">freelance</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 m6 mt-5">
+                          <p style="font-weight: bolder;" >Q&A status:&nbsp;&nbsp; <span style="padding: 5px 10px; border-radius: 20px;" class="white-text green z-depth-1">Ready</span></p>
+                        </div>
+                      </div>
+                      
                       <!-- accordin -->
                       <div class="row" >
                         <div class="col s12">
@@ -714,49 +724,47 @@ License: You must have a valid license purchased only from themeforest(the above
 
                 <!-- second column -->
                 <div class="col s12 m8 l9 anothercard">
-                  <div class="card animate fadeLeft">
+                  <div class="card animate gradient-45deg-light-blue-cyan fadeLeft">
                     <div class="card-content pt-1 pb-0">
-                      <a href="#modalEndorsAdd" style="top:2px" class="star modal-trigger"><i class="material-icons ">create</i></a>
-                      <h6 class="text-ellipsis"><b> Collaborators</b></h6>
+                      <a href="#modalRemoveCollaborator" style="top:2px" class="star modal-trigger"><i class="material-icons white-text">create</i></a>
                       <div class="contianer">
                         <div class="row">
-                          <div class="col s6 m4 l3">
-                            <ul id="collection-custom" class="collection mb-0" style="border: none;">
-                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
-                                <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle responsive-img" />
-                                <p class="font-weight-600 m-0 text-ellipsis">John&nbsp;Doe</p>
-                                <p class="medium-small m-0 text-ellipsis">subsonic</p>
-                                <p class="medium-small m-0 text-ellipsis">Dept Manager </p>                                         
+                          <div class="col s6 m4 l2 ">
+                            <ul id="collection-custom " class="collection mb-0 transparent" style="border: none;">
+                              <li class="collection-item transparent avatar mr-9 mt-0" style="border-right: 1px solid grey;min-height: 60px; padding: 0px; ">
+                                <h6 class="text-ellipsis white-text pl-5 "><b> Collaborators</b></h6>
+                                <div class=" " style="border-bottom: 1px solid lightgrey; width: 80%;"></div>
+                                <p class="medium-small pl-5 m-0 text-ellipsis white-text">Dept Manager </p>                                         
                               </li>
                             </ul>
                           </div>
                           <div class="col s6 m4 l3">
                             <ul id="collection-custom" class="collection mb-0" style="border: none;">
-                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
+                              <li class="collection-item transparent avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
                                 <img src="{% static 'app-assets/images/avatar/avatar-6.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle responsive-img" />
-                                <p class="font-weight-600 m-0 text-ellipsis">John&nbsp;Doe</p>
-                                <p class="medium-small m-0 text-ellipsis">subsonic</p>
-                                <p class="medium-small m-0 text-ellipsis">Dept Manager </p>                                         
+                                <p class="font-weight-600 m-0 text-ellipsis white-text">John&nbsp;Doe</p>
+                                <p class="medium-small m-0 text-ellipsis white-text">subsonic</p>
+                                <p class="medium-small m-0 text-ellipsis white-text">Dept Manager </p>                                         
                               </li>
                             </ul>
                           </div>
                           <div class="col s6 m4 l3">
                             <ul id="collection-custom" class="collection mb-0" style="border: none;">
-                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
+                              <li class="collection-item transparent avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
                                 <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle responsive-img" />
-                                <p class="font-weight-600 m-0 text-ellipsis">John&nbsp;Doe</p>
-                                <p class="medium-small m-0 text-ellipsis">subsonic</p>
-                                <p class="medium-small m-0 text-ellipsis">Dept Manager </p>                                         
+                                <p class="font-weight-600 m-0 text-ellipsis white-text">John&nbsp;Doe</p>
+                                <p class="medium-small m-0 text-ellipsis white-text">subsonic</p>
+                                <p class="medium-small m-0 text-ellipsis white-text">Dept Manager </p>                                         
                               </li>
                             </ul>
                           </div>
                           <div class="col s6 m4 l3">
                             <ul id="collection-custom" class="collection mb-0" style="border: none;">
-                              <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
+                              <li class="collection-item transparent avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
                                 <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle responsive-img" />
-                                <p class="font-weight-600 m-0 text-ellipsis">John&nbsp;Doe</p>
-                                <p class="medium-small m-0 text-ellipsis">subsonic</p>
-                                <p class="medium-small m-0 text-ellipsis">Dept Manager </p>                                         
+                                <p class="font-weight-600 m-0 text-ellipsis white-text">John&nbsp;Doe</p>
+                                <p class="medium-small m-0 text-ellipsis white-text">subsonic</p>
+                                <p class="medium-small m-0 text-ellipsis white-text">Dept Manager </p>                                         
                               </li>
                             </ul>
                           </div>
@@ -856,6 +864,101 @@ License: You must have a valid license purchased only from themeforest(the above
               </div>
             </div>
 
+
+            <!-- collaborator modal -->
+            <div id="modalRemoveCollaborator" class="modal modal-fixed-footer" style="border-radius: 12px; width: 40%!important;">
+            <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+              <div class="container">
+                <div class="row">
+                  <div class="col s2">
+                  </div>
+                  <div class="col s8">
+                    <h6 class="center-align text-ellipsis"><a href=""><b> Select Collaborators&nbsp; </b></a> </h6>
+                  </div>
+                  <div class="col s2" style="padding-right: 0px; ">
+                    <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                          onmouseover="this.style.background ='#e91e63'" 
+                          onmouseout="this.style.background='transparent'" 
+                          style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                      <i class="material-icons">clear</i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-content">
+              <div class="container">
+                <div class="col s12">
+                  <ul id="collection-custom" class="collection mb-0 " style="border: none; border-radius: 8px;">
+                    <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic</p>
+                      <p class="medium-small text-ellipsis">Dept Manager </p>  
+                      <p class="star switch">
+                        <label class="grey-text darken-3">
+                          <input type="checkbox"> <span class="lever"></span>active
+                        </label>
+                      </p>  
+                    </li>
+                    <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                      <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic</p>
+                      <p class="medium-small text-ellipsis">Dept Manager </p>  
+                      <p class="star switch">
+                        <label class="grey-text darken-3">
+                          <input type="checkbox"> <span class="lever"></span>active
+                        </label>
+                      </p>                                     
+                    </li>
+                    
+                    <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                      <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic</p>
+                      <p class="medium-small text-ellipsis">Dept Manager </p>  
+                      <p class="star switch">
+                        <label class="grey-text darken-3">
+                          <input type="checkbox"> <span class="lever"></span>active
+                        </label>
+                      </p>                                     
+                    </li>
+                    <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                      <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic</p>
+                      <p class="medium-small text-ellipsis">Dept Manager </p>  
+                      <p class="star switch">
+                        <label class="grey-text darken-3">
+                          <input type="checkbox"> <span class="lever"></span>active
+                        </label>
+                      </p>                                     
+                    </li>
+                    <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                      <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic</p>
+                      <p class="medium-small text-ellipsis">Dept Manager </p>  
+                      <p class="star switch">
+                        <label class="grey-text darken-3">
+                          <input type="checkbox"> <span class="lever"></span>active
+                        </label>
+                      </p>                                     
+                    </li>
+
+                    <li class=" center-align" style="border-radius: 8px; background-attachment: transparent;">
+                      <p class="btn">Apply</p>
+                    </li>
+                  </ul>
+                </div>
+
+
+                </div>
+              </div>
+            </div>
+            
+            <!-- END: collaborator modal-->
             <!-- START RIGHT SIDEBAR NAV -->
             <aside id="right-sidebar-nav">
               <div id="slide-out-right" class="slide-out-right-sidenav sidenav rightside-navigation">
@@ -1652,6 +1755,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="{% static 'app-assets/js/custom/custom-script.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/form-select2.js' %}"></script>
+    <script src="{% static 'app-assets/js/scripts/advance-ui-modals.js' %}"></script>
+
 
     
     <script>

@@ -33,6 +33,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END: VENDOR CSS-->
 
     <!-- BEGIN: Page Level CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/materialize.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/dashboard-modern.css' %}">
@@ -583,15 +584,17 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- first column -->
                 <div class="col s12 m4 l3 allCard">
                   <!-- generic user profile -->
-                  <div class=" card animate fadeLeft  gradient-45deg-green-teal ">
-                    <video  palysinline muted loop preload="auto" width="100%"  style="border-radius: 15px 15px 0 0;"> 
+                  <div class=" card animate fadeLeft">
+                    <!-- <a href=""  style="position: relative; top: 10px;z-index: 2;"><i class="material-icons right mr-2">edit</i></a> -->
+                    <video class="z-depth-2" palysinline muted loop preload="auto" width="100%"  style="border-radius: 15px 15px 0 0;"> 
                       <source src="https://webnus.net/themes/easyweb/design/wp-content/uploads/2016/05/easy-v1.mp4" type="video/mp4">
                     </video>
-                      <div class="card-content pt-3">
+                    <a href=""  style="position: relative; top: -40px;z-index: 2;"><i class="material-icons white-text right mr-4">edit</i></a>
+                      <div class="card-content">
                           <div class="col s6 l4 pl-0 pb-0">
                             <div class="grid pb-0" style="width: 100px;" >
-                              <figure class="effect-sadie center-align" style="width: 130px; border-radius: 50%;" >
-                                <img  class="responsive-img padding-2 card-profile-image white  circle z-depth-2" style="opacity: 1;" width="100px" src="{% static 'app-assets/images/user/12.jpg' %}"
+                              <figure class="effect-sadie padding-2 gradient-indigo-purple center-align z-depth-3" style="width: 130px; border-radius: 50%;" >
+                                <img  class="responsive-img  card-profile-image circle materialboxed" style="opacity: 1;" width="100px" src="{% static 'app-assets/images/user/12.jpg' %}"
                                 alt="user profile">
                                 <figcaption class="circle" >
                                   <p ><a href=""><i class="material-icons pink-text">camera_alt</i></a></p>
@@ -601,21 +604,40 @@ License: You must have a valid license purchased only from themeforest(the above
                           </div>
                           <div class="col s6 l8">
                             <div class="mt-9">
-                              <h6 class="white-text  text-ellipsis" style="font-weight: bolder;">Peter Same North</h6>
-                              <p class="white-text  text-ellipsis">Event Project Manager</p>
-                              <p class="white-text  text-ellipsis">GreenVilia, Illinois, USA</p>
+                              <h6 class="  text-ellipsis" style="font-weight: bolder;">Peter Same North</h6>
+                              <p class="  text-ellipsis">Event Project Manager</p>
+                              <p class="  text-ellipsis">GreenVilia, Illinois, USA</p>
                             </div>
                           </div>
                         <div class="row">
                           <div class="col s12">
                             <div class="row">
                               <div id="text" class="col s12">
-                                <h5  class="mb-0 pt-3 text-ellipsis white-text"> <b>Project Manager &nbsp;<a href=""><i class="material-icons grey-text text-lighten-3">create</i></a> </b> </h5>
-                                <article class="white-text pt-1">
-                                  Contrary to popular belief, Lorem Ipsum is not simply random text. 
-                                  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                                  Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia.
-                                </article>
+                                <h5  class="mb-0 pt-3 text-ellipsis "> <b>Project Manager &nbsp;<a href=""><i class="material-icons blue-text">create</i></a> </b> </h5>
+                                <div class="mb-3">
+                                  <article  class="">
+                                    This is the short bio. at this place you can write short bio of your self. 
+                                    In this section add what ever you want to show case your profile. Show off youself.
+                                  </article>
+                              </div>
+                              <div>
+                                <h6 class="">Experiences: <a  href="#">1&nbsp;years</a></h6>
+                              </div>
+                              <div>
+                                <h6 class=" mt-3 mb-3">Targeted&nbsp;location: <a href="#" >Dubai,&nbsp;UAE</a> </h6>
+                              </div>
+                              <div>
+                                <h6 class=" mt-3">Expected&nbsp;Salary: <a class=" " href="#"> 8000&nbsp;AED</a></h6>
+                              </div>
+                              <div class="container">
+                                <div class="row">
+                                  <div id="view-basic-demo">
+                                      <div class="col s12 mt-1">
+                                        <input type="text" class="js-range-slider" value="" />
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
                               </div>
                             </div>
                           </div>
@@ -642,21 +664,21 @@ License: You must have a valid license purchased only from themeforest(the above
                             <p class="font-weight-600">John Doe</p>
                             <p class="medium-small">18, January 2019</p>
                             <a href="#modalEndorsView" class="star modal-trigger pl-3"><i class="material-icons blue-text">remove_red_eye</i></a>
-                            <a href="#" class="star"><i class="material-icons red-text">delete</i></a>                                      
+                            <a href="#" class="star"><i class="material-icons blue-text">delete</i></a>                                      
                           </li>
                           <li class="collection-item avatar" style="border-bottom: none;">
                             <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
                             <p class="font-weight-600">Adam Garza</p>
                             <p class="medium-small">20, January 2019</p>
                             <a href="#modalEndorsView" class="star modal-trigger pl-3"><i class="material-icons blue-text">remove_red_eye</i></a>
-                            <a href="#" class="star"><i class="material-icons red-text">delete</i></a>                                      
+                            <a href="#" class="star"><i class="material-icons blue-text">delete</i></a>                                      
                           </li>
                           <li class="collection-item avatar" style="border-bottom: none;">
                             <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
                             <p class="font-weight-600">Jennifer Rice</p>
                             <p class="medium-small">25, January 2019</p>
                             <a href="#modalEndorsView" class="star modal-trigger pl-3"><i class="material-icons blue-text">remove_red_eye</i></a>
-                            <a href="#" class="star"><i class="material-icons red-text">delete</i></a>                                      
+                            <a href="#" class="star"><i class="material-icons blue-text">delete</i></a>                                      
                           </li>
                          
                           <li class="collection-item avatar" style="border-bottom: none;">
@@ -664,7 +686,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <p class="font-weight-600">Jennifer Rice</p>
                             <p class="medium-small">25, January 2019</p>
                             <a href="#modalEndorsView" class="star modal-trigger pl-3"><i class="material-icons blue-text">remove_red_eye</i></a>
-                            <a href="#" class="star"><i class="material-icons red-text">delete</i></a>                                      
+                            <a href="#" class="star"><i class="material-icons blue-text">delete</i></a>                                      
                           </li>
 
                       </ul>
@@ -692,7 +714,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           <div>
                             <h6 class="text-ellipsis" style="font-weight: bolder;">2018&nbsp;-&nbsp;present<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></h6>
                             <b class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.subsonic.ae" target="_blank">Subsonic&nbsp;LLC</a></b>
-                            <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons red-text">delete</i></a>
+                            <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons  blue-text">delete</i></a>
                             <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                               It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                               Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
@@ -701,7 +723,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           <div>
                             <h6 class="text-ellipsis" style="font-weight: bolder;">2018&nbsp;-&nbsp;present<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></h6>
                             <b class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.subsonic.ae" target="_blank">Subsonic&nbsp;LLC</a></b>
-                            <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons red-text">delete</i></a>
+                            <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons  blue-text">delete</i></a>
                             <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                               It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                               Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
@@ -725,13 +747,54 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="card-content pb-0">
                           <div class="container">
-                            <div class="row user-projects  pb-3 pt-1">
+                            <div class="container popup-gallery">
+                              <div class="row user-projects pb-1 pt-5">
+                                <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                  <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                    <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                  </a>
+                                </div>
+                                <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                  <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                    <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                  </a>
+                                </div>
+                                <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                  <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                    <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                  </a>
+                                </div>
+                                <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                  <a href="{% static 'app-assets/images/gallery/4.png' %}" title="The fourth">
+                                    <img src="{% static 'app-assets/images/gallery/4.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                  </a>
+                                </div>
+                                <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                  <a href="{% static 'app-assets/images/gallery/5.png' %}" title="The fourth">
+                                    <img src="{% static 'app-assets/images/gallery/5.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                  </a>
+                                </div>
+                                <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                  <a href="{% static 'app-assets/images/gallery/6.png' %}" title="The fourth">
+                                    <div class=" grid">
+                                      <figure class="effect-sadie photo-border" style="border-radius: 6px;">
+                                        <img  src="{% static 'app-assets/images/gallery/10.png' %}"  alt="shopify LOGO" />
+                                        <figcaption >
+                                          <p style="bottom: 5px!important;"><a href=""><i class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
+                                        </figcaption>
+                                      </figure>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- <div class="row user-projects  pb-3 pt-1">
                               <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
                                 <div class=" grid">
                                   <figure class="effect-sadie photo-border" style="border-radius: 6px;">
                                     <img  src="{% static 'app-assets/images/gallery/10.png' %}"  alt="shopify LOGO" />
                                     <figcaption >
-                                      <p ><a href=""><i class="material-icons pink-text">delete</i></a></p>
+                                      <p style="bottom: 5px!important;"><a href=""><i class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
                                     </figcaption>
                                   </figure>
                                 </div>
@@ -741,7 +804,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                   <figure class="effect-sadie photo-border" style="border-radius: 6px;">
                                     <img  src="{% static 'app-assets/images/gallery/11.png' %}" alt="shopify LOGO" />
                                     <figcaption >
-                                      <p ><a href=""><i class="material-icons pink-text">delete</i></a></p>
+                                      <p style="bottom: 5px!important;"><a href=""><i class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
                                     </figcaption>
                                   </figure>
                                 </div>
@@ -751,7 +814,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                   <figure class="effect-sadie photo-border" style="border-radius: 6px;">
                                     <img  src="{% static 'app-assets/images/gallery/12.png' %}" alt="shopify LOGO" />
                                     <figcaption >
-                                      <p ><a href=""><i class="material-icons pink-text">delete</i></a></p>
+                                      <p style="bottom: 5px!important;"><a href=""><i class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
                                     </figcaption>
                                   </figure>
                                 </div>
@@ -761,7 +824,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                   <figure class="effect-sadie photo-border" style="border-radius: 6px;">
                                     <img  src="{% static 'app-assets/images/gallery/13.png' %}" alt="shopify LOGO" />
                                     <figcaption >
-                                      <p ><a href=""><i class="material-icons pink-text">delete</i></a></p>
+                                      <p style="bottom: 5px!important;"><a href=""><i class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
                                     </figcaption>
                                   </figure>
                                 </div>
@@ -771,7 +834,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                   <figure class="effect-sadie photo-border" style="border-radius: 6px;">
                                     <img  src="{% static 'app-assets/images/gallery/14.png' %}" alt="shopify LOGO" />
                                     <figcaption >
-                                      <p ><a href=""><i class="material-icons pink-text">delete</i></a></p>
+                                      <p style="bottom: 5px!important;"><a href=""><i class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
                                     </figcaption>
                                   </figure>
                                 </div>
@@ -781,13 +844,13 @@ License: You must have a valid license purchased only from themeforest(the above
                                   <figure class="effect-sadie photo-border" style="border-radius: 6px;">
                                     <img  src="{% static 'app-assets/images/gallery/15.png' %}" alt="shopify LOGO" />
                                     <figcaption >
-                                      <p ><a href=""><i class="material-icons pink-text">delete</i></a></p>
+                                      <p style="bottom: 5px!important;"><a href="#!"><i  onclick="remove()" class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
                                     </figcaption>
                                   </figure>
                                 </div>
                               </div>
 
-                            </div>
+                            </div> -->
                           </div>
                           <!-- accordian here -->
                         </div>
@@ -815,7 +878,7 @@ License: You must have a valid license purchased only from themeforest(the above
                               <div>
                                 <h6 class="text-ellipsis" style="font-weight: bolder;">Master&nbsp;in&nbsp;Marketing&nbsp;|&nbsp;&nbsp;Harvard&nbsp;University</h6>
                                 <b class="text-ellipsis">2018&nbsp;-&nbsp;2020<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
-                                <a href="#" style="top:-5px" class="star"><i class="material-icons red-text">delete</i></a>
+                                <a href="#" style="top:-5px" class="star"><i class="material-icons blue-text">delete</i></a>
                                 <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                                   It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                                   Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
@@ -823,7 +886,7 @@ License: You must have a valid license purchased only from themeforest(the above
                               <div>
                                 <h6 class="text-ellipsis" style="font-weight: bolder;">Bachelor&nbsp;in&nbsp;IT&nbsp;|&nbsp;&nbsp;MIT&nbsp;</h6>
                                 <b class="text-ellipsis">2014&nbsp;-&nbsp;2017<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
-                                <a href="#" style="top:-5px" class="star"><i class="material-icons red-text">delete</i></a>
+                                <a href="#" style="top:-5px" class="star"><i class="material-icons blue-text">delete</i></a>
                                 <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                                   It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                                   Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
@@ -848,47 +911,47 @@ License: You must have a valid license purchased only from themeforest(the above
                           <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
                         </div> 
                       </div>
-                        <div class="card-content pb-0">
-                          <div class="container">
+                        <div class="card-content ">
+                          <div class="container p-0">
                             <div class="row">
                               <ul id="collection-custom" class="collection" style="border: none;">
-                                <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
-                                  <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
-                                  <p class="font-weight-600">Project management </p>
-                                  <div class="prograss">
-                                    <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
-                                  </div>
-                                </li>
-                                <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                  <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
-                                  <p class="font-weight-600">Marketing </p>
-                                  <div class="prograss">
-                                    <div class="w3-yellow-green prograss_bar" style="width:80%; box-shadow: 0 0 0 1px #A3C14F;">
-                                      <span>80%</span>
+                                <li class="collection-item avatar mb-9 mt-1" style="border-bottom: none;">
+                                  <div class="col s10">
+                                    <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                    <p class="font-weight-600">Project  </p>
+                                    <div class="prograss">
+                                      <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
                                     </div>
                                   </div>
-                                </li>
-                                <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                  <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                  <p class="font-weight-600">Vloging </p>
-                                  <div class="prograss">
-                                    <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span>60%</span></div>
+                                  <div class="col s2 mt-3">
+                                    <p><a href="#!"><i class="material-icons blue-text right">delete</i></a></p>
                                   </div>
                                 </li>
-                                <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                  <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                  <p class="font-weight-600">SEO </p>
-                                  <div class="prograss">
-                                    <div class="w3-orange prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #ff9800 ; "><span>35%</span></div>
+                                <li class="collection-item avatar mb-9 mt-1" style="border-bottom: none;">
+                                  <div class="col s10">
+                                    <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                    <p class="font-weight-600">Project  </p>
+                                    <div class="prograss">
+                                      <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                    </div>
+                                  </div>
+                                  <div class="col s2 mt-3">
+                                    <p><a href="#!"><i class="material-icons blue-text right">delete</i></a></p>
                                   </div>
                                 </li>
-                                <li class="collection-item avatar mb-2" style="border-bottom: none;">
-                                  <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
-                                  <p class="font-weight-600">SEO </p>
-                                  <div class="prograss">
-                                    <div class="w3-orange prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #ff9800 ; "><span>35%</span></div>
+                                <li class="collection-item avatar mb-9 mt-1" style="border-bottom: none;">
+                                  <div class="col s10">
+                                    <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                    <p class="font-weight-600">Project  </p>
+                                    <div class="prograss">
+                                      <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                    </div>
+                                  </div>
+                                  <div class="col s2 mt-3">
+                                    <p><a href="#!"><i class="material-icons blue-text right">delete</i></a></p>
                                   </div>
                                 </li>
+                                
                               </ul>
                             </div>
                           </div>
@@ -1938,11 +2001,74 @@ License: You must have a valid license purchased only from themeforest(the above
                   <article class="mt-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </article>                                          
+                    nisi ut aliquip ex ea commodo consequat. 
+                  </article>  
+                  <div class="row">
+                    <div class="row">
+                      <div class="col s12">
+                        <ul class="collapsible collapsible-accordion mt-1">
+                          <li class="">
+                            <div class="collapsible-header centering grey lighten-3 pr-0" style="border-radius: 8px;">
+                                See More
+                              <div class="col s1 pr-0"><i class="material-icons right pr-0">add</i></div>
+                            </div>
+                            <div class="collapsible-body " style="border-bottom: none;">
+                              <div class="container">
+                                <div class="row pl-2">
+                                  <div class="col s12 m6">
+                                    <h6>Key Roles:</h6>
+                                    <ul >
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                      <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                      <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                      <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                      <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                      <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                    </ul>
+                                  </div>
+                                  <div class="col s12 m6">
+                                    <h6>Accomplishments</h6>
+                                    <ul >
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                      <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                      <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                    </ul>
+                                    <div class="container popup-gallery">
+                                      <div class="row user-projects pb-1 pt-5">
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                            <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                            <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                            <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                         
+                        
+                        </ul>
+                      </div>
+                    </div>
+                  </div>                                  
                 </li>
+
                 <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
                   <div style=" padding-top: 5px;" >
                     <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
@@ -1953,11 +2079,74 @@ License: You must have a valid license purchased only from themeforest(the above
                   <article class="mt-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </article>                                          
+                    nisi ut aliquip ex ea commodo consequat. 
+                  </article>  
+                  <div class="row">
+                    <div class="row">
+                      <div class="col s12">
+                        <ul class="collapsible collapsible-accordion mt-1">
+                          <li class="">
+                            <div class="collapsible-header centering grey lighten-3 pr-0" style="border-radius: 8px;">
+                                See More
+                              <div class="col s1 pr-0"><i class="material-icons right pr-0">add</i></div>
+                            </div>
+                            <div class="collapsible-body " style="border-bottom: none;">
+                              <div class="container">
+                                <div class="row pl-2">
+                                  <div class="col s12 m6">
+                                    <h6>Key Roles:</h6>
+                                    <ul >
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                      <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                      <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                      <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                      <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                      <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                    </ul>
+                                  </div>
+                                  <div class="col s12 m6">
+                                    <h6>Accomplishments</h6>
+                                    <ul >
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                      <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                      <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                    </ul>
+                                    <div class="container popup-gallery">
+                                      <div class="row user-projects pb-1 pt-5">
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                            <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                            <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                            <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                         
+                        
+                        </ul>
+                      </div>
+                    </div>
+                  </div>                                  
                 </li>
+
                 <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
                   <div style=" padding-top: 5px;" >
                     <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
@@ -1968,11 +2157,74 @@ License: You must have a valid license purchased only from themeforest(the above
                   <article class="mt-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </article>                                          
+                    nisi ut aliquip ex ea commodo consequat. 
+                  </article>  
+                  <div class="row">
+                    <div class="row">
+                      <div class="col s12">
+                        <ul class="collapsible collapsible-accordion mt-1">
+                          <li class="">
+                            <div class="collapsible-header centering grey lighten-3 pr-0" style="border-radius: 8px;">
+                                See More
+                              <div class="col s1 pr-0"><i class="material-icons right pr-0">add</i></div>
+                            </div>
+                            <div class="collapsible-body " style="border-bottom: none;">
+                              <div class="container">
+                                <div class="row pl-2">
+                                  <div class="col s12 m6">
+                                    <h6>Key Roles:</h6>
+                                    <ul >
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                      <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                      <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                      <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                      <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                      <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                    </ul>
+                                  </div>
+                                  <div class="col s12 m6">
+                                    <h6>Accomplishments</h6>
+                                    <ul >
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                      <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                      <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                    </ul>
+                                    <div class="container popup-gallery">
+                                      <div class="row user-projects pb-1 pt-5">
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                            <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                            <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                            <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                         
+                        
+                        </ul>
+                      </div>
+                    </div>
+                  </div>                                  
                 </li>
+                
                 <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
                   <div style=" padding-top: 5px;" >
                     <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
@@ -1983,11 +2235,74 @@ License: You must have a valid license purchased only from themeforest(the above
                   <article class="mt-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </article>                                          
+                    nisi ut aliquip ex ea commodo consequat. 
+                  </article>  
+                  <div class="row">
+                    <div class="row">
+                      <div class="col s12">
+                        <ul class="collapsible collapsible-accordion mt-1">
+                          <li class="">
+                            <div class="collapsible-header centering grey lighten-3 pr-0" style="border-radius: 8px;">
+                                See More
+                              <div class="col s1 pr-0"><i class="material-icons right pr-0">add</i></div>
+                            </div>
+                            <div class="collapsible-body " style="border-bottom: none;">
+                              <div class="container">
+                                <div class="row pl-2">
+                                  <div class="col s12 m6">
+                                    <h6>Key Roles:</h6>
+                                    <ul >
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                      <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                      <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                      <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                      <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                      <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                    </ul>
+                                  </div>
+                                  <div class="col s12 m6">
+                                    <h6>Accomplishments</h6>
+                                    <ul >
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                      <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                      <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                    </ul>
+                                    <div class="container popup-gallery">
+                                      <div class="row user-projects pb-1 pt-5">
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                            <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                            <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                            <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                         
+                        
+                        </ul>
+                      </div>
+                    </div>
+                  </div>                                  
                 </li>
+
                 <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
                   <div style=" padding-top: 5px;" >
                     <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
@@ -1998,11 +2313,74 @@ License: You must have a valid license purchased only from themeforest(the above
                   <article class="mt-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </article>                                          
+                    nisi ut aliquip ex ea commodo consequat. 
+                  </article>  
+                  <div class="row">
+                    <div class="row">
+                      <div class="col s12">
+                        <ul class="collapsible collapsible-accordion mt-1">
+                          <li class="">
+                            <div class="collapsible-header centering grey lighten-3 pr-0" style="border-radius: 8px;">
+                                See More
+                              <div class="col s1 pr-0"><i class="material-icons right pr-0">add</i></div>
+                            </div>
+                            <div class="collapsible-body " style="border-bottom: none;">
+                              <div class="container">
+                                <div class="row pl-2">
+                                  <div class="col s12 m6">
+                                    <h6>Key Roles:</h6>
+                                    <ul >
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                      <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                      <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                      <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                      <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                      <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                    </ul>
+                                  </div>
+                                  <div class="col s12 m6">
+                                    <h6>Accomplishments</h6>
+                                    <ul >
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                      <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                      <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                    </ul>
+                                    <div class="container popup-gallery">
+                                      <div class="row user-projects pb-1 pt-5">
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                            <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                            <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                            <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                         
+                        
+                        </ul>
+                      </div>
+                    </div>
+                  </div>                                  
                 </li>
+
                 <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
                   <div style=" padding-top: 5px;" >
                     <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
@@ -2013,71 +2391,74 @@ License: You must have a valid license purchased only from themeforest(the above
                   <article class="mt-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </article>                                          
+                    nisi ut aliquip ex ea commodo consequat. 
+                  </article>  
+                  <div class="row">
+                    <div class="row">
+                      <div class="col s12">
+                        <ul class="collapsible collapsible-accordion mt-1">
+                          <li class="">
+                            <div class="collapsible-header centering grey lighten-3 pr-0" style="border-radius: 8px;">
+                                See More
+                              <div class="col s1 pr-0"><i class="material-icons right pr-0">add</i></div>
+                            </div>
+                            <div class="collapsible-body " style="border-bottom: none;">
+                              <div class="container">
+                                <div class="row pl-2">
+                                  <div class="col s12 m6">
+                                    <h6>Key Roles:</h6>
+                                    <ul >
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                      <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                      <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                      <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                      <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                      <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                    </ul>
+                                  </div>
+                                  <div class="col s12 m6">
+                                    <h6>Accomplishments</h6>
+                                    <ul >
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                      <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                      <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                      <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                    </ul>
+                                    <div class="container popup-gallery">
+                                      <div class="row user-projects pb-1 pt-5">
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                            <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                            <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                        <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                          <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                            <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                         
+                        
+                        </ul>
+                      </div>
+                    </div>
+                  </div>                                  
                 </li>
-                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                  <div style=" padding-top: 5px;" >
-                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
-                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
-                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
-                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
-                  </div>
-                  <article class="mt-1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </article>                                          
-                </li>
-                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                  <div style=" padding-top: 5px;" >
-                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
-                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
-                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
-                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
-                  </div>
-                  <article class="mt-1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </article>                                          
-                </li>
-                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                  <div style=" padding-top: 5px;" >
-                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
-                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
-                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
-                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
-                  </div>
-                  <article class="mt-1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </article>                                          
-                </li>
-                <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                  <div style=" padding-top: 5px;" >
-                    <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
-                    <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
-                    <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
-                    <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
-                  </div>
-                  <article class="mt-1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                  </article>                                          
-                </li>
+               
               </ul>
             </div>
           </div>
@@ -2194,7 +2575,6 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
         <div class="modal-content pb-6">
           <div class="row user-projects pb-1 pt-5">
-            
             <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
               <div class="overlai">
                 <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/6.png' %}" />
@@ -2535,11 +2915,59 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="{% static 'app-assets/js/search.js' %}"></script>
     <script src="{% static 'app-assets/js/custom/custom-script.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="{% static 'app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
      <script src="{% static 'app-assets/js/scripts/advance-ui-modals.js' %}"></script>
-
+     <script src="{% static 'app-assets/js/scripts/media-gallery-page.js' %}"></script>
 
     <script>
+
+      function remove(){
+        var g =document.querySelectorAll('grid');
+         var i =0;
+          for(; i<g.length;i++ ){
+            g[i].css('display', 'none')
+          }
+      }
+
+        // rangeslider
+        var $range = $(".js-range-slider");
+        var gaps = [5000,5500, 8000];
+        var  g = [6000, 7000];
+        var $debug = $(".js-debug");
+
+        function transform(num) {
+            var pos = gaps.indexOf(num);
+            var p = g.indexOf(num);
+            // skip value from gaps array
+            if (pos !== -1) {
+                return "you";
+            } if(p !== -1){ 
+              return "avg";
+            }
+            return num;
+        }
+
+        $range.ionRangeSlider({
+            type: "double",
+            min: 3000,
+            max: 9000,
+            from: 6000,
+            to: 8000,
+            from_fixed:true,
+            to_fixed: true,
+            // hide_min_max: true,
+            grid: true,
+            grid_num: 10,
+            prettify: function(num) {
+            return transform(num);
+            },
+            onChange: function(data) {
+                $debug.text(transform(data.from));
+            }
+        });
+
+
 
  // this is for viewing the picture only one
           $(document).ready(function(){

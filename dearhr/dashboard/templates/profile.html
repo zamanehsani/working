@@ -579,8 +579,8 @@ License: You must have a valid license purchased only from themeforest(the above
                       <div class="card-content">
                           <div class="col s12 push-l3">
                             <div class="grid " style="width: 130px;" >
-                              <figure class="effect-sadie center-align" style="width: 130px; border-radius: 50%;" >
-                                <img  class="responsive-img padding-2 card-profile-image gradient-indigo-purple  circle z-depth-5" width="130px" src="{% static 'app-assets/images/user/12.jpg' %}"
+                              <figure class="effect-sadie padding-2 gradient-indigo-purple center-align z-depth-3" style="width: 130px; border-radius: 50%;" >
+                                <img  class="responsive-img  card-profile-image  circle" width="130px" style="opacity: 1;" src="{% static 'app-assets/images/user/12.jpg' %}"
                                 alt="user profile">
                                 <figcaption class="circle" >
                                   <p ><a href=""><i class="material-icons pink-text">camera_alt</i></a></p>
@@ -592,7 +592,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           <div class="col s12">
                             <div class="row">
                               <div id="text" class="col s12">
-                                <h5 class="mb-0 pt-3 text-ellipsis white-text"> <b>Emma Olivia</b> <i class="material-icons">edit</i></h5>
+                                <h5 class="mb-0 pt-3 text-ellipsis white-text"> <b>Emma Olivia</b> <i class="material-icons modal-trigger" style="cursor: pointer;" data-target="modalEditInfo">edit</i></h5>
                                 <h6  class="text-ellipsis white-text" >Email&nbsp;: <a href="#" class="grey-text text-lighten-3"> emmaOlivia@gmail.com</a> </h6>
                                 <h6 class="text-ellipsis white-text"  >Phone&nbsp;: <a href="#" class="grey-text text-lighten-3"> 0566652534</a> </h6>
                                 <h6  class="text-ellipsis white-text" >DOB: <a href="#" class="grey-text text-lighten-3">15/10/1994</a> </h6>
@@ -618,7 +618,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
                       </div> 
                     </div>
-                    <div class="card-content pb-0">
+                    <div class="card-content pb-0 pt-0 mt-5 " >
                       <ul class="collapsible collapsible-accordion">
                         <li class="">
                           <div class="collapsible-header pb-2 centering">
@@ -670,21 +670,21 @@ License: You must have a valid license purchased only from themeforest(the above
                                   <p class="font-weight-600 text-ellipsis">Jennifer&nbsp;Rice</p>
                                   <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
                                   <p class="medium-small text-ellipsis">2019/2/10 </p> 
-                                  <a href="#!" class="star pr-3"> <i class="material-icons blue-text">edit</i></a>                                      
+                                  <a href="#modalRefEdit" class="star pr-3 modal-trigger"> <i class="material-icons blue-text">edit</i></a>                                      
                                 </li>
                                 <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px;margin-bottom: 20px;">
                                   <img src="{% static 'app-assets/images/icon/jpg-image.png' %}" style="width: 45px; height: 60px; left: 0px;position: absolute;" alt="" class="" />
                                   <p class="font-weight-600 text-ellipsis">John&nbsp;Smith</p>
                                   <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
                                   <p class="medium-small text-ellipsis">2019/2/10 </p> 
-                                  <a href="#!" class="star pr-3"> <i class="material-icons blue-text">edit</i></a>                                     
+                                  <a href="#modalRefEdit" class="star pr-3 modal-trigger"> <i class="material-icons blue-text">edit</i></a>                                     
                                 </li>
                                 <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px;margin-bottom: 20px;">
                                   <img src="{% static 'app-assets/images/icon/pdf-image.png' %}" style="width: 45px; height: 60px; left: 0px; position: absolute;" alt="" class="" />
                                   <p class="font-weight-600 text-ellipsis">Jennifer&nbsp;Rice</p>
                                   <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
                                   <p class="medium-small text-ellipsis">2019/2/10 </p> 
-                                  <a href="#!" class="star pr-3"> <i class="material-icons blue-text">edit</i></a>                                      
+                                  <a href="#modalRefEdit" class="star pr-3 modal-trigger"> <i class="material-icons blue-text">edit</i></a>                                      
                                 </li>
                               </ul>
 
@@ -761,14 +761,14 @@ License: You must have a valid license purchased only from themeforest(the above
                           <article class="white-text center-align" >list all of you exsperiences here to make them avaible for your cards.</article>
                       </div>
                         <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalEndorsAdd" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
-                          <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
+                          <a class="btn-floating btn-medium pink.accent-2 menu-shadow modal-trigger" href="#modalExp"><i class="material-icons">add</i> </a>
                         </div> 
                       </div>
                         <div class="card-content pb-2">
                           <div>
                             <h6 class="text-ellipsis" style="font-weight: bolder;">2018&nbsp;-&nbsp;present<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></h6>
                             <b class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;Subsonic&nbsp;LLC</b>
-                            <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons green-text">edit</i></a>
+                            <a href="#modalDeleteExp" style="top:-30px" class="star modal-trigger"><i class="material-icons blue-text">delete</i></a>
                             <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                               It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                               Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
@@ -778,7 +778,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           <div>
                             <h6 class="text-ellipsis"  style="font-weight: bolder;">2016&nbsp;-&nbsp;2018<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></h6>
                             <b  class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;Subsonic&nbsp;LLC</b>
-                            <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons green-text">edit</i></a>
+                            <a href="#modalDeleteExp" style="top:-30px" class="star modal-trigger"><i class="material-icons blue-text">delete</i></a>
                             <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                               It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                               Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
@@ -786,7 +786,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           <div>
                             <h6 class="text-ellipsis" style="font-weight: bolder;">2013&nbsp;-&nbsp;2016<a href="#" style="font-size: 16px;">&nbsp;&nbsp;5yr</a></h6>
                             <b class="text-ellipsis">Asistant&nbsp;&nbsp;|&nbsp;&nbsp;Subsonic&nbsp;LLC</b>
-                            <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons green-text">edit</i></a>
+                            <a href="#modalDeleteExp" style="top:-30px" class="star modal-trigger"><i class="material-icons blue-text">delete</i></a>
                             <p class="pb-5" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                               It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                               Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
@@ -804,10 +804,10 @@ License: You must have a valid license purchased only from themeforest(the above
                               <article class="white-text center-align" >put all of your records, projections and documents here in order to use them in tyour targeted profiles.</article>
                           </div>
                           <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalEndorsAdd" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
-                            <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
+                            <a class="btn-floating btn-medium pink.accent-2 menu-shadow modal-trigger" href="#modalAddPhoto"><i class="material-icons">add</i> </a>
                           </div> 
                         </div>
-                        <div class="card-content pb-0">
+                        <div class="card-content p-0" style="padding: 20px 10px 0 10px !important;">
                           <div class="container popup-gallery">
                             <div class="row user-projects pb-1 pt-3">
                               <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
@@ -849,7 +849,6 @@ License: You must have a valid license purchased only from themeforest(the above
                   </div>
                   <!-- end of second column -->
                   
-
                   <!-- third column -->
                   <div class="col s12 m4 l3 allCard">
                     <!-- education card -->
@@ -859,15 +858,15 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="mb-3">
                           <article class="white-text center-align" >Enter your all eudcational records. later on, you can choose which which educational records you want to show on your targeted profile.</article>
                         </div>
-                        <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalEndorsAdd" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
+                        <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalAddEdu" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
                           <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
                         </div> 
                       </div>
-                        <div class="card-content pb-0">
+                        <div class="card-content ">
                               <div>
                                 <h6 class="text-ellipsis" style="font-weight: bolder;">Master&nbsp;in&nbsp;Marketing&nbsp;|&nbsp;&nbsp;Harvard&nbsp;University</h6>
                                 <b class="text-ellipsis">2018&nbsp;-&nbsp;2020<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
-                                <a href="#modalEndorsAdd" style="top:-5px" class="star modal-trigger"><i class="material-icons green-text">edit</i></a>
+                                <a href="#modalDeleteExp" style="top:-5px" class="star modal-trigger"><i class="material-icons blue-text">delete</i></a>
                                 <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                                   It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                                   Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
@@ -875,7 +874,7 @@ License: You must have a valid license purchased only from themeforest(the above
                               <div>
                                 <h6 class="text-ellipsis" style="font-weight: bolder;">Bachelor&nbsp;in&nbsp;IT&nbsp;|&nbsp;&nbsp;MIT&nbsp;</h6>
                                 <b class="text-ellipsis">2014&nbsp;-&nbsp;2017<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
-                                <a href="#modalEndorsAdd" style="top:-5px" class="star modal-trigger"><i class="material-icons green-text">edit</i></a>
+                                <a href="#modalDeleteExp" style="top:-5px" class="star modal-trigger"><i class="material-icons blue-text">delete</i></a>
                                 <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                                   It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                                   Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
@@ -883,7 +882,7 @@ License: You must have a valid license purchased only from themeforest(the above
                               <div>
                                 <h6 class="text-ellipsis" style="font-weight: bolder;">Master&nbsp;in&nbsp;Marketing&nbsp;|&nbsp;&nbsp;Harvard&nbsp;University</h6>
                                 <b class="text-ellipsis">2018&nbsp;-&nbsp;2020<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
-                                <a href="#modalEndorsAdd" style="top:-5px" class="star modal-trigger"><i class="material-icons green-text">edit</i></a>
+                                <a href="#modalDeleteExp" style="top:-5px" class="star modal-trigger"><i class="material-icons blue-text">delete</i></a>
                                 <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                                   It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                                   Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
@@ -891,7 +890,7 @@ License: You must have a valid license purchased only from themeforest(the above
                               <div>
                                 <h6 class="text-ellipsis" style="font-weight: bolder;">Diploma&nbsp;in&nbsp;PMP&nbsp;|&nbsp;&nbsp;PMI&nbsp;</h6>
                                 <b class="text-ellipsis">2014&nbsp;-&nbsp;2015<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
-                                <a href="#modalEndorsAdd" style="top:-5px" class="star modal-trigger"><i class="material-icons green-text">edit</i></a>
+                                <a href="#modalDeleteExp" style="top:-5px" class="star modal-trigger"><i class="material-icons blue-text">delete</i></a>
                                 <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
                                   It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
                                   Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
@@ -904,7 +903,7 @@ License: You must have a valid license purchased only from themeforest(the above
                   </div>
                   <!-- end of third column -->
                   
-                  
+                  <!-- fourth col -->
                   <div class="col s12 m4 l3 allCard">
                     <!-- skills card -->
                     <div class="card user-statistics-card animate fadeLeft">
@@ -917,18 +916,25 @@ License: You must have a valid license purchased only from themeforest(the above
                           <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
                         </div> 
                       </div>
-                        <div class="card-content pb-0">
-                              <div class="container">
-                                <div class="row">
-                                  <ul id="collection-custom" class="collection" style="border: none;">
-                                    <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                        <div class="card-content "  style="padding: 5px 10px;">
+                          <div class="container">
+                            <div class="row ">
+                              <ul id="" class="collection" style="border: none; margin-top: 20px;">
+                                <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                                  <div class="row p-0 ">
+                                    <div class="col s10">
                                       <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
                                       <p class="font-weight-600">Project management </p>
                                       <div class="prograss">
                                         <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
                                       </div>
-                                    </li>
-                                    <li class="collection-item avatar mb-2" style="border-bottom: none;">
+                                    </div>
+                                    <div class="col s2 mt-4 "><a href="#modalDeleteExp" class="modal-trigger right"><i class="material-icons blue-text">delete</i></a></div>
+                                  </div>
+                                </li>
+                                <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                                  <div class="row p-0 ">
+                                    <div class="col s10">
                                       <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
                                       <p class="font-weight-600">Marketing </p>
                                       <div class="prograss">
@@ -936,25 +942,38 @@ License: You must have a valid license purchased only from themeforest(the above
                                           <span>80%</span>
                                         </div>
                                       </div>
-                                    </li>
-                                    <li class="collection-item avatar mb-2" style="border-bottom: none;">
+                                    </div>
+                                    <div class="col s2 mt-4 "><a href="#modalDeleteExp" class="modal-trigger right"><i class="material-icons blue-text">delete</i></a></div>
+                                  </div>
+                                </li>
+                                <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                                  <div class="row p-0 ">
+                                    <div class="col s10">
                                       <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
                                       <p class="font-weight-600">Vloging </p>
                                       <div class="prograss">
                                         <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span>60%</span></div>
                                       </div>
-                                    </li>
-                                    <li class="collection-item avatar mb-2" style="border-bottom: none;">
+                                    </div>
+                                    <div class="col s2 mt-4 "><a href="#modalDeleteExp" class="modal-trigger right"><i class="material-icons blue-text">delete</i></a></div>
+                                  </div>
+                                </li>
+                                <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                                  <div class="row p-0 ">
+                                    <div class="col s10">
                                       <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
                                       <p class="font-weight-600">SEO </p>
                                       <div class="prograss">
                                         <div class="w3-orange prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #ff9800 ; "><span>35%</span></div>
                                       </div>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                              <!-- accordian here -->
+                                    </div>
+                                    <div class="col s2 mt-4 "><a href="#modalDeleteExp" class="modal-trigger right"><i class="material-icons blue-text">delete</i></a></div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- accordian here -->
                         </div>
                     </div>                
                       <!-- end of skills card  -->
@@ -1737,6 +1756,192 @@ License: You must have a valid license purchased only from themeforest(the above
     </div>
     <!--/ Theme Customizer -->
 
+    <!-- modal for experience add -->
+    <div id="modalExp" class="modal modal-fixed-footer" style="border-radius: 12px;">
+      <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+        <div class="container p-0">
+          <div class="row">
+            <div class="col s2">
+            </div>
+            <div class="col s8">
+              <h6 class="center-align text-ellipsis"><a href=""><b>Add Experience </b></a> </h6>
+            </div>
+            <div class="col s2" style="padding-right: 0px; ">
+              <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                    onmouseover="this.style.background ='#e91e63'"  onmouseout="this.style.background='transparent'" 
+                    style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                <i class="material-icons">clear</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content pb-6">
+          <div class="row p-0">
+              <div class="col s12">
+                <!-- Form Advance -->
+                <div class="col s12 m12 l12">
+                  <div id="Form-advance" class="card card card-default scrollspy">
+                    <div class="card-content">
+                      <h4 class="card-title">Add Details About Experience: </h4>
+                      <form>
+                        <div class="row">
+                          <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="first_name01" type="text">
+                            <label for="first_name01">Position </label>
+                          </div>
+                          <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">home</i>
+                            <input id="last_name" type="text">
+                            <label for="last_name">Company </label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">date_range</i>
+                            <input type="text" class="datepicker">
+                            <label for="icon_prefix">Date From  </label>
+                          </div>
+                          <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">date_range</i>
+                          <input type="text" class="datepicker">
+                          <label for="icon_prefix">To  </label>
+                          </div>
+                        </div>
+                        
+                      
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <textarea id="message5" class="materialize-textarea"></textarea>
+                            <label for="message">Roles</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <textarea id="message5" class="materialize-textarea"></textarea>
+                            <label for="message">Accomplishment</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <textarea id="message5" class="materialize-textarea"></textarea>
+                            <label for="message">Description</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12 m6">
+                            <div class="file-field input-field ">
+                              <div class="btn">
+                              <span>File</span>
+                              <input type="file" multiple>
+                            </div>
+                            <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>         
+              </div>
+          </div>
+      </div>
+      <div class="modal-footer" style="z-index: 1;">
+        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+        <a href="#!" class="modal-action modal-close  waves-effect waves-green btn-flat ">save</a>
+      </div>
+    </div>
+    <!-- endo of experience add modal -->
+
+    <!-- modal for education add -->
+    <div id="modalAddEdu" class="modal modal-fixed-footer" style="border-radius: 12px;">
+      <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+        <div class="container p-0">
+          <div class="row">
+            <div class="col s2">
+            </div>
+            <div class="col s8">
+              <h6 class="center-align text-ellipsis"><a href=""><b>Add Education </b></a> </h6>
+            </div>
+            <div class="col s2" style="padding-right: 0px; ">
+              <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                    onmouseover="this.style.background ='#e91e63'"  onmouseout="this.style.background='transparent'" 
+                    style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                <i class="material-icons">clear</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content pb-6">
+          <div class="row p-0">
+              <div class="col s12">
+                <!-- Form Advance -->
+                <div class="col s12 m12 l12">
+                  <div id="Form-advance" class="card card card-default scrollspy">
+                    <div class="card-content">
+                      <h4 class="card-title">Add Details About Education: </h4>
+                      <form>
+                        <div class="row">
+                          <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="first_name01" type="text">
+                            <label for="first_name01">Title </label>
+                          </div>
+                          <div class="input-field col m6 s12">
+                            <i class="material-icons prefix">account_balance</i>
+                            <input id="last_name" type="text">
+                            <label for="last_name">Institution </label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">date_range</i>
+                            <input type="text" class="datepicker">
+                            <label for="icon_prefix">Date From  </label>
+                          </div>
+                          <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">date_range</i>
+                          <input type="text" class="datepicker">
+                          <label for="icon_prefix">To  </label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <textarea id="message5" class="materialize-textarea"></textarea>
+                            <label for="message">Description</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12 m6">
+                            <div class="file-field input-field ">
+                              <div class="btn">
+                              <span>File</span>
+                              <input type="file" multiple>
+                            </div>
+                            <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>         
+              </div>
+          </div>
+      </div>
+      <div class="modal-footer" style="z-index: 1;">
+        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+        <a href="#!" class="modal-action modal-close  waves-effect waves-green btn-flat ">save</a>
+      </div>
+    </div>
+    <!-- endo of education add modal -->
+
       <!-- modal for endorsements -->
       <div id="modalEndorsAdd" class="modal modal-fixed-footer" style="border-radius: 12px;">
         <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
@@ -1745,7 +1950,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <div class="col s2">
               </div>
               <div class="col s8">
-                <h6 class="center-align text-ellipsis"><a href=""><b>Add an Endoresement </b></a> </h6>
+                <h6 class="center-align text-ellipsis"><a href=""><b>Add Reference </b></a> </h6>
               </div>
               <div class="col s2" style="padding-right: 0px; ">
                 <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
@@ -1799,12 +2004,16 @@ License: You must have a valid license purchased only from themeforest(the above
                           </div>
                           <div class="row">
                             <div class=" col m6 s12">
-                              <div class="col s12 m4 l4">
-                                <p>Person Photo </p>
-                              </div>
                               <div class="col s12 m8 l9">
-                                <input type="file" id="input-file-events" class="dropify-event"
-                                  data-default-file="{% static 'app-assets/images/gallery/1.png' %}" />
+                                <div class="file-field input-field ">
+                                  <div class="btn">
+                                  <span>File</span>
+                                  <input type="file" multiple>
+                                </div>
+                                <div class="file-path-wrapper">
+                                  <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                  </div>
+                                </div>
                               </div>
                             </div>
                             <div class="input-field col m6 s12">
@@ -1822,13 +2031,6 @@ License: You must have a valid license purchased only from themeforest(the above
                               <textarea id="message5" class="materialize-textarea"></textarea>
                               <label for="message">enter the body of your endorsement</label>
                             </div>
-                            <div class="row">
-                              <div class="input-field col s12">
-                                <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Submit
-                                  <i class="material-icons right">send</i>
-                                </button>
-                              </div>
-                            </div>
                           </div>
                         </form>
                       </div>
@@ -1843,7 +2045,8 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
       </div>
       <!-- endo of endorsement modal -->
-       <!-- modal for endorsements -->
+
+       <!-- modal for endorsements view -->
        <div id="modalEndorsView" class="modal" style="border-radius: 12px;">
         <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
           <div class="container p-0">
@@ -1891,6 +2094,245 @@ License: You must have a valid license purchased only from themeforest(the above
       </div>
       <!-- endo of endorsement modal -->
 
+      <!-- modal for edit information -->
+      <div id="modalEditInfo" class="modal" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b>Edit your Info </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+            <div class="row">
+                <div class="card">
+                  <div class="step-content grey lighten-4 pl-3 pr-3 pt-1" style="border-radius: 10px;">
+                    <div class="row">
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Full Name </label>
+                      </div>
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="icon_prefix" type="email" class="validate">
+                        <label for="icon_prefix">Email  </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">phone</i>
+                        <input id="icon_prefix" type="tel" class="validate">
+                        <label for="icon_prefix">Phone   </label>
+                      </div>
+
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">date_range</i>
+                        <input type="text" class="datepicker">
+                        <label for="icon_prefix">Date of Birth  </label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col s12 m6">
+                        <div class="input-field">
+                          <i class="material-icons prefix">person</i>
+                          <input id="icon_prefix" type="text" class="validate">
+                          <label for="icon_prefix"> Nationality</label>
+                        </div>
+                      </div>
+                      <div class="col s12 m6 pt-2">
+                        <p class="btn right"> Ok </p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- endo of edit information modal -->
+
+      <!-- modal for reference edit -->
+      <div id="modalRefEdit" class="modal" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b>Edit Reference </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+            <div class="row">
+                <div class="card">
+                  <div class="step-content grey lighten-4 pl-3 pr-3 pt-1" style="border-radius: 10px;">
+                    <div class="row">
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Full Name </label>
+                      </div>
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="icon_prefix" type="email" class="validate">
+                        <label for="icon_prefix">Email  </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">phone</i>
+                        <input id="icon_prefix" type="tel" class="validate">
+                        <label for="icon_prefix">Phone   </label>
+                      </div>
+
+                      <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">date_range</i>
+                        <input type="text" class="datepicker">
+                        <label for="icon_prefix">Date of Birth  </label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col s12 m6">
+                        <div class="input-field">
+                          <i class="material-icons prefix">person</i>
+                          <input id="icon_prefix" type="text" class="validate">
+                          <label for="icon_prefix"> Position</label>
+                        </div>
+                      </div>
+                      <div class="col s12 m6">
+                        <div class="input-field">
+                          <i class="material-icons prefix">home</i>
+                          <input id="icon_prefix" type="text" class="validate">
+                          <label for="icon_prefix"> Company</label>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div class="row">
+                      <p class="btn right"> Ok </p>
+                    </div>
+                    
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- endo of reference edit modal -->
+
+      <!-- modal for add file -->
+      <div id="modalAddPhoto" class="modal" style="border-radius: 12px; width: 40%!important;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b>Add Files </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+            <div class="row">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 pb-2 ">
+                        <form action="#">
+                          <div class="file-field input-field ">
+                            <div class="btn">
+                            <span>File</span>
+                            <input type="file" multiple>
+                          </div>
+                          <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col s12">
+                        <p class="btn right">Upload</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- endo of add flie modal -->
+
+      <!-- modal for delete  -->
+      <div id="modalDeleteExp" class="modal" style="border-radius: 12px; width: 40%!important;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b>Warning </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+            <div class="row">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 pb-2 ">
+                        <p class="center-align">Are you sure you want to preceed?</p>
+                      </div>
+                      <div class="col s12 pull-s4">
+                        <p class="btn grey right ml-2">Cancel</p>
+                        <p class="btn right">Delete</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- endo of delete -->
+
     <!-- BEGIN: Footer-->
 
     <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-purple gradient-shadow navbar-border navbar-shadow">
@@ -1913,11 +2355,20 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="{% static 'app-assets/js/search.js' %}"></script>
     <script src="{% static 'app-assets/js/custom/custom-script.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
-    <script src="{% static 'app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/advance-ui-modals.js' %}"></script>
     <script src="{% static 'app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/media-gallery-page.js' %}"></script>
+
+
     <script>
+
+      // date picker for input
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.datepicker');
+        var instances = M.Datepicker.init(elems, options);
+      });
+
+
 
       // for resizing 
       $(document).ready(function(){

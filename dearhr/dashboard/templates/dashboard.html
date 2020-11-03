@@ -39,13 +39,12 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/materialize-stepper/materialize-stepper.min.css' %}"> -->
     <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/form-wizard.css' %}"> -->
     <!-- BEGIN: Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/magnific-popup/magnific-popup.css' %}">
 
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/materialize.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/dashboard-modern.css' %}">
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/intro.css' %}"> -->
-  
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/magnific-popup/magnific-popup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/timeline.css' %}">
     <!-- END: Page Level CSS-->
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/custom/custom.css' %}">
@@ -774,10 +773,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                       In this section add what ever you want to show case your profile. Show off youself.</article>
                                 </div>
                                 <div>
-                                  <h6>Experiences: <a href="#">1&nbsp;years</a></h6>
+                                  <h6>Experiences: <a class="modal-trigger" href="#modalExp">1&nbsp;years</a></h6>
                                 </div>
                                 <div>
-                                  <h6 class="mt-3 mb-3">Targeted&nbsp;location: <a href="#">Dubai,&nbsp;UAE</a> </h6>
+                                  <h6 class="mt-3 mb-3">Targeted&nbsp;location: <a href="#modallocation" class="modal-trigger">Dubai,&nbsp;UAE</a> </h6>
                                 </div>
                                 <div>
                                   <h6 class="mt-3">Expected&nbsp;Salary: <a href="#"> 8000&nbsp;AED</a></h6>
@@ -971,10 +970,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                   </article>
                               </div>
                               <div>
-                                <h6>Experiences: <a href="#">1&nbsp;years</a></h6>
+                                <h6>Experiences: <a class="modal-trigger" href="#modalExp">1&nbsp;years</a></h6>
                               </div>
                               <div>
-                                <h6 class="mt-3 mb-3">Targeted&nbsp;location: <a href="#">Dubai,&nbsp;UAE</a> </h6>
+                                <h6 class="mt-3 mb-3">Targeted&nbsp;location: <a href="#modallocation" class="modal-trigger">Dubai,&nbsp;UAE</a> </h6>
                               </div>
                               <div>
                                 <h6 class="mt-3">Expected&nbsp;Salary: <a href="#"> 8000&nbsp;AED</a></h6>
@@ -1151,6 +1150,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
               </div>
             </div>
+
 
             <!-- START RIGHT SIDEBAR NAV -->
             <aside id="right-sidebar-nav">
@@ -1692,15 +1692,15 @@ License: You must have a valid license purchased only from themeforest(the above
 
             <!-- gallery modal -->
             <div id="modalgallery" class="modal modal-fixed-footer" style="border-radius: 12px;">
-              <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
-                <div class="container p-0">
+              <div class="container">
+                <div class="container">
                   <div class="row">
                     <div class="col s2">
                     </div>
                     <div class="col s8">
                       <h6 class="center-align text-ellipsis"><a href=""><b> Showcase&nbsp; </b></a> </h6>
                     </div>
-                    <div class="col s2" style="padding-right: 0px; ">
+                    <div class="col s2">
                       <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
                             onmouseover="this.style.background ='#e91e63'" 
                             onmouseout="this.style.background='transparent'" 
@@ -1716,7 +1716,6 @@ License: You must have a valid license purchased only from themeforest(the above
                   <div class="popup-gallery">
                     <div class="gallery-sizer"></div>
                     <div class="row">
-
                       <div class="col s12 m6 l4 xl4" >
                         <div>
                           <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The Cleaner">
@@ -1772,8 +1771,160 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
               </div>
             </div>
-            <!-- END: Page Main-->
-                        
+            <!-- END: gallery -->
+
+            <!-- modal for experiences -->
+            <div id="modalExp" class="modal modal-fixed-footer" style="border-radius: 12px;">
+              <div class="" style=" width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9;">
+                <div class="container p-0">
+                  <div class="row">
+                    <div class="col s2">
+                    </div>
+                    <div class="col s8">
+                      <h6 class="center-align text-ellipsis"><a href=""><b> Experience:&nbsp;<a href="">5 years</a> </b></a> </h6>
+                    </div>
+                    <div class="col s2" style="padding-right: 0px; ">
+                      <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                            onmouseover="this.style.background ='#e91e63'" 
+                            onmouseout="this.style.background='transparent'" 
+                            style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                        <i class="material-icons">clear</i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-content">
+                <section class="timeline2">
+                  <div class="container">
+                    <div class="timeline2-item">
+                      <div class="timeline2-img"></div>
+                      <div class="timeline2-content js--fadeInLeft  animate fadeLeft">
+                        <h2>Title</h2>
+                        <div class="date">1 MAY 2016</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                        <a class="bnt-more" href="javascript:void(0)">More</a>
+                      </div>
+                    </div> 
+                
+                    <div class="timeline2-item">
+                      <div class="timeline2-img"></div>
+                      <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                        <div class="timeline2-img-header">
+                          <h2>Card Title</h2>
+                        </div>
+                        <div class="date">25 MAY 2016</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                        <a class="bnt-more" href="javascript:void(0)">More</a>
+                      </div>
+                    </div>   
+                
+                    <div class="timeline2-item">
+                      <div class="timeline2-img"></div>
+                      <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                        <div class="date">3 JUN 2016</div>
+                        <h2>Quote</h2>
+                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+                      </div>
+                    </div>   
+                    <div class="timeline2-item">
+                      <div class="timeline2-img"></div>
+                      <div class="timeline2-content js--fadeInRight animate fadeRight">
+                        <h2>Title</h2>
+                        <div class="date">22 JUN 2016</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                        <a class="bnt-more" href="javascript:void(0)">More</a>
+                      </div>
+                    </div>   
+                
+                    <div class="timeline2-item">
+                      <div class="timeline2-img"></div>
+                      <div class="timeline2-content timeline2-card js--fadeInLeft animate fadeLeft">
+                        <div class="timeline2-img-header">
+                          <h2>Card Title</h2>
+                        </div>
+                        <div class="date">10 JULY 2016</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                        <a class="bnt-more" href="javascript:void(0)">More</a>
+                      </div>
+                    </div>   
+                    <div class="timeline2-item">
+                      <div class="timeline2-img"></div>
+                      <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                        <div class="timeline2-img-header">
+                          <h2>Card Title</h2>
+                        </div>
+                        <div class="date">30 JULY 2016</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                        <a class="bnt-more" href="javascript:void(0)">More</a>
+                      </div>
+                    </div>  
+                
+                    <div class="timeline2-item">
+                      <div class="timeline2-img"></div>
+                      <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                        <div class="date">5 AUG 2016</div>
+                        <h2>Quote</h2>
+                        <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+                      </div>
+                    </div>   
+                
+                    <div class="timeline2-item">
+                      <div class="timeline2-img"></div>
+                      <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                        <div class="timeline2-img-header">
+                          <h2>Card Title</h2>
+                        </div>
+                        <div class="date">19 AUG 2016</div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                        <a class="bnt-more" href="javascript:void(0)">More</a>
+                      </div>
+                    </div>  
+                
+                    <div class="timeline2-item">
+                      <div class="timeline2-img"></div>
+                      <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                        <div class="date">1 SEP 2016</div>
+                        <h2>Title</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                        <a class="bnt-more" href="javascript:void(0)">More</a>
+                      </div>
+                    </div>   
+                
+                  </div>
+                </section>
+              </div>
+            </div>       
+                    
+              <!-- location modal -->
+              <div id="modallocation" class="modal modal-fixed-footer" style="border-radius: 12px;">
+                <div class="" style=" width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col s2">
+                      </div>
+                      <div class="col s8">
+                        <h6 class="center-align text-ellipsis"><a href=""><b> Location&nbsp; </b></a> </h6>
+                      </div>
+                      <div class="col s2" style="padding-right: 0px; ">
+                        <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                              onmouseover="this.style.background ='#e91e63'" 
+                              onmouseout="this.style.background='transparent'" 
+                              style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                          <i class="material-icons">clear</i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-content">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14465.211945787229!2d55.170928747549816!3d24.989818590020977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sae!4v1604234346091!5m2!1sen!2sae" 
+                  width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                  </iframe>
+                </div>
+              </div>
+              <!-- END: location modal-->
+
           </div>
           <div class="content-overlay"></div>
         </div>
@@ -2040,6 +2191,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <script src="{% static 'app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/media-gallery-page.js' %}"></script>
+    <script src="{% static 'app-assets/js/scripts/advance-ui-modals.js' %}"></script>
 
 
 

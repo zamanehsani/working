@@ -590,7 +590,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                   <h5 class="text-ellipsis mt-0 pt-0"> <b>SUBSONIC&nbsp;LLC</b> </h5>
                                   <h6 class="text-ellipsis" style="vertical-align: top;">Address&nbsp;: <a href="#" > DIP1,&nbsp;Dubai,&nbsp;UAE</a> </h6>
                                   <h6 class="text-ellipsis"  style="vertical-align: top;">website &nbsp;: <a href="#" > www.subsonic.ae</a> </h6>
-                                  <h6 class="text-ellipsis" style="vertical-align: top;">Email <a href="#" >15/10/1994</a> </h6>
+                                  <h6 class="text-ellipsis" style="vertical-align: top;">Email <a href="#" >info@subsonic.ae</a> </h6>
                                   <h6 class="text-ellipsis" style="vertical-align: top;">Phone: <a href="#" > 0562312534</a> </h6>
                                 </div>
                             </div>
@@ -636,6 +636,9 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="card-header gradient-45deg-deep-orange-orange pl-4 pt-4 pb-1" style="border-radius: 15px 15px 0 0;">
                       <h5  class="pt-0 mt-0 text-ellipsis text-lighten-3 white-text ">Collaborator</h5>
                       <p class="m-0 pb-2 pl-3 white-text text-lighten-3" style="vertical-align: top;">Active: <a class="grey-text text-lighten-3" href="">6</a></p>
+                      <div  class="fixed-action-btn right  direction-left" style=" bottom: -10px; margin-right: 20px;">
+                        <a class="btn-floating btn-medium modal-trigger pink.accent-2 menu-shadow" href="#modalAddCollaborator"> <i class="material-icons">add</i> </a>
+                      </div> 
                     </div>
                     <div class="card-content">
                       <div class="container">
@@ -663,7 +666,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             </ul>
                           </div> 
                           <div class="col s12 l6 pt-2 modal-trigger" data-target="modalEndors">
-                            <ul id="collection-custom" class="collection mb-0" style="border: none;">
+                            <ul id="collection-custom" class="collection mb-0 modal-trigger" data-target="modalRemoveCollaborator" style="border: none;">
                               <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
                                 <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 60px; height: 60px; left: 0px;" alt="" class="circle" />
                                 <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
@@ -725,16 +728,15 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="col s12 m5">
                           <div class="container">
-                            <div class="container ct-golden-section" style="min-width: 100px;">
+                            <div class="container ct-golden-section" style="min-width: 110px; height: 120px;">
                               <div class="ct-chart ct9-chart">                                 
                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      
                       <!-- accordin -->
-                      <div class="row" >
+                      <div class="row"  >
                         <div class="col s12">
                           <ul class="collapsible collapsible-accordion">
                             <li class="">
@@ -850,7 +852,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           <div id="clients-bar">
                             <div class="container ">
                               <div class="row mb-0 ">
-                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_card' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons tooltipped" data-tooltip="initialize search" data-position="top">search</i> </a></div>
+                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:hrlook' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons tooltipped" data-tooltip="initialize search" data-position="top">search</i> </a></div>
                                 <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_post_editor' %}" > <i style="font-size: 30px;" class="material-icons tooltipped" data-position="top" data-tooltip="edite">edit</i> </a> </div>
                               </div>
                             </div>
@@ -893,7 +895,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           </div>
                           <div class="col s12 m5">
                             <div class="container">
-                              <div class="container ct-golden-section" style="min-width: 100px;">
+                              <div class="container ct-golden-section" style="min-width: 110px; height: 120px;">
                                 <div class="ct-chart ct9-chart">                                 
                                </div>
                               </div>
@@ -1017,7 +1019,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div id="clients-bar" >
                               <div class="container">
                                 <div class="row mb-0">
-                                  <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_card' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons tooltipped" data-tooltip="initialize search" data-position="top">search</i> </a></div>
+                                  <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:hrlook' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons tooltipped" data-tooltip="initialize search" data-position="top">search</i> </a></div>
                                   <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_post_editor' %}" > <i style="font-size: 30px;" class="material-icons tooltipped" data-position="top" data-tooltip="edite">edit</i> </a> </div>
                                 </div>
                               </div>
@@ -1060,7 +1062,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           </div>
                           <div class="col s12 m5">
                             <div class="container">
-                              <div class="container ct-golden-section" style="min-width: 100px;">
+                              <div class="container ct-golden-section" style="min-width:110px; height: 120px;">
                                 <div class="ct-chart ct9-chart">                                 
                                </div>
                               </div>
@@ -1184,7 +1186,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           <div id="clients-bar" >
                             <div class="container">
                               <div class="row mb-0">
-                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_card' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons tooltipped" data-tooltip="initialize search" data-position="top">search</i> </a></div>
+                                <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:hrlook' %}" target="_blank" > <i style="font-size: 30px;" class="material-icons tooltipped" data-tooltip="initialize search" data-position="top">search</i> </a></div>
                                 <div class="col s6 centering pr-0 mr-0"> <a href="{% url 'dashboard:job_post_editor' %}" > <i style="font-size: 30px;" class="material-icons tooltipped" data-position="top" data-tooltip="edite">edit</i> </a> </div>
                               </div>
                             </div>
@@ -1197,6 +1199,186 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- end of fourth column -->
               </div>
             </div>
+
+
+             <!-- language modal -->
+            <div id="modalAddCollaborator" class="modal " style="border-radius: 12px;">
+              <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+                <div class="container">
+                  <div class="row">
+                    <div class="col s2">
+                    </div>
+                    <div class="col s8">
+                      <h6 class="center-align text-ellipsis"><a href=""><b> Invite Collaborator&nbsp; </b></a> </h6>
+                    </div>
+                    <div class="col s2" style="padding-right: 0px; ">
+                      <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                            onmouseover="this.style.background ='#e91e63'" 
+                            onmouseout="this.style.background='transparent'" 
+                            style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                        <i class="material-icons">clear</i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-content">
+                <div class="container">
+                  <div class="step-content grey lighten-4 pl-3 pr-3 pt-1" style="border-radius: 10px;">
+                    <div class="row">
+                      <div class="input-field col s2 m4">
+                        <i class="material-icons prefix">email</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Title </label>
+                      </div>
+                    </div>
+                    
+                    <div class="row">
+                      <div class="input-field col s12 " >
+                        <textarea  style="height: 100px!important;"id="textarea1" class="materialize-textarea" ></textarea>
+                        <label for="textarea1"> enter your email body here</label>
+                      </div>
+                    </div>
+                    <div class="step-actions">
+                      <div class="row">
+                        <div class="col s4 mb-3">
+                          <div class="switch">
+                            <label class="grey-text darken-3">
+                              
+                              <input type="checkbox">
+                              <span class="lever"></span>
+                            View Salary
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col s4 mb-3">
+                          <div class="switch">
+                            <label class="grey-text darken-3">
+                              
+                              <input type="checkbox">
+                              <span class="lever"></span>
+                              Edit View
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col s4 mb-3">
+                          <button class="waves-effect waves dark btn btn-primary next-step" type="submit">
+                            Send
+                            <i class="material-icons right">arrow_forward</i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: language modal-->
+
+             <!-- collaborator modal -->
+             <div id="modalRemoveCollaborator" class="modal modal-fixed-footer" style="border-radius: 12px; width: 40%!important;">
+              <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+                <div class="container">
+                  <div class="row">
+                    <div class="col s2">
+                    </div>
+                    <div class="col s8">
+                      <h6 class="center-align text-ellipsis"><a href=""><b> Edit Collaborators&nbsp; </b></a> </h6>
+                    </div>
+                    <div class="col s2" style="padding-right: 0px; ">
+                      <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                            onmouseover="this.style.background ='#e91e63'" 
+                            onmouseout="this.style.background='transparent'" 
+                            style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                        <i class="material-icons">clear</i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-content">
+                <div class="container">
+                  <div class="col s12">
+                    <ul id="collection-custom" class="collection mb-0 " style="border: none; border-radius: 8px;">
+                      <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                        <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p>  
+                        <p class="star switch">
+                          <label class="grey-text darken-3">
+                            <input type="checkbox"> <span class="lever"></span>active
+                          </label>
+                        </p>  
+                      </li>
+                      <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                        <img src="{% static 'app-assets/images/avatar/avatar-6.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p>  
+                        <p class="star switch">
+                          <label class="grey-text darken-3">
+                            <input type="checkbox"> <span class="lever"></span>active
+                          </label>
+                        </p>  
+                      </li>
+                      <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                        <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p>  
+                        <p class="star switch">
+                          <label class="grey-text darken-3">
+                            <input type="checkbox"> <span class="lever"></span>active
+                          </label>
+                        </p>                                     
+                      </li>
+                      <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                        <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p>  
+                        <p class="star switch">
+                          <label class="grey-text darken-3">
+                            <input type="checkbox"> <span class="lever"></span>active
+                          </label>
+                        </p>                                     
+                      </li>
+                      <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                        <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p>  
+                        <p class="star switch">
+                          <label class="grey-text darken-3">
+                            <input type="checkbox"> <span class="lever"></span>active
+                          </label>
+                        </p>                                     
+                      </li>
+                      <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                        <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p>  
+                        <p class="star switch">
+                          <label class="grey-text darken-3">
+                            <input type="checkbox"> <span class="lever"></span>active
+                          </label>
+                        </p>                                     
+                      </li>
+
+                      <li class=" center-align" style="border-radius: 8px; background-attachment: transparent;">
+                        <p class="btn">Apply</p>
+                      </li>
+                    </ul>
+                  </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: collaborator modal-->
 
             <!-- START RIGHT SIDEBAR NAV -->
             <aside id="right-sidebar-nav">
@@ -1992,7 +2174,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="{% static 'app-assets/js/search.js' %}"></script>
     <script src="{% static 'app-assets/js/custom/custom-script.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
-    
+    <script src="{% static 'app-assets/js/scripts/advance-ui-modals.js' %}"></script>
+
     <script>
 
       // for tooltip

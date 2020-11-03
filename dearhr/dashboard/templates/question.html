@@ -62,7 +62,50 @@
     <!-- BEGIN: Page Main-->
     <div class="container " >
       <div class="row mt-1">
-      
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <div class="" style="padding-top: 10px;" 
+                data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+                <div class="carousel-cell ">
+                  <div class="chip">
+                    Collaborators:
+                  </div>
+                </div>
+                <div class="carousel-cell">
+                  <div class="chip">
+                    <img class="padding-2" src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="Contact Person">
+                    Jane Doe
+                  </div>
+                </div>
+                <div class="carousel-cell">
+                  <div class="chip">
+                    <img class="padding-2" src="{% static 'app-assets/images/avatar/avatar-4.png' %}" alt="Contact Person">
+                    Jane Doe
+                  </div>
+                </div>
+                <div class="carousel-cell">
+                  <div class="chip">
+                    <img class="padding-2" src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="Contact Person">
+                    Jane Doe
+                  </div>
+                </div>
+                <div class="carousel-cell">
+                  <div class="chip">
+                    <img  class="padding-2" src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="Contact Person">
+                    Jane Doe
+                  </div>
+                </div>
+                <div class="carousel-cell">
+                  <div class="chip">
+                    <img class="padding-2" src="{% static 'app-assets/images/avatar/avatar-2.png' %}" alt="Contact Person">
+                    Jane Doe
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- small card for small screen -->
         <div class="col s12 m6 push-m3 card-sq">
@@ -319,9 +362,9 @@
                     </li>
                 </ul>
                 </div>
+                <p class="btn waves-effect waves-block waves-light col right mr-3" >Save</p>
               </div>
               
-
             </div>
           </div>
         </div>
@@ -916,10 +959,15 @@
     <!-- <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script> -->
     <script src="{% static 'app-assets/js/scripts/advance-ui-modals.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/media-gallery-page.js' %}"></script>
+    <script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
 
 
     <script>
 
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, options);
+      });
           // this is for expanding card
           // This is the important part!
           function collapseSection(element) {
