@@ -8,8 +8,7 @@ def join(request):
     if request.method == 'POST':
         form = RegisterForm (request.POST)
         if form.is_valid():
-            user = form.save(commit = False)
-            user.is_active = False
+            user.is_active = True
             form.save()
             return redirect('user:user_login')
     else:
@@ -40,10 +39,6 @@ def user_dash(request):
     context ={ "title":page_title, "obj":obj}
 
     return render(request, 'user_dashboard.html', context)
-
-
-
-
 
 
 def user_card_full(request):

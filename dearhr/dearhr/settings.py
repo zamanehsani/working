@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,8 +33,8 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.0.128']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'crispy_forms',
-    'user.apps.UserConfig',
-    # 'django.contrib.sites',
+    # 'user.apps.UserConfig',
+    'start',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'dearhr.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hr',
+        'NAME': 'hr2',
         'USER': 'postgres',
         'PASSWORD': '123',
         'HOST':'localhost',
@@ -138,6 +138,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 SITE_ID =1
-LOGIN_REDIRECT_URL = 'user:user_profile'
-LOGIN_URL ='user:user_login'
-LOGOUT_REDIRECT_URL = 'user:user_login'
+LOGIN_REDIRECT_URL = 'start:user_profile'
+LOGIN_URL =''
+LOGOUT_REDIRECT_URL = ''
+
+MEDIA_ROOT = os.path.join(BASE_DIR,  'media')
+MEDIA_URL  = '/media/'
