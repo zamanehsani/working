@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/custom/custom.css' %}">
     <!-- END: Custom CSS-->
     <style>
-      .material-placeholder:nth-child(1){
+      .material-placeholder:nth-child(2){
         height: auto!important;
         top: 0px!important;
       }
@@ -64,6 +64,7 @@
         </nav>
       </div>
     </header>
+    
     <!-- BEGIN: Page Main-->
     <div class="container " >
 
@@ -79,7 +80,7 @@
                   </div>
                   <div class="row" >
                     <div class="col s12 p-3 pr-0 pl-4 animate fadeLeft">
-                      <h6 class="pl-2 pt-1 pb-1 ml-1 mr-1 mt-3 mb-1" style="background: #e1e4e9; border-radius: 5px;"> <b>Bio </b> </h6>
+                      <h6 class="pl-2 pt-1 pb-1 ml-2 mr-3 mt-3 mb-1" style="background: #e1e4e9; border-radius: 5px;"> <b>Bio </b> </h6>
                       <div class="container" style="height: 108px; overflow: hidden;">
                         <article  class="pt-2">This is the short bio. at this place you can write short bio of your self. 
                           In this section add what ever you want to show case your profile. Show off youself.
@@ -106,7 +107,7 @@
                     <!-- endoresement -->
                       <div class="container ml-1">
                         <div class="row p-0">
-                          <h6 class="pl-2 pt-1 pb-1 ml-1 mr-1" style="background: #e1e4e9; border-radius: 5px;margin-left: 5px;"> <b>Endoresement: <a class="modal-trigger" href="#modalEndors">6</a></b> </h6>
+                          <h6 class="pl-2 pt-1 pb-1 ml-1 mr-3" style="background: #e1e4e9; border-radius: 5px;margin-left: 5px;"> <b>Endoresement: <a class="modal-trigger" href="#modalEndors">6</a></b> </h6>
                           <div class="col s12 l6 pt-2 modal-trigger" data-target="modalEndors">
                             <ul id="collection-custom" class="collection mb-0" style="border: none;">
                               <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
@@ -442,7 +443,7 @@
                         <h6 class="mt-3 mb-3">Targeted&nbsp;location: <a class="modal-trigger" href="#modallocation">Dubai,&nbsp;UAE</a> </h6>
                       </div>
                       <div>
-                        <h6 class="mt-3">Languages: <a href="#"> EN&nbsp;,PR</a></h6>
+                        <h6 class="mt-3">Languages: <a class="modal-trigger" href="#modallanguage"> EN&nbsp;PR&nbsp;ARB</a></h6>
                       </div>  
                     </div>
                   </div>
@@ -1152,7 +1153,7 @@
     <!-- END: location modal-->
 
     <!-- language modal -->
-    <div id="modallanguage" class="modal " style="border-radius: 12px; width: 30%!important;">
+    <div id="modallanguage" class="modal " style="border-radius: 12px;max-width: 500px;">
       <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
         <div class="container p-0">
           <div class="row">
@@ -1181,7 +1182,7 @@
                   <div class="card-content p-0">
                     <div class="row">
                       <div class="col s12">
-                        <ul id="collection-custom " class="collection " style="border: none; border-radius: 8px;">
+                        <ul id="collection-custom " class="collection " style="border: none; margin-left: 15px; margin-right: 10px; ">
                           
                           <li class="collection-item avatar " style="border-radius: 8px; border-bottom: none; min-height: 60px; padding-left: 70px;">
                             <img src="{% static 'app-assets/images/country-flag/united-kingdom.png' %}" style="width: 30px; height: 30px; left: 10px;" alt="" class="circle mt-1" />
@@ -1234,7 +1235,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
 
 
-    <!-- <script src="{% static 'app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script> -->
+    <script src="{% static 'app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
     <script src="{% static 'app-assets/js/plugins.js' %}"></script>
     <script src="{% static 'app-assets/js/search.js' %}"></script>
     <script src="{% static 'app-assets/js/timeline.js' %}"></script>

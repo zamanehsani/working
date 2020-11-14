@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-from pathlib import Path  
+from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'crispy_forms',
     'user.apps.UserConfig',
-    'django.contrib.sites',
+    # 'django.contrib.sites',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'dearhr.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/Users/HP/Desktop/py_env/dearhr/users/templates/users'],
+        'DIRS': ['C:/Users/HP/Desktop/DearHR_project/dearhr/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'dearhr.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dearhr',
+        'NAME': 'hr',
         'USER': 'postgres',
         'PASSWORD': '123',
         'HOST':'localhost',
@@ -92,11 +92,12 @@ DATABASES = {
 
 # email confirmation
 
-EMAIL_USE_TLS = True
+EMAIL_BACHEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'dearhr.com@gmail.com'
-EMAIL_HOST_PASSWORD = 'd3arHR@2020'
+EMAIL_HOST_USER = 'zamanehsani@gmail.com'
+EMAIL_HOST_PASSWORD = 'hntlcpzmksjcpaie'
 EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -134,9 +135,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 SITE_ID =1
-LOGIN_REDIRECT_URL = 'dashboard:dash'
-LOGIN_URL ='dashboard:login'
-LOGOUT_REDIRECT_URL = 'dashboard:login'
+LOGIN_REDIRECT_URL = 'user:user_profile'
+LOGIN_URL ='user:user_login'
+LOGOUT_REDIRECT_URL = 'user:user_login'

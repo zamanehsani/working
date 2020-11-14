@@ -33,14 +33,12 @@
   <body class="vertical-layout vertical-menu-collapsible page-header-dark vertical-modern-menu preload-transitions 2-columns" data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
 
     <!-- BEGIN: Header-->
-    <header class="page-topbar" id="header">
-      <div class="navbar navbar-fixed"> 
-        <nav class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-dark gradient-45deg-indigo-purple no-shadow">
+    <header class="page-topbar" id="header" >
+      <div class="navbar navbar-fixed" > 
+        <nav style="height: 200px!important;" class="navbar-main navbar-color nav-collapsible sideNav-lock navbar-dark gradient-45deg-indigo-purple no-shadow">
           <div class="nav-wrapper">
-           
           
           </div>
-       
         </nav>
       </div>
     </header>
@@ -50,98 +48,91 @@
     <!-- BEGIN: Page Main-->
     <div id="main">
       <div class="row">
-        <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
-        <div class="col s12 m8 l8">
-          <div class="container">
-            <!-- Contact Us -->
-                <div id="contact-us" class="">
-                <div class="app-wrapper">
-                    <div class="contact-header">
-                    <div class="row contact-us ml-0 mr-0">
-                        <div class="col s12 m12 l4 sidebar-title">
-                        
-                        </div>
-                        <div class="col s12 m12 l8 form-header">
-                        <h6 class="form-header-text">
-                            <i class="material-icons"> mail_outline </i> 
-                            Register to make an account
-                        </h6>
-                        </div>
-                    </div>
-                    </div>
-
-                        <!-- Contact Sidenav -->
-                        <div  class="row contact-sidenav ml-0 mr-0">
-                          <div class="col s12 m12 l4">            </div>
-
-                          <div class="col s12 m12 l8 contact-form">
-                              <div class="row">
-                              <form class="col s12">
-                                <div class="row">
-                                <div class="input-field col m6 s12">
-                                    <input id="name" type="text" class="validate">
-                                    <label for="name">Your Name</label>
-                                </div>
-                                <div class="input-field col m6 s12">
-                                    <input id="name" type="text" class="validate">
-                                    <label for="name">Your Surname</label>
-                                </div>
-                                <div class="input-field col m12 s12">
-                                    <input id="email" type="text" class="validate">
-                                    <label for="email">Your e-mail</label>
-                                </div>
-                                </div>
-                                <div class="row">
-                            
-                                <div class="input-field col m6 s12">
-                                    <input id="budget" type="password" class="validate">
-                                    <label for="budget">Your Password </label>
-                                </div>
-                                <div class="input-field col m6 s12">
-                                    <input id="budget" type="password" class="validate">
-                                    <label for="budget">Your Password Again </label>
-                                </div>
-                                <h5 class="m-0">Choose the right type of account</h5>  
-                                    <hr class="">
-                                    
-                                <div class="input-field col m4 s12">
-                                    <p>
-                                        <label>
-                                          <input name="group1" type="radio" checked/>
-                                          <span>I Job Seeker</span>
-                                        </label>
-                                      </p>
-                                </div>
-                                <div class="input-field col m4 s12">
-                                    <p>
-                                        <label>
-                                          <input name="group1" type="radio" checked/>
-                                          <span>I Manager</span>
-                                        </label>
-                                      </p>
-                                </div>
-                                <div class="input-field col m4 s12">
-                                    <p>
-                                        <label>
-                                          <input name="group1" type="radio" checked/>
-                                          <span> I Service Provider </span>
-                                        </label>
-                                      </p>
-                                </div>
-                               
-                                <div class="input-field col s12 width-100">
-                                    <a class="waves-effect waves-light btn">Register</a>
-                                </div>
-                                </div>
-                            </form>
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- <div class="content-wrapper-before "></div> -->
+        <div class="col s12 m8 l6 pish-m2 push-l2" style="border-radius: 15px; z-index: 1000;">
+          <div class="card ">
+            <div class="card-header pt-3 pb-4" style="background:#d7e0e8; border-radius: 15px 15px 0 0;">
+              <h5 class="center-align" style="font-weight: bolder;">Create Your Account </h5>
             </div>
+            <div class="card-content">
+              <div class="container">
+                <!-- Contact Us -->
+                <div id="contact-us">
+                  <div class="app-wrapper">
+                      <!-- Contact Sidenav -->
+                    <div  class="row contact-sidenav">
+                      <div class="col s12 m12 contact-form pt-0">
+                          <div class="row">
+                            <form class="col s12">
+                              <div class="row">
+                              <div class="input-field col m6 s12">
+                                <input id="name" type="text" class="validate">
+                                <label for="name">Your Name</label>
+                              </div>
+                              <div class="input-field col m6 s12">
+                                <input id="name" type="text" class="validate">
+                                <label for="name">Your Surname</label>
+                              </div>
+                              <div class="input-field col m12 s12">
+                                <input id="email" type="text" class="validate">
+                                <label for="email">Your e-mail</label>
+                              </div>
+                              </div>
+                              <div class="row">
+                              <div class="input-field col m6 s12">
+                                <input id="budget" type="password" class="validate">
+                                <label for="budget">Your Password </label>
+                              </div>
+                              <div class="input-field col m6 s12">
+                                <input id="budget" type="password" class="validate">
+                                <label for="budget">Your Password Again </label>
+                              </div>
+                              <h6 class="m-0 ml-2">Choose the right type of account</h6>  
+                              <div class="contianer">
+                                <div class="row pl-3 pr-3">
+                                  <hr class="">
+                                </div>
+                              </div>
+                              <div class="container">
+                                <div class="row">
+                                  <p class="text-ellipsis"><label>
+                                      <input name="group1" type="radio" checked/><span class="text-ellipsis">Job Seeker</span>
+                                    </label> </p>
+                                    <p class="text-ellipsis">
+                                      <label>
+                                        <input name="group1" type="radio" checked/>
+                                        <span class="text-ellipsis"> Service Provider </span>
+                                      </label>
+                                    </p>
+                                    <p class="text-ellipsis">
+                                      <label>
+                                        <input name="group1" type="radio" checked/>
+                                        <span class="text-ellipsis"> Service Provider </span>
+                                      </label>
+                                    </p>
+                                    <p class="text-ellipsis">
+                                      <label>
+                                        <input name="group1" type="checkbox" checked/>
+                                        <span class="text-ellipsis"> Acept Terms & Conditions  </span>
+                                      </label>
+                                    </p>
+                                </div>
+                              </div>
+                              <div class="input-field col s12 width-100">
+                                  <a class="waves-effect waves-light btn">Register</a>
+                              </div>
+                              </div>
+                            </form>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
                 

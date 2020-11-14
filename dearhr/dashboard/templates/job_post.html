@@ -57,7 +57,7 @@ License: You must have a valid license purchased only from themeforest(the above
             </div>
             <div class="col m6 ">
               <div class="nav-wrapper gradient-45deg-indigo-purple">
-                <div class="header-search-wrapper hide-on-med-and-down">
+                <div class="header-search-wrapper hide-on-med-and-down ml-4">
                   <i class="material-icons">search</i>
                   <input class="header-search-input z-depth-2 border-round" type="text" name="Search" placeholder="Explore DearHR" data-search="template-list">
                   <ul class="search-list collection display-none"></ul>
@@ -722,9 +722,10 @@ License: You must have a valid license purchased only from themeforest(the above
                       <div class="row pt-3">
                         <div class="col s12 m7 mt-3">
                           <h6 class="text-ellipsis">Pool&nbsp;of&nbsp;Condidates Data:</h6>
-                          <p class="text-ellipsis">Over&nbsp;90%&nbsp;Match: <b style="font-weight: bolder;">28</b><a href="">&nbsp;&nbsp;view</a> </p>
-                          <p class="text-ellipsis">Over&nbsp;75&nbsp;Match: <b style="font-weight: bolder;">72</b><a href="">&nbsp;&nbsp;view</a> </p>
-                          <p class="text-ellipsis">Shortlisted: <a href="">8</a></p>
+                          <p class="text-ellipsis">Over&nbsp;90%&nbsp;Match: <b style="font-weight: bolder;">28</b><a href="{% url 'dashboard:hrlook' %}">&nbsp;&nbsp;view</a> </p>
+                          <p class="text-ellipsis">Over&nbsp;75&nbsp;Match: <b style="font-weight: bolder;">72</b><a href="{% url 'dashboard:hrlook' %}">&nbsp;&nbsp;view</a> </p>
+                          <p class="text-ellipsis">Shortlisted: <a href="{% url 'dashboard:shortlist' %}">8</a></p>
+                          <p class="text-ellipsis">Q&A: <a href="{% url 'dashboard:question' %}"><span style="padding:5px 10px; border-radius: 30%;" class="orange orange-text lighten-4">ready</span></a></p>
                         </div>
                         <div class="col s12 m5">
                           <div class="container">
@@ -889,9 +890,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="row pt-3">
                           <div class="col s12 m7 mt-3">
                             <h6 class="text-ellipsis">Pool&nbsp;of&nbsp;Condidates Data:</h6>
-                            <p class="text-ellipsis">Over&nbsp;90%&nbsp;Match: <b style="font-weight: bolder;">28</b><a href="">&nbsp;&nbsp;view</a> </p>
-                            <p class="text-ellipsis">Over&nbsp;75&nbsp;Match: <b style="font-weight: bolder;">72</b><a href="">&nbsp;&nbsp;view</a> </p>
-                            <p class="text-ellipsis">Shortlisted: <a href="">8</a></p>
+                            <p class="text-ellipsis">Over&nbsp;90%&nbsp;Match: <b style="font-weight: bolder;">28</b><a href="{% url 'dashboard:hrlook' %}">&nbsp;&nbsp;view</a> </p>
+                            <p class="text-ellipsis">Over&nbsp;75&nbsp;Match: <b style="font-weight: bolder;">72</b><a href="{% url 'dashboard:hrlook' %}">&nbsp;&nbsp;view</a> </p>
+                            <p class="text-ellipsis">Shortlisted: <a href="{% url 'dashboard:shortlist' %}">8</a></p>
+                            <p class="text-ellipsis">Q&A:<a href="{% url 'dashboard:question' %}"> <span style="padding:5px 10px; border-radius: 30%;" class="red red-text lighten-4">N/A</span></a></p>
                           </div>
                           <div class="col s12 m5">
                             <div class="container">
@@ -1056,9 +1058,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="row pt-3">
                           <div class="col s12 m7 mt-3">
                             <h6 class="text-ellipsis">Pool&nbsp;of&nbsp;Condidates Data:</h6>
-                            <p class="text-ellipsis">Over&nbsp;90%&nbsp;Match: <b style="font-weight: bolder;">28</b><a href="">&nbsp;&nbsp;view</a> </p>
-                            <p class="text-ellipsis">Over&nbsp;75&nbsp;Match: <b style="font-weight: bolder;">72</b><a href="">&nbsp;&nbsp;view</a> </p>
-                            <p class="text-ellipsis">Shortlisted: <a href="">8</a></p>
+                            <p class="text-ellipsis">Over&nbsp;90%&nbsp;Match: <b style="font-weight: bolder;">28</b><a href="{% url 'dashboard:hrlook' %}">&nbsp;&nbsp;view</a> </p>
+                            <p class="text-ellipsis">Over&nbsp;75&nbsp;Match: <b style="font-weight: bolder;">72</b><a href="{% url 'dashboard:hrlook' %}">&nbsp;&nbsp;view</a> </p>
+                            <p class="text-ellipsis">Shortlisted: <a href="{% url 'dashboard:shortlist' %}">8</a></p>
+                            <p class="text-ellipsis">Q&A:<a href="{% url 'dashboard:question' %}"><span style="padding:5px 10px; border-radius: 30%;" class="green green-text lighten-4">sent</span></a></p>
                           </div>
                           <div class="col s12 m5">
                             <div class="container">
@@ -1195,13 +1198,14 @@ License: You must have a valid license purchased only from themeforest(the above
                       </div>
                   </div>
                   <!-- end of experience card  -->
+                  <div class="card user-statistics-card animate fadeLeft "></div>
                 </div>
                 <!-- end of fourth column -->
               </div>
             </div>
 
 
-             <!-- language modal -->
+             <!-- invite collaborator modal -->
             <div id="modalAddCollaborator" class="modal " style="border-radius: 12px;">
               <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
                 <div class="container">

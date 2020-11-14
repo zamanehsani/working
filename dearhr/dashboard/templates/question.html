@@ -19,52 +19,117 @@
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/vendors.min.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/animate-css/animate.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/chartist-js/chartist.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/chartist-js/chartist-plugin-tooltip.css' %}">
     <!-- END: VENDOR CSS-->
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/circular_prograss_bar.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link rel="stylesheet" href="{% static 'app-assets/vendors/select2/select2.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'app-assets/vendors/select2/select2-materialize.css' %}" type="text/css">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/hover-effects/media-hover-effects.css' %}">
     <!-- BEGIN: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/materialize.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/dashboard-modern.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/magnific-popup/magnific-popup.css' %}">
     <!-- END: Page Level CSS-->
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/timeline.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/form-select2.css' %}">
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/custom/custom.css' %}">
     <!-- END: Custom CSS-->
     <script src="https://use.fontawesome.com/de1bfe1b04.js"></script>
+    <style>
+      .flickity-slider{
+        transform: none!important;
+      }
+    </style>
   </head>
   <!-- END: Head-->
   <body class="vertical-layout gradient-45deg-indigo-purple page-header-dark vertical-modern-menu preload-transitions 2-columns " data-open="click" data-menu="vertical-modern-menu" data-col="2-columns">
-
+    <!-- BEGIN: Header-->
     <header class="page-topbar"  id="header">
       <div class="navbar navbar-fixed"> 
-        <nav id="navscroll" style="padding-top: 15px; padding-bottom: 20px;"  class="navbar-main navbar-color nav-collapsible navbar-dark gradient-45deg-indigo-purple">
-          <div class="nav-wrapper gradient-45deg-indigo-purple">
-              <div class="row ">
-                <div class="col s6">
-                  <img  src="{% static 'app-assets/images/logo/materialize-logo-color.png' %}" height="40px" class=""/>
+        <nav id="navscroll" style="padding-top: 15px; padding-bottom: 20px;"  class="navbar-main navbar-color nav-collapsible navbar-dark gradient-45deg-indigo-purple no-shadow">
+          <div class="row">
+            <div class="col m6">
+              <h6 class="pl-7 grey-text text-lighten-1 text-ellipsis "><b class="white-text">HR</b> <i class="material-icons white-text" style="position: relative; top: 5px;">chevron_right</i>  Create Job </h6>
+            </div>
+            <div class="col m6 ">
+              <div class="nav-wrapper gradient-45deg-indigo-purple">
+                <div class="header-search-wrapper hide-on-med-and-down ml-4">
+                  <i class="material-icons">search</i>
+                  <input class="header-search-input z-depth-2 border-round" type="text" name="Search" placeholder="Explore DearHR" data-search="template-list">
+                  <ul class="search-list collection display-none"></ul>
                 </div>
-                <div class="col s6 ">
-                  <ul class="navbar-list right pt-1" id="nabbar-top">
-                    <li><a class="btn waves-effect waves-block waves-light " > Login</a></li>
-                    <li><a class="btn waves-effect waves-block waves-light " > Join</a></li>
-                  </ul>
-                </div>
-              </div>
+                <ul class="navbar-list right" id="nabbar-top">
+                  <!-- <li class="dropdown-language"><a class="waves-effect waves-block waves-light translation-button" href="#" data-target="translation-dropdown"><span class="flag-icon flag-icon-gb"></span></a></li> -->
+                  <li class="hide-on-med-and-down"><a style="height: 60px;" class="waves-effect waves-block waves-light toggle-fullscreen" href="javascript:void(0);"><i class="material-icons">settings_overscan</i></a></li>
+                  <li class="hide-on-large-only search-input-wrapper"><a style="height: 60px;" class="waves-effect waves-block waves-light search-button" href="javascript:void(0);"><i class="material-icons">search</i></a></li>
+                  <li><a style="height: 60px;" class="waves-effect waves-block waves-light notification-button" href="javascript:void(0);" data-target="notifications-dropdown"><i class="material-icons">notifications_none<small class="notification-badge">5</small></i></a></li>
+                  <li><a class="waves-effect waves-block waves-light profile-button" href="javascript:void(0);" data-target="profile-dropdown"><span class="avatar-status avatar-online"><img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="avatar"><i></i></span></a></li>
+                  <li> <a style="height: 60px;"  href="#" data-target="theme-cutomizer-out" class="accent-2 white-text sidenav-trigger theme-cutomizer-trigger"><i class="material-icons">settings</i></a></li>
+                  <li><a style="height: 60px;" class="waves-effect waves-block waves-light sidenav-trigger" href="#" data-target="slide-out-right"><i class="material-icons">format_indent_increase</i></a></li>
+                </ul>
+                <!-- translation-button-->
+                <ul class="dropdown-content" id="translation-dropdown">
+                  <li class="dropdown-item"><a class="grey-text text-darken-1" href="#!" data-language="en"><i class="flag-icon flag-icon-gb"></i> English</a></li>
+                  <li class="dropdown-item"><a class="grey-text text-darken-1" href="#!" data-language="fr"><i class="flag-icon flag-icon-fr"></i> French</a></li>
+                  <li class="dropdown-item"><a class="grey-text text-darken-1" href="#!" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a></li>
+                  <li class="dropdown-item"><a class="grey-text text-darken-1" href="#!" data-language="de"><i class="flag-icon flag-icon-de"></i> German</a></li>
+                </ul> 
+                <!-- notifications-dropdown-->
+                <ul class="dropdown-content" id="notifications-dropdown">
+                  <li>
+                    <h6>NOTIFICATIONS<span class="new badge">5</span></h6>
+                  </li>
+                  <li class="divider"></li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle cyan small">add_shopping_cart</span> A new order has been placed!</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">2 hours ago</time>
+                  </li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle red small">stars</span> Completed the task</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">3 days ago</time>
+                  </li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle teal small">settings</span> Settings updated</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">4 days ago</time>
+                  </li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle deep-orange small">today</span> Director meeting started</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">6 days ago</time>
+                  </li>
+                  <li><a class="black-text" href="#!"><span class="material-icons icon-bg-circle amber small">trending_up</span> Generate monthly report</a>
+                    <time class="media-meta grey-text darken-2" datetime="2015-06-12T20:50:48+08:00">1 week ago</time>
+                  </li>
+                </ul>
+                <!-- profile-dropdown-->
+                <ul class="dropdown-content" id="profile-dropdown">
+                  <li><a class="grey-text text-darken-1" href="user-profile-page.html"><i class="material-icons">person_outline</i> Profile</a></li>
+                  <li><a class="grey-text text-darken-1" href="app-chat.html"><i class="material-icons">chat_bubble_outline</i> Chat</a></li>
+                  <li><a class="grey-text text-darken-1" href="page-faq.html"><i class="material-icons">help_outline</i> Help</a></li>
+                  <li class="divider"></li>
+                  <li><a class="grey-text text-darken-1" href="user-lock-screen.html"><i class="material-icons">lock_outline</i> Lock</a></li>
+                  <li><a class="grey-text text-darken-1" href="{% url 'dashboard:logout' %}"><i class="material-icons">keyboard_tab</i> Logout</a></li>
+                </ul>
+              <!-- </div> -->
+            <!-- </div> -->
           </div>
+            </div>
+          </div>
+          <nav class="display-none search-sm">
+            <div class="nav-wrapper">
+              <form id="navbarForm">
+                <div class="input-field search-input-sm">
+                  <input class="search-box-sm mb-0" type="search" required="" id="search" placeholder="Explore Materialize" data-search="template-list">
+                  <label class="label-icon" for="search"><i class="material-icons search-sm-icon">search</i></label><i class="material-icons search-sm-close">close</i>
+                  <ul class="search-list collection search-list-sm display-none"></ul>
+                </div>
+              </form>
+            </div>
+          </nav>
         </nav>
       </div>
     </header>
+    <!-- END: Header-->
     <!-- BEGIN: Page Main-->
     <div class="container " >
       <div class="row mt-1">
         <div class="container">
-          <div class="row">
-            <div class="col s12">
+          <div class="row pl-6 animate fadeLeft">
+            <div class="col s12 m6 push-m3">
               <div class="" style="padding-top: 10px;" 
                 data-flickity='{ "freeScroll": false, "contain": true, "prevNextButtons": false, "pageDots": false }'>
                 <div class="carousel-cell ">
@@ -122,11 +187,11 @@
                     Enter your all your skills records. later on, you can choose which which skills records you want to show on your targeted profile.
                   </article>
               </div>
-              <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalEndorsAdd" style="margin-top: 0px !important; bottom: 0px; margin-right: 20px;">
+          
+              <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalAddSection" style="margin-top: 0px !important; bottom: 0px; margin-right: 20px;">
                 <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
               </div> 
               <h5> Sections </h5>
-
               <div class="row">
                 <div class="col s12">
                   <ul class="collapsible collapsible-accordion">
@@ -134,13 +199,13 @@
                       <div class="collapsible-header centering text-ellipsis grey lighten-2 mt-1" style="border-radius: 8px;">
                          <b>Section:&nbsp;01</b>
                         <div class="col s1">
-                          <i class="material-icons right ">arrow_drop_down</i>
+                          <i class="material-icons right" >arrow_drop_down</i>
                         </div>
                       </div>
                       <div class="collapsible-body" style="border-bottom: none;">
                         <div class="container pl-2 pr-2">
                           <div class="row grey lighten-4 mt-1 pt-1  pl-2 pr-2" style="border-radius: 8px;">
-                            <a href="#modalEndorsAdd" style="top:0px" class="star modal-trigger"><i class="material-icons grey-text">add</i></a>
+                            <a href="#modalAddQuestion" style="top:0px" class="star modal-trigger"><i class="material-icons grey-text">add</i></a>
                             <p>This section is the general overview of your knowledge.</p>
                           </div>
                           <div class="row grey lighten-4 mt-1 pt-1 pl-2" style="border-radius: 8px;">
@@ -208,7 +273,7 @@
                       <div class="collapsible-body" style="border-bottom: none;">
                         <div class="container pl-2 pr-2">
                           <div class="row grey lighten-4 mt-1 pt-1  pl-2 pr-2" style="border-radius: 8px;">
-                            <a href="#modalEndorsAdd" style="top:0px" class="star modal-trigger"><i class="material-icons grey-text">add</i></a>
+                            <a href="#modalAddQuestion" style="top:0px" class="star modal-trigger"><i class="material-icons grey-text">add</i></a>
                             <p>This section is about your contribution to the company.</p>
                           </div>
                           <div class="row grey lighten-4 mt-1 pt-1 pl-2" style="border-radius: 8px;">
@@ -252,7 +317,7 @@
                       <div class="collapsible-body" style="border-bottom: none;">
                         <div class="container pl-2 pr-2">
                           <div class="row grey lighten-4 mt-1 pt-1  pl-2 pr-2" style="border-radius: 8px;">
-                            <a href="#modalEndorsAdd" style="top:0px" class="star modal-trigger"><i class="material-icons grey-text">add</i></a>
+                            <a href="#modalAddQuestion" style="top:0px" class="star modal-trigger"><i class="material-icons grey-text">add</i></a>
                             <p>This sectionis about your contribution to the company.</p>
                           </div>
                           <div class="row grey lighten-4 mt-1 pt-1 pl-2" style="border-radius: 8px;">
@@ -372,15 +437,15 @@
       </div>
     </div>
 
-    <!-- modal for endorsements -->
-    <div id="modalEndors" class="modal modal-fixed-footer" style="border-radius: 12px;">
+    <!-- modal for section -->
+    <div id="modalAddSection" class="modal " style="border-radius: 12px; width: 50%!important;">
       <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
         <div class="container p-0">
           <div class="row">
             <div class="col s2">
             </div>
             <div class="col s8">
-              <h6 class="center-align text-ellipsis"><a href=""><b> Endoresement:<a href="">10</a> </b></a> </h6>
+              <h6 class="center-align text-ellipsis"><a href=""><b> Add Section </h6>
             </div>
             <div class="col s2" style="padding-right: 0px; ">
               <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
@@ -396,569 +461,135 @@
       <div class="modal-content">
           <div class="row p-0">
               <div class="col s12">
-                <ul id="collection-custom" style="border: none; border-radius: 15px;" class="collection">
-                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                    <div style="padding-left: 80px; padding-top: 5px;" >
-                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 70px; height: 70px; padding: 1px; " alt="" class="circle z-depth-2" />
-                      <p class="right">12/10/ 2018</p>
-                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                      <!-- <p class="right">12/10/ 2018</p> -->
-                      <p class="medium-small text-ellipsis">subsonic</p>
-                      <p class="medium-small text-ellipsis">Dept Manager </p> 
+                <div class="container">
+                  <div class="step-content grey lighten-4 pl-3 pr-3 pt-1" style="border-radius: 10px;">
+                    <div class="row">
+                      <div class="input-field col s12 m4">
+                        <i class="material-icons prefix">assignment</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Section Name </label>
+                      </div>
                     </div>
-                    <article class="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </article>                                          
-                  </li>
-                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin:0px 10px 20px 10px; padding-left: 20px;">
-                    <div style="padding-left: 80px; padding-top: 5px;" >
-                      <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                      <p class="right">12/10/ 2018</p>
-                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                      <!-- <p class="right">12/10/ 2018</p> -->
-                      <p class="medium-small text-ellipsis">subsonic</p>
-                      <p class="medium-small text-ellipsis">Dept Manager </p> 
+                    
+                    <div class="row">
+                      <div class="input-field col s12 " >
+                        <textarea  style="height: 100px!important;"id="textarea1" class="materialize-textarea" ></textarea>
+                        <label for="textarea1"> Section Description...</label>
+                      </div>
                     </div>
-                    <article class="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </article>                                          
-                  </li>
-                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                    <div style="padding-left: 80px; padding-top: 5px;" >
-                      <img src="{% static 'app-assets/images/avatar/avatar-6.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                      <p class="right">12/10/ 2018</p>
-                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                      <!-- <p class="right">12/10/ 2018</p> -->
-                      <p class="medium-small text-ellipsis">subsonic</p>
-                      <p class="medium-small text-ellipsis">Dept Manager </p> 
+                    <div class="step-actions">
+                      <div class="row pb-2">
+                        <button class="waves-effect waves dark btn btn-primary next-step right" type="submit">
+                          Add
+                          <i class="material-icons right">arrow_forward</i>
+                        </button>
+                      </div>
                     </div>
-                    <article class="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </article>                                          
-                  </li>
-                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                    <div style="padding-left: 80px; padding-top: 5px;" >
-                      <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" style="width: 70px; height: 70px; padding: 1px;  " alt="" class="circle z-depth-2" />
-                      <p class="right">12/10/ 2018</p>
-                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                      <!-- <p class="right">12/10/ 2018</p> -->
-                      <p class="medium-small text-ellipsis">subsonic</p>
-                      <p class="medium-small text-ellipsis">Dept Manager </p> 
-                    </div>
-                    <article class="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </article>                                          
-                  </li>
-                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                    <div style="padding-left: 80px; padding-top: 5px;" >
-                      <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 70px; height: 70px; padding: 1px;  " alt="" class="circle z-depth-2" />
-                      <p class="right">12/10/ 2018</p>
-                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                      <p class="medium-small text-ellipsis">subsonic</p>
-                      <p class="medium-small text-ellipsis">Dept Manager </p> 
-                    </div>
-                    <article class="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </article>                                          
-                  </li>
-                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                    <div style="padding-left: 80px; padding-top: 5px;" >
-                      <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                      <p class="right">12/10/ 2018</p>
-                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                      <p class="medium-small text-ellipsis">subsonic</p>
-                      <p class="medium-small text-ellipsis">Dept Manager </p> 
-                    </div>
-                    <article class="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </article>                                          
-                  </li>
-                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                    <div style="padding-left: 80px; padding-top: 5px;" >
-                      <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                      <p class="right">12/10/ 2018</p>
-                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                      
-                      <p class="medium-small text-ellipsis">subsonic</p>
-                      <p class="medium-small text-ellipsis">Dept Manager </p> 
-                    </div>
-                    <article class="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </article>                                          
-                  </li>
-                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                    <div style="padding-left: 80px; padding-top: 5px;" >
-                      <img src="{% static 'app-assets/images/avatar/avatar-9.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                      <p class="right">12/10/ 2018</p>
-                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                      
-                      <p class="medium-small text-ellipsis">subsonic</p>
-                      <p class="medium-small text-ellipsis">Dept Manager </p> 
-                    </div>
-                    <article class="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </article>                                          
-                  </li>
-                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                    <div style="padding-left: 80px; padding-top: 5px;" >
-                      <img src="{% static 'app-assets/images/avatar/avatar-13.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                      <p class="right">12/10/ 2018</p>
-                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                      
-                      <p class="medium-small text-ellipsis">subsonic</p>
-                      <p class="medium-small text-ellipsis">Dept Manager </p> 
-                    </div>
-                    <article class="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </article>                                          
-                  </li>
-                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                    <div style="padding-left: 80px; padding-top: 5px;" >
-                      <img src="{% static 'app-assets/images/avatar/avatar-10.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                      <p class="right">12/10/ 2018</p>
-                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                      
-                      <p class="medium-small text-ellipsis">subsonic</p>
-                      <p class="medium-small text-ellipsis">Dept Manager </p> 
-                    </div>
-                    <article class="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </article>                                          
-                  </li>
-                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                    <div style="padding-left: 80px; padding-top: 5px;" >
-                      <img src="{% static 'app-assets/images/avatar/avatar-11.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                      <p class="right">12/10/ 2018</p>
-                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                      
-                      <p class="medium-small text-ellipsis">subsonic</p>
-                      <p class="medium-small text-ellipsis">Dept Manager </p> 
-                    </div>
-                    <article class="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </article>                                          
-                  </li>
-                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
-                    <div style="padding-left: 80px; padding-top: 5px;" >
-                      <img src="{% static 'app-assets/images/avatar/avatar-12.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
-                      <p class="right">12/10/ 2018</p>
-                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
-                      
-                      <p class="medium-small text-ellipsis">subsonic</p>
-                      <p class="medium-small text-ellipsis">Dept Manager </p> 
-                    </div>
-                    <article class="mt-2">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                    </article>                                          
-                  </li>
-                  
-                  
-                </ul>
+                  </div>
+                </div>
               </div>
           </div>
       </div>
     </div>
+    <!-- end modal section -->
 
-    <!-- modal for experiences -->
-    <div id="modalExp" class="modal modal-fixed-footer" style="border-radius: 12px;">
-      <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
-        <div class="container p-0">
-          <div class="row">
-            <div class="col s2">
-            </div>
-            <div class="col s8">
-              <h6 class="center-align text-ellipsis"><a href=""><b> Experience:&nbsp;<a href="">5 years</a> </b></a> </h6>
-            </div>
-            <div class="col s2" style="padding-right: 0px; ">
-              <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
-                    onmouseover="this.style.background ='#e91e63'" 
-                    onmouseout="this.style.background='transparent'" 
-                    style="padding-left: 10px; width: 20px; border-radius: 10px;">
-                <i class="material-icons">clear</i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-content">
-        <section class="timeline2">
-          <div class="container">
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content js--fadeInLeft  animate fadeLeft">
-                <h2>Title</h2>
-                <div class="date">1 MAY 2016</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div> 
-        
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
-                <div class="timeline2-img-header">
-                  <h2>Card Title</h2>
-                </div>
-                <div class="date">25 MAY 2016</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div>   
-        
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content js--fadeInLeft animate fadeLeft">
-                <div class="date">3 JUN 2016</div>
-                <h2>Quote</h2>
-                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
-              </div>
-            </div>   
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content js--fadeInRight animate fadeRight">
-                <h2>Title</h2>
-                <div class="date">22 JUN 2016</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div>   
-        
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content timeline2-card js--fadeInLeft animate fadeLeft">
-                <div class="timeline2-img-header">
-                  <h2>Card Title</h2>
-                </div>
-                <div class="date">10 JULY 2016</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div>   
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
-                <div class="timeline2-img-header">
-                  <h2>Card Title</h2>
-                </div>
-                <div class="date">30 JULY 2016</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div>  
-        
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content js--fadeInLeft animate fadeLeft">
-                <div class="date">5 AUG 2016</div>
-                <h2>Quote</h2>
-                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
-              </div>
-            </div>   
-        
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
-                <div class="timeline2-img-header">
-                  <h2>Card Title</h2>
-                </div>
-                <div class="date">19 AUG 2016</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div>  
-        
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content js--fadeInLeft animate fadeLeft">
-                <div class="date">1 SEP 2016</div>
-                <h2>Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div>   
-        
-          </div>
-        </section>
-      </div>
-    </div>
 
-    <!-- education model here -->
-    <div id="modalEdu" class="modal modal-fixed-footer" style="border-radius: 12px;">
-      <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
-        <div class="container p-0">
-          <div class="row">
-            <div class="col s2">
-            </div>
-            <div class="col s8">
-              <h6 class="center-align text-ellipsis"><a href=""><b> Education&nbsp; </b></a> </h6>
-            </div>
-            <div class="col s2" style="padding-right: 0px; ">
-              <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
-                    onmouseover="this.style.background ='#e91e63'" 
-                    onmouseout="this.style.background='transparent'" 
-                    style="padding-left: 10px; width: 20px; border-radius: 10px;">
-                <i class="material-icons">clear</i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-content">
-        <section class="timeline2">
-          <div class="container">
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content js--fadeInLeft  animate fadeLeft">
-                <h2>Title</h2>
-                <div class="date">1 MAY 2016</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div> 
-        
-            <div class="timeline2-item">
-        
-              <div class="timeline2-img"></div>
-        
-              <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
-                <div class="timeline2-img-header">
-                  <h2>Card Title</h2>
-                </div>
-                <div class="date">25 MAY 2016</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div>   
-        
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content js--fadeInLeft animate fadeLeft">
-                <div class="date">3 JUN 2016</div>
-                <h2>Quote</h2>
-                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
-              </div>
-            </div>   
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content js--fadeInRight animate fadeRight">
-                <h2>Title</h2>
-                <div class="date">22 JUN 2016</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div>   
-        
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content timeline2-card js--fadeInLeft animate fadeLeft">
-                <div class="timeline2-img-header">
-                  <h2>Card Title</h2>
-                </div>
-                <div class="date">10 JULY 2016</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div>   
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
-                <div class="timeline2-img-header">
-                  <h2>Card Title</h2>
-                </div>
-                <div class="date">30 JULY 2016</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div>  
-        
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content js--fadeInLeft animate fadeLeft">
-                <div class="date">5 AUG 2016</div>
-                <h2>Quote</h2>
-                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
-              </div>
-            </div>   
-        
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
-                <div class="timeline2-img-header">
-                  <h2>Card Title</h2>
-                </div>
-                <div class="date">19 AUG 2016</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div>  
-        
-            <div class="timeline2-item">
-              <div class="timeline2-img"></div>
-              <div class="timeline2-content js--fadeInLeft animate fadeLeft">
-                <div class="date">1 SEP 2016</div>
-                <h2>Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
-                <a class="bnt-more" href="javascript:void(0)">More</a>
-              </div>
-            </div>   
-        
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <!-- gallery modal -->
-    <div id="modalgallery" class="modal modal-fixed-footer" style="border-radius: 12px;">
-      <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
-        <div class="container p-0">
-          <div class="row">
-            <div class="col s2">
-            </div>
-            <div class="col s8">
-              <h6 class="center-align text-ellipsis"><a href=""><b> Showcase&nbsp; </b></a> </h6>
-            </div>
-            <div class="col s2" style="padding-right: 0px; ">
-              <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
-                    onmouseover="this.style.background ='#e91e63'" 
-                    onmouseout="this.style.background='transparent'" 
-                    style="padding-left: 10px; width: 20px; border-radius: 10px;">
-                <i class="material-icons">clear</i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-content">
-        <div class="masonry-gallery-wrapper">
-          <div class="popup-gallery">
-            <div class="gallery-sizer"></div>
+      <!-- modal for Question -->
+      <div id="modalAddQuestion" class="modal " style="border-radius: 12px; width: 50%!important;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
             <div class="row">
-
-              <div class="col s12 m6 l4 xl4" >
-                <div>
-                  <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The Cleaner">
-                    <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                  </a>
-                </div>
+              <div class="col s2">
               </div>
-              <div class="col s12 m6 l4 xl4">
-                <div>
-                  <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The Cleaner">
-                    <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                  </a>
-                </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b> Add Question </h6>
               </div>
-              <div class="col s12 m6 l4 xl4">
-                <div>
-                  <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The Cleaner">
-                    <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                  </a>
-                </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
               </div>
-              <div class="col s12 m6 l4 xl4">
-                <div>
-                  <a href="{% static 'app-assets/images/gallery/4.png' %}" title="The Cleaner">
-                    <img src="{% static 'app-assets/images/gallery/4.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                  </a>
-                </div>
-              </div>
-              <div class="col s12 m6 l4 xl4">
-                <div>
-                  <a href="{% static 'app-assets/images/gallery/5.png' %}" title="The Cleaner">
-                    <img src="{% static 'app-assets/images/gallery/5.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                  </a>
-                </div>
-              </div>
-              <div class="col s12 m6 l4 xl4">
-                <div>
-                  <a href="{% static 'app-assets/images/gallery/6.png' %}" title="The Cleaner">
-                    <img src="{% static 'app-assets/images/gallery/6.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                  </a>
-                </div>
-              </div>
-              <div class="col s12 m6 l4 xl4">
-                <div>
-                  <a href="{% static 'app-assets/images/gallery/7.png' %}" title="The Cleaner">
-                    <img src="{% static 'app-assets/images/gallery/7.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
-                  </a>
-                </div>
-              </div>
-
             </div>
           </div>
         </div>
+        <div class="modal-content">
+            <div class="row p-0">
+                <div class="col s12">
+                  <div class="container">
+                    <div class="step-content grey lighten-4 pl-3 pr-3 pt-1" style="border-radius: 10px;">
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">help</i>
+                          <input id="icon_prefix" type="text" class="validate">
+                          <label for="icon_prefix">Enter Your Question Here... </label>
+                        </div>
+                      </div>
+                      
+                      <div class="row">
+                        <p>Enter options. If not, heave it blank.</p>
+                        <div class="input-field col s12 m4">
+                          <i class="material-icons prefix">assignment</i>
+                          <input id="icon_prefix" type="text" class="validate">
+                          <label for="icon_prefix">Option one </label>
+                        </div>
+                        <div class="input-field col s12 m4">
+                          <i class="material-icons prefix">assignment</i>
+                          <input id="icon_prefix" type="text" class="validate">
+                          <label for="icon_prefix">Option two </label>
+                        </div>
+                        <div class="input-field col s12 m4">
+                          <i class="material-icons prefix">assignment</i>
+                          <input id="icon_prefix" type="text" class="validate">
+                          <label for="icon_prefix">Option three </label>
+                        </div>
+                        <div class="input-field col s12 m4">
+                          <i class="material-icons prefix">assignment</i>
+                          <input id="icon_prefix" type="text" class="validate">
+                          <label for="icon_prefix">Option four </label>
+                        </div>
+                        <div class="input-field col s12 m4">
+                          <select>
+                            <option value="" disabled selected> Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="3">Option 4</option>
+                          </select>
+                          <label>Correct Option </label>
+                        </div>
+                      </div>
+                      <div class="step-actions">
+                        <div class="row pb-2">
+                          <button class="waves-effect waves dark btn btn-primary next-step right" type="submit">
+                            Add
+                            <i class="material-icons right">add</i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
       </div>
-    </div>
+      <!-- end modal question -->
 
     <!-- END: Page Main-->
-
-
 
  
 
     <!-- END: Footer-->
     <!-- BEGIN VENDOR JS-->
     <script src="{% static 'app-assets/js/vendors.min.js' %}"></script>
-    <!-- <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script> -->
-
-
-    <script src="{% static 'app-assets/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'app-assets/vendors/select2/select2.full.min.js' %}"></script>
     <script src="{% static 'app-assets/js/plugins.js' %}"></script>
     <script src="{% static 'app-assets/js/search.js' %}"></script>
-    <script src="{% static 'app-assets/js/timeline.js' %}"></script>
     <script src="{% static 'app-assets/js/custom/custom-script.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
-    <!-- <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script> -->
+    <script src="{% static 'app-assets/js/scripts/form-select2.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/advance-ui-modals.js' %}"></script>
-    <script src="{% static 'app-assets/js/scripts/media-gallery-page.js' %}"></script>
     <script src='https://npmcdn.com/flickity@2/dist/flickity.pkgd.js'></script>
 
 

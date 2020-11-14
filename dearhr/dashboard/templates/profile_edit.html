@@ -40,6 +40,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END: Page Level CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/hover-effects/media-hover-effects.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/magnific-popup/magnific-popup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/themes/vertical-modern-menu-template/timeline.css' %}">
+
     <!-- <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/hover-effects/media-hover-effects.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/dropify/css/dropify.min.css' $}"> -->
 
@@ -55,11 +57,13 @@ License: You must have a valid license purchased only from themeforest(the above
     <header class="page-topbar"  id="header">
       <div class="navbar navbar-fixed"> 
         <nav id="navscroll" style="padding-top: 15px; padding-bottom: 20px;"  class="navbar-main navbar-color nav-collapsible navbar-dark gradient-45deg-indigo-purple no-shadow">
-          <div class="nav-wrapper gradient-45deg-indigo-purple">
-            <!-- <div class="row"> -->
-              <!-- <div class="col m6 l6"></div> -->
-              <!-- <div class="col s12 right no-padding " > -->
-                <div class="header-search-wrapper hide-on-med-and-down">
+          <div class="row">
+            <div class="col m6">
+              <h6 class="pl-7 grey-text text-lighten-1 text-ellipsis "><b class="white-text">User</b> <i class="material-icons white-text" style="position: relative; top: 5px;">chevron_right</i>   Profile Edit </h6>
+            </div>
+            <div class="col m6 ">
+              <div class="nav-wrapper gradient-45deg-indigo-purple">
+                <div class="header-search-wrapper hide-on-med-and-down ml-4">
                   <i class="material-icons">search</i>
                   <input class="header-search-input z-depth-2 border-round" type="text" name="Search" placeholder="Explore DearHR" data-search="template-list">
                   <ul class="search-list collection display-none"></ul>
@@ -113,6 +117,8 @@ License: You must have a valid license purchased only from themeforest(the above
                 </ul>
               <!-- </div> -->
             <!-- </div> -->
+          </div>
+            </div>
           </div>
           <nav class="display-none search-sm">
             <div class="nav-wrapper">
@@ -571,15 +577,7 @@ License: You must have a valid license purchased only from themeforest(the above
           <div class="container">
             <div class="section">
               <!-- User statistics & appointment cards-->
-              <div class="container">
-                <div class="row">
-                    <div class="card animate fadeUp grey lighten-2">
-                        <div class="card-content m-0" style="padding: 5px 20px;">
-                          <h5>Profile Editor</h5>
-                        </div>
-                    </div>
-                </div>
-              </div>
+            
               <div class="row">
                 <!-- first column -->
                 <div class="col s12 m4 l3 allCard">
@@ -627,7 +625,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <h6 class=" mt-3 mb-3">Targeted&nbsp;location: <a href="#" >Dubai,&nbsp;UAE</a> </h6>
                               </div>
                               <div>
-                                <h6 class=" mt-3">Expected&nbsp;Salary: <a class=" " href="#"> 8000&nbsp;AED</a></h6>
+                                <h6 class=" mt-3">Expected&nbsp;Salary: <a class="tooltipped modal-trigger" data-position="top" data-tooltip="your salary is 30 % above average" href="#modalSalaryEdit"> 8000&nbsp;AED</a>&nbsp;+&nbsp;30%</h6>
                               </div>
                               <div class="container">
                                 <div class="row">
@@ -710,7 +708,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           <a class="btn-floating btn-medium pink.accent-2 menu-shadow modal-trigger" data-target="modalExpAdd"><i class="material-icons ">add</i> </a>
                         </div> 
                       </div>
-                        <div class="card-content pb-2">
+                        <div class="card-content pb-2 modal-trigger" data-target="modalExp">
                           <div>
                             <h6 class="text-ellipsis" style="font-weight: bolder;">2018&nbsp;-&nbsp;present<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></h6>
                             <b class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.subsonic.ae" target="_blank">Subsonic&nbsp;LLC</a></b>
@@ -741,11 +739,15 @@ License: You must have a valid license purchased only from themeforest(the above
                           <div class="mb-3">
                               <article class="white-text center-align" >put all of your records, projections and documents here in order to use them in tyour targeted profiles.</article>
                           </div>
-                          <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalShowcaseAdd" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
+                          <div class="fixed-action-btn right click-to-toggle direction-left" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
                             <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
+                            <ul style="list-style: none;">
+                              <li><a href="#modalShowcaseAdd" target="_blank" class="btn-floating modal-trigger blue"><i class="material-icons">add</i></a></li>
+                              <li><a href="#modalShowcaseDelete" class="btn-floating blue  modal-trigger" ><i class="material-icons ">delete</i></a></li>
+                          </ul>
                           </div> 
                         </div>
-                        <div class="card-content pb-0">
+                        <div class="card-content pb-0 pl-1 pr-1 pt-3">
                           <div class="container">
                             <div class="container popup-gallery">
                               <div class="row user-projects pb-1 pt-5">
@@ -776,81 +778,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                 </div>
                                 <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
                                   <a href="{% static 'app-assets/images/gallery/6.png' %}" title="The fourth">
-                                    <div class=" grid">
-                                      <figure class="effect-sadie photo-border" style="border-radius: 6px;">
-                                        <img  src="{% static 'app-assets/images/gallery/10.png' %}"  alt="shopify LOGO" />
-                                        <figcaption >
-                                          <p style="bottom: 5px!important;"><a href=""><i class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
-                                        </figcaption>
-                                      </figure>
-                                    </div>
+                                    <img src="{% static 'app-assets/images/gallery/6.png' %}" class="responsive-img mb-8 photo-border" alt="">
                                   </a>
                                 </div>
+                                
                               </div>
                             </div>
-                            <!-- <div class="row user-projects  pb-3 pt-1">
-                              <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                <div class=" grid">
-                                  <figure class="effect-sadie photo-border" style="border-radius: 6px;">
-                                    <img  src="{% static 'app-assets/images/gallery/10.png' %}"  alt="shopify LOGO" />
-                                    <figcaption >
-                                      <p style="bottom: 5px!important;"><a href=""><i class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
-                                    </figcaption>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                <div class=" grid">
-                                  <figure class="effect-sadie photo-border" style="border-radius: 6px;">
-                                    <img  src="{% static 'app-assets/images/gallery/11.png' %}" alt="shopify LOGO" />
-                                    <figcaption >
-                                      <p style="bottom: 5px!important;"><a href=""><i class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
-                                    </figcaption>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                <div class=" grid">
-                                  <figure class="effect-sadie photo-border" style="border-radius: 6px;">
-                                    <img  src="{% static 'app-assets/images/gallery/12.png' %}" alt="shopify LOGO" />
-                                    <figcaption >
-                                      <p style="bottom: 5px!important;"><a href=""><i class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
-                                    </figcaption>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                <div class=" grid">
-                                  <figure class="effect-sadie photo-border" style="border-radius: 6px;">
-                                    <img  src="{% static 'app-assets/images/gallery/13.png' %}" alt="shopify LOGO" />
-                                    <figcaption >
-                                      <p style="bottom: 5px!important;"><a href=""><i class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
-                                    </figcaption>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                <div class=" grid">
-                                  <figure class="effect-sadie photo-border" style="border-radius: 6px;">
-                                    <img  src="{% static 'app-assets/images/gallery/14.png' %}" alt="shopify LOGO" />
-                                    <figcaption >
-                                      <p style="bottom: 5px!important;"><a href=""><i class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
-                                    </figcaption>
-                                  </figure>
-                                </div>
-                              </div>
-                              <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
-                                <div class=" grid">
-                                  <figure class="effect-sadie photo-border" style="border-radius: 6px;">
-                                    <img  src="{% static 'app-assets/images/gallery/15.png' %}" alt="shopify LOGO" />
-                                    <figcaption >
-                                      <p style="bottom: 5px!important;"><a href="#!"><i  onclick="remove()" class="material-icons blue-text right mt-0 pb-0">delete</i></a></p>
-                                    </figcaption>
-                                  </figure>
-                                </div>
-                              </div>
-
-                            </div> -->
                           </div>
                           <!-- accordian here -->
                         </div>
@@ -874,7 +807,7 @@ License: You must have a valid license purchased only from themeforest(the above
                           <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
                         </div> 
                       </div>
-                        <div class="card-content pb-0">
+                        <div class="card-content pb-1 modal-trigger" data-target="modalEdu">
                               <div>
                                 <h6 class="text-ellipsis" style="font-weight: bolder;">Master&nbsp;in&nbsp;Marketing&nbsp;|&nbsp;&nbsp;Harvard&nbsp;University</h6>
                                 <b class="text-ellipsis">2018&nbsp;-&nbsp;2020<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
@@ -911,51 +844,65 @@ License: You must have a valid license purchased only from themeforest(the above
                           <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
                         </div> 
                       </div>
-                        <div class="card-content ">
-                          <div class="container p-0">
+                        <div class="card-content pt-0 pb-0">
+                          <div class="container">
                             <div class="row">
-                              <ul id="collection-custom" class="collection" style="border: none;">
-                                <li class="collection-item avatar mb-9 mt-1" style="border-bottom: none;">
-                                  <div class="col s10">
-                                    <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
-                                    <p class="font-weight-600">Project  </p>
-                                    <div class="prograss">
-                                      <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                              <ul id="" class="collection" style="border: none; margin-top: 20px;">
+                                <li class="collection-item avatar  mt-1" style="border-bottom: none;">
+                                  <div class="row p-0 ">
+                                    <div class="col s11">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                      <p class="font-weight-600">Project management </p>
+                                      <a href="#modalDeleteExp" style="right: -45px;top: -10px;" class="modal-trigger star"><i class="material-icons blue-text">delete</i></a>
+                                      <div class="prograss">
+                                        <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                      </div>
                                     </div>
                                   </div>
-                                  <div class="col s2 mt-3">
-                                    <p><a href="#!"><i class="material-icons blue-text right">delete</i></a></p>
-                                  </div>
                                 </li>
-                                <li class="collection-item avatar mb-9 mt-1" style="border-bottom: none;">
-                                  <div class="col s10">
-                                    <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
-                                    <p class="font-weight-600">Project  </p>
-                                    <div class="prograss">
-                                      <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                                  <div class="row p-0 ">
+                                    <div class="col s11">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
+                                      <p class="font-weight-600">Marketing </p>
+                                      <a href="#modalDeleteExp" style="right: -45px;top: -10px;" class="modal-trigger star"><i class="material-icons blue-text">delete</i></a>
+                                      <div class="prograss">
+                                        <div class="w3-yellow-green prograss_bar" style="width:80%; box-shadow: 0 0 0 1px #A3C14F;">
+                                          <span>80%</span>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
-                                  <div class="col s2 mt-3">
-                                    <p><a href="#!"><i class="material-icons blue-text right">delete</i></a></p>
-                                  </div>
                                 </li>
-                                <li class="collection-item avatar mb-9 mt-1" style="border-bottom: none;">
-                                  <div class="col s10">
-                                    <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
-                                    <p class="font-weight-600">Project  </p>
-                                    <div class="prograss">
-                                      <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                                  <div class="row p-0 ">
+                                    <div class="col s11">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
+                                      <p class="font-weight-600">Vloging </p>
+                                      <a href="#modalDeleteExp" style="right: -45px;top: -10px;" class="modal-trigger star"><i class="material-icons blue-text">delete</i></a>
+                                      <div class="prograss">
+                                        <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span>60%</span></div>
+                                      </div>
                                     </div>
-                                  </div>
-                                  <div class="col s2 mt-3">
-                                    <p><a href="#!"><i class="material-icons blue-text right">delete</i></a></p>
+                                    <!-- <div class="col s2 mt-4 pr-2 "><a href="#modalDeleteExp" class="modal-trigger "><i class="material-icons blue-text">delete</i></a></div> -->
                                   </div>
                                 </li>
-                                
+                                <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                                  <div class="row p-0 ">
+                                    <div class="col s11 ">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
+                                      <p class="font-weight-600">SEO </p>
+                                      <a href="#modalDeleteExp" style="right: -45px;top: -10px;" class="modal-trigger star"><i class="material-icons blue-text">delete</i></a>
+                                      <div class="prograss">
+                                        <div class="w3-orange prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #ff9800 ; "><span>35%</span></div>
+                                      </div>
+                                    </div>
+                                    <!-- <div class="col s2 mt-4 pr-2 "><a href="#modalDeleteExp" class="modal-trigger "><i class="material-icons blue-text">delete</i></a></div> -->
+                                  </div>
+                                </li>
                               </ul>
                             </div>
                           </div>
-                          <!-- accordian here -->
                         </div>
                     </div>                
                       <!-- end of skills card  -->
@@ -1735,6 +1682,300 @@ License: You must have a valid license purchased only from themeforest(the above
       </div>
     </div>
     <!--/ Theme Customizer -->
+
+    <!-- modal for salary edit  -->
+    <div id="modalSalaryEdit" class="modal" style="border-radius: 12px; width: 30%!important;">
+      <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+        <div class="container p-0">
+          <div class="row">
+            <div class="col s2">
+            </div>
+            <div class="col s8">
+              <h6 class="center-align text-ellipsis"><a href=""><b>Salary </b></a> </h6>
+            </div>
+            <div class="col s2" style="padding-right: 0px; ">
+              <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right btn-me-hover" 
+                   
+                    style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                <i class="material-icons">clear</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content">
+          <div class="row">
+              <div class="card">
+                <div class="card-content">
+                  <div class="row">
+                    <div class="col s12 pb-2 ">
+                      <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Enter your Salary </label>
+                      </div>
+
+                    </div>
+                    <div class="col s12 ">
+                      <p class="btn grey right ml-2">Cancel</p>
+                      <p class="btn right">OK</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- endo of salary edit -->
+
+    <!-- modal for experiences -->
+    <div id="modalExp" class="modal modal-fixed-footer" style="border-radius: 12px;">
+      <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+        <div class="container p-0">
+          <div class="row">
+            <div class="col s2">
+            </div>
+            <div class="col s8">
+              <h6 class="center-align text-ellipsis"><a href=""><b> Experience:&nbsp;<a href="">5 years</a> </b></a> </h6>
+            </div>
+            <div class="col s2" style="padding-right: 0px; ">
+              <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                    onmouseover="this.style.background ='#e91e63'" 
+                    onmouseout="this.style.background='transparent'" 
+                    style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                <i class="material-icons">clear</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content">
+        <section class="timeline2">
+          <div class="container">
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content js--fadeInLeft  animate fadeLeft">
+                <h2>Title</h2>
+                <div class="date">1 MAY 2016</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div> 
+        
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                <div class="timeline2-img-header">
+                  <h2>Card Title</h2>
+                </div>
+                <div class="date">25 MAY 2016</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div>   
+        
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                <div class="date">3 JUN 2016</div>
+                <h2>Quote</h2>
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+              </div>
+            </div>   
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content js--fadeInRight animate fadeRight">
+                <h2>Title</h2>
+                <div class="date">22 JUN 2016</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div>   
+        
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content timeline2-card js--fadeInLeft animate fadeLeft">
+                <div class="timeline2-img-header">
+                  <h2>Card Title</h2>
+                </div>
+                <div class="date">10 JULY 2016</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div>   
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                <div class="timeline2-img-header">
+                  <h2>Card Title</h2>
+                </div>
+                <div class="date">30 JULY 2016</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div>  
+        
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                <div class="date">5 AUG 2016</div>
+                <h2>Quote</h2>
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+              </div>
+            </div>   
+        
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                <div class="timeline2-img-header">
+                  <h2>Card Title</h2>
+                </div>
+                <div class="date">19 AUG 2016</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div>  
+        
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                <div class="date">1 SEP 2016</div>
+                <h2>Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div>   
+        
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- education model here -->
+    <div id="modalEdu" class="modal modal-fixed-footer" style="border-radius: 12px;">
+      <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+        <div class="container p-0">
+          <div class="row">
+            <div class="col s2">
+            </div>
+            <div class="col s8">
+              <h6 class="center-align text-ellipsis"><a href=""><b> Education&nbsp; </b></a> </h6>
+            </div>
+            <div class="col s2" style="padding-right: 0px; ">
+              <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                    onmouseover="this.style.background ='#e91e63'" 
+                    onmouseout="this.style.background='transparent'" 
+                    style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                <i class="material-icons">clear</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content">
+        <section class="timeline2">
+          <div class="container">
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content js--fadeInLeft  animate fadeLeft">
+                <h2>Title</h2>
+                <div class="date">1 MAY 2016</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div> 
+        
+            <div class="timeline2-item">
+        
+              <div class="timeline2-img"></div>
+        
+              <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                <div class="timeline2-img-header">
+                  <h2>Card Title</h2>
+                </div>
+                <div class="date">25 MAY 2016</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div>   
+        
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                <div class="date">3 JUN 2016</div>
+                <h2>Quote</h2>
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+              </div>
+            </div>   
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content js--fadeInRight animate fadeRight">
+                <h2>Title</h2>
+                <div class="date">22 JUN 2016</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div>   
+        
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content timeline2-card js--fadeInLeft animate fadeLeft">
+                <div class="timeline2-img-header">
+                  <h2>Card Title</h2>
+                </div>
+                <div class="date">10 JULY 2016</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div>   
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                <div class="timeline2-img-header">
+                  <h2>Card Title</h2>
+                </div>
+                <div class="date">30 JULY 2016</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div>  
+        
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                <div class="date">5 AUG 2016</div>
+                <h2>Quote</h2>
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+              </div>
+            </div>   
+        
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                <div class="timeline2-img-header">
+                  <h2>Card Title</h2>
+                </div>
+                <div class="date">19 AUG 2016</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div>  
+        
+            <div class="timeline2-item">
+              <div class="timeline2-img"></div>
+              <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                <div class="date">1 SEP 2016</div>
+                <h2>Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                <a class="bnt-more" href="javascript:void(0)">More</a>
+              </div>
+            </div>   
+        
+          </div>
+        </section>
+      </div>
+    </div>
+
 
       <!-- modal for endorsements -->
       <div id="modalEndorsAdd" class="modal modal-fixed-footer" style="border-radius: 12px;">
@@ -2551,7 +2792,6 @@ License: You must have a valid license purchased only from themeforest(the above
       </div>
       <!-- endo of education modal -->
 
-
       <!-- modal for showcase -->
       <div id="modalShowcaseAdd" class="modal modal-fixed-footer" style="border-radius: 12px;">
         <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
@@ -2685,6 +2925,138 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
       </div>
       <!-- endo of showcase modal -->
+
+      <!-- modal for showcase delete -->
+      <div id="modalShowcaseDelete" class="modal modal-fixed-footer" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b>Select to Delete </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content pb-6">
+          <div class="row user-projects pb-1 pt-5">
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/6.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/7.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/8.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/9.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/10.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/11.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/12.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/13.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/14.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+              <div class="overlai">
+                <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/15.png' %}" />
+                <div class="overlay1">
+                  <div class="">
+                    <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer" style="z-index: 1;">
+          <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Delete</a>
+        </div>
+      </div>
+      <!-- endo of showcase delete modal -->
 
       <!-- modal for skills -->
       <div id="modalSkillAdd" class="modal modal-fixed-footer" style="border-radius: 12px;">
@@ -2921,6 +3293,11 @@ License: You must have a valid license purchased only from themeforest(the above
      <script src="{% static 'app-assets/js/scripts/media-gallery-page.js' %}"></script>
 
     <script>
+
+        $(document).ready(function(){
+          $('.tooltipped').tooltip();
+        });
+
 
       function remove(){
         var g =document.querySelectorAll('grid');

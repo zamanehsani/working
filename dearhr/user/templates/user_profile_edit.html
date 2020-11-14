@@ -1,0 +1,2474 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  
+      <!-- BEGIN: Page Main-->
+      <div id="main">
+        <div class="row">
+          <div class="content-wrapper-before "></div>
+          <div class="col s12 ">
+            <div class="container">
+              <div class="section">
+                <!-- User statistics & appointment cards-->
+              
+                <div class="row">
+                  <!-- first column -->
+                  <div class="col s12 m4 l3 allCard">
+                    <!-- generic user profile -->
+                    <div class=" card animate fadeLeft">
+                      <!-- <a href=""  style="position: relative; top: 10px;z-index: 2;"><i class="material-icons right mr-2">edit</i></a> -->
+                      <video class="z-depth-2" palysinline muted loop preload="auto" width="100%"  style="border-radius: 15px 15px 0 0;"> 
+                        <source src="https://webnus.net/themes/easyweb/design/wp-content/uploads/2016/05/easy-v1.mp4" type="video/mp4">
+                      </video>
+                      <a href=""  style="position: relative; top: -40px;z-index: 2;"><i class="material-icons white-text right mr-4">edit</i></a>
+                        <div class="card-content">
+                            <div class="col s6 l4 pl-0 pb-0">
+                              <div class="grid pb-0" style="width: 100px;" >
+                                <figure class="effect-sadie padding-2 gradient-indigo-purple center-align z-depth-3" style="width: 130px; border-radius: 50%;" >
+                                  <img  class="responsive-img  card-profile-image circle materialboxed" style="opacity: 1;" width="100px" src="{% static 'app-assets/images/user/12.jpg' %}"
+                                  alt="user profile">
+                                  <figcaption class="circle" >
+                                    <p ><a href=""><i class="material-icons pink-text">camera_alt</i></a></p>
+                                  </figcaption>
+                                </figure>
+                              </div>
+                            </div>
+                            <div class="col s6 l8">
+                              <div class="mt-9">
+                                <h6 class="  text-ellipsis" style="font-weight: bolder;">Peter Same North</h6>
+                                <p class="  text-ellipsis">Event Project Manager</p>
+                                <p class="  text-ellipsis">GreenVilia, Illinois, USA</p>
+                              </div>
+                            </div>
+                          <div class="row">
+                            <div class="col s12">
+                              <div class="row">
+                                <div id="text" class="col s12">
+                                  <h5  class="mb-0 pt-3 text-ellipsis "> <b>Project Manager &nbsp;<a href=""><i class="material-icons blue-text">create</i></a> </b> </h5>
+                                  <div class="mb-3">
+                                    <article  class="">
+                                      This is the short bio. at this place you can write short bio of your self. 
+                                      In this section add what ever you want to show case your profile. Show off youself.
+                                    </article>
+                                </div>
+                                <div>
+                                  <h6 class="">Experiences: <a  href="#">1&nbsp;years</a></h6>
+                                </div>
+                                <div>
+                                  <h6 class=" mt-3 mb-3">Targeted&nbsp;location: <a href="#" >Dubai,&nbsp;UAE</a> </h6>
+                                </div>
+                                <div>
+                                  <h6 class=" mt-3">Expected&nbsp;Salary: <a class="tooltipped modal-trigger" data-position="top" data-tooltip="your salary is 30 % above average" href="#modalSalaryEdit"> 8000&nbsp;AED</a>&nbsp;+&nbsp;30%</h6>
+                                </div>
+                                <div class="container">
+                                  <div class="row">
+                                    <div id="view-basic-demo">
+                                        <div class="col s12 mt-1">
+                                          <input type="text" class="js-range-slider" value="" />
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- Experience card -->
+  
+                    <!-- endorsement card -->
+                    <div class="card user-statistics-card animate fadeLeft mt-7">
+                      <div class="card-header gradient-45deg-light-blue-cyan pl-3 pr-3 pt-4 pb-2" style="border-radius: 15px 15px 0 0;">
+                        <h5  class="pt-0 mt-0 center-align text-ellipsis white-text">  Endorsements </h5>
+                        <div class="mb-3">
+                            <article class="white-text center-align" >put all of your Endorsements here in order to use them in your targeted profiles.</article>
+                        </div>
+                        <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalEndorsAdd" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
+                          <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
+                        </div> 
+                      </div>
+                      <div class="card-content pb-0">
+                        <ul id="collection-custom" class="collection mb-0" style="border: none;">
+                            <li class="collection-item avatar">
+                              <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                              <p class="font-weight-600">John Doe</p>
+                              <p class="medium-small">18, January 2019</p>
+                              <a href="#modalEndorsView" class="star modal-trigger pl-3"><i class="material-icons blue-text">remove_red_eye</i></a>
+                              <a href="#" class="star"><i class="material-icons blue-text">delete</i></a>                                      
+                            </li>
+                            <li class="collection-item avatar" style="border-bottom: none;">
+                              <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
+                              <p class="font-weight-600">Adam Garza</p>
+                              <p class="medium-small">20, January 2019</p>
+                              <a href="#modalEndorsView" class="star modal-trigger pl-3"><i class="material-icons blue-text">remove_red_eye</i></a>
+                              <a href="#" class="star"><i class="material-icons blue-text">delete</i></a>                                      
+                            </li>
+                            <li class="collection-item avatar" style="border-bottom: none;">
+                              <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
+                              <p class="font-weight-600">Jennifer Rice</p>
+                              <p class="medium-small">25, January 2019</p>
+                              <a href="#modalEndorsView" class="star modal-trigger pl-3"><i class="material-icons blue-text">remove_red_eye</i></a>
+                              <a href="#" class="star"><i class="material-icons blue-text">delete</i></a>                                      
+                            </li>
+                           
+                            <li class="collection-item avatar" style="border-bottom: none;">
+                              <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" alt="" class="circle" />
+                              <p class="font-weight-600">Jennifer Rice</p>
+                              <p class="medium-small">25, January 2019</p>
+                              <a href="#modalEndorsView" class="star modal-trigger pl-3"><i class="material-icons blue-text">remove_red_eye</i></a>
+                              <a href="#" class="star"><i class="material-icons blue-text">delete</i></a>                                      
+                            </li>
+  
+                        </ul>
+                        <!-- accordian here -->
+                      </div>
+                    </div>
+                    <!-- end of endorsement -->
+                  </div>
+                  <!-- end of first column -->
+                  
+                    <!-- second column -->
+                    <div class="col s12 m4 l3 allCard">
+                      <!-- experience card -->
+                      <div class="card user-statistics-card animate fadeLeft">
+                        <div class="card-header gradient-45deg-red-pink pl-3 pr-3 pt-4 pb-2" style="border-radius: 15px 15px 0 0;">
+                          <h5  class="pt-0 mt-0 center-align text-ellipsis white-text">  Experiences </h5>
+                          <div class="mb-3">
+                            <article class="white-text center-align" >list all of you exsperiences here to make them avaible for your cards.</article>
+                        </div>
+                          <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalEndorsAdd" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
+                            <a class="btn-floating btn-medium pink.accent-2 menu-shadow modal-trigger" data-target="modalExpAdd"><i class="material-icons ">add</i> </a>
+                          </div> 
+                        </div>
+                          <div class="card-content pb-2 modal-trigger" data-target="modalExp">
+                            <div>
+                              <h6 class="text-ellipsis" style="font-weight: bolder;">2018&nbsp;-&nbsp;present<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></h6>
+                              <b class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.subsonic.ae" target="_blank">Subsonic&nbsp;LLC</a></b>
+                              <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons  blue-text">delete</i></a>
+                              <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+                              </p>
+                            </div>
+                            <div>
+                              <h6 class="text-ellipsis" style="font-weight: bolder;">2018&nbsp;-&nbsp;present<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></h6>
+                              <b class="text-ellipsis">Project&nbsp;Manager&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.subsonic.ae" target="_blank">Subsonic&nbsp;LLC</a></b>
+                              <a href="#modalEndorsAdd" style="top:-30px" class="star modal-trigger"><i class="material-icons  blue-text">delete</i></a>
+                              <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+                              </p>
+                            </div>
+                            
+                          </div>
+                      </div>
+                      <!-- end of experience card  -->
+  
+                        <!-- showcase card -->
+                        <div class="card user-statistics-card animate fadeLeft mt-7 ">
+                          <div class="card-header gradient-45deg-blue-indigo pl-3 pr-3 pt-4 pb-2" style="border-radius: 15px 15px 0 0;">
+                            <h5  class="pt-0 mt-0 center-align text-ellipsis white-text">  Showcase </h5>
+                            <div class="mb-3">
+                                <article class="white-text center-align" >put all of your records, projections and documents here in order to use them in tyour targeted profiles.</article>
+                            </div>
+                            <div class="fixed-action-btn right click-to-toggle direction-left" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
+                              <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
+                              <ul style="list-style: none;">
+                                <li><a href="#modalShowcaseAdd" target="_blank" class="btn-floating modal-trigger blue"><i class="material-icons">add</i></a></li>
+                                <li><a href="#modalShowcaseDelete" class="btn-floating blue  modal-trigger" ><i class="material-icons ">delete</i></a></li>
+                            </ul>
+                            </div> 
+                          </div>
+                          <div class="card-content pb-0 pl-1 pr-1 pt-3">
+                            <div class="container">
+                              <div class="container popup-gallery">
+                                <div class="row user-projects pb-1 pt-5">
+                                  <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                    <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                      <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                    </a>
+                                  </div>
+                                  <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                    <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                      <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                    </a>
+                                  </div>
+                                  <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                    <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                      <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                    </a>
+                                  </div>
+                                  <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                    <a href="{% static 'app-assets/images/gallery/4.png' %}" title="The fourth">
+                                      <img src="{% static 'app-assets/images/gallery/4.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                    </a>
+                                  </div>
+                                  <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                    <a href="{% static 'app-assets/images/gallery/5.png' %}" title="The fourth">
+                                      <img src="{% static 'app-assets/images/gallery/5.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                    </a>
+                                  </div>
+                                  <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                    <a href="{% static 'app-assets/images/gallery/6.png' %}" title="The fourth">
+                                      <img src="{% static 'app-assets/images/gallery/6.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                    </a>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            <!-- accordian here -->
+                          </div>
+                        </div>
+                          <!-- end of showcase -->
+                    </div>
+                    <!-- end of second column -->
+                    
+  
+                    <!-- third column -->
+                    <div class="col s12 m4 l3 allCard">
+  
+                      <!-- education card -->
+                      <div class="card user-statistics-card animate fadeLeft">
+                        <div class="card-header gradient-45deg-amber-amber pl-3 pr-3 pt-4 pb-2" style="border-radius: 15px 15px 0 0;">
+                          <h5  class="pt-0 mt-0 center-align text-ellipsis white-text">  Education </h5>
+                          <div class="mb-3">
+                            <article class="white-text center-align" >Enter your all eudcational records. later on, you can choose which which educational records you want to show on your targeted profile.</article>
+                          </div>
+                          <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalEduAdd" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
+                            <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
+                          </div> 
+                        </div>
+                          <div class="card-content pb-1 modal-trigger" data-target="modalEdu">
+                                <div>
+                                  <h6 class="text-ellipsis" style="font-weight: bolder;">Master&nbsp;in&nbsp;Marketing&nbsp;|&nbsp;&nbsp;Harvard&nbsp;University</h6>
+                                  <b class="text-ellipsis">2018&nbsp;-&nbsp;2020<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
+                                  <a href="#" style="top:-5px" class="star"><i class="material-icons blue-text">delete</i></a>
+                                  <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                    It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                    Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
+                                </div>
+                                <div>
+                                  <h6 class="text-ellipsis" style="font-weight: bolder;">Bachelor&nbsp;in&nbsp;IT&nbsp;|&nbsp;&nbsp;MIT&nbsp;</h6>
+                                  <b class="text-ellipsis">2014&nbsp;-&nbsp;2017<a href="#" style="font-size: 16px;">&nbsp;&nbsp;2yr</a></b>
+                                  <a href="#" style="top:-5px" class="star"><i class="material-icons blue-text">delete</i></a>
+                                  <p class="pb-3" style="font-size: smaller;">Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                                    It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                    Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, l</p>
+                                </div>
+                                
+                                <!-- accordian here -->
+                          </div>
+                      </div>
+                      <!-- end of education card  -->
+                   
+                    </div>
+                    <!-- end of third column -->
+                    <div class="col s12 m4 l3 allCard">
+                      <!-- skills card -->
+                      <div class="card user-statistics-card animate fadeLeft">
+                        <div class="card-header gradient-45deg-purple-deep-orange pl-3 pr-3 pt-4 pb-2" style="border-radius: 15px 15px 0 0;">
+                          <h5  class="pt-0 mt-0 center-align text-ellipsis white-text"> Skills </h5>
+                          <div class="mb-3">
+                              <article class="white-text center-align" >Enter your all your skills records. later on, you can choose which which skills records you want to show on your targeted profile.</article>
+                          </div>
+                          <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="modalSkillAdd" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
+                            <a class="btn-floating btn-medium pink.accent-2 menu-shadow"><i class="material-icons">add</i> </a>
+                          </div> 
+                        </div>
+                          <div class="card-content pt-0 pb-0">
+                            <div class="container">
+                              <div class="row">
+                                <ul id="" class="collection" style="border: none; margin-top: 20px;">
+                                  <li class="collection-item avatar  mt-1" style="border-bottom: none;">
+                                    <div class="row p-0 ">
+                                      <div class="col s11">
+                                        <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                        <p class="font-weight-600">Project management </p>
+                                        <a href="#modalDeleteExp" style="right: -45px;top: -10px;" class="modal-trigger star"><i class="material-icons blue-text">delete</i></a>
+                                        <div class="prograss">
+                                          <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                                    <div class="row p-0 ">
+                                      <div class="col s11">
+                                        <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="" class="circle" />
+                                        <p class="font-weight-600">Marketing </p>
+                                        <a href="#modalDeleteExp" style="right: -45px;top: -10px;" class="modal-trigger star"><i class="material-icons blue-text">delete</i></a>
+                                        <div class="prograss">
+                                          <div class="w3-yellow-green prograss_bar" style="width:80%; box-shadow: 0 0 0 1px #A3C14F;">
+                                            <span>80%</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                                    <div class="row p-0 ">
+                                      <div class="col s11">
+                                        <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
+                                        <p class="font-weight-600">Vloging </p>
+                                        <a href="#modalDeleteExp" style="right: -45px;top: -10px;" class="modal-trigger star"><i class="material-icons blue-text">delete</i></a>
+                                        <div class="prograss">
+                                          <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span>60%</span></div>
+                                        </div>
+                                      </div>
+                                      <!-- <div class="col s2 mt-4 pr-2 "><a href="#modalDeleteExp" class="modal-trigger "><i class="material-icons blue-text">delete</i></a></div> -->
+                                    </div>
+                                  </li>
+                                  <li class="collection-item avatar mb-2 mt-1" style="border-bottom: none;">
+                                    <div class="row p-0 ">
+                                      <div class="col s11 ">
+                                        <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="" class="circle" />
+                                        <p class="font-weight-600">SEO </p>
+                                        <a href="#modalDeleteExp" style="right: -45px;top: -10px;" class="modal-trigger star"><i class="material-icons blue-text">delete</i></a>
+                                        <div class="prograss">
+                                          <div class="w3-orange prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #ff9800 ; "><span>35%</span></div>
+                                        </div>
+                                      </div>
+                                      <!-- <div class="col s2 mt-4 pr-2 "><a href="#modalDeleteExp" class="modal-trigger "><i class="material-icons blue-text">delete</i></a></div> -->
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                      </div>                
+                        <!-- end of skills card  -->
+                    </div>
+                    <!-- end of  -->
+                </div>
+              </div>
+  
+              <!-- START RIGHT SIDEBAR NAV -->
+              <aside id="right-sidebar-nav">
+                <div id="slide-out-right" class="slide-out-right-sidenav sidenav rightside-navigation">
+                  <div class="row">
+                    <div class="slide-out-right-title">
+                      <div class="col s12 border-bottom-1 pb-0 pt-1">
+                        <div class="row">
+                          <div class="col s2 pr-0 center">
+                            <i class="material-icons vertical-text-middle"><a href="#" class="sidenav-close">clear</a></i>
+                          </div>
+                          <div class="col s10 pl-0">
+                            <ul class="tabs">
+                              <li class="tab col s4 p-0">
+                                <a href="#messages" class="active">
+                                  <span>Messages</span>
+                                </a>
+                              </li>
+                              <li class="tab col s4 p-0">
+                                <a href="#settings">
+                                  <span>Settings</span>
+                                </a>
+                              </li>
+                              <li class="tab col s4 p-0">
+                                <a href="#activity">
+                                  <span>Activity</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slide-out-right-body row pl-3">
+                      <div id="messages" class="col s12 pb-0">
+                        <div class="collection border-none mb-0">
+                          <input class="header-search-input mt-4 mb-2" type="text" name="Search" placeholder="Search Messages" />
+                          <ul class="collection right-sidebar-chat p-0 mb-0">
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-online avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Elizabeth Elliott</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Thank you</p>
+                              </div>
+                              <span class="secondary-content medium-small">5.00 AM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-online avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Mary Adams</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Hello Boo</p>
+                              </div>
+                              <span class="secondary-content medium-small">4.14 AM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-off avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-2.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Caleb Richards</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Hello Boo</p>
+                              </div>
+                              <span class="secondary-content medium-small">4.14 AM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-online avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-3.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Caleb Richards</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Keny !</p>
+                              </div>
+                              <span class="secondary-content medium-small">9.00 PM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-online avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-4.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">June Lane</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Ohh God</p>
+                              </div>
+                              <span class="secondary-content medium-small">4.14 AM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-off avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-5.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Edward Fletcher</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Love you</p>
+                              </div>
+                              <span class="secondary-content medium-small">5.15 PM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-online avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-6.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Crystal Bates</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Can we</p>
+                              </div>
+                              <span class="secondary-content medium-small">8.00 AM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-off avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Nathan Watts</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Great!</p>
+                              </div>
+                              <span class="secondary-content medium-small">9.53 PM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-off avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-8.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Willard Wood</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Do it</p>
+                              </div>
+                              <span class="secondary-content medium-small">4.20 AM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-online avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-1.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Ronnie Ellis</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Got that</p>
+                              </div>
+                              <span class="secondary-content medium-small">5.20 AM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-online avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-9.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Daniel Russell</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Thank you</p>
+                              </div>
+                              <span class="secondary-content medium-small">12.00 AM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-off avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-10.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Sarah Graves</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Okay you</p>
+                              </div>
+                              <span class="secondary-content medium-small">11.14 PM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-off avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-11.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Andrew Hoffman</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Can do</p>
+                              </div>
+                              <span class="secondary-content medium-small">7.30 PM</span>
+                            </li>
+                            <li class="collection-item right-sidebar-chat-item sidenav-trigger display-flex avatar pl-5 pb-0"
+                              data-target="slide-out-chat">
+                              <span class="avatar-status avatar-online avatar-50"><img
+                                  src="{% static 'app-assets/images/avatar/avatar-12.png' %}" alt="avatar" />
+                                <i></i>
+                              </span>
+                              <div class="user-content">
+                                <h6 class="line-height-0">Camila Lynch</h6>
+                                <p class="medium-small blue-grey-text text-lighten-3 pt-3">Leave it</p>
+                              </div>
+                              <span class="secondary-content medium-small">2.00 PM</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div id="settings" class="col s12">
+                        <p class="setting-header mt-8 mb-3 ml-5 font-weight-900">GENERAL SETTINGS</p>
+                        <ul class="collection border-none">
+                          <li class="collection-item border-none">
+                            <div class="m-0">
+                              <span>Notifications</span>
+                              <div class="switch right">
+                                <label>
+                                  <input checked type="checkbox" />
+                                  <span class="lever"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="collection-item border-none">
+                            <div class="m-0">
+                              <span>Show recent activity</span>
+                              <div class="switch right">
+                                <label>
+                                  <input type="checkbox" />
+                                  <span class="lever"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="collection-item border-none">
+                            <div class="m-0">
+                              <span>Show recent activity</span>
+                              <div class="switch right">
+                                <label>
+                                  <input type="checkbox" />
+                                  <span class="lever"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="collection-item border-none">
+                            <div class="m-0">
+                              <span>Show Task statistics</span>
+                              <div class="switch right">
+                                <label>
+                                  <input type="checkbox" />
+                                  <span class="lever"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="collection-item border-none">
+                            <div class="m-0">
+                              <span>Show your emails</span>
+                              <div class="switch right">
+                                <label>
+                                  <input type="checkbox" />
+                                  <span class="lever"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="collection-item border-none">
+                            <div class="m-0">
+                              <span>Email Notifications</span>
+                              <div class="switch right">
+                                <label>
+                                  <input checked type="checkbox" />
+                                  <span class="lever"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <p class="setting-header mt-7 mb-3 ml-5 font-weight-900">SYSTEM SETTINGS</p>
+                        <ul class="collection border-none">
+                          <li class="collection-item border-none">
+                            <div class="m-0">
+                              <span>System Logs</span>
+                              <div class="switch right">
+                                <label>
+                                  <input type="checkbox" />
+                                  <span class="lever"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="collection-item border-none">
+                            <div class="m-0">
+                              <span>Error Reporting</span>
+                              <div class="switch right">
+                                <label>
+                                  <input type="checkbox" />
+                                  <span class="lever"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="collection-item border-none">
+                            <div class="m-0">
+                              <span>Applications Logs</span>
+                              <div class="switch right">
+                                <label>
+                                  <input checked type="checkbox" />
+                                  <span class="lever"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="collection-item border-none">
+                            <div class="m-0">
+                              <span>Backup Servers</span>
+                              <div class="switch right">
+                                <label>
+                                  <input type="checkbox" />
+                                  <span class="lever"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="collection-item border-none">
+                            <div class="m-0">
+                              <span>Audit Logs</span>
+                              <div class="switch right">
+                                <label>
+                                  <input type="checkbox" />
+                                  <span class="lever"></span>
+                                </label>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="activity" class="col s12">
+                        <div class="activity">
+                          <p class="mt-5 mb-0 ml-5 font-weight-900">SYSTEM LOGS</p>
+                          <ul class="widget-timeline mb-0">
+                            <li class="timeline-items timeline-icon-green active">
+                              <div class="timeline-time">Today</div>
+                              <h6 class="timeline-title">Homepage mockup design</h6>
+                              <p class="timeline-text">Melissa liked your activity.</p>
+                              <div class="timeline-content orange-text">Important</div>
+                            </li>
+                            <li class="timeline-items timeline-icon-cyan active">
+                              <div class="timeline-time">10 min</div>
+                              <h6 class="timeline-title">Melissa liked your activity Drinks.</h6>
+                              <p class="timeline-text">Here are some news feed interactions concepts.</p>
+                              <div class="timeline-content green-text">Resolved</div>
+                            </li>
+                            <li class="timeline-items timeline-icon-red active">
+                              <div class="timeline-time">30 mins</div>
+                              <h6 class="timeline-title">12 new users registered</h6>
+                              <p class="timeline-text">Here are some news feed interactions concepts.</p>
+                              <div class="timeline-content">
+                                <img src="{% static 'app-assets/images/icon/pdf.png' %}" alt="document" height="30" width="25"
+                                  class="mr-1">Registration.doc
+                              </div>
+                            </li>
+                            <li class="timeline-items timeline-icon-indigo active">
+                              <div class="timeline-time">2 Hrs</div>
+                              <h6 class="timeline-title">Tina is attending your activity</h6>
+                              <p class="timeline-text">Here are some news feed interactions concepts.</p>
+                              <div class="timeline-content">
+                                <img src="{% static 'app-assets/images/icon/pdf.png' %}" alt="document" height="30" width="25"
+                                  class="mr-1">Activity.doc
+                              </div>
+                            </li>
+                            <li class="timeline-items timeline-icon-orange">
+                              <div class="timeline-time">5 hrs</div>
+                              <h6 class="timeline-title">Josh is now following you</h6>
+                              <p class="timeline-text">Here are some news feed interactions concepts.</p>
+                              <div class="timeline-content red-text">Pending</div>
+                            </li>
+                          </ul>
+                          <p class="mt-5 mb-0 ml-5 font-weight-900">APPLICATIONS LOGS</p>
+                          <ul class="widget-timeline mb-0">
+                            <li class="timeline-items timeline-icon-green active">
+                              <div class="timeline-time">Just now</div>
+                              <h6 class="timeline-title">New order received urgent</h6>
+                              <p class="timeline-text">Melissa liked your activity.</p>
+                              <div class="timeline-content orange-text">Important</div>
+                            </li>
+                            <li class="timeline-items timeline-icon-cyan active">
+                              <div class="timeline-time">05 min</div>
+                              <h6 class="timeline-title">System shutdown.</h6>
+                              <p class="timeline-text">Here are some news feed interactions concepts.</p>
+                              <div class="timeline-content blue-text">Urgent</div>
+                            </li>
+                            <li class="timeline-items timeline-icon-red">
+                              <div class="timeline-time">20 mins</div>
+                              <h6 class="timeline-title">Database overloaded 89%</h6>
+                              <p class="timeline-text">Here are some news feed interactions concepts.</p>
+                              <div class="timeline-content">
+                                <img src="{% static 'app-assets/images/icon/pdf.png' %}" alt="document" height="30" width="25"
+                                  class="mr-1">Database-log.doc
+                              </div>
+                            </li>
+                          </ul>
+                          <p class="mt-5 mb-0 ml-5 font-weight-900">SERVER LOGS</p>
+                          <ul class="widget-timeline mb-0">
+                            <li class="timeline-items timeline-icon-green active">
+                              <div class="timeline-time">10 min</div>
+                              <h6 class="timeline-title">System error</h6>
+                              <p class="timeline-text">Melissa liked your activity.</p>
+                              <div class="timeline-content red-text">Error</div>
+                            </li>
+                            <li class="timeline-items timeline-icon-cyan">
+                              <div class="timeline-time">1 min</div>
+                              <h6 class="timeline-title">Production server down.</h6>
+                              <p class="timeline-text">Here are some news feed interactions concepts.</p>
+                              <div class="timeline-content blue-text">Urgent</div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Slide Out Chat -->
+                <ul id="slide-out-chat" class="sidenav slide-out-right-sidenav-chat">
+                  <li class="center-align pt-2 pb-2 sidenav-close chat-head">
+                    <a href="#!"><i class="material-icons mr-0">chevron_left</i>Elizabeth Elliott</a>
+                  </li>
+                  <li class="chat-body">
+                    <ul class="collection">
+                      <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
+                        <span class="avatar-status avatar-online avatar-50"><img src="{% static 'app-assets/images/avatar/avatar-7.png' %}"
+                            alt="avatar" />
+                        </span>
+                        <div class="user-content speech-bubble">
+                          <p class="medium-small">hello!</p>
+                        </div>
+                      </li>
+                      <li class="collection-item display-flex avatar justify-content-end pl-5 pb-0" data-target="slide-out-chat">
+                        <div class="user-content speech-bubble-right">
+                          <p class="medium-small">How can we help? We're here for you!</p>
+                        </div>
+                      </li>
+                      <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
+                        <span class="avatar-status avatar-online avatar-50"><img src="{% static 'app-assets/images/avatar/avatar-7.png' %}"
+                            alt="avatar" />
+                        </span>
+                        <div class="user-content speech-bubble">
+                          <p class="medium-small">I am looking for the best admin template.?</p>
+                        </div>
+                      </li>
+                      <li class="collection-item display-flex avatar justify-content-end pl-5 pb-0" data-target="slide-out-chat">
+                        <div class="user-content speech-bubble-right">
+                          <p class="medium-small">Materialize admin is the responsive materializecss admin template.</p>
+                        </div>
+                      </li>
+  
+                      <li class="collection-item display-grid width-100 center-align">
+                        <p>8:20 a.m.</p>
+                      </li>
+  
+                      <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
+                        <span class="avatar-status avatar-online avatar-50"><img src="{% static 'app-assets/images/avatar/avatar-7.png' %}"
+                            alt="avatar" />
+                        </span>
+                        <div class="user-content speech-bubble">
+                          <p class="medium-small">Ohh! very nice</p>
+                        </div>
+                      </li>
+                      <li class="collection-item display-flex avatar justify-content-end pl-5 pb-0" data-target="slide-out-chat">
+                        <div class="user-content speech-bubble-right">
+                          <p class="medium-small">Thank you.</p>
+                        </div>
+                      </li>
+                      <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
+                        <span class="avatar-status avatar-online avatar-50"><img src="{% static 'app-assets/images/avatar/avatar-7.png' %}"
+                            alt="avatar" />
+                        </span>
+                        <div class="user-content speech-bubble">
+                          <p class="medium-small">How can I purchase it?</p>
+                        </div>
+                      </li>
+  
+                      <li class="collection-item display-grid width-100 center-align">
+                        <p>9:00 a.m.</p>
+                      </li>
+  
+                      <li class="collection-item display-flex avatar justify-content-end pl-5 pb-0" data-target="slide-out-chat">
+                        <div class="user-content speech-bubble-right">
+                          <p class="medium-small">From ThemeForest.</p>
+                        </div>
+                      </li>
+                      <li class="collection-item display-flex avatar justify-content-end pl-5 pb-0" data-target="slide-out-chat">
+                        <div class="user-content speech-bubble-right">
+                          <p class="medium-small">Only $24</p>
+                        </div>
+                      </li>
+                      <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
+                        <span class="avatar-status avatar-online avatar-50"><img src="{% static 'app-assets/images/avatar/avatar-7.png' %}"
+                            alt="avatar" />
+                        </span>
+                        <div class="user-content speech-bubble">
+                          <p class="medium-small">Ohh! Thank you.</p>
+                        </div>
+                      </li>
+                      <li class="collection-item display-flex avatar pl-5 pb-0" data-target="slide-out-chat">
+                        <span class="avatar-status avatar-online avatar-50"><img src="{% static 'app-assets/images/avatar/avatar-7.png' %}"
+                            alt="avatar" />
+                        </span>
+                        <div class="user-content speech-bubble">
+                          <p class="medium-small">I will purchase it for sure.</p>
+                        </div>
+                      </li>
+                      <li class="collection-item display-flex avatar justify-content-end pl-5 pb-0" data-target="slide-out-chat">
+                        <div class="user-content speech-bubble-right">
+                          <p class="medium-small">Great, Feel free to get in touch on</p>
+                        </div>
+                      </li>
+                      <li class="collection-item display-flex avatar justify-content-end pl-5 pb-0" data-target="slide-out-chat">
+                        <div class="user-content speech-bubble-right">
+                          <p class="medium-small">https://pixinvent.ticksy.com/</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="center-align chat-footer">
+                    <form class="col s12" onsubmit="slideOutChat()" action="javascript:void(0);">
+                      <div class="input-field">
+                        <input id="icon_prefix" type="text" class="search" />
+                        <label for="icon_prefix">Type here..</label>
+                        <a onclick="slideOutChat()"><i class="material-icons prefix">send</i></a>
+                      </div>
+                    </form>
+                  </li>
+                </ul>
+              </aside>
+              <!-- END RIGHT SIDEBAR NAV -->
+            </div>
+            <div class="content-overlay"></div>
+          </div>
+        </div>
+      </div>
+      <!-- END: Page Main-->
+  
+
+  
+      <!-- modal for salary edit  -->
+      <div id="modalSalaryEdit" class="modal" style="border-radius: 12px; width: 30%!important;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b>Salary </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right btn-me-hover" 
+                     
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+            <div class="row">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 pb-2 ">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">account_circle</i>
+                          <input id="icon_prefix" type="text" class="validate">
+                          <label for="icon_prefix">Enter your Salary </label>
+                        </div>
+  
+                      </div>
+                      <div class="col s12 ">
+                        <p class="btn grey right ml-2">Cancel</p>
+                        <p class="btn right">OK</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- endo of salary edit -->
+  
+      <!-- modal for experiences -->
+      <div id="modalExp" class="modal modal-fixed-footer" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b> Experience:&nbsp;<a href="">5 years</a> </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+          <section class="timeline2">
+            <div class="container">
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft  animate fadeLeft">
+                  <h2>Title</h2>
+                  <div class="date">1 MAY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div> 
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">25 MAY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                  <div class="date">3 JUN 2016</div>
+                  <h2>Quote</h2>
+                  <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+                </div>
+              </div>   
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInRight animate fadeRight">
+                  <h2>Title</h2>
+                  <div class="date">22 JUN 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInLeft animate fadeLeft">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">10 JULY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">30 JULY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>  
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                  <div class="date">5 AUG 2016</div>
+                  <h2>Quote</h2>
+                  <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+                </div>
+              </div>   
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">19 AUG 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>  
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                  <div class="date">1 SEP 2016</div>
+                  <h2>Title</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+          
+            </div>
+          </section>
+        </div>
+      </div>
+  
+      <!-- education model here -->
+      <div id="modalEdu" class="modal modal-fixed-footer" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b> Education&nbsp; </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+          <section class="timeline2">
+            <div class="container">
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft  animate fadeLeft">
+                  <h2>Title</h2>
+                  <div class="date">1 MAY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div> 
+          
+              <div class="timeline2-item">
+          
+                <div class="timeline2-img"></div>
+          
+                <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">25 MAY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                  <div class="date">3 JUN 2016</div>
+                  <h2>Quote</h2>
+                  <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+                </div>
+              </div>   
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInRight animate fadeRight">
+                  <h2>Title</h2>
+                  <div class="date">22 JUN 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInLeft animate fadeLeft">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">10 JULY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">30 JULY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>  
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                  <div class="date">5 AUG 2016</div>
+                  <h2>Quote</h2>
+                  <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+                </div>
+              </div>   
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">19 AUG 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>  
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                  <div class="date">1 SEP 2016</div>
+                  <h2>Title</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+          
+            </div>
+          </section>
+        </div>
+      </div>
+  
+  
+        <!-- modal for endorsements -->
+        <div id="modalEndorsAdd" class="modal modal-fixed-footer" style="border-radius: 12px;">
+          <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+            <div class="container p-0">
+              <div class="row">
+                <div class="col s2">
+                </div>
+                <div class="col s8">
+                  <h6 class="center-align text-ellipsis"><a href=""><b>Add an Endoresement </b></a> </h6>
+                </div>
+                <div class="col s2" style="padding-right: 0px; ">
+                  <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                        onmouseover="this.style.background ='#e91e63'" 
+                        onmouseout="this.style.background='transparent'" 
+                        style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                    <i class="material-icons">clear</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-content pb-6">
+            <div class="row p-0">
+              <div class="col s12">
+                <ul id="collection-custom" style="border: none; border-radius: 15px;" class="collection">
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style="padding-left: 80px; padding-top: 5px;" >
+                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 70px; height: 70px; padding: 1px; " alt="" class="circle z-depth-2" />
+                      <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                      <p class="medium-small text-ellipsis">2019/2/20 </p>
+                    </div>
+                    <article class="mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin:0px 10px 20px 10px; padding-left: 20px;">
+                    <div style="padding-left: 80px; padding-top: 5px;" >
+                      <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                      <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                      <p class="medium-small text-ellipsis">2019/2/20 </p>
+                    </div>
+                    <article class="mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style="padding-left: 80px; padding-top: 5px;" >
+                      <img src="{% static 'app-assets/images/avatar/avatar-6.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                      <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                      <p class="medium-small text-ellipsis">2019/2/20 </p>
+                    </div>
+                    <article class="mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style="padding-left: 80px; padding-top: 5px;" >
+                      <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" style="width: 70px; height: 70px; padding: 1px;  " alt="" class="circle z-depth-2" />
+                      <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                      <p class="medium-small text-ellipsis">2019/2/20 </p>
+                    </div>
+                    <article class="mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style="padding-left: 80px; padding-top: 5px;" >
+                      <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 70px; height: 70px; padding: 1px;  " alt="" class="circle z-depth-2" />
+                      <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                      <p class="medium-small text-ellipsis">2019/2/20 </p>
+                    </div>
+                    <article class="mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style="padding-left: 80px; padding-top: 5px;" >
+                      <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                      <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                      <p class="medium-small text-ellipsis">2019/2/20 </p>
+                    </div>
+                    <article class="mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style="padding-left: 80px; padding-top: 5px;" >
+                      <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                      <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                      <p class="medium-small text-ellipsis">2019/2/20 </p> 
+                    </div>
+                    <article class="mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style="padding-left: 80px; padding-top: 5px;" >
+                      <img src="{% static 'app-assets/images/avatar/avatar-9.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                      <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                      <p class="medium-small text-ellipsis">2019/2/20 </p>
+                    </div>
+                    <article class="mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style="padding-left: 80px; padding-top: 5px;" >
+                      <img src="{% static 'app-assets/images/avatar/avatar-13.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                      <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                      <p class="medium-small text-ellipsis">2019/2/20 </p>
+                    </div>
+                    <article class="mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style="padding-left: 80px; padding-top: 5px;" >
+                      <img src="{% static 'app-assets/images/avatar/avatar-10.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                      <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                      <p class="medium-small text-ellipsis">2019/2/20 </p>
+                    </div>
+                    <article class="mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style="padding-left: 80px; padding-top: 5px;" >
+                      <img src="{% static 'app-assets/images/avatar/avatar-11.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                      <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                      <p class="medium-small text-ellipsis">2019/2/20 </p>
+                    </div>
+                    <article class="mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style="padding-left: 80px; padding-top: 5px;" >
+                      <img src="{% static 'app-assets/images/avatar/avatar-12.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                      <p class="right"><label> <input type="checkbox" /><span></span></label> </p>
+                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;Dept&nbsp;Manager</p>
+                      <p class="medium-small text-ellipsis">2019/2/20 </p>
+                    </div>
+                    <article class="mt-2">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" style="z-index: 1;">
+            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">save</a>
+          </div>
+        </div>
+        <!-- endo of endorsement modal -->
+  
+         <!-- modal for Experiences -->
+         <div id="modalExpAdd" class="modal modal-fixed-footer" style="border-radius: 12px;">
+          <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+            <div class="container p-0">
+              <div class="row">
+                <div class="col s2">
+                </div>
+                <div class="col s8">
+                  <h6 class="center-align text-ellipsis"><a href=""><b>Add Experience </b></a> </h6>
+                </div>
+                <div class="col s2" style="padding-right: 0px; ">
+                  <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                        onmouseover="this.style.background ='#e91e63'" 
+                        onmouseout="this.style.background='transparent'" 
+                        style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                    <i class="material-icons">clear</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-content pb-6">
+            <div class="row p-0">
+              <div class="col s12">
+                <ul id="collection-custom" style="border: none; border-radius: 15px;" class="collection">
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style=" padding-top: 5px;" >
+                      <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                      <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                      <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                    </div>
+                    <article class="mt-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. 
+                    </article>  
+                    <div class="row">
+                      <div class="row">
+                        <div class="col s12">
+                          <ul class="collapsible collapsible-accordion mt-1">
+                            <li class="">
+                              <div class="collapsible-header centering grey lighten-3 pr-0" style="border-radius: 8px;">
+                                  See More
+                                <div class="col s1 pr-0"><i class="material-icons right pr-0">add</i></div>
+                              </div>
+                              <div class="collapsible-body " style="border-bottom: none;">
+                                <div class="container">
+                                  <div class="row pl-2">
+                                    <div class="col s12 m6">
+                                      <h6>Key Roles:</h6>
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                        <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                        <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                    </div>
+                                    <div class="col s12 m6">
+                                      <h6>Accomplishments</h6>
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                      <div class="container popup-gallery">
+                                        <div class="row user-projects pb-1 pt-5">
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                              <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                              <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                              <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </div>
+  
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                           
+                          
+                          </ul>
+                        </div>
+                      </div>
+                    </div>                                  
+                  </li>
+  
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style=" padding-top: 5px;" >
+                      <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                      <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                      <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                    </div>
+                    <article class="mt-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. 
+                    </article>  
+                    <div class="row">
+                      <div class="row">
+                        <div class="col s12">
+                          <ul class="collapsible collapsible-accordion mt-1">
+                            <li class="">
+                              <div class="collapsible-header centering grey lighten-3 pr-0" style="border-radius: 8px;">
+                                  See More
+                                <div class="col s1 pr-0"><i class="material-icons right pr-0">add</i></div>
+                              </div>
+                              <div class="collapsible-body " style="border-bottom: none;">
+                                <div class="container">
+                                  <div class="row pl-2">
+                                    <div class="col s12 m6">
+                                      <h6>Key Roles:</h6>
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                        <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                        <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                    </div>
+                                    <div class="col s12 m6">
+                                      <h6>Accomplishments</h6>
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                      <div class="container popup-gallery">
+                                        <div class="row user-projects pb-1 pt-5">
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                              <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                              <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                              <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </div>
+  
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                           
+                          
+                          </ul>
+                        </div>
+                      </div>
+                    </div>                                  
+                  </li>
+  
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style=" padding-top: 5px;" >
+                      <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                      <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                      <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                    </div>
+                    <article class="mt-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. 
+                    </article>  
+                    <div class="row">
+                      <div class="row">
+                        <div class="col s12">
+                          <ul class="collapsible collapsible-accordion mt-1">
+                            <li class="">
+                              <div class="collapsible-header centering grey lighten-3 pr-0" style="border-radius: 8px;">
+                                  See More
+                                <div class="col s1 pr-0"><i class="material-icons right pr-0">add</i></div>
+                              </div>
+                              <div class="collapsible-body " style="border-bottom: none;">
+                                <div class="container">
+                                  <div class="row pl-2">
+                                    <div class="col s12 m6">
+                                      <h6>Key Roles:</h6>
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                        <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                        <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                    </div>
+                                    <div class="col s12 m6">
+                                      <h6>Accomplishments</h6>
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                      <div class="container popup-gallery">
+                                        <div class="row user-projects pb-1 pt-5">
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                              <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                              <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                              <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </div>
+  
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                           
+                          
+                          </ul>
+                        </div>
+                      </div>
+                    </div>                                  
+                  </li>
+                  
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style=" padding-top: 5px;" >
+                      <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                      <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                      <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                    </div>
+                    <article class="mt-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. 
+                    </article>  
+                    <div class="row">
+                      <div class="row">
+                        <div class="col s12">
+                          <ul class="collapsible collapsible-accordion mt-1">
+                            <li class="">
+                              <div class="collapsible-header centering grey lighten-3 pr-0" style="border-radius: 8px;">
+                                  See More
+                                <div class="col s1 pr-0"><i class="material-icons right pr-0">add</i></div>
+                              </div>
+                              <div class="collapsible-body " style="border-bottom: none;">
+                                <div class="container">
+                                  <div class="row pl-2">
+                                    <div class="col s12 m6">
+                                      <h6>Key Roles:</h6>
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                        <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                        <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                    </div>
+                                    <div class="col s12 m6">
+                                      <h6>Accomplishments</h6>
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                      <div class="container popup-gallery">
+                                        <div class="row user-projects pb-1 pt-5">
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                              <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                              <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                              <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </div>
+  
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                           
+                          
+                          </ul>
+                        </div>
+                      </div>
+                    </div>                                  
+                  </li>
+  
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style=" padding-top: 5px;" >
+                      <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                      <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                      <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                    </div>
+                    <article class="mt-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. 
+                    </article>  
+                    <div class="row">
+                      <div class="row">
+                        <div class="col s12">
+                          <ul class="collapsible collapsible-accordion mt-1">
+                            <li class="">
+                              <div class="collapsible-header centering grey lighten-3 pr-0" style="border-radius: 8px;">
+                                  See More
+                                <div class="col s1 pr-0"><i class="material-icons right pr-0">add</i></div>
+                              </div>
+                              <div class="collapsible-body " style="border-bottom: none;">
+                                <div class="container">
+                                  <div class="row pl-2">
+                                    <div class="col s12 m6">
+                                      <h6>Key Roles:</h6>
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                        <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                        <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                    </div>
+                                    <div class="col s12 m6">
+                                      <h6>Accomplishments</h6>
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                      <div class="container popup-gallery">
+                                        <div class="row user-projects pb-1 pt-5">
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                              <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                              <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                              <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </div>
+  
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                           
+                          
+                          </ul>
+                        </div>
+                      </div>
+                    </div>                                  
+                  </li>
+  
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style=" padding-top: 5px;" >
+                      <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                      <p class="font-weight-600 text-ellipsis">Data&nbsp;Analytic</p>
+                      <p class="medium-small text-ellipsis">subsonic&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.subsonic.ae</a></p>
+                      <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                    </div>
+                    <article class="mt-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. 
+                    </article>  
+                    <div class="row">
+                      <div class="row">
+                        <div class="col s12">
+                          <ul class="collapsible collapsible-accordion mt-1">
+                            <li class="">
+                              <div class="collapsible-header centering grey lighten-3 pr-0" style="border-radius: 8px;">
+                                  See More
+                                <div class="col s1 pr-0"><i class="material-icons right pr-0">add</i></div>
+                              </div>
+                              <div class="collapsible-body " style="border-bottom: none;">
+                                <div class="container">
+                                  <div class="row pl-2">
+                                    <div class="col s12 m6">
+                                      <h6>Key Roles:</h6>
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">Use the present tense.</li>
+                                        <li style="list-style-type: disc!important;">Start sentences with verbs.</li>
+                                        <li style="list-style-type: disc!important;">Use complete sentences.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                    </div>
+                                    <div class="col s12 m6">
+                                      <h6>Accomplishments</h6>
+                                      <ul >
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job. this is for testing.</li>
+                                        <li style="list-style-type: disc!important;">Use gender-neutral language.</li>
+                                        <li style="list-style-type: disc!important;">List them in order of importance.</li>
+                                        <li style="list-style-type: disc!important;">List the essential duties required to carry out this job.</li>
+                                      </ul>
+                                      <div class="container popup-gallery">
+                                        <div class="row user-projects pb-1 pt-5">
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The first one" >
+                                              <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The second">
+                                              <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                            <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The third">
+                                              <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-8 photo-border" alt="">
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </div>
+  
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                           
+                          
+                          </ul>
+                        </div>
+                      </div>
+                    </div>                                  
+                  </li>
+                 
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" style="z-index: 1;">
+            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">save</a>
+          </div>
+        </div>
+        <!-- endo of experience modal -->
+  
+        <!-- modal for education -->
+        <div id="modalEduAdd" class="modal modal-fixed-footer" style="border-radius: 12px;">
+          <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+            <div class="container p-0">
+              <div class="row">
+                <div class="col s2">
+                </div>
+                <div class="col s8">
+                  <h6 class="center-align text-ellipsis"><a href=""><b>Add Education </b></a> </h6>
+                </div>
+                <div class="col s2" style="padding-right: 0px; ">
+                  <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                        onmouseover="this.style.background ='#e91e63'" 
+                        onmouseout="this.style.background='transparent'" 
+                        style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                    <i class="material-icons">clear</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-content pb-6">
+            <div class="row p-0">
+              <div class="col s12">
+                <ul id="collection-custom" style="border: none; border-radius: 15px;" class="collection">
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style=" padding-top: 5px;" >
+                      <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                      <p class="font-weight-600 text-ellipsis">Master&nbsp;of&nbsp;Art</p>
+                      <p class="medium-small text-ellipsis">MIT&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.mit.com</a></p>
+                      <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                    </div>
+                    <article class="mt-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style=" padding-top: 5px;" >
+                      <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                      <p class="font-weight-600 text-ellipsis">bachelor&nbsp;of&nbsp;Music</p>
+                      <p class="medium-small text-ellipsis">Penn&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.penn.com</a></p>
+                      <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                    </div>
+                    <article class="mt-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                  <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                    <div style=" padding-top: 5px;" >
+                      <h6 class="right"><label> <input type="checkbox" /><span></span></label> </h6>
+                      <p class="font-weight-600 text-ellipsis">Diploma&nbsp;in&nbsp;English</p>
+                      <p class="medium-small text-ellipsis">AVB&nbsp;|&nbsp;<a href="https://www.subsonic.ae" target="_blank"> www.avb.com</a></p>
+                      <p class="medium-small text-ellipsis">2019/2/20&nbsp;&nbsp;<b class="pink-text ">TO</b>&nbsp;&nbsp;2020/10/10</p>
+                    </div>
+                    <article class="mt-1">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                      proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </article>                                          
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" style="z-index: 1;">
+            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">save</a>
+          </div>
+        </div>
+        <!-- endo of education modal -->
+  
+        <!-- modal for showcase -->
+        <div id="modalShowcaseAdd" class="modal modal-fixed-footer" style="border-radius: 12px;">
+          <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+            <div class="container p-0">
+              <div class="row">
+                <div class="col s2">
+                </div>
+                <div class="col s8">
+                  <h6 class="center-align text-ellipsis"><a href=""><b>Select Showcase </b></a> </h6>
+                </div>
+                <div class="col s2" style="padding-right: 0px; ">
+                  <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                        onmouseover="this.style.background ='#e91e63'" 
+                        onmouseout="this.style.background='transparent'" 
+                        style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                    <i class="material-icons">clear</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-content pb-6">
+            <div class="row user-projects pb-1 pt-5">
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/6.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/7.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/8.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/9.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/10.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/11.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/12.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/13.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/14.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/15.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+            
+            </div>
+          </div>
+          <div class="modal-footer" style="z-index: 1;">
+            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">save</a>
+          </div>
+        </div>
+        <!-- endo of showcase modal -->
+  
+        <!-- modal for showcase delete -->
+        <div id="modalShowcaseDelete" class="modal modal-fixed-footer" style="border-radius: 12px;">
+          <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+            <div class="container p-0">
+              <div class="row">
+                <div class="col s2">
+                </div>
+                <div class="col s8">
+                  <h6 class="center-align text-ellipsis"><a href=""><b>Select to Delete </b></a> </h6>
+                </div>
+                <div class="col s2" style="padding-right: 0px; ">
+                  <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                        onmouseover="this.style.background ='#e91e63'" 
+                        onmouseout="this.style.background='transparent'" 
+                        style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                    <i class="material-icons">clear</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-content pb-6">
+            <div class="row user-projects pb-1 pt-5">
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/6.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/7.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/8.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/9.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/10.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/11.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/12.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/13.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/14.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                <div class="overlai">
+                  <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/15.png' %}" />
+                  <div class="overlay1">
+                    <div class="">
+                      <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" style="z-index: 1;">
+            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Delete</a>
+          </div>
+        </div>
+        <!-- endo of showcase delete modal -->
+  
+        <!-- modal for skills -->
+        <div id="modalSkillAdd" class="modal modal-fixed-footer" style="border-radius: 12px;">
+          <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+            <div class="container p-0">
+              <div class="row">
+                <div class="col s2">
+                </div>
+                <div class="col s8">
+                  <h6 class="center-align text-ellipsis"><a href=""><b>Add Skills </b></a> </h6>
+                </div>
+                <div class="col s2" style="padding-right: 0px; ">
+                  <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                        onmouseover="this.style.background ='#e91e63'" 
+                        onmouseout="this.style.background='transparent'" 
+                        style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                    <i class="material-icons">clear</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-content pb-6">
+            <div class="row">
+              <div class="col s12 m6">
+                <ul id="collection-custom" class="collection mb-0" style="border: none;" >
+                  <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                    <div class="col s11 ">
+                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                      <p class="font-weight-600"> Digital Marketing</p>
+                      <div class="prograss">
+                        <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                      </div>
+                    </div>
+                    <div class="col s1 pt-1">
+                      <p><label> <input type="checkbox" /> <span></span> </label></p>
+                    </div>
+                  </li>
+                  <li class="collection-item avatar mt-3 pt-5" style="border-radius: 8px;">
+                    <div class="col s11 ">
+                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                      <p class="font-weight-600"> Digital Marketing</p>
+                      <div class="prograss">
+                        <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                      </div>
+                    </div>
+                    <div class="col s1 pt-1">
+                      <p> <label> <input type="checkbox" /> <span></span> </label> </p>
+                    </div>
+                  </li>
+                  <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                    <div class="col s11 ">
+                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                      <p class="font-weight-600"> Digital Marketing</p>
+                      <div class="prograss">
+                        <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                      </div>
+                    </div>
+                    <div class="col s1 pt-1">
+                      <p>
+                        <label> <input type="checkbox" /> <span></span> </label> </p>
+                    </div>
+                  </li>
+                  <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                    <div class="col s11 ">
+                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                      <p class="font-weight-600"> Digital Marketing</p>
+                      <div class="prograss">
+                        <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                      </div>
+                    </div>
+                    <div class="col s1 pt-1">
+                      <p> <label> <input type="checkbox" /> <span></span> </label> </p>
+                    </div>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div class="col s12 m6">
+                <ul id="collection-custom" class="collection mb-0" style="border: none;" >
+                  <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                    <div class="col s11 ">
+                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                      <p class="font-weight-600"> Digital Marketing</p>
+                      <div class="prograss">
+                        <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                      </div>
+                    </div>
+                    <div class="col s1 pt-1">
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span></span>
+                        </label>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                    <div class="col s11 ">
+                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                      <p class="font-weight-600"> Digital Marketing</p>
+                      <div class="prograss">
+                        <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                      </div>
+                    </div>
+                    <div class="col s1 pt-1">
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span></span>
+                        </label>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                    <div class="col s11 ">
+                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                      <p class="font-weight-600"> Digital Marketing</p>
+                      <div class="prograss">
+                        <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                      </div>
+                    </div>
+                    <div class="col s1 pt-1">
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span></span>
+                        </label>
+                      </p>
+                    </div>
+                  </li>
+                  <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                    <div class="col s11 ">
+                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                      <p class="font-weight-600"> Digital Marketing</p>
+                      <div class="prograss">
+                        <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                      </div>
+                    </div>
+                    <div class="col s1 pt-1">
+                      <p>
+                        <label>
+                          <input type="checkbox" />
+                          <span></span>
+                        </label>
+                      </p>
+                    </div>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" style="z-index: 1;">
+            <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">save</a>
+          </div>
+        </div>
+        <!-- endo of skills modal -->
+  
+         <!-- modal for endorsements -->
+         <div id="modalEndorsView" class="modal" style="border-radius: 12px;">
+          <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+            <div class="container p-0">
+              <div class="row">
+                <div class="col s2">
+                </div>
+                <div class="col s8">
+                  <h6 class="center-align text-ellipsis"><a href=""><b>Endoresement </b></a> </h6>
+                </div>
+                <div class="col s2" style="padding-right: 0px; ">
+                  <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                        onmouseover="this.style.background ='#e91e63'" 
+                        onmouseout="this.style.background='transparent'" 
+                        style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                    <i class="material-icons">clear</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-content">
+              <div class="row p-0">
+                  <div class="col s12">
+                    <ul id="collection-custom" style="border: none; border-radius: 15px;" class="collection">
+                      <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                        <div style="padding-left: 80px; padding-top: 5px;" >
+                          <img src="{% static 'app-assets/images/avatar/avatar-12.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                          <p class="right">12/10/ 2018</p>
+                          <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                          <p class="medium-small text-ellipsis">subsonic</p>
+                          <p class="medium-small text-ellipsis">Dept Manager </p> 
+                        </div>
+                        <article class="mt-2">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        </article>                                          
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- endo of endorsement modal -->
+{% endblock content %}

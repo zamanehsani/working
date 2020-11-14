@@ -99,6 +99,10 @@
                             <a class="scroll-item nav-link" data-scroll-nav="4" href="#team">Team</a>
                             <a class="scroll-item nav-link" data-scroll-nav="5" href="#blog">Blog</a>
                             <a class="scroll-item nav-link" data-scroll-nav="6" href="#contact-us">Contact</a>
+                            <a href="{% url 'user:user_login' %}" style="margin-top: 0px!important; padding: 0.3rem 0.5rem!important; border-radius: 10px;" 
+                               class="btn corner-round btn-white mr-2"  data-target="#getstarted"> Login</a>
+                            <a href="{% url 'user:user_join' %}" style="margin-top: 0px!important; padding: 0.3rem 0.5rem!important; border-radius: 10px;" 
+                               class="btn corner-round btn-white mr-2"  data-target="#getstarted"> Join</a>
                             <span class="menu-arrow"></span>
                         </div>
                     </div>
@@ -128,11 +132,11 @@
                                         id="typewriter"></span>
                                 </h1>
                                 <div class="clearfix mt-30">
-                                    <a href="{% url 'dashboard:login' %}" class="btn corner-round btn-outline-white mr-2" 
+                                    <a href="{% url 'user:user_login' %}" class="btn corner-round btn-outline-white mr-2" 
                                         data-target="#getstarted">
                                         Login
                                     </a>
-                                    <a href="{% url 'dashboard:join' %}" class="corner-round btn btn-white">
+                                    <a href="{% url 'user:user_join' %}" class="corner-round btn btn-white">
                                         Join Now
                                     </a>
                                 </div>

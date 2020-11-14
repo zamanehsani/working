@@ -77,3 +77,6 @@ def job_post_editor(request):
 
 def create_card(request):
     return render(request, 'create_card.html')
+
+def create_job(request):
+    return render(request, 'create_job.html')

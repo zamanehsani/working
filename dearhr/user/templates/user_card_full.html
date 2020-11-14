@@ -1,0 +1,1151 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ 
+    <!-- BEGIN: Page Main-->
+    <div class="container " >
+
+        <div class="row mt-1">
+          <div class="col s12 m8 push-m2 card-rec">
+            <div class="card animate fadeUp " style="border-radius: 15px;">
+              <div class="card-content" style="padding: 0px 10px; border-radius: 15px; border-radius: 15px;">
+                <div class="row" style=" border-radius: 15px;">
+                  <!-- video part -->
+                  <div class="col s12 m5 pl-0 pr-0 pb-0" style=" border-radius: 15px;">
+                    <div class="video-container animate fadeLeft" style="border-radius: 15px 0 15px 0; min-height: 240px;">
+                      <iframe src="https://www.youtube.com/embed/kFjxIgIgW80" frameborder="0" allow=" clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="row" >
+                      <div class="col s12 p-3 pr-0 pl-4 animate fadeLeft">
+                        <h6 class="pl-2 pt-1 pb-1 ml-2 mr-3 mt-3 mb-1" style="background: #e1e4e9; border-radius: 5px;"> <b>Bio </b> </h6>
+                        <div class="container" style="height: 108px; overflow: hidden;">
+                          <article  class="pt-2">This is the short bio. at this place you can write short bio of your self. 
+                            In this section add what ever you want to show case your profile. Show off youself.
+                            In this section add what ever you want to show case your profile. Here is limited to character.
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 pr-0 animate fadeLeft">
+                      <!-- salary and location and experience -->
+                      <h6 class="pl-2 pt-1 pb-1 ml-1 mr-1" style="background: #e1e4e9; border-radius: 5px;"> <b>General Information</b> </h6>
+                      <div class="coantainer ml-1 mt-2">
+                        <div class="row">
+                          <div class="col s12 l6">
+                            <h6 class="text-ellipsis">Experiences: <a href="#modalExp" class="modal-trigger">1&nbsp;years</a></h6>
+                            <h6 class="text-ellipsis">Education: <a href="#modalEdu" class="modal-trigger">Master</a></h6>
+                          </div>
+                          <div class="col s12 l6">
+                              <h6 class="mt-3 text-ellipsis">Targeted&nbsp;location: <a class="modal-trigger" href="#modallocation">Dubai,&nbsp;UAE</a> </h6>
+                              <h6 class="mt-3 text-ellipsis">Languages: <a href="#modallanguage" class="modal-trigger"> EN,&nbsp;PR,&nbsp;ARB</a></h6>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- endoresement -->
+                        <div class="container ml-1">
+                          <div class="row p-0">
+                            <h6 class="pl-2 pt-1 pb-1 ml-1 mr-3" style="background: #e1e4e9; border-radius: 5px;margin-left: 5px;"> <b>Endoresement: <a class="modal-trigger" href="#modalEndors">6</a></b> </h6>
+                            <div class="col s12 l6 pt-2 modal-trigger" data-target="modalEndors">
+                              <ul id="collection-custom" class="collection mb-0" style="border: none;">
+                                <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
+                                  <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle" />
+                                  <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                                  <p class="medium-small text-ellipsis">subsonic</p>
+                                  <p class="medium-small text-ellipsis">Dept Manager </p>                                         
+                                </li>
+                                <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px;margin-bottom: 20px;">
+                                  <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle" />
+                                  <p class="font-weight-600 text-ellipsis">Adam&nbsp;Garza</p>
+                                  <p class="medium-small text-ellipsis">subsonic</p>
+                                  <p class="medium-small text-ellipsis">Dept Manager </p>                                       
+                                </li>
+                                <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px;margin-bottom: 20px;">
+                                  <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle" />
+                                  <p class="font-weight-600 text-ellipsis">Jennifer&nbsp;Rice</p>
+                                  <p class="medium-small text-ellipsis">subsonic</p>
+                                  <p class="medium-small text-ellipsis">Dept Manager </p>                                        
+                                </li>
+                              </ul>
+                            </div> 
+                            <div class="col s12 l6 pt-2 modal-trigger" data-target="modalEndors">
+                              <ul id="collection-custom" class="collection mb-0" style="border: none;">
+                                <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
+                                  <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle" />
+                                  <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                                  <p class="medium-small text-ellipsis">subsonic</p>
+                                  <p class="medium-small text-ellipsis">Dept Manager </p>                                         
+                                </li>
+                                <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px;margin-bottom: 20px;">
+                                  <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle" />
+                                  <p class="font-weight-600 text-ellipsis">Adam&nbsp;Garza</p>
+                                  <p class="medium-small text-ellipsis">subsonic</p>
+                                  <p class="medium-small text-ellipsis">Dept Manager </p>                                       
+                                </li>
+                                <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px;margin-bottom: 20px;">
+                                  <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle" />
+                                  <p class="font-weight-600 text-ellipsis">Jennifer&nbsp;Rice</p>
+                                  <p class="medium-small text-ellipsis">subsonic</p>
+                                  <p class="medium-small text-ellipsis">Dept Manager </p>                                        
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- another parts -->
+                  <div class="col s12 m7 pl-0 pt-1 animate fadeRight" style="height: 240px; overflow: hidden; overflow: visible; ">
+                    <div class="row mr-2">
+                      <div class="col s6">
+                        <div class="col s5">
+                        <div class="container">
+                          <img  src="{% static 'app-assets/images/avatar/avatar-4.png' %}" class=" materialboxed responsive-img circle padding-2 z-depth-2"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col s6 pull-s4">
+                        <div>
+                          <h6 style="font-weight: bolder;">Peter Same North</h6>
+                          <p>Event Project Manager</p>
+                          <p>GreenVilia, Illinois, USA</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- skills row -->
+                    <div class="col s12 pl-3 pb-2" >
+                      <div class="row transparent">
+  
+                        <!-- first column of skills -->
+                        <div class="col s12 m6 l6" >
+                          <p class="font-weight-600 mt-3"> Event Management</p>
+                          <div class="prograss">
+                            <div class="w3-green prograss_bar" style="width:82%; box-shadow: 0 0 0 1px #6ca86e ;"><span style="padding:1px 90%">82%</span></div>
+                          </div>
+                        
+                          <p class="font-weight-600 mt-3"> Show Caller </p>
+                          <div class="prograss">
+                            <div class="w3-yellow-green prograss_bar" style="width:70%; box-shadow: 0 0 0 1px #A3C14F ;"> <span style="padding:1px 90%">70%</span></div>
+                          </div>
+                          <p class="font-weight-600 mt-3"> Show Caller </p>
+                          <div class="prograss">
+                            <div class="w3-yellow-green prograss_bar" style="width:70%; box-shadow: 0 0 0 1px #A3C14F ;"> <span style="padding:1px 90%">70%</span></div>
+                          </div>
+                          
+                          <p class="font-weight-600 mt-3"> Digital Marketing</p>
+                            <div class="prograss">
+                              <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;"> <span style="padding:1px 90%">60%</span></div>
+                            </div>
+  
+                            <p class="font-weight-600 mt-3"> AutoDisk  </p>
+                          <div class="prograss">
+                            <div class="w3-yellow prograss_bar" style="width:50%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span style="padding:1px 90%">50%</span></div>
+                          </div>
+  
+                          <p class="font-weight-600 mt-3"> AutoCAD </p>
+                          <div class="prograss">
+                            <div class="w3-orange prograss_bar" style="width:45%; box-shadow: 0 0 0 1px #ff9800 ;">  <span style="padding:1px 90%">45%</span></div>
+                          </div>
+  
+                          <p class="font-weight-600 mt-3"> SketchUp </p>
+                          <div class="prograss">
+                            <div class="w3-red prograss_bar" style="width:40%; box-shadow: 0 0 0 1px #f44336 ;">  <span style="padding:1px 90%">40%</span></div>
+                          </div>
+                          <p class="font-weight-600 mt-3"> Photoshop </p>
+                          <div class="prograss">
+                            <div class="w3-red prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #f44336 ;">  <span style="padding:1px 90%">35%</span></div>
+                          </div>
+                        </div>
+                        
+                        <!-- second column of skills -->
+                        <div class="col s12 m6 l6 " >
+                          <p class="font-weight-600 mt-3"> Stage Manager </p>
+                          <div class="prograss">
+                            <div class="w3-green prograss_bar" style="width:80%; box-shadow: 0 0 0 1px #6ca86e ;">  <span style="padding:1px 90%">80%</span></div>
+                          </div>
+  
+                          <p class="font-weight-600 mt-3"> Show Caller </p>
+                          <div class="prograss">
+                            <div class="w3-yellow-green prograss_bar" style="width:70%; box-shadow: 0 0 0 1px #A3C14F ;"> <span style="padding:1px 90%">70%</span></div>
+                          </div>
+                          <p class="font-weight-600 mt-3"> AutoCAD </p>
+                          <div class="prograss">
+                            <div class="w3-yellow-green prograss_bar" style="width:70%; box-shadow: 0 0 0 1px #A3C14F ;">  <span style="padding:1px 90%">70%</span></div>
+                          </div>
+  
+                          <p class="font-weight-600 mt-3"> Photoshop Editing </p>
+                          <div class="prograss">
+                            <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span style="padding:1px 90%">60%</span></div>
+                          </div>
+  
+                          <p class="font-weight-600 mt-3"> AutoDisk  </p>
+                          <div class="prograss">
+                            <div class="w3-yellow prograss_bar" style="width:50%; box-shadow: 0 0 0 1px #ffeb3b ;">  <span style="padding:1px 90%">50%</span></div>
+                          </div>
+  
+                          <p class="font-weight-600 mt-3"> AutoCAD </p>
+                          <div class="prograss">
+                            <div class="w3-orange prograss_bar" style="width:45%; box-shadow: 0 0 0 1px #ff9800 ;">  <span style="padding:1px 90%">45%</span></div>
+                          </div>
+  
+                          <p class="font-weight-600 mt-3"> SketchUp </p>
+                          <div class="prograss">
+                            <div class="w3-red prograss_bar" style="width:40%; box-shadow: 0 0 0 1px #f44336 ;">  <span style="padding:1px 90%">40%</span></div>
+                          </div>
+                          <p class="font-weight-600 mt-3"> Illustrator </p>
+                          <div class="prograss">
+                            <div class="w3-red prograss_bar" style="width:35%; box-shadow: 0 0 0 1px #f44336 ;">  <span style="padding:1px 90%">35%</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 pl-3" >
+                      <div class="container modal-trigger animate fadeRight" data-target="modalgallery">
+                        <div class="row ">
+                          <h6 class="pl-1 pt-1 pb-1 mb-3 ml-1 mr-1" style="background: #e1e4e9; border-radius: 5px;"> <b>Showcase: <a href="#">6</a></b> </h6>
+                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;" >
+                            <div class="grid">
+                              <figure class="effect-sadie photo-border" style="border-radius: 6px;">
+                                <img  src="{% static 'app-assets/images/gallery/9.png' %}" alt="lionsgate logo" />
+                                <figcaption >
+                                  <p> Lorem Ipsum is simply dummy text of the printing </p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                          </div>
+                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                            <div class=" grid">
+                              <figure class="effect-sadie photo-border" style="border-radius: 6px;">
+                                <img  src="{% static 'app-assets/images/gallery/10.png' %}" alt="shopify LOGO" />
+                                <figcaption >
+                                  <p> Lorem Ipsum is simply dummy text of the printing </p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                          </div>
+                          <div class="col s4"  style="padding-left: 0.5em; padding-right: 0.5em;">
+                            <div class="grid">
+                              <figure class="effect-sadie photo-border " style="border-radius: 6px;">
+                                <img  src="{% static 'app-assets/images/gallery/11.png' %}" alt="subsonic Logo" />
+                                <figcaption >
+                                  <p> Lorem Ipsum is simply dummy text of the printing </p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                          </div>
+                          <div class="col s4"  style="padding-left: 0.5em; padding-right: 0.5em;">
+                            <div class=" grid">
+                              <figure class="effect-sadie photo-border " style="border-radius: 6px;">
+                                <img  src="{% static 'app-assets/images/gallery/12.png' %}" alt="subway logo" />
+                                <figcaption >
+                                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                          </div>
+                          <div class="col s4"  style="padding-left: 0.5em; padding-right: 0.5em;">
+                            <div class=" grid">
+                              <figure class="effect-sadie photo-border " style="border-radius: 6px;">
+                                <img  src="{% static 'app-assets/images/gallery/13.png' %}" alt="bloomberg logo" />
+                                <figcaption >
+                                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                          </div>
+                          <div class="col s4"  style="padding-left: 0.5em; padding-right: 0.5em;">
+                            <div class=" grid">
+                              <figure class="effect-sadie photo-border " style="border-radius: 6px;">
+                                <img  src="{% static 'app-assets/images/gallery/14.png' %}" alt="wordpress logo" />
+                                <figcaption >
+                                  <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- small card for small screen -->
+          <div class="col s12 m8 push-m2 card-sq" style="display: none;">
+            <div class="card animate fadeRight" >
+              <div class="card-content p-0">
+                <div class="video-container" sty>
+                  <iframe style="border-radius: 15px 15px 0px 0px;" width="1280" height="720" src="https://www.youtube.com/embed/OZzEBa9cHN0" frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" ></iframe>                        
+                </div>
+                
+                <div class="container">
+                  <div class="row">
+                    <div class="col s6 " >
+                      <div class="row pt-2">
+                        <div class="col s6 " >
+                          <div class="progress-container p-0 mt-3" style=" min-height: 70px; min-width: 70px;">
+                            <svg  class="progressbar" viewBox="0 0 68 64">
+                              <defs>
+                                <linearGradient id="linear1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                  <stop offset="0%"   stop-color="#388e3c"/>
+                                    <stop offset="100%" stop-color="#6ca86e"/>
+                                </linearGradient>
+                              </defs>
+                                <circle class="progressbar__track"  stroke="url(#linear)" cx="50%" cy="50%" r="30px"></circle>
+                                <circle class=" " stroke="white" stroke-width="3" fill="url(#img)"  cx="50%" cy="50%" r="26px"></circle>
+                                <circle class="progressbar__thumb progressbar__thumb--track-3"  stroke="url(#linear1)" cx="50%" cy="50%" r="30px"></circle>
+                            </svg>
+                            <div class="padding-10">
+                              <img  src="{% static 'app-assets/images/avatar/avatar-6.png' %}"
+                              style=" position: relative; top: 4px; left: -1px; z-index: -1; " alt="" 
+                              class="responsive-img circle padding-2"/>
+                            </div>
+                          </div>
+  
+                        </div>
+                        <div class="col s6 pt-7">
+                          <b class="centering"> <a href="" style="font-weight: bolder;"> MATCH </a></b>
+                          <b class="centering"> <a href="" style="font-size: 40px; font-weight: bolder;"><span class="count"> 90</span></a> <a href="">%</a></b>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s6 ">
+                        <h6 class="text-ellipsis" style="font-weight: bolder;">Lucia&nbsp;Jones&nbsp;Smith</h6>
+                        <p class="text-ellipsis">Event&nbsp;Project&nbsp;Manager</p>
+                        <p class="text-ellipsis">GreenVilia,&nbsp;Illinois,&nbsp;USA</p>
+                    </div>
+                  </div>
+  
+                </div>
+                <!-- skills -->
+                <div class="container" >
+                  <h6 class="pl-2 pt-1 pb-1 text-ellipsis" style="background: #e1e4e9; border-radius: 5px;"> <b>Skill Sets</b> </h6>
+                  <div class="row ">
+                    <div class="col s12 mb-2" >
+                      <p class="font-weight-600 mt-2 text-ellipsis"> Event&nbsp;Management</p>
+                      <div class="prograss">
+                        <div class="w3-green prograss_bar" style="width:85%; box-shadow: 0 0 0 1px #6ca86e ;"><span style="padding:1px 90%">85%</span></div>
+                      </div>
+                      <p class="font-weight-600 mt-3 text-ellipsis"> Show&nbsp;Caller </p>
+                      <div class="prograss">
+                        <div class="w3-yellow-green prograss_bar" style="width:70%; box-shadow: 0 0 0 1px #A3C14F ;"> <span style="padding:1px 90%">70%</span></div>
+                      </div>
+                      <p class="font-weight-600 mt-3 text-ellipsis"> Digital&nbsp;Marketing</p>
+                        <div class="prograss">
+                          <div class="w3-yellow prograss_bar" style="width:60%; box-shadow: 0 0 0 1px #ffeb3b ;"> <span style="padding:1px 90%">60%</span></div>
+                        </div>
+                        <p class="font-weight-600 mt-3 text-ellipsis"> Event&nbsp;Management</p>
+                      <div class="prograss">
+                        <div class="w3-yellow prograss_bar" style="width:55%; box-shadow: 0 0 0 1px #ffeb3b ;"><span style="padding:1px 90%">55%</span></div>
+                      </div>
+                      <p class="font-weight-600 mt-3 text-ellipsis"> Show&nbsp;Caller </p>
+                      <div class="prograss">
+                        <div class="w3-orange prograss_bar" style="width:40%; box-shadow: 0 0 0 1px #ff9800 ;"> <span style="padding:1px 90%">40%</span></div>
+                      </div>
+                      <p class="font-weight-600 mt-3 text-ellipsis"> Digital&nbsp;Marketing</p>
+                        <div class="prograss">
+                          <div class="w3-red prograss_bar" style="width:30%; box-shadow: 0 0 0 1px #f44336 ;"> <span style="padding:1px 90%;">30%</span></div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section collapsible2" style="overflow: hidden; height: auto; transition: height 0.5s ease-out; padding: 0px;" >
+                   <!-- bio -->
+                   <div class="container">
+                    <h6 class="pl-2 pt-1 pb-1 text-ellipsis" style="background: #e1e4e9; border-radius: 5px;"> <b>Bio </b> </h6>
+                    <div class="row">
+                      <div class="col s12 mt-1">
+                        <article  class="">This is the short bio. at this place you can write short bio of your self. 
+                          In this section add what ever you want to show case your profile. Show off youself.
+                          at this place you can write short bio of your self. 
+                          In this section add what ever you want to show case your profile. Show off youself.
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- experience ... -->
+                  <div class="container">
+                    <h6 class="pl-2 pt-1 pb-1 text-ellipsis" style="background: #e1e4e9; border-radius: 5px;"> <b>General Information </b> </h6>
+                    <div class="row">
+                      <div class="col s12">
+                        <div>
+                          <h6>Experience: <a href="#modalExp" class="modal-trigger" >1&nbsp;years</a></h6>
+                        </div>
+                        <div>
+                          <h6 class="mt-3">Education:&nbsp;<a class="modal-trigger" href="#modalEdu">Master</a></h6>
+                        </div> 
+                        <div>
+                          <h6 class="mt-3 mb-3">Targeted&nbsp;location: <a class="modal-trigger" href="#modallocation">Dubai,&nbsp;UAE</a> </h6>
+                        </div>
+                        <div>
+                          <h6 class="mt-3">Languages: <a class="modal-trigger" href="#modallanguage"> EN&nbsp;PR&nbsp;ARB</a></h6>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                  <!-- endoresments -->
+                  <div class="conatainer">
+                    <h6 class="pl-2 pt-1 pb-1 ml-1 mr-1 text-ellipsis" style="background: #e1e4e9; border-radius: 5px;"> <b>Endoresements </b> </h6>
+                    <div class="row">
+                        <div class="col s11 ml-2 pt-1 modal-trigger" data-target="modalEndors">
+                          <ul id="collection-custom" class="collection mb-0" style="border: none;">
+                            <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px; margin-bottom: 20px;">
+                              <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle" />
+                              <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                              <p class="medium-small text-ellipsis">subsonic</p>
+                              <p class="medium-small text-ellipsis">Dept Manager </p>                                         
+                            </li>
+                            <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px;margin-bottom: 20px;">
+                              <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle" />
+                              <p class="font-weight-600 text-ellipsis">Adam&nbsp;Garza</p>
+                              <p class="medium-small text-ellipsis">subsonic</p>
+                              <p class="medium-small text-ellipsis">Dept Manager </p>                                       
+                            </li>
+                            <li class="collection-item avatar" style="border-bottom: none; min-height: 60px; padding: 0px; padding-left: 80px;margin-bottom: 20px;">
+                              <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 70px; height: 70px; left: 0px;" alt="" class="circle" />
+                              <p class="font-weight-600 text-ellipsis">Jennifer&nbsp;Rice</p>
+                              <p class="medium-small text-ellipsis">subsonic</p>
+                              <p class="medium-small text-ellipsis">Dept Manager </p>                                        
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
+                  </div>
+  
+                  <!-- showcases -->
+                  <div class="container">
+                    <div class="row">
+                      <div class="col s12 modal-trigger" data-target="modalgallery" > 
+                          <h6 class="pl-1 pt-1 pb-1 mb-4 ml-1 mr-1" style="background: #e1e4e9; border-radius: 5px;"> <b>Showcases</b> </h6>
+                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;" >
+                            <div class="grid">
+                              <figure class="effect-sadie photo-border" style="border-radius: 6px;">
+                                <img  src="{% static 'app-assets/images/gallery/9.png' %}" alt="lionsgate logo" />
+                                <figcaption >
+                                  <p> Lorem Ipsum is simply dummy text </p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                          </div>
+                          <div class="col s4" style="padding-left: 0.5em; padding-right: 0.5em;">
+                            <div class=" grid">
+                              <figure class="effect-sadie photo-border" style="border-radius: 6px;">
+                                <img  src="{% static 'app-assets/images/gallery/10.png' %}" alt="shopify LOGO" />
+                                <figcaption >
+                                  <p> Lorem Ipsum is simply dummy text of the printing. </p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                          </div>
+                          <div class="col s4"  style="padding-left: 0.5em; padding-right: 0.5em;">
+                            <div class="grid">
+                              <figure class="effect-sadie photo-border " style="border-radius: 6px;">
+                                <img  src="{% static 'app-assets/images/gallery/11.png' %}" alt="subsonic Logo" />
+                                <figcaption >
+                                  <p> Lorem Ipsum is simply dummy text of the printing. </p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                          </div>
+                            
+                          <div class="col s4"  style="padding-left: 0.5em; padding-right: 0.5em;">
+                            <div class=" grid">
+                              <figure class="effect-sadie photo-border " style="border-radius: 6px;">
+                                <img  src="{% static 'app-assets/images/gallery/12.png' %}" alt="subway logo" />
+                                <figcaption >
+                                  <p> Lorem Ipsum is simply dummy text of the printing.  </p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                          </div>
+                          <div class="col s4"  style="padding-left: 0.5em; padding-right: 0.5em;">
+                            <div class=" grid">
+                              <figure class="effect-sadie photo-border " style="border-radius: 6px;">
+                                <img  src="{% static 'app-assets/images/gallery/13.png' %}" alt="bloomberg logo" />
+                                <figcaption >
+                                  <p> Lorem Ipsum is simply dummy text of. </p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                          </div>
+                          <div class="col s4"  style="padding-left: 0.5em; padding-right: 0.5em;">
+                            <div class=" grid">
+                              <figure class="effect-sadie photo-border " style="border-radius: 6px;">
+                                <img  src="{% static 'app-assets/images/gallery/14.png' %}" alt="wordpress logo" />
+                                <figcaption >
+                                  <p> Lorem Ipsum is simply dummy text of. </p>
+                                </figcaption>
+                              </figure>
+                            </div>
+                          </div>
+  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="background-color:#e1e4e9; border-radius: 0px 0px 15px 15px; cursor: pointer;" class="pt-3 expanding-small">
+                  <p class="center toggle-button2" style="position: relative; top: -8px;"><i class="fa fa-chevron-down  "></i> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of small card -->
+        </div>
+      </div>
+  
+      <!-- modal for endorsements -->
+      <div id="modalEndors" class="modal modal-fixed-footer" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b> Endoresement:<a href="">10</a> </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+            <div class="row p-0">
+                <div class="col s12">
+                  <ul id="collection-custom" style="border: none; border-radius: 15px;" class="collection">
+                    <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                      <div style="padding-left: 80px; padding-top: 5px;" >
+                        <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 70px; height: 70px; padding: 1px; " alt="" class="circle z-depth-2" />
+                        <p class="right">12/10/ 2018</p>
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        <!-- <p class="right">12/10/ 2018</p> -->
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p> 
+                      </div>
+                      <article class="mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </article>                                          
+                    </li>
+                    <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin:0px 10px 20px 10px; padding-left: 20px;">
+                      <div style="padding-left: 80px; padding-top: 5px;" >
+                        <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                        <p class="right">12/10/ 2018</p>
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        <!-- <p class="right">12/10/ 2018</p> -->
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p> 
+                      </div>
+                      <article class="mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </article>                                          
+                    </li>
+                    <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                      <div style="padding-left: 80px; padding-top: 5px;" >
+                        <img src="{% static 'app-assets/images/avatar/avatar-6.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                        <p class="right">12/10/ 2018</p>
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        <!-- <p class="right">12/10/ 2018</p> -->
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p> 
+                      </div>
+                      <article class="mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </article>                                          
+                    </li>
+                    <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                      <div style="padding-left: 80px; padding-top: 5px;" >
+                        <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" style="width: 70px; height: 70px; padding: 1px;  " alt="" class="circle z-depth-2" />
+                        <p class="right">12/10/ 2018</p>
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        <!-- <p class="right">12/10/ 2018</p> -->
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p> 
+                      </div>
+                      <article class="mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </article>                                          
+                    </li>
+                    <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                      <div style="padding-left: 80px; padding-top: 5px;" >
+                        <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 70px; height: 70px; padding: 1px;  " alt="" class="circle z-depth-2" />
+                        <p class="right">12/10/ 2018</p>
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p> 
+                      </div>
+                      <article class="mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </article>                                          
+                    </li>
+                    <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                      <div style="padding-left: 80px; padding-top: 5px;" >
+                        <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                        <p class="right">12/10/ 2018</p>
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p> 
+                      </div>
+                      <article class="mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </article>                                          
+                    </li>
+                    <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                      <div style="padding-left: 80px; padding-top: 5px;" >
+                        <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                        <p class="right">12/10/ 2018</p>
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p> 
+                      </div>
+                      <article class="mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </article>                                          
+                    </li>
+                    <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                      <div style="padding-left: 80px; padding-top: 5px;" >
+                        <img src="{% static 'app-assets/images/avatar/avatar-9.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                        <p class="right">12/10/ 2018</p>
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p> 
+                      </div>
+                      <article class="mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </article>                                          
+                    </li>
+                    <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                      <div style="padding-left: 80px; padding-top: 5px;" >
+                        <img src="{% static 'app-assets/images/avatar/avatar-13.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                        <p class="right">12/10/ 2018</p>
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p> 
+                      </div>
+                      <article class="mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </article>                                          
+                    </li>
+                    <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                      <div style="padding-left: 80px; padding-top: 5px;" >
+                        <img src="{% static 'app-assets/images/avatar/avatar-10.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                        <p class="right">12/10/ 2018</p>
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p> 
+                      </div>
+                      <article class="mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </article>                                          
+                    </li>
+                    <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                      <div style="padding-left: 80px; padding-top: 5px;" >
+                        <img src="{% static 'app-assets/images/avatar/avatar-11.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                        <p class="right">12/10/ 2018</p>
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p> 
+                      </div>
+                      <article class="mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </article>                                          
+                    </li>
+                    <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                      <div style="padding-left: 80px; padding-top: 5px;" >
+                        <img src="{% static 'app-assets/images/avatar/avatar-12.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                        <p class="right">12/10/ 2018</p>
+                        <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                        
+                        <p class="medium-small text-ellipsis">subsonic</p>
+                        <p class="medium-small text-ellipsis">Dept Manager </p> 
+                      </div>
+                      <article class="mt-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                      </article>                                          
+                    </li>
+                    
+                    
+                  </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+  
+      <!-- modal for experiences -->
+      <div id="modalExp" class="modal modal-fixed-footer" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b> Experience:&nbsp;<a href="">5 years</a> </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+          <section class="timeline2">
+            <div class="container">
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft  animate fadeLeft">
+                  <h2>Title</h2>
+                  <div class="date">1 MAY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div> 
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">25 MAY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                  <div class="date">3 JUN 2016</div>
+                  <h2>Quote</h2>
+                  <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+                </div>
+              </div>   
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInRight animate fadeRight">
+                  <h2>Title</h2>
+                  <div class="date">22 JUN 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInLeft animate fadeLeft">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">10 JULY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">30 JULY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>  
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                  <div class="date">5 AUG 2016</div>
+                  <h2>Quote</h2>
+                  <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+                </div>
+              </div>   
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">19 AUG 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>  
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                  <div class="date">1 SEP 2016</div>
+                  <h2>Title</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+          
+            </div>
+          </section>
+        </div>
+      </div>
+  
+      <!-- education model here -->
+      <div id="modalEdu" class="modal modal-fixed-footer" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b> Education&nbsp; </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+          <section class="timeline2">
+            <div class="container">
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft  animate fadeLeft">
+                  <h2>Title</h2>
+                  <div class="date">1 MAY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div> 
+          
+              <div class="timeline2-item">
+          
+                <div class="timeline2-img"></div>
+          
+                <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">25 MAY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                  <div class="date">3 JUN 2016</div>
+                  <h2>Quote</h2>
+                  <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+                </div>
+              </div>   
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInRight animate fadeRight">
+                  <h2>Title</h2>
+                  <div class="date">22 JUN 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInLeft animate fadeLeft">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">10 JULY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">30 JULY 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>  
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                  <div class="date">5 AUG 2016</div>
+                  <h2>Quote</h2>
+                  <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+                </div>
+              </div>   
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content timeline2-card js--fadeInRight animate fadeRight">
+                  <div class="timeline2-img-header">
+                    <h2>Card Title</h2>
+                  </div>
+                  <div class="date">19 AUG 2016</div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>  
+          
+              <div class="timeline2-item">
+                <div class="timeline2-img"></div>
+                <div class="timeline2-content js--fadeInLeft animate fadeLeft">
+                  <div class="date">1 SEP 2016</div>
+                  <h2>Title</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+                  <a class="bnt-more" href="javascript:void(0)">More</a>
+                </div>
+              </div>   
+          
+            </div>
+          </section>
+        </div>
+      </div>
+  
+      <!-- gallery modal -->
+      <div id="modalgallery" class="modal modal-fixed-footer" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b> Showcase&nbsp; </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+          <div class="masonry-gallery-wrapper">
+            <div class="popup-gallery">
+              <div class="row">
+                <div class="col s12 m6 l4 xl4" >
+                  <div>
+                    <a href="{% static 'app-assets/images/gallery/1.png' %}" title="The Cleaner">
+                      <img src="{% static 'app-assets/images/gallery/1.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="col s12 m6 l4 xl4">
+                  <div>
+                    <a href="{% static 'app-assets/images/gallery/2.png' %}" title="The Cleaner">
+                      <img src="{% static 'app-assets/images/gallery/2.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="col s12 m6 l4 xl4">
+                  <div>
+                    <a href="{% static 'app-assets/images/gallery/3.png' %}" title="The Cleaner">
+                      <img src="{% static 'app-assets/images/gallery/3.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="col s12 m6 l4 xl4">
+                  <div>
+                    <a href="{% static 'app-assets/images/gallery/4.png' %}" title="The Cleaner">
+                      <img src="{% static 'app-assets/images/gallery/4.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="col s12 m6 l4 xl4">
+                  <div>
+                    <a href="{% static 'app-assets/images/gallery/5.png' %}" title="The Cleaner">
+                      <img src="{% static 'app-assets/images/gallery/5.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="col s12 m6 l4 xl4">
+                  <div>
+                    <a href="{% static 'app-assets/images/gallery/6.png' %}" title="The Cleaner">
+                      <img src="{% static 'app-assets/images/gallery/6.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="col s12 m6 l4 xl4">
+                  <div>
+                    <a href="{% static 'app-assets/images/gallery/7.png' %}" title="The Cleaner">
+                      <img src="{% static 'app-assets/images/gallery/7.png' %}" class="responsive-img mb-10 border-radius-10" alt="">
+                    </a>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END: modal gallery -->
+  
+       <!-- location modal -->
+       <div id="modallocation" class="modal modal-fixed-footer" style="border-radius: 12px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b> Location&nbsp; </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14465.211945787229!2d55.170928747549816!3d24.989818590020977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sae!4v1604234346091!5m2!1sen!2sae" 
+           width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+          </iframe>
+        </div>
+      </div>
+      <!-- END: location modal-->
+  
+      <!-- language modal -->
+      <div id="modallanguage" class="modal " style="border-radius: 12px;max-width: 500px;">
+        <div class="" style="overflow-y: auto; width: 100%; padding:6px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+          <div class="container p-0">
+            <div class="row">
+              <div class="col s2">
+              </div>
+              <div class="col s8">
+                <h6 class="center-align text-ellipsis"><a href=""><b> languages&nbsp; </b></a> </h6>
+              </div>
+              <div class="col s2" style="padding-right: 0px; ">
+                <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                      onmouseover="this.style.background ='#e91e63'" 
+                      onmouseout="this.style.background='transparent'" 
+                      style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                  <i class="material-icons">clear</i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="container">
+                <div class="col s12">
+                  <div class="card">
+                    <div class="card-content p-0">
+                      <div class="row">
+                        <div class="col s12">
+                          <ul id="collection-custom " class="collection " style="border: none; margin-left: 15px; margin-right: 10px; ">
+                            
+                            <li class="collection-item avatar " style="border-radius: 8px; border-bottom: none; min-height: 60px; padding-left: 70px;">
+                              <img src="{% static 'app-assets/images/country-flag/united-kingdom.png' %}" style="width: 30px; height: 30px; left: 10px;" alt="" class="circle mt-1" />
+                              <p class="font-weight-600 text-ellipsis mt-3">English  <b class="right">Native</b></p>
+                            </li>
+                            <li class="collection-item avatar " style="border-radius: 8px; border-bottom: none; min-height: 60px; padding-left: 70px;">
+                              <img src="{% static 'app-assets/images/country-flag/united-arab-emirates.png' %}" style="width: 30px; height: 30px; left: 10px;" alt="" class="circle mt-1" />
+                              <p class="font-weight-600 text-ellipsis mt-3">Arabic  <b class="right">Fluent</b></p>
+                            </li>
+                            <li class="collection-item avatar " style="border-radius: 8px; border-bottom: none; min-height: 60px; padding-left: 70px;">
+                              <img src="{% static 'app-assets/images/country-flag/Italy.png' %}" style="width: 30px; height: 30px; left: 10px;" alt="" class="circle mt-1" />
+                              <p class="font-weight-600 text-ellipsis mt-3">Italy  <b class="right">Basic</b></p>
+                            </li>
+  
+                          </ul>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END: language modal-->
+  
+{% endblock content %}

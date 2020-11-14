@@ -23,4 +23,5 @@ urlpatterns = [
     path('question/', views.question, name="question"),
     path('job_post_editor/', views.job_post_editor, name="job_post_editor"),
     path('create_card/', views.create_card, name="create_card"),
+    path('create_job/', views.create_job, name='create_job'),
 ]
