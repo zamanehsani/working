@@ -21,10 +21,10 @@
             <div class="col s12 push-s2 pl-9">
                 <div class="grid " style="width: 180px;" >
                 <figure class="effect-sadie padding-2 gradient-indigo-purple center-align z-depth-3" style="width: 130px; border-radius: 50%;" >
-                    <img  class="responsive-img  card-profile-image  circle" width="180px" height="170px" style="opacity: 1;" src="{% if user.user_profile %}   {{user.user_profile.image.url }} {% else %}{% static 'app-assets/images/default.png' %} {% endif %}"
+                    <img  class="responsive-img  card-profile-image  circle" width="180px" height="180px" style="opacity: 1;" src="{% if user.user_profile %}   {{user.user_profile.image.url }} {% else %}{% static 'app-assets/images/default.png' %} {% endif %}"
                     alt="user profile">
                     <figcaption class="circle" >
-                    <p ><a href=""><i class="material-icons pink-text">camera_alt</i></a></p>
+                    <p ><a href="#modalEditInfo" class="modal-trigger" ><i class="material-icons pink-text">camera_alt</i></a></p>
                     </figcaption>
                 </figure>
                 </div>
@@ -33,14 +33,15 @@
             <div class="col s12">
                 <div class="row">
                 <div id="text" class="col s12">
-                    <h5 class="mb-0 pt-3 text-ellipsis"> <b>{{user.username}}&nbsp;{{user.username}}</b> <i class="material-icons modal-trigger" style="cursor: pointer;" data-target="modalEditInfo">edit</i></h5>
+                    <h5 class="mb-0 pt-3 text-ellipsis"> <b>{{user.first_name|title}}&nbsp;{{user.last_name|title}}</b> </h5>
                     <h6  class="text-ellipsis pb-1" >Email&nbsp;: <a href="#"> {{user.email}}</a> </h6>
-                    <h6  class="text-ellipsis pb-1"  >Phone&nbsp;: <a href="#"> 0566652543</a> </h6>
-                    <h6  class="text-ellipsis pb-1" >DOB: <a href="#"> {{user.date_joined|date:"D d M Y" }}</a> </h6>
-                    <h6  class="text-ellipsis pb-1" >Gender: <a href="#"> other</a> </h6>
-                    <h6  class="text-ellipsis pb-1" >Nationality: <a href="#"> German</a></h6>
-                    <h6  class="text-ellipsis pb-1" >Marriatal Status: <a href="#"> Single</a></h6>
-                    <h6  class="text-ellipsis pb-1" >Visa Status: <a href="#"> N/A</a></h6>
+                    <h6  class="text-ellipsis pb-1"  >Phone&nbsp;: <a href="#"> {{user.user_profile.phone}}</a> </h6>
+                    <h6  class="text-ellipsis pb-1"  >Phone&nbsp;: <a href="#"> {{user.user_profile.mobile}}</a> </h6>
+                    <h6  class="text-ellipsis pb-1" >DOB: <a href="#"> {{user.user_profile.DOB|date:"D d M Y" }}</a> </h6>
+                    <h6  class="text-ellipsis pb-1" >Gender: <a href="#"> {{user.user_profile.gender}}</a> </h6>
+                    <h6  class="text-ellipsis pb-1" >Nationality: <a href="#"> {{user.user_profile.nationality}}</a></h6>
+                    <h6  class="text-ellipsis pb-1" >Marriatal Status: <a href="#"> {{user.user_profile.marriatal_status}}</a></h6>
+                    <h6  class="text-ellipsis pb-1" >Visa Status: <a href="#"> {{user.user_profile.visa_status}}</a></h6>
                     <!-- <h6  style="vertical-align: top;">Gender: <a href="#"> female</a> </h6> -->
                 </div>
                 </div>
@@ -565,8 +566,8 @@
 </div>
 </div>
 <div class="modal-footer" style="z-index: 1;">
-<a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
-<a href="#!" class="modal-action modal-close  waves-effect waves-green btn-flat ">save</a>
+    <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat ">cancel</a>          
+    <a href="#!" class="modal-action modal-close  waves-effect waves-green btn-flat ">save</a>
 </div>
 </div>
 <!-- endo of education add modal -->
