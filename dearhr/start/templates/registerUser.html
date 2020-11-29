@@ -52,7 +52,18 @@
     </header>
     <!-- END: Header-->
 
-
+ 
+     <!-- Modal Structure -->
+     <div id="modal1" class="modal">
+       <div class="modal-content">
+         <h4></h4>
+         <p>A bunch of text</p>
+         <input type="text" value="" name="id" id="12">
+       </div>
+       <div class="modal-footer">
+         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+       </div>
+     </div>
     <!-- BEGIN: Page Main-->
     <div id="main">
       <div class="row">
@@ -63,6 +74,7 @@
             <div class="card-header pt-3 pb-4" style="background:#d7e0e8; border-radius: 15px 15px 0 0;">
               <h5 class="center-align" style="font-weight: bolder;">Create Your Account </h5>
             </div>
+
             <div class="card-content">
               <div class="container">
                 <!-- Contact Us -->
@@ -94,38 +106,59 @@
         </div>
       </div>
     </div>     
-            <!-- BEGIN: Footer-->
 
-            <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-purple gradient-shadow navbar-border navbar-shadow">
-            <div class="footer-copyright">
-                <div class="container"><span>&copy; 2020 <a href="http://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank"></a>
-                    DearHR</a> All rights reserved.</span><span class="right hide-on-small-only">Design and Developed by <a href="https://pixinvent.com/">DearHR</a></span></div>
+
+
+    <!-- modal for delete  -->
+<div id="modalEditClient" class="modal" style="border-radius: 12px; width: 40%!important;">
+  <div class="modal-content">
+    <div class="row">
+      <div class="card">
+        <div class="card-content">
+            <div class="row">
+                <form action="" method="POST"> {% csrf_token %}
+                    <div class="col s12 pb-2 ">
+                      <p class="center-align">Are you sure your want to delete?</p>
+                      <input class="center-align" type="text" disabled name="id">
+                    </div>
+                    <div class="col s12 center-align">
+                        <button  type="submit" class=" white-text pink ml-2 modal-action modal-close waves-effect waves-red btn-flat" >Delete</button>
+                        <p class=" white-text grey mr-2 modal-action modal-close waves-effect waves-red btn-flat">Cancel</p>
+                    </div>
+                </form>
             </div>
-            </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- endo of delete -->
 
+  <a data-target="modalEditClient" href="#modalEditClient" class="modal-trigger " data-id="222">
+    <i class="material-icons">mode_edit</i></a>
+  <!-- Modal Structure -->
+  <!-- BEGIN: Footer-->
+  <footer class="page-footer footer footer-static footer-dark gradient-45deg-indigo-purple gradient-shadow navbar-border navbar-shadow">
+  <div class="footer-copyright">
+      <div class="container"><span>&copy; 2020 <a href="http://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank"></a>
+          DearHR</a> All rights reserved.</span><span class="right hide-on-small-only">Design and Developed by <a href="https://pixinvent.com/">DearHR</a></span></div>
+  </div>
+  </footer>
 
-    <!-- END: Footer-->
-    <!-- BEGIN VENDOR JS-->
     <script src="{% static 'app-assets/js/vendors.min.js' %}"></script>
-    <!-- BEGIN VENDOR JS-->
-    <!-- BEGIN PAGE VENDOR JS-->
-    <!-- END PAGE VENDOR JS-->
-    <!-- BEGIN THEME  JS-->
     <script src="{% static 'app-assets/js/plugins.js' %}"></script>
     <script src="{% static 'app-assets/js/search.js' %}"></script>
     <script src="{% static 'app-assets/js/custom/custom-script.js' %}"></script>
     <script src="{% static 'app-assets/js/scripts/customizer.js' %}"></script>
-    <!-- END THEME  JS-->
-    <!-- BEGIN PAGE LEVEL JS-->
     <script src="{% static 'app-assets/js/scripts/page-contact.js' %}"></script>
-    <!-- END PAGE LEVEL JS-->
-    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script> -->
+
     <script>
       $(document).ready(function() {
          $("#div_id_first_name").addClass("col m6");
          $("#div_id_last_name").addClass("col m6");
-         $("#div_id_username").addClass("col s12");
-         $("#div_id_email").addClass("col s12");
+         $("#div_id_username").addClass("col s12 m6");
+         $("#div_id_email").addClass("col s12 m6");
          $("#div_id_password1").addClass("col s12");
          $("#div_id_password2").addClass("col s12");
     });

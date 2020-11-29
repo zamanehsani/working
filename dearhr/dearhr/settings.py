@@ -28,13 +28,14 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.0.128']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
     'crispy_forms',
     # 'user.apps.UserConfig',
-    'start',
+    'start.apps.StartConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

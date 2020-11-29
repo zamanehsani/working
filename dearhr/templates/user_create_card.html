@@ -1,0 +1,584 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- BEGIN: Page Main-->
+    <div id="main">
+        <div class="row">
+          <div class="content-wrapper-before gradient-45deg-indigo-purple"></div>
+          
+          <div class="col s12 ">
+            <div class="container ">
+              <div class="section section-form-wizard">
+                <div class="container">
+                  <div class="card col s12 l8 push-l2" >
+                    <div class="card-content p-0 ">
+                      <h5 class="caption mb-0 pt-1  pl-1">Make Your Card:</h5>
+                      
+                      <p class="pl-1 pb-2">
+                        Use this page to create your desired profiles cards. 
+                        this is some steps toward creation of card. do it as soon as possible.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Horizontal Stepper -->
+                <div class="row" style="display: none;" >
+                  <div class="col s12">
+                    <div class="card">
+                      <div class="card-content pb-0">
+                        <div class="card-header mb-2">
+                          <!-- <h4 class="card-title">Horizontal Stepper</h4> -->
+                        </div>
+                        <ul class="stepper horizontal" id="horizStepper">
+                          <li class="step active">
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Linear Stepper -->
+                <div class="row" style="display: none;">
+                  <div class="col s12">
+                    <div class="card">
+                      <div class="card-content">
+                        <div class="card-header">
+                          <!-- <h4 class="card-title">Linear Stepper</h4> -->
+                        </div>
+  
+                        <ul class="stepper linear" id="linearStepper">
+                          <li class="step active">
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Non Linear Stepper -->
+                <div class="row">
+                  <div class="col s12 l8 push-l2">
+                    <div class="card">
+                      <div class="card-content">
+                        <div class="card-header">
+                          <h4 class="card-title">Create Your Card</h4>
+                          <p>
+                            In the Non-Linear Stepper you can navigate freely between steps. You can also use the
+                            buttons for validation, but if the user wants to move arbitrarily around the steps, it's
+                            allowed by clicking on the steps instead of the buttons.
+                          </p>
+                        </div>
+                        
+                        <form action="" method="POST" enctype="multipart/form-data">
+                          <ul class="stepper" id="nonLinearStepper">
+                            <li class="step active">
+                              <div class="step-title waves-effect">Step 1</div>
+                              <div class="step-content grey lighten-4 pl-3 pr-3 pt-1" style="border-radius: 10px;">
+                                <div class="row">
+                                  <div class="input-field col s12 m6">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="icon_prefix" type="text" class="validate">
+                                    <label for="icon_prefix">Title </label>
+                                  </div>
+                                  <div class="col s12 m6">
+                                    <div class="file-field input-field">
+                                      <div class="btn">
+                                        <span>Your Photo</span>
+                                        <input type="file">
+                                      </div>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="input-field col s12">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <textarea id="textarea1" class="materialize-textarea" ></textarea>
+                                    <label for="textarea1"> Short Bio</label>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="input-field col s12">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <textarea id="textarea1" class="materialize-textarea" ></textarea>
+                                    <label for="textarea1"> Long Bio</label>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12 m6">
+                                      <i class="material-icons prefix">account_circle</i>
+                                      <select>
+                                        <option value="1" selected>Option 1</option>
+                                        <option value="2">Option 3</option>
+                                        <option value="2">Option 4</option>
+                                        <option value="2">Option 5</option>
+                                        <option value="2">Option 6</option>
+                                        <option value="3">Option 7</option>
+                                      </select>
+                                      <label>Choose your location </label>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                      <i class="material-icons prefix">account_circle</i>
+                                    <input id="icon_prefix" type="number" class="validate">
+                                    <label for="icon_prefix">Expected Salary </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col s12">
+                                    <div class="file-field input-field">
+                                      <div class="btn">
+                                        <span>Upload your Video</span>
+                                        <input type="file">
+                                      </div>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+    
+                                <div class="step-actions">
+                                  <div class="row">
+                                    <div class="col m4 s12 mb-3">
+                                      <button class="red btn btn-reset" type="reset">
+                                        <i class="material-icons left">clear</i>Reset
+                                      </button>
+                                    </div>
+                                    <div class="col m4 s12 mb-3">
+                                      <button class="btn btn-light previous-step" disabled>
+                                        <i class="material-icons left">arrow_back</i>
+                                        Prev
+                                      </button>
+                                    </div>
+                                    <div class="col m4 s12 mb-3">
+                                      <button class="waves-effect waves dark btn btn-primary next-step" type="submit">
+                                        Next
+                                        <i class="material-icons right">arrow_forward</i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="step">
+                              <div class="step-title waves-effect">Step 2</div>
+                              <div class="step-content grey lighten-4 pl-3 pr-3 pt-1"  style="border-radius: 10px;">
+                                <h6>choose your skills</h6>
+                                <div class="row">
+                                  <div class="col s12 m6">
+                                    <ul id="collection-custom" class="collection mb-0" style="border: none;" >
+                                      <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                                        <div class="col s11 ">
+                                          <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                          <p class="font-weight-600"> Digital Marketing</p>
+                                          <div class="prograss">
+                                            <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                          </div>
+                                        </div>
+                                        <div class="col s1 pt-1">
+                                          <p><label> <input type="checkbox" /> <span></span> </label></p>
+                                        </div>
+                                      </li>
+                                      <li class="collection-item avatar mt-3 pt-5" style="border-radius: 8px;">
+                                        <div class="col s11 ">
+                                          <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                          <p class="font-weight-600"> Digital Marketing</p>
+                                          <div class="prograss">
+                                            <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                          </div>
+                                        </div>
+                                        <div class="col s1 pt-1">
+                                          <p> <label> <input type="checkbox" /> <span></span> </label> </p>
+                                        </div>
+                                      </li>
+                                      <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                                        <div class="col s11 ">
+                                          <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                          <p class="font-weight-600"> Digital Marketing</p>
+                                          <div class="prograss">
+                                            <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                          </div>
+                                        </div>
+                                        <div class="col s1 pt-1">
+                                          <p>
+                                            <label> <input type="checkbox" /> <span></span> </label> </p>
+                                        </div>
+                                      </li>
+                                      <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                                        <div class="col s11 ">
+                                          <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                          <p class="font-weight-600"> Digital Marketing</p>
+                                          <div class="prograss">
+                                            <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                          </div>
+                                        </div>
+                                        <div class="col s1 pt-1">
+                                          <p> <label> <input type="checkbox" /> <span></span> </label> </p>
+                                        </div>
+                                      </li>
+                                      
+                                    </ul>
+                                  </div>
+                                  <div class="col s12 m6">
+                                    <ul id="collection-custom" class="collection mb-0" style="border: none;" >
+                                      <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                                        <div class="col s11 ">
+                                          <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                          <p class="font-weight-600"> Digital Marketing</p>
+                                          <div class="prograss">
+                                            <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                          </div>
+                                        </div>
+                                        <div class="col s1 pt-1">
+                                          <p>
+                                            <label>
+                                              <input type="checkbox" />
+                                              <span></span>
+                                            </label>
+                                          </p>
+                                        </div>
+                                      </li>
+                                      <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                                        <div class="col s11 ">
+                                          <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                          <p class="font-weight-600"> Digital Marketing</p>
+                                          <div class="prograss">
+                                            <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                          </div>
+                                        </div>
+                                        <div class="col s1 pt-1">
+                                          <p>
+                                            <label>
+                                              <input type="checkbox" />
+                                              <span></span>
+                                            </label>
+                                          </p>
+                                        </div>
+                                      </li>
+                                      <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                                        <div class="col s11 ">
+                                          <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                          <p class="font-weight-600"> Digital Marketing</p>
+                                          <div class="prograss">
+                                            <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                          </div>
+                                        </div>
+                                        <div class="col s1 pt-1">
+                                          <p>
+                                            <label>
+                                              <input type="checkbox" />
+                                              <span></span>
+                                            </label>
+                                          </p>
+                                        </div>
+                                      </li>
+                                      <li class="collection-item avatar  mt-3 pt-5" style="border-radius: 8px;">
+                                        <div class="col s11 ">
+                                          <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" alt="" class="circle" />
+                                          <p class="font-weight-600"> Digital Marketing</p>
+                                          <div class="prograss">
+                                            <div class="w3-green prograss_bar" style="width:94%; box-shadow: 0 0 0 1px #6ca86e ;">  <span>95%</span></div>
+                                          </div>
+                                        </div>
+                                        <div class="col s1 pt-1">
+                                          <p>
+                                            <label>
+                                              <input type="checkbox" />
+                                              <span></span>
+                                            </label>
+                                          </p>
+                                        </div>
+                                      </li>
+                                      
+                                    </ul>
+                                  </div>
+                                  
+                                </div>
+                                <div class="step-actions">
+                                  <div class="row">
+                                    <div class="col m4 s12 mb-3">
+                                      <button class="red btn btn-reset" type="reset">
+                                        <i class="material-icons left">clear</i>Reset
+                                      </button>
+                                    </div>
+                                    <div class="col m4 s12 mb-3">
+                                      <button class="btn btn-light previous-step">
+                                        <i class="material-icons left">arrow_back</i>
+                                        Prev
+                                      </button>
+                                    </div>
+                                    <div class="col m4 s12 mb-3">
+                                      <button class="waves-effect waves dark btn btn-primary next-step" type="submit">
+                                        Next
+                                        <i class="material-icons right">arrow_forward</i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="step">
+                              <div class="step-title waves-effect">Step 3</div>
+                              <div class="step-content grey lighten-4 pl-3 pr-3 pt-1" style="border-radius: 10px;">
+                                <h6>choose your showcases</h6>
+                                <div class="row">
+                                  <div class="container">
+                                    <div class="row user-projects pb-1 pt-5">
+                                      <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                        <div class="overlai">
+                                          <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/6.png' %}" />
+                                          <div class="overlay1">
+                                            <div class="">
+                                              <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                        <div class="overlai">
+                                          <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/7.png' %}" />
+                                          <div class="overlay1">
+                                            <div class="">
+                                              <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                        <div class="overlai">
+                                          <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/8.png' %}" />
+                                          <div class="overlay1">
+                                            <div class="">
+                                              <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                        <div class="overlai">
+                                          <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/9.png' %}" />
+                                          <div class="overlay1">
+                                            <div class="">
+                                              <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                        <div class="overlai">
+                                          <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/10.png' %}" />
+                                          <div class="overlay1">
+                                            <div class="">
+                                              <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                        <div class="overlai">
+                                          <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/12.png' %}" />
+                                          <div class="overlay1">
+                                            <div class="">
+                                              <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                        <div class="overlai">
+                                          <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/13.png' %}" />
+                                          <div class="overlay1">
+                                            <div class="">
+                                              <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                        <div class="overlai">
+                                          <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/14.png' %}" />
+                                          <div class="overlay1">
+                                            <div class="">
+                                              <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col s4 mb-2" style="padding-left: 0.5em; padding-right: 0.5em;">
+                                        <div class="overlai">
+                                          <img class="imaje photo-border" src="{% static 'app-assets/images/gallery/15.png' %}" />
+                                          <div class="overlay1">
+                                            <div class="">
+                                              <h1 class="centering"> <i class="material-icons grey-text text-lighten-3" style="font-size: 200px;">check</i></h1>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                                <div class="step-actions">
+                                  <div class="row">
+                                    <div class="col m4 s12 mb-3">
+                                      <button class="red btn btn-reset" type="reset">
+                                        <i class="material-icons left">clear</i>Reset
+                                      </button>
+                                    </div>
+                                    <div class="col m4 s12 mb-3">
+                                      <button class="btn btn-light previous-step">
+                                        <i class="material-icons left">arrow_back</i>
+                                        Prev
+                                      </button>
+                                    </div>
+                                    <div class="col m4 s12 mb-3">
+                                      <button class="waves-effect waves dark btn btn-primary next-step" type="submit">
+                                        Next
+                                        <i class="material-icons right">arrow_forward</i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="step">
+                              <div class="step-title waves-effect">Step 4</div>
+                              <div class="step-content grey lighten-4 pl-3 pr-3 pt-1" style="border-radius: 10px;">
+                                <h6>choose your endorsements</h6>
+                                <div class="row">
+                                <div class="col s12 m6">
+                                  <ul id="collection-custom" class="collection mb-0 pr-0" style="border: none; border-radius: 8px;">
+                                    <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                                      <p class="font-weight-600 text-ellipsis">John&nbsp;Smith</p>
+                                      <p class="medium-small text-ellipsis">subsonic</p>
+                                      <p class="medium-small text-ellipsis">Dept Manager </p>  
+                                      <p class="star"><label> <input type="checkbox" /><span><a href="#modalEndorsView" class="modal-trigger"><i class="material-icons">visibility</i></a></span></label> </p>                                     
+                                    </li>
+                                    <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-5.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                                      <p class="font-weight-600 text-ellipsis">John&nbsp;Adam</p>
+                                      <p class="medium-small text-ellipsis">subsonic</p>
+                                      <p class="medium-small text-ellipsis">Dept Manager </p>  
+                                      <p class="star"><label> <input type="checkbox" /><span><a href="#modalEndorsView" class="modal-trigger"><i class="material-icons">visibility</i></a></span></label> </p>                                     
+                                    </li>
+                                    <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-4.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                                      <p class="font-weight-600 text-ellipsis">Junifer&nbsp;Doe</p>
+                                      <p class="medium-small text-ellipsis">subsonic</p>
+                                      <p class="medium-small text-ellipsis">Dept Manager </p>  
+                                      <p class="star"><label> <input type="checkbox" /><span><a href="#modalEndorsView" class="modal-trigger"><i class="material-icons">visibility</i></a></span></label> </p>                                     
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="col s12 m6">
+                                  <ul id="collection-custom" class="collection mb-0 " style="border: none; border-radius: 8px;">
+                                    <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-3.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                                      <p class="medium-small text-ellipsis">subsonic</p>
+                                      <p class="medium-small text-ellipsis">Dept Manager </p>  
+                                      <p class="star"><label> <input type="checkbox" /><span><a href="#modalEndorsView" class="modal-trigger"><i class="material-icons">visibility</i></a></span></label> </p>                                     
+                                    </li>
+                                    <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-2.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                                      <p class="medium-small text-ellipsis">subsonic</p>
+                                      <p class="medium-small text-ellipsis">Dept Manager </p>  
+                                      <p class="star"><label> <input type="checkbox" /><span><a href="#modalEndorsView" class="modal-trigger"><i class="material-icons">visibility</i></a></span></label> </p>                                     
+                                    </li>
+                                    <li class="collection-item avatar" style="border-radius: 8px; border-bottom: none; min-height: 60px; padding: 10px; padding-left: 90px; margin-bottom: 20px;">
+                                      <img src="{% static 'app-assets/images/avatar/avatar-1.png' %}" style="width: 60px; height: 60px; left: 10px;" alt="" class="circle mt-1" />
+                                      <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                                      <p class="medium-small text-ellipsis">subsonic</p>
+                                      <p class="medium-small text-ellipsis">Dept Manager </p>  
+                                      <p class="star"><label> <input type="checkbox" /><span><a href="#modalEndorsView" class="modal-trigger"><i class="material-icons">visibility</i></a></span></label> </p>                                     
+                                    </li>
+                                  </ul>
+                                </div>
+                                </div>
+                                
+                                <div class="step-actions">
+                                  <div class="row">
+                                    <div class="col m6 s12 mb-1">
+                                      <button class="red btn mr-1 btn-reset" type="reset">
+                                        <i class="material-icons">clear</i>
+                                        Reset
+                                      </button>
+                                    </div>
+                                    <div class="col m6 s12 mb-1">
+                                      <button class="waves-effect waves-dark btn btn-primary" type="submit">Submit</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+  
+              <!-- modal for endorsements -->
+              <div id="modalEndorsView" class="modal" style="border-radius: 12px;">
+                <div class="" style="overflow-y: hidden; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col s2">
+                      </div>
+                      <div class="col s8">
+                        <h6 class="center-align text-ellipsis"><a href=""><b>Endoresement </b></a> </h6>
+                      </div>
+                      <div class="col s2" style="padding-right: 0px; ">
+                        <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                              onmouseover="this.style.background ='#e91e63'" 
+                              onmouseout="this.style.background='transparent'" 
+                              style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                          <i class="material-icons">clear</i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-content">
+                    <div class="row p-0">
+                        <div class="col s12">
+                          <ul id="collection-custom" style="border: none; border-radius: 15px;" class="collection">
+                            <li class="collection-item avatar card animate fadeUp" style="min-height: 60px; margin: 0px 10px 20px 10px; padding-left: 20px;">
+                              <div style="padding-left: 80px; padding-top: 5px;" >
+                                <img src="{% static 'app-assets/images/avatar/avatar-7.png' %}" style="width: 70px; height: 70px;  padding: 1px; " alt="" class="circle z-depth-2" />
+                                <p class="right">12/10/ 2018</p>
+                                <p class="font-weight-600 text-ellipsis">John&nbsp;Doe</p>
+                                <p class="medium-small text-ellipsis">subsonic</p>
+                                <p class="medium-small text-ellipsis">Dept Manager </p> 
+                              </div>
+                              <article class="mt-2">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                              </article>                                          
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <!-- endo of endorsement modal -->
+              
+            </div>
+            <div class="content-overlay"></div>
+          </div>
+        </div>
+      </div>
+      <!-- END: Page Main-->
+{% endblock content %}

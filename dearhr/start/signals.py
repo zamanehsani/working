@@ -6,8 +6,10 @@ from start.models import User_profile
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):
     if created:
-        User_profile.objects.create(User = isntance)
+        User_profile.objects.create(user = instance)
+        print("user profile createds")
 
 @receiver(post_save, sender=User)
-def save_profile(sender, instance, **kwargs):
-    instance.User_profile.save()
+def save_profile(sender, instance, *args, **kwargs):
+    instance.user_profile.save()
+    print("user profile saved")
