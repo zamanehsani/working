@@ -1395,13 +1395,39 @@ $(document).ready(function(){
         $('#modalRefEdit').find('textarea').html(data[4]);
         $('#modalRefEdit').find('input[name="date"]').val(data[5]);
         $('#modalRefEdit').find('input[name="filepath"]').val(data[7]);
-      }
-    });
-
-    
+        }
+      });
     });
   });
 
+  $(document).ready(function(){
+  $('.editmodal').click(function(){
+      var userid = $(this).data('id');
+      console.log(userid );
+    // AJAX request
+      $.ajax({
+      url: '{% url "start:expview" %}',
+      type: 'get',
+      data: {userid: userid},
+      dataType:'json',
+      success: function(data){ 
+        // Add response in Modal body
+        // [exp.id, exp.title, exp.company,  exp.date_from, exp.date_to]
+        console.log(data);
+        $('#modalEditExp').find('input[name="id"]').val(data[0]);
+        $('#modalEditExp').find('input[name="title"]').val(data[1]);
+        $('#modalEditExp').find('input[name="company"]').val(data[2]);
+        $('#modalEditExp').find('input[name="date_from"]').val(data[3]);
+        $('#modalEditExp').find('input[name="date_to"]').val(data[4]);
+        $('#modalEditExp').find('#id_roles').html(data[5]);
+        $('#modalEditExp').find('#id_achievements').html(data[6]);
+        $('#modalEditExp').find('#id_description').html(data[7]);
+        // $("#modalEditExp #id_type option[value="+data[8]+"]").attr('selected', 'selected');
+        $("#modalEditExp #id_type").val(data[8]);
+        }
+      });
+    });
+  });
 
       $(document).ready(function(){
         $('.modal').modal({

@@ -199,7 +199,7 @@
                             <div class="card-header gradient-45deg-red-pink pl-3 pr-3 pt-4 pb-2" style="border-radius: 15px 15px 0 0;">
                                 <h5  class="pt-0 mt-0 center-align text-ellipsis white-text">  Experiences:&nbsp;<a class="grey-text text-lighten-3" href="">{{user.experiences_set.all.count}}</a> </h5>
                                 <div class="mb-3">
-                                <article class="white-text center-align" >list all of you exsperiences here to make them avaible for your cards.</article>
+                                <article class="white-text center-align" >list all of you exsperiences here to make them avaible for your cards. here you have your experiences listed all. later on you can choose which one to appear on each card.</article>
                             </div>
                                 <div class="fixed-action-btn right click-to-toggle direction-left modal-trigger" data-target="" style="margin-top: -12px !important; bottom: 0px; margin-right: 20px;">
                                 <a class="btn-floating btn-medium pink.accent-2 menu-shadow modal-trigger" href="#modalExp"><i class="material-icons">add</i> </a>
@@ -207,7 +207,7 @@
                             </div>
                                 <div class="card-content">
                                     {% for experience in user.experiences_set.all %}
-                                    <div class="grey lighten-4 padding-2 border-radius-8 mt-2">
+                                    <div class="grey lighten-4 padding-2 border-radius-8 mt-2 modal-trigger editmodal" data-id="{{experience.id}}" data-target="modalEditExp" > 
                                         <h6 class="text-ellipsis" style="font-weight: bolder;">{{experience.date_from|date:"d M Y"}}&nbsp;-&nbsp;{{experience.date_to|date:"d M Y"}}</h6>
                                         <a href="#modalDelete" style="top:-30px" class="star modal-trigger" data-id="{{experience.id}}" data-type="./exp/">
                                             <i class="material-icons blue-text">delete</i>
@@ -846,7 +846,7 @@
                             </div>
                             <div class="input-field col s12 m6">
                                 <i class="material-icons prefix">date_range</i>
-                                <input type="text" name="DOB" id="id_DOB" value="{{user.user_profile.DOB}}" class="datepicker">
+                                <input type="text" name="DOB" id="id_DOB" value="{{user.user_profile.DOB|date:'d/m/Y'}}" class="datepicker">
                                 <label for="icon_prefix">Date of Birth  </label>
                             </div>
                         </div>
@@ -868,7 +868,7 @@
                                     <i class="material-icons prefix">person</i>
                                     <select name="gender"  id="id_gender">
                                         {% for x,y in up_form.fields.gender.choices %}
-                                        <option value="{{ x }}" {% if p_form.fields.gender.value == y %} selected {% endif %} >{{ y }}</option>
+                                        <option value="{{ x }}" {% if user.user_profile.gender == x %} selected {% endif %} >{{ y }}</option>
                                         {% endfor %}
                                     </select>
                                     <label> Gender</label>
@@ -879,7 +879,7 @@
                                     <i class="material-icons prefix">person</i>
                                     <select name="marriatal_status" id="id_marriatal_status">
                                         {% for x,y in up_form.fields.marriatal_status.choices %}
-                                        <option value="{{ x }}" >{{ y }}</option>
+                                        <option value="{{ x }}"  {% if user.user_profile.marriatal_status == x %} selected {% endif %} >{{ y }}</option>
                                         {% endfor %}
                                     </select>
                                     <label> marriatal Status</label>
@@ -887,7 +887,6 @@
                             </div>
                         </div>
                         <div class="row">
-                            
                             <div class="input-field col s12 m6">
                                 <div class="input-field">
                                     <i class="material-icons prefix">person</i>
@@ -903,7 +902,7 @@
                             <div class="input-field col s12 m6">
                                 <div class="input-field">
                                     <i class="material-icons prefix">person</i>
-                                    <input type="text" name="current_location" class="validate" id="id_current_location">
+                                    <input type="text" name="current_location" value="{{user.user_profile.current_location}}" class="validate" id="id_current_location">
                                     <label> Current location</label>
                                 </div>
                             </div>
@@ -1082,6 +1081,125 @@
     </div>
 </div>
 <!-- endo of reference edit modal -->
+
+<!-- modal for expereince edit -->
+<div id="modalEditExp" class="modal modal-fixed-footer" style="border-radius: 12px;">
+    <div class="" style="overflow-y: auto; width: 100%; padding:7px 10px; border-bottom: 1px solid rgba(0, 0, 0, .1); background: #e1e4e9; ">
+        <div class="container p-0">
+            <div class="row">
+                <div class="col s2">
+                </div>
+                <div class="col s8">
+                    <h6 class="center-align text-ellipsis"><a href=""><b>Edit experience </b></a> </h6>
+                </div>
+                <div class="col s2" style="padding-right: 0px; ">
+                    <a class="modal-action modal-close waves-effect waves-red accent-2 btn-flat right" 
+                        style="padding-left: 10px; width: 20px; border-radius: 10px;">
+                    <i class="material-icons">clear</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-content">
+        <div class="row">
+            <div class="card">
+                <div class="step-content grey lighten-4 pl-3 pr-3 pt-1" style="border-radius: 10px;">
+                    <form action="{% url 'start:exp_delete' %}" method="POST" id="fromDelExp" > {% csrf_token %}
+                        <input class="center-align" type="hidden" id="id_id" name="id">
+                    </form>
+                    <form action="./expedit" method="POST"> {% csrf_token %}
+                        <!-- <input class="center-align" type="hidden" id="id_id" name="id"> -->
+                        <div class="row">
+                            <div class="input-field col m6 s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="id_title" name="title" value=" "  type="text">
+                                <label for="first_name01">Position </label>
+                            </div>
+                            <div class="input-field col m6 s12">
+                                <i class="material-icons prefix">home</i>
+                                <input id="id_company" value=" " name="company" type="text">
+                                <label for="last_name">Company </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <i class="material-icons prefix">date_range</i>
+                                <input type="text" id="id_date_from" value=" " name="date_from" class="datepicker">
+                                <label for="icon_prefix">Date From  </label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <i class="material-icons prefix">date_range</i>
+                                <input type="text" id="id_date_to" value=" " name="date_to" class="datepicker">
+                                <label for="icon_prefix"> Date To  </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="id_roles"  name="roles" class="materialize-textarea"> roles here </textarea>
+                                <label for="message">Roles</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea name="achievements" class="materialize-textarea" id="id_achievements"></textarea>
+                                <label for="message">achievements</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="id_description" name="description"  class="materialize-textarea"></textarea>
+                                <label for="message">Description</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+
+                                <select name="location" id="id_location">
+                                    <!-- <option value=" " id="selected_location" > </option> -->
+                                    {% for country in countries %}
+                                    <option value="{{country.id}}">{{country.name}}</option>
+                                    {% endfor %}
+                                </select>
+                                <label for="location">Location</label>
+
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <select name="role_level" id="id_role_level">
+                                    {% for level in exp_role_level %}
+                                    <option value="{{level.id}}">{{level.role_level}}</option>
+                                    {% endfor %}
+                                </select>
+                                <label for="role_level">Role Lavel</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <select name="type" id="id_type">
+                                    <!-- <option id="selected_type" value=" "></option> -->
+                                    {% for type in job_type %}
+                                    <option value="{{type.id}}">{{type.name}}</option>
+                                    {% endfor %}
+                                </select>
+                                <label for="Type">Type</label>
+                            </div>
+                            <div class="col s12 m6">
+                                <input type="hidden" name="user" id="id_user_id" value="{{user.id}}">
+                                <div class=" pt-5">
+                                    <button name="delete" form="fromDelExp" class="modal-action modal-close waves-effect grey waves-green white-text btn" >Remove</button>
+                                    <button name="add_exp"  class="modal-action modal-close right waves-effect waves-green pink white-text btn-flat" >Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- endo of experience edit modal -->
+
 
 <!-- modal for add file -->
 <div id="modalAddPhoto" class="modal" style="border-radius: 12px; width: 40%!important;">

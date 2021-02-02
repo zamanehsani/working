@@ -18,6 +18,8 @@ urlpatterns = [
     path("dashboard/", start_views.user_dash, name="user_dashboard"),
     path("profile/refview/", start_views.refview, name="refview"),
     path("profile/updateref/", start_views.updateref, name="updateref"),
+    path("profile/expview/", start_views.expview, name="expview"),
+    path("profile/expedit", start_views.expedit, name="expedit"),
     path("profile/ref-remove/", start_views.del_ref, name="del_ref"),
     path("createJobProfile/", start_views.user_create_job, name="user_create_job_profile"),
 ]

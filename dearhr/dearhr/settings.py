@@ -53,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'dearhr.urls'
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'dearhr.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/HP/Desktop/DearHR_project/dearhr/templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,20 +74,28 @@ TEMPLATES = [
     },
 ]
 
+print(BASE_DIR)
+
 WSGI_APPLICATION = 'dearhr.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'hr2',
+#         'USER': 'postgres',
+#         'PASSWORD': '123',
+#         'HOST':'localhost',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hr2',
-        'USER': 'postgres',
-        'PASSWORD': '123',
-        'HOST':'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -137,6 +146,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 SITE_ID =1
 LOGIN_REDIRECT_URL = 'start:user_profile'
@@ -145,3 +156,5 @@ LOGOUT_REDIRECT_URL = ''
 
 MEDIA_ROOT = os.path.join(BASE_DIR,  'media')
 MEDIA_URL  = '/media/'
+
+

@@ -256,3 +256,31 @@ def updateref(request):
     else:
         messages.success(request, f'Get request is not processed here!')
         return redirect('start:user_profile')
+
+
+def expview(request):
+    if request.method =="GET":
+        id = request.GET['userid']
+        exp = start_modals.Experiences.objects.get(id = id)
+        typeid = str(exp.type.id)
+        locationid = str(exp.location.id)
+        data = [exp.id, exp.title, exp.company, exp.date_from, exp.date_to, exp.roles, 
+        exp.achievements, exp.description, typeid, str(exp.type) ]
+        return JsonResponse(data, safe=False)
+    else:
+        messages.success(request, f'something went wrong. Plaese try again')
+        return redirect('start:user_profile')
+
+def expedit(request):
+    if request.method =="POST":
+        form = Add_expereince(request.POST)
+        if form.is_valid():
+            form.save(commit=False)
+            messages.success(request, f'Your experience has been updated')
+            return redirect('start:user_profile')
+        else:
+            messages.success(request, form.errors)
+            return redirect('start:user_profile')
+    else:
+        messages.success(request, f'Get request is not processed here!')
+        return redirect('start:user_profile')

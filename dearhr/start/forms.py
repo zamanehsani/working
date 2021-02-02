@@ -49,7 +49,6 @@ class Add_expereince(forms.ModelForm):
         fields = ["title","company","date_from","date_to","type", "roles", "achievements","description","location","role_level"]
 
 
-
     def __init__(self, *args, **kwargs):
         super(Add_expereince, self).__init__(*args, **kwargs)
         self.fields['type'].empty_label = ""
